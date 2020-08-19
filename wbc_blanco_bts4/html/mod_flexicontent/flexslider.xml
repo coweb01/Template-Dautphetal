@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+	<name>mod_flexicontent - flexslider Layout</name>
+	<author>claudia oerter</author>
+	<creationDate>Augus 2015</creationDate>
+	<copyright>Copyright (C) webconcept</copyright>
+	<license>GNU/GPL v2</license>
+	<authorEmail>co@das-webconcept.de</authorEmail>
+	<authorUrl>das-webconcept.de</authorUrl>
+	<version>1.0</version>
+	<description>Flexicontent Universal Content Module, Flexslider Layout parameters</description>
+	
+	<fields name="params">
+		
+		<fieldset name="layout" addfieldpath="/administrator/components/com_flexicontent/elements">
+			<field  name="direction" 
+			     	type="radio"
+				 	class="btn-group"
+				 	default="horizontal" 
+				 	label="TPL_WBC_BLANCO_J3_FIELD_FLEXSLIDER_DIR_LABEL" 
+				 	description="TPL_WBC_BLANCO_J3_FIELD_FLEXSLIDER_DIR_DESC">
+				 
+				 <option value="vertical">vertikal</option>
+				 <option value="horizontal">horizontal</option>
+	        </field>
+	        <field  name="slideritems" 
+			     	type="text"
+				 	class="form-control"
+				 	default="1" 
+				 	label="TPL_WBC_BLANCO_J3_FIELD_FLEXSLIDER_ITEMS_LABEL" 
+				 	description="TPL_WBC_BLANCO_J3_FIELD_FLEXSLIDER_ITEMS_DESC">		 
+				 
+	        </field>
+	        <field  name="sliderSpeed" 
+			     	type="text"
+				 	class="form-control"
+				 	default="2000" 
+				 	label="TPL_WBC_BLANCO_J3_FIELD_FLEXSLIDER_SPEED_LABEL" 
+				 	description="TPL_WBC_BLANCO_J3_FIELD_FLEXSLIDER_SPEED_DESC">		 
+				 
+	        </field>
+	        <field  name="AnimationSpeed" 
+			     	type="text"
+				 	class="form-control"
+				 	default="500" 
+				 	label="TPL_WBC_BLANCO_J3_FIELD_FLEXSLIDER_ANIMATIONSPEED_LABEL" 
+				 	description="TPL_WBC_BLANCO_J3_FIELD_FLEXSLIDER_ANIMATIONSPEED_DESC">		 
+				 
+	        </field>
+	        <field  name="Controlnav" 
+			     	type="radio"
+				 	class="btn-group"
+				 	default="true" 
+				 	label="TPL_WBC_BLANCO_J3_FIELD_FLEXSLIDER_CONTROLNAV_LABEL" 
+				 	description="TPL_WBC_BLANCO_J3_FIELD_FLEXSLIDER_CONTROLNAV_DESC">		 
+				 	<option value="true">JYES</option>
+				 	<option value="false">JNO</option>
+	        </field> 
+	        <field  name="DirectionNav" 
+			     	type="radio"
+				 	class="btn-group"
+				 	default="true" 
+				 	label="TPL_WBC_BLANCO_J3_FIELD_FLEXSLIDER_DIRECTIONNAV_LABEL" 
+				 	description="TPL_WBC_BLANCO_J3_FIELD_FLEXSLIDER_DIRECTIONNAV_DESC">		 
+				 	<option value="true">JYES</option>
+				 	<option value="false">JNO</option>
+	        </field>
+		</fieldset>
+		
+	</fields>
+	
+</form>

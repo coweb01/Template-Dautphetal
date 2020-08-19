@@ -1,0 +1,310 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 127.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 432.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/W/Entwicklung/Joomla/JOOMLA 30/Flexicontent/Kommune/3.1/blog-wbc/category.php",
+		"/W/Entwicklung/Joomla/JOOMLA 30/Flexicontent/Kommune/3.1/items-tabbed/category_alpha_html5.php",
+		"/W/Entwicklung/Joomla/JOOMLA 30/Templates/blank_co_J3.v1.0/includes/frontpagemodules.php",
+		"/W/Entwicklung/Joomla/JOOMLA 30/Flexicontent/Kommune/3.1/blog-wbc/category_html5.php",
+		"/W/Entwicklung/Joomla/JOOMLA 30/Flexicontent/Kommune/3.1/blog-wbc/category_category.php",
+		"/W/Entwicklung/Joomla/JOOMLA 30/Flexicontent/Kommune/3.1/blog-wbc/category_category_html5.php",
+		"/W/Entwicklung/Joomla/JOOMLA 30/Flexicontent/Kommune/3.1/blog-wbc/category_subcategories_html5.php",
+		"/W/Entwicklung/Joomla/JOOMLA 30/Flexicontent/www.neustadt-hessen.de/wbc_blanco_j3/index.php",
+		"/W/Entwicklung/Joomla/JOOMLA 30/Flexicontent/www.neustadt-hessen.de/wbc_blanco_j3/templateDetails.xml",
+		"/W/Entwicklung/Joomla/JOOMLA 30/Flexicontent/Kommune/3.1/blog-wbc/category_alpha_html5.php",
+		"/W/Entwicklung/Joomla/JOOMLA 30/Flexicontent/Kommune/3.1/blog-wbc/category_alpha.php",
+		"/W/Entwicklung/Joomla/JOOMLA 30/Flexicontent/Kommune/3.1/blog-wbc/category_subcategories.php",
+		"/W/Entwicklung/Joomla/JOOMLA 30/Flexicontent/Kommune/3.1/blog-wbc/category_peercategories_html5.php",
+		"/W/Entwicklung/Joomla/JOOMLA 30/Flexicontent/Kommune/3.1/blog-wbc/category_peercategories.php",
+		"/W/Entwicklung/Joomla/JOOMLA 30/Flexicontent/www.huenfeld.de/Haupttemplate/wbc_blanco_j3/css/custom.css",
+		"/W/Entwicklung/Joomla/JOOMLA 30/Flexicontent/www.neustadt-hessen.de/wbc_blanco_j3/includes/magic.php",
+		"/W/Entwicklung/Joomla/JOOMLA 30/Flexicontent/www.neustadt-hessen.de/wbc_blanco_j3/includes/footermodules.php",
+		"/W/Entwicklung/Joomla/JOOMLA 30/Flexicontent/www.mengerskirchen.de/wbc_blanco_j3/includes/multicolunmvor.php",
+		"/W/Entwicklung/Joomla/JOOMLA 30/Flexicontent/www.greifenstein.de/co_grj30_01/css/template_sys.css",
+		"/W/Entwicklung/Joomla/JOOMLA 30/Flexicontent/www.mengerskirchen.de/wbc_blanco_j3/includes/multicolumnach.php",
+		"/W/Entwicklung/Joomla/JOOMLA 30/Flexicontent/www.mengerskirchen.de/wbc_blanco_j3/index.php",
+		"/W/Entwicklung/Joomla/JOOMLA 30/Flexicontent/www.huenfeld.de/Flexicontent/neue Version v.3/verzeichniss-organisationen/less/item.less",
+		"/W/Entwicklung/Joomla/JOOMLA 30/Flexicontent/www.greifenstein.de/co_grj30_01/css/template.css",
+		"/W/Entwicklung/Joomla/JOOMLA 30/Flexicontent/www.huenfeld.de/Flexicontent/neue Version v.3/verzeichniss-organisationen/css/category.css",
+		"/W/Entwicklung/Joomla/JOOMLA 30/Flexicontent/www.huenfeld.de/Flexicontent/neue Version v.3/verzeichniss-organisationen/less/category.less",
+		"/W/Webseiten/Kommunen/Joomla 3/www.huenfeld.de/Flexicontent/neue Version v.3/downloads/css/category.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.mengerskirchen.de/wbc_blanco_j3/css/custom_flexicontent.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.mengerskirchen.de/wbc_blanco_j3/css/custom_flexicontent.min.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.huenfeld.de/Flexicontent/neue Version v.3/blog-huenfeld/css/category.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.huenfeld.de/Flexicontent/neue Version v.3/blog-huenfeld/css/item.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.huenfeld.de/Haupttemplate/wbc_blanco_j3/css/flexicontent.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilburg.de/co_weiilburg_3/html/com_flexicontent/fileselement/flexicontent v3.1.2-dev/image.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilburg.de/co_weiilburg_3/html/com_flexicontent/fileselement/default.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilburg.de/co_weiilburg_3/html/com_flexicontent/fileselement/flexicontent v3.1.2-dev/default.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilburg.de/co_weiilburg_3/html/com_flexicontent/filemanager/addfiles.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilburg.de/co_weiilburg_3/html/com_flexicontent/filemanager/default.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilburg.de/co_weiilburg_3/html/com_flexicontent/filemanager/flexicontent v3.1.2-dev/adminstrator/default.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilburg.de/co_weiilburg_3/html/com_flexicontent/filemanager/flexicontent v3.1.2-dev/addfiles.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.huenfeld.de/Haupttemplate/wbc_blanco_j3/css/custom.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.mengerskirchen.de/wbc_blanco_j3/css/template_sys.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.mengerskirchen.de/wbc_blanco_j3/error.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.beselich.de/Oberlahn/script Termine Frontpage ohne tabs-ssl",
+		"/W/Webseiten/Kommunen/Joomla 3/www.huenfeld.de/Haupttemplate/wbc_blanco_j3/html/mod_random_image/default.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.mengerskirchen.de/wbc_blanco_j3/css/compressed/custom_flexicontent.min.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilburg.de/co_weiilburg_3/css/flexicontent_custom.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilmuenster.de/wbc_weilmuenster/css/custom.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilmuenster.de/wbc_weilmuenster/css/formulare.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilburg.de/Fluechtlingshilfe/Formulare/formular fluechtlingshilfe.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilburg.de/Fluechtlingshilfe/Formulare/emailtemplate-rathaus.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilburg.de/co_weiilburg_3/css/formulare.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilburg.de/co_weiilburg_3/css/template_sys.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.mengerskirchen.de/wbc_blanco_j3/css/custom.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.huenfeld.de/Haupttemplate/wbc_blanco_j3/html/mod_random_image/randbg.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.mengerskirchen.de/wbc_blanco_j3/css/compressed/custom.min.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilburg.de/co_weiilburg_3/css/basic.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.huenfeld.de/Haupttemplate/wbc_blanco_j3/css/template_sys.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.freiensteinau.de J3/co_freiensteinau_3/css/responsive.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.freiensteinau.de J3/co_freiensteinau_3/css/formulare.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.greifenstein.de/JEvents/plugins/jevents/âgendaminutes-3.1.10/agendaminutes.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.gemeinde-muecke.de/Templates Flexicontent/standard-tabs/item.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.mengerskirchen.de/wbc_blanco_j3/includes/navmain.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.greifenstein.de/co_grj30_01/css/template.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.greifenstein.de/co_grj30_01/css/template_sys.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.greifenstein.de/co_grj30_mobil/css/mobilTemplate_Sys.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.greifenstein.de/JEvents/plugins/jevents/agendaminutes/agendaminutes.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.mengerskirchen.de/flexicontent templates/immobilienboerse/css/item.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.mengerskirchen.de/flexicontent templates/immobilienboerse/less/item.less",
+		"/W/Webseiten/Kommunen/Joomla 3/www.huenfeld.de/Haupttemplate/wbc_blanco_j3/html/mod_jevents_filter/default.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.huenfeld.de/Haupttemplate/wbc_blanco_j3/html/mod_jevents_filter/default_chosenlayout.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilmuenster.de/wbc_weilmuenster/templateDetails.xml",
+		"/W/Webseiten/Kommunen/Joomla 3/www.mengerskirchen.de/wbc_blanco_j3/css/template.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.mengerskirchen.de/wbc_blanco_j3/css/compressed/template_sys.min.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.mengerskirchen.de/wbc_blanco_j3/css/template_sys.min.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilmuenster.de/wbc_weilmuenster/html/mod_flexicontent/news.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilmuenster.de/wbc_weilmuenster/html/mod_flexicontent/mod_flexicontent.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilburg.de/co_weiilburg_3/css/hk_basic.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilmuenster.de/wbc_weilmuenster/html/mod_flexicontent/default/footer.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilmuenster.de/wbc_weilmuenster/html/mod_flexicontent/news/footer.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilmuenster.de/wbc_weilmuenster/html/mod_flexicontent/default.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilmuenster.de/wbc_weilmuenster/html/mod_flexicontent/tmpl_common/readon.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.huenfeld.de/Flexicontent/neue Version v.3/verzeichniss-vereine/category_items.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilmuenster.de/wbc_weilmuenster/js/funktion.js",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilmuenster.de/wbc_weilmuenster/html/mod_flexicontent/mod_flexicontent.xml",
+		"/W/Webseiten/Kommunen/Joomla 3/www.huenfeld.de/Flexicontent/neue Version v.3/verzeichniss-vereine/category_items_html5.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.huenfeld.de/Haupttemplate/wbc_blanco_j3/tmpl_common/category.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.huenfeld.de/Flexicontent/neue Version v.3/verzeichniss-vereine/category.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.huenfeld.de/Flexicontent/neue Version v.3/verzeichniss-vereine/category_html5.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.huenfeld.de/Flexicontent/neue Version v.3/verzeichniss-vereine/less/item.less",
+		"/W/Webseiten/Kommunen/Joomla 3/www.huenfeld.de/Flexicontent/neue Version v.3/verzeichniss-vereine/less/category.less",
+		"/W/Webseiten/Kommunen/Joomla 3/www.huenfeld.de/Flexicontent/neue Version v.3/verzeichniss-vereine/css/category.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.huenfeld.de/Flexicontent/neue Version v.3/default/category_items_html5.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilmuenster.de/flexicontent templates/personenverzeichnis/category.xml",
+		"/W/Webseiten/Kommunen/Joomla 3/www.huenfeld.de/Flexicontent/neue Version v.3/verzeichniss-organisationen--vereine/category_items_html5.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.huenfeld.de/Flexicontent/neue Version v.3/blog/category_items_html5.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.gemeinde-muecke.de/Templates Flexicontent/personenverzeichnis/category_items.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.huenfeld.de/Flexicontent/neue Version v.3/faq/category_items_html5.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.huenfeld.de/Flexicontent/neue Version v.3/verzeichniss-organisationen/category_items_html5.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.mengerskirchen.de/flexicontent templates/personenverzeichnis/category_items_html5.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.mengerskirchen.de/flexicontent templates/verzeichniss-organisationen/category_items_html5.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.mengerskirchen.de/flexicontent templates/verzeichniss-organisationen-tabbed/category_items_html5.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilmuenster.de/wbc_weilmuenster/css/newsblock.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.mengerskirchen.de/wbc_blanco_j3/html/mod_menu/AKdropdown.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.mengerskirchen.de/wbc_blanco_j3/html/mod_menu/AKdropdown_component.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.huenfeld.de/Haupttemplate/wbc_blanco_j3/css/__flexi_containers.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.huenfeld.de/Haupttemplate/wbc_blanco_j3/css/flexi_containers.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.mengerskirchen.de/Formulare/delete_objekt",
+		"/W/Webseiten/Kommunen/Joomla 3/www.mengerskirchen.de/wbc_blanco_j3/html/com_flexicontent/item/form.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.mengerskirchen.de/wbc_blanco_j3/html/mod_jevents_filter/default.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.weilmuenster.de/wbc_weilmuenster/index.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.huenfeld.de/Haupttemplate/wbc_blanco_j3/html/com_flexicontent/item/form.php",
+		"/W/Webseiten/Kommunen/Joomla 3/www.beselich.de/Oberlahn/script Termine Frontpage ohne tabs",
+		"/W/Webseiten/Kommunen/Joomla 3/www.beselich.de/beselich3/css/event.css",
+		"/W/Webseiten/Kommunen/Joomla 3/www.huenfeld.de/Haupttemplate/wbc_blanco_j3/index.php"
+	],
+	"find":
+	{
+		"height": 31.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"$frontpage_cols",
+			"$affix ",
+			"hr.fcclearline",
+			"fcfile_mime",
+			".fcfile_mime",
+			"button",
+			"search",
+			"chronoform_buergerecho",
+			"chorono",
+			"image-overlay",
+			"ContentHelperRoute::",
+			"FlexicontentHelperRoute",
+			"accordio",
+			"JRoute::",
+			"JRoute::_(ContentHelperRoute",
+			"readon",
+			"module_readon",
+			"module-readon",
+			"readon",
+			"Das Feld ist verschieden von",
+			"Das Feld",
+			"sidebar",
+			"toggle",
+			"sidebar"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "category_html5.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 366.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

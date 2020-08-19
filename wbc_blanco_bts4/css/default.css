@@ -1,0 +1,47 @@
+secondary_color_hover: #383d41;
+.wbc-flex {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+.vertikal-zentriert-pos-abs {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.boxshadow {
+	-webkit-box-shadow: 0px 3px 5px 0px #262426;
+	-moz-box-shadow: 0px 3px 5px 0px #262426;
+	box-shadow: 0px 3px 5px 0px #262426;
+}
+.cc-window {
+	background-color: #9DA0A7 !important;
+	color: #2e2e2e !important;
+}
+.cc-window .cc-cookie-settings-toggler {
+	font-size: 0px !important;
+}
+.cc-window .cc-cookie-settings-toggle {
+	background-color: transparent !important;
+}
+.cc-window span.cc-message span.cc-cookie-settings-toggle:hover {
+	color: #2e2e2e;
+}
+.cc-window a:link:not(.btn),
+.cc-window a:visited:not(.btn) {
+	color: white;
+}
+.cc-window a:hover:not(.btn),
+.cc-window a:focus:not(.btn) {
+	color: #2e2e2e;
+	text-decoration: none;
+}
+.cc-window div.cc-checkboxes-container.cc-checkboxes-filled input.cc-cookie-checkbox:checked + span::before,
+.cc-window div.cc-checkbox-container.cc-checkboxes-filled input.cc-cookie-checkbox:checked + span::after {
+	background-color: #777E8E !important;
+	border-color: #777E8E !important;
+}

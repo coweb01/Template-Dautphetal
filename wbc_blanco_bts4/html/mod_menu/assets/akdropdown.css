@@ -1,0 +1,256 @@
+/* CSS Styles für override mod_menu */
+/* Author: c.Oerter                 */
+/* Stand:  09/2019                  */
+/* Flexbox eingebunden              */
+/* website: www.das-webconcept.de   */
+
+.akdropdown {}
+.akdropdown > li { position: static; }
+
+.akdropdown > li.dropdown.level1 { 
+	position: relative;
+	margin: 0;
+	 }
+
+/* wenn untermenue mehrspaltig */
+.akdropdown > li.dropdown.multicolumn { 
+	position: static;
+}
+
+
+
+/* Spalte mit der Überschrift des Menübereichs */
+.akdropdown ul.dropdown-level1 >li:first-child { 
+	flex: 0 0 100%; 
+}
+
+
+.akdropdown ul.dropdown-level1,
+.akdropdown li.level1:hover ul.dropdown-level1, 
+.akdropdown li.level1:focus ul.dropdown-level1
+
+ {  
+ 	display: flex;
+	flex-wrap: wrap;
+ 	flex-direction: column;
+ 	border-radius: 0px; 	 	
+ 	width: 100%;
+ 	padding:  1rem 0 1rem 0;
+ 	left: auto;		
+ }
+
+/* dropdown mehrspaltig */
+
+.akdropdown ul.dropdown-level1.multicolumn-dropdown,
+.akdropdown li.level1:hover ul.dropdown-level1.multicolumn-dropdown, 
+.akdropdown li.level1:focus ul.dropdown-level1.multicolumn-dropdown
+ { 
+	flex-direction: row;
+	/*flex-wrap: nowrap;*/
+	flex-wrap: wrap;
+	min-width: 70%;
+	width: auto; 
+} 
+
+.akdropdown li.multi-column {}
+.akdropdown li.multi-column .wrap-nav-col {}
+.akdropdown li.multi-column .nav-col {}
+
+.akdropdown .nav-col > ul { 
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.akdropdown .nav-col a  {
+	text-align: left; 
+	padding: 0.3rem 0.5rem;
+} 
+.akdropdown .menutitle  { 
+	text-align: center; 
+	text-transform: uppercase;
+	margin-bottom: 2rem;
+	font-size: 2rem;
+	border-bottom: solid 3px #DDD;
+	border-top: solid 1px #DDD;
+}
+
+.akdropdown .nav-header { 
+	text-align: left; 
+	padding: 0.3rem 0.5rem;
+}
+
+.akdropdown .subtitle { 
+	display: block;
+	font-size: 0.9rem; 
+	line-height: 1.2rem;
+	font-style:  italic;
+	padding: 0 0.5rem 0 0.5rem;
+}
+
+
+ul.akdropdown .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: .6em;
+    vertical-align: middle;
+    font-family: "FontAwesome";
+    content: "\f078";
+    border: none!important;
+    font-size: 1rem;
+}
+
+.akdropdown .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: .6em;
+    vertical-align: middle;
+    font-family: "FontAwesome";
+    content: "\f078";
+    border: none!important;
+    font-size: 1rem;
+}
+
+.akdropdown ul.multicolumn-dropdown > .nav-item {
+		border-right: solid 1px #DDDDDD;
+	  }
+.akdropdown ul.multicolumn-dropdown > .nav-item:last-child {
+		border-right: none;
+	  }  
+
+@media (min-width: 992px) {
+		
+	/* dropdown mehrspaltig */
+	.akdropdown li.multi-column {  }
+	.akdropdown li.multi-column .nav-col {
+		
+	}
+		
+	.akdropdown .dropdown-level1 {
+		display: flex !important;
+		visibility: hidden;
+		-webkit-transition: visibility 0.2s;
+        -moz-transition: visibility 0.2s;
+        -ms-transition: visibility 0.2s; 
+        -o-transition: visibility 0.2s;
+        transition: visibility 0.2s;
+        opacity: 0;
+        -webkit-transition: opacity .8s ease;
+        -moz-transition: opacity .8s ease;
+        -ms-transition: opacity .8s ease; 
+        -o-transition: opacity .8s ease;
+		transition: opacity .8s ease;
+
+	}
+
+	.akdropdown li.level1:hover ul.dropdown-level1, 
+	.akdropdown li.level1:focus ul.dropdown-level1  { /*  bootstrap dropdown bei hover 1st-level */
+	    margin-top: 0px;
+		visibility: visible;
+		opacity: 1;
+		-webkit-transition-delay:0.4s;   /* verzoegerung bei mouseover */  
+        -moz-transition-delay:0.4s; 
+        -ms-transition-delay:0.4s;     
+        -o-transition-delay:0.4s;     
+        transition-delay:0.4s; 
+
+        -webkit-border-bottom-right-radius: 6px;
+		-webkit-border-bottom-left-radius: 6px;
+		-webkit-border-top-right-radius: 0px;
+		-webkit-border-top-left-radius: 0px;
+
+		-moz-border-radius-bottomright: 6px;
+		-moz-border-radius-bottomleft: 6px;
+		-moz-border-radius-topright: 0px;
+		-moz-border-radius-topleft: 0px;
+
+		border-bottom-right-radius: 6px;
+		border-bottom-left-radius: 6px;
+		border-top-right-radius: 0px;
+		border-top-left-radius: 0px; 
+	}
+
+    /*** Bootstrap menue 3. level ********************************************/
+	
+	.akdropdown .dropdown-submenu {
+		position: relative;
+	}
+	
+	.akdropdown .dropdown-submenu>.dropdown-menu {
+		top: 0;
+		left: 100%;
+		margin-top: -6px;
+		margin-left: -1px;
+		-webkit-border-radius: 0 6px 6px 6px;
+		-moz-border-radius: 0 6px 6px;
+		border-radius: 0 6px 6px 6px;
+	}
+	
+	.akdropdown .dropdown-submenu:hover>.dropdown-menu {
+		display: block;
+	}
+	
+	.akdropdown .dropdown-submenu>a:after {
+		display: block;
+		content: '';
+		float: right;
+		width: 0;
+		height: 0;
+		border-color: transparent;
+		border-style: solid;
+		border-width: 5px 0 5px 5px;
+		border-left-color: #ccc;
+		margin-top: 5px;
+		margin-right: -10px;
+	}
+	
+	.akdropdown .dropdown-submenu:hover>a:after {
+		border-left-color: #fff;
+	}
+	
+	.akdropdown .dropdown-submenu.float-left {
+		float: none;
+	}
+	
+	.akdropdown .dropdown-submenu.float-left>.dropdown-menu {
+		left: -100%;
+		margin-left: 10px;
+		-webkit-border-radius: 6px 0 6px 6px;
+		-moz-border-radius: 6px 0 6px 6px;
+		border-radius: 6px 0 6px 6px;
+	}
+	
+
+	.akdropdown .dropdown-menu {
+		border: 0px;
+		background: rgb(255,255,255);
+		background:  rgba(255,255,255,0.95) !important;
+		-webkit-box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.75);
+		 box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.75);
+		padding: .5rem;
+	} 
+
+
+}
+
+
+@media (min-width: 1200px) {
+
+	.akdropdown .menutitle  { 
+		margin-bottom: 2rem;
+	}
+
+}
+
+@media (min-width: 1700px) {
+
+	.akdropdown {
+		justify-content: center;
+	    max-width: 100%;
+	    width: 100%;
+	    flex-direction: row;
+	}
+	.akdropdown > li.dropdown-level1.multicolumn { 
+   		margin: 0 10%;
+    }
+
+
+}

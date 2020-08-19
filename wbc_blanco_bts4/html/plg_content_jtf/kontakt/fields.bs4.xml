@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form class="custom-form custom-contact form-inline">
+	<fieldset name="kontaktdaten">
+		<field name="name"
+		    type="text"
+		    class="form-control col-sm-12 col-md-5 col-lg-5"
+			labelclass="col-sm-12 col-md-3 col-lg-3"
+		    maxlength="60"
+		    description="JTF_NAME_DESC"
+		    label="JTF_NAME_LABEL"
+		    filter="string"
+		    required="true"
+		/>
+		<field name="strasse"
+			type="text"
+			class="form-control col-sm-12 col-md-5 col-lg-5"
+			labelclass="col-sm-12 col-md-3 col-lg-3"
+			size="30"
+			description="JTF_EXTENDED_FORM_STREET_DESC"
+			label="JTF_EXTENDED_FORM_STREET_LABEL"
+		/>
+		<field name="ort"
+			type="text"
+			class="form-control col-sm-12 col-md-5 col-lg-5"
+			labelclass="col-sm-12 col-md-3 col-lg-3"
+			size="30"
+			description="JTF_EXTENDED_FORM_LOCATION_DESC"
+			label="JTF_EXTENDED_FORM_LOCATION_LABEL"
+		/>
+		
+		<field name="email"
+		    type="email"
+		    class="form-control col-sm-12 col-md-5 col-lg-5"
+			labelclass="col-sm-12 col-md-3 col-lg-3"
+		    maxlength="60"
+		    size="30"
+		    description="JTF_EMAIL_DESC"
+		    label="JTF_EMAIL_LABEL"
+		    filter="string"
+		    validate="email"
+		    required="true"
+		/>
+
+		<field name="telefon"
+			type="tel"	
+			class="form-control col-sm-12 col-md-5 col-lg-5"
+			labelclass="col-sm-12 col-md-3 col-lg-3"
+			size="30"
+			description="JTF_EXTENDED_FORM_TEL_DESC"
+			label="JTF_EXTENDED_FORM_TEL_LABEL"
+			
+		/>
+		
+		<field name="message"
+		    type="textarea"
+		    class="form-control col-sm-12 col-md-5 col-lg-5"
+			labelclass="col-sm-12 col-md-3 col-lg-3"
+		    cols="30"
+		    rows="10"
+		    description="JTF_MESSAGE_DESC"
+		    label="JTF_MESSAGE_LABEL"
+		    filter="safehtml"
+		    required="true"
+		/>
+	</fieldset>
+	<fieldset name="consent_form"	         
+	>
+		<field name="privacy_policy"
+		       type="checkboxes"
+		       class="form-check-input privacy_policy"
+		       labelclass="form-check-label"
+		       description=""
+		       label="JTF_PRIVACY_POLICY_LABEL"
+		       default=""
+		       required="true"
+		       hiddenLabel="true"
+		>
+			<option value="JYES">JTF_PRIVACY_POLICY_OPTION_ACCEPT</option>
+		</field>
+	</fieldset>
+</form>

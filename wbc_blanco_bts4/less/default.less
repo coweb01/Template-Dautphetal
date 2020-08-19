@@ -1,0 +1,43 @@
+/* Colors default Styles */
+
+@import "variables.less";
+
+
+/** cookie Box GDPR Komponente Farben an Template anpassen ----------------------------*/
+
+.cc-floating {}
+.cc-window {
+	background-color: @color1 !important;
+	color: @default !important;
+}
+.cc-center {}
+.cc-window .cc-cookie-settings-toggler { font-size: 0px !important; }
+.cc-window .cc-cookie-settings-toggle {
+	background-color: transparent !important;
+	 }
+
+
+.cc-window span.cc-message span.cc-cookie-settings-toggle:hover {
+	color: @default;
+}
+
+
+.cc-window a:link:not(.btn),.cc-window a:visited:not(.btn) { color: white; }
+.cc-window a:hover:not(.btn), .cc-window a:focus:not(.btn) { 
+	color: @default; 
+	text-decoration: none;
+}
+
+
+
+/*** cookie Checkboxen Style aendern ---------------------------------------------------------*/
+
+.cc-window div.cc-checkboxes-container.cc-checkboxes-filled input.cc-cookie-checkbox:checked + span::before, 
+.cc-window div.cc-checkbox-container.cc-checkboxes-filled input.cc-cookie-checkbox:checked + span::after {
+    background-color: @color2 !important;
+	border-color:    @color2 !important;
+    
+}
+
+
+/******** ende Checkboxen -------------------------------------------------------------*/

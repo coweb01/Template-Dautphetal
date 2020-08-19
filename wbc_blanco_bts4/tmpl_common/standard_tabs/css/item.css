@@ -1,0 +1,260 @@
+/* Items-Tabbed Theme : item template CSS file */
+/**  Tabs  */
+div.current  { background-color:#F9F9F9 }
+dt.open {}
+dt.closed {
+	background: #DCDCDC !important;
+}
+
+
+/* ----   End Tabs --------- */
+.flexi.lineinfo {
+	display: block;
+	margin: 0 0 1em;
+	overflow: hidden;
+	clear: both;
+}
+
+.flexi.subtitle1 {
+}
+.flexi.subtitle2 {
+}
+.flexi.subtitle3 {
+}
+
+.tabbertab .flexi.element,
+.subtitle1 .flexi.element,
+.subtitle2 .flexi.element,
+.subtitle3 .flexi.element {
+	display:block;
+	float: left;
+	margin: 0px 24px 12px 0px;
+}
+
+
+/* topblock: Field block styling */
+.flexi.topblock {
+	overflow: hidden;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.topblock .flexi.image {
+	float: left;
+	margin-right: 10px;
+	line-height: 0px;
+}
+.topblock .flexi.image a {
+	outline: none;
+}
+.topblock .flexi.image img {
+	border: 1px solid white;
+}
+.topblock .flexi.infoblock {
+	overflow: hidden;
+}
+.tab-content {
+	margin-top:      1em;
+	margin-bottom:   3em;
+	overflow: hidden !important;
+}
+
+/* infoblock: Field block styling */
+.flexi.infoblock {
+	margin: 0 0 1em;
+	padding-top: 0.5em;
+	clear: both;
+	width: 100%;
+}
+.infoblock ul.flexi {
+	margin: 0;
+	padding: 0;
+}
+.infoblock ul li.flexi {
+	padding: 0;
+	background: none;
+	min-height: 10px;
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0%;
+	zoom: 1;
+	*display: inline;
+	_height: 10px;
+}
+
+
+/* Field label & values styling */
+.lineinfo .element .label {
+ }
+
+
+
+span.label, .label {
+	float:       left;
+	margin-right: 5px !important;
+	display:      block;
+	max-width:   100% !important;
+	line-height: 1.4em !important;
+	width:        10em;
+	font-weight:  600;
+
+}
+span.value, .value {
+	float: left;
+}
+
+.description { margin-top: 20px;}
+
+/* Field values into 1 column */
+.onecols ul li.flexi {
+	width: 100%;
+}
+.onecols .label {
+	min-width: 20%;
+	margin-right: 4%;
+	margin-bottom:6px;
+}
+.onecols .value {
+	min-width: 74%;
+	margin-right: 1%;
+}
+
+
+/* Field values into 2 columns */
+.twocols ul li.flexi {
+	min-width: 48%;
+}
+.twocols .label {
+	min-width: 34%;
+	margin-right: 6%;
+	margin-bottom:6px;
+}
+.twocols .value {
+	min-width: 58%;
+	margin-right: 1%;
+}
+
+/* "micro" clearfix http://nicolasgallagher.com/micro-clearfix-hack/  */
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.group:before,
+.group:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.group:after {
+    clear: both;
+}
+
+/**
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.group {
+	/* for IE 6/7 */
+    *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
+    /* non-JS fallback */
+    *zoom: 1;
+}
+/************************* verschiedene felder **************************************/
+div.flexi_fields {
+	width: 100%;
+	line-height: 1.4em;
+	float:left;
+	}
+	
+.field_logo_07 {
+	float: left;
+	width:auto !important;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	}   /*  Feld Bild in Fliesstext    */	
+	
+.field_text  {
+	margin-top: 10px ;
+	float: left;
+	width: auto !important;
+}
+	
+.field-verwandte_artikel_back_00 {
+	font-size: 1.2em !important;
+	color: #333 !important;
+	clear: both;
+	float: none !important;
+	line-height: 1.2em;
+	margin-bottom: 0.2em;
+	border: none !important
+}
+.field_einrichtung {}
+
+
+
+.value_name_1, .value_prename_1 { float:left;}
+.value_plz_2,
+.value_ort_2,
+.value_ort_1,
+.value_ortsteil_auswahl,
+.value_ortsteil_auswahl_2,
+.value_name_1,
+.value_prename_1 {
+	float: left !important; display: inline!important; width: auto!important; }
+	
+.value_plz_2,
+.value_plz_3,
+.value_ort_2,
+.field_plz_1,
+.field_plz_2,
+.field_ort_1, 
+.field_ortsteil_auswahl,
+.field_ortsteil_auswahl_2,
+.field_name_1,
+.field_prename_1 {width: auto !important;}
+
+.field_ort_2,
+.field_ort_1,
+.field_ortsteil_auswahl, 
+.field_ortsteil_auswahl_2, 
+.field_name_1 
+{ clear: none; }
+
+.value_plz_1, .value_ort_1, .value_ortsteil_auswahl_2 {}		
+.value_funktion1 { font-weight: 600 !important; }
+.value_name_1, .value_ort_2, .value_ort_1, .value_ortsteil_auswahl, .value_ortsteil_auswahl_2 {margin-left: 5px !important;} 
+.field_strasse_1, .field_plz_2, .field_plz_1 {clear:left !important; float: none !important;}
+
+.value_text {
+}
+
+
+/*******  Google map ****************************************************/
+.flexi-googlemap {
+   width: 100% !important;
+   height: 100% !important;
+   margin-bottom: 10px;
+}	
+
+	
+/*.flexi-googlemap .button {float: none !important;}*/
+
+/***  download button **************************************************/
+.field_downloads_1 form {margin: 0px; padding: 0px;}
+.field_downloads_1  input   {margin-bottom : 0px;}
+.field_downloads_1  .button {
+	float: right !important;
+	margin: 0px 0px 0px 0.5em;
+}
+
+.flexi-tabinfo img {
+	margin-left: 0px;
+	margin-right: 0.96525% !important;
+	max-width: 48%;
+	height:auto;
+	}

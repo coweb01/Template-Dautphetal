@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<author>C.Oerter</author>
+	<website>www.das-webconcept.de</website>
+	<email>co@das-webconcept.de</email>
+	<license>GPLv3</license>
+	<version>2.0</version>
+	<release>July - 2017</release>
+	<description>Beitragslayout als Tabs  </description>
+	<fields name="attribs">
+		<fieldset name="attribs" addfieldpath="/administrator/components/com_flexicontent/elements">
+		<field name="grid_framework" type="radio" default="1" label="FLEXI_GRID" description="FLEXI_GRID_DESC" class="btn-group btn-group-yesno">
+			<option value="0">FLEXI_GRID_YES</option>
+			<option value="1">FLEXI_BTS_YES</option>
+			<option value="2">FLEXI_UIKIT_YES</option>
+		</field>
+
+
+		<field name="title_cut_text" type="text" size="3" default="200" label="FLEXI_TITLE_MAXLEN" description="FLEXI_TITLE_MAXLEN_DESC" />
+		
+		<field name="bottom_cols" type="list" default="2" label="FLEXI_ITEM_BOTTOM_COLS" description="FLEXI_ITEM_BOTTOM_COLS_DESC">
+			<option value="">FLEXI_USE_GLOBAL</option>
+			<option value="1">FLEXI_1_COL</option>
+			<option value="2">FLEXI_2_COLS</option>
+		</field>
+
+		<field name="itemimage" type="separator" hr="false" default="Bild in Beitragstext einbinden" level="level2" menu="hide" />
+		<field name="use_item_image" type="list" default="1" label="FLEXI_USE_IMAGE" description="FLEXI_USE_IMAGE_DESC">
+			<option value="0">FLEXI_NO</option>
+			<option value="1">FLEXI_YES</option>
+		</field>
+
+		<field name="select_item_image" type="fcimage" size="10" default="" label="FLEXI_IMAGE_SOURCE" description="FLEXI_IMAGE_SOURCE_DESC" />
+		<field name="item_image_position" type="radio" default="" label="FLEXI_IMAGE_POSITION" description="FLEXI_IMAGE_POSITION_DESC" class="btn-group btn-group-yesno">
+				<option value="">FLEXI_USE_GLOBAL</option>
+				<option value="0">FLEXI_IMAGE_LEFT</option>
+				<option value="1">FLEXI_IMAGE_RIGHT</option>
+				<option value="2">FLEXI_IMAGE_CLEAR</option>
+		</field>
+		
+		<field name="image_size" type="radio" default="" label="FLEXI_IMAGE_SIZE" description="FLEXI_IMAGE_SIZE_DESC" class="btn-group btn-group-yesno">
+				<option value="">FLEXI_USE_PARAMS</option>
+				<option value="s">FLEXI_SMALL</option>
+				<option value="m">FLEXI_MEDIUM</option>
+				<option value="l">FLEXI_LARGE</option>
+				<option value="o">FLEXI_ORIGINAL</option>
+		</field>
+
+		<field name="item_image_style" type="list" default="" label="FLEXI_ITEM_IMAGE_STYLE" description="FLEXI_ITEM_IMAGE_STYLE_DESC">
+			<option value="">FLEXI_USE_GLOBAL</option>
+			<option value="rounded">FLEXI_ROUND</option>
+			<option value="circle">FLEXI_CIRCLE</option>
+		</field>
+
+		<field name="item_image_lightbox" type="radio" default="1" label="FLEXI_ITEM_IMAGE_LIGHTBOXSTYLE" description="FLEXI_ITEM_IMAGE_LIGHTBOXSTYLE_DESC" class="btn-group btn-group-yesno">
+			<option value="0">FLEXI_NO</option>
+			<option value="1">FLEXI_YES</option>
+		</field>
+		
+		<field name="galerieimages" type="separator" hr="false" default="FLEXI_GALERIE_TIP" level="level2" menu="hide" />
+
+		<field name="select_galerie" type="fcimage" size="10" default="" label="FLEXI_IMAGE_SOURCE" description="FLEXI_IMAGE_SOURCE_DESC" />
+
+		<field name="galerie_image_title" type="radio" default="0" label="FLEXI_GALERIE_IMAGE_TITLE_LABEL" description="FLEXI_GALERIE_IMAGE_TITLE_DESC"  class="btn-group btn-group-yesno">
+			<option value="0">FLEXI_NO</option>
+			<option value="1">FLEXI_YES</option>
+		</field>
+
+		<field name="galerie_gutter" type="list" default="10" label="FLEXI_GALERIE_GUTTER_LABEL" description="FLEXI_GALERIE_GUTTER_DESC" >
+			<option value="">FLEXI_USE_GLOBAL</option>
+			<option value="0">0</option>
+			<option value="5">5</option>
+			<option value="10">10</option>
+			<option value="20">20</option>
+		</field>
+
+		<field name="galerie_delay" type="text" size="5" default="300" label="FLEXI_GALERIE_DELAY_LABEL" description="FLEXI_GALERIE_DELAY_DESC" />
+
+		<field name="galerie_cols" type="list" default="" label="FLEXI_MAX_GALERIE_COLS_RESPONSIVE" description="FLEXI_MAX_GALERIE_COLS_RESPONSIVE_DESC">
+			<option value="">FLEXI_USE_GLOBAL</option>
+			<option value="1">FLEXI_1_COL</option>
+			<option value="2">FLEXI_2_COLS</option>
+			<option value="3">FLEXI_3_COLS</option>
+			<option value="4">FLEXI_4_COLS</option>
+			<option value="5">FLEXI_5_COLS</option>
+		</field>
+
+
+		<field name="label_backlink" type="text" default="weitere Informationen: " label="label Backlink" description="Die Beschriftung für das Feld vewandte Artikel" />
+		
+		
+		<field name="subtitle_tabs_grp" type="separator" default="SubTitle Tabs" description="" level="level2" hr="false" />
+		<field name="subtitle_tab1_label" type="text" default="Infos" label="Label for Tab 1" description="The text for this label is filter via JText (you can add to your ini language files)" />
+		<field name="subtitle_tab1_icon" type="text" default="" label="LABEL_CSS_IMAGE_1" description="The text for this label is filter via JText (you can add to your ini language files)" />
+		
+		<field name="subtitle_tab2_label" type="text" default="Ansprechpartner" label="Label for Tab 2" description="The text for this label is filter via JText (you can add to your ini language files)" />
+		<field name="subtitle_tab2_icon" type="text" default="fa fa-user" label="LABEL_CSS_IMAGE_2" description="The text for this label is filter via JText (you can add to your ini language files)" />
+		
+		<field name="subtitle_tab3_label" type="text" default="Bilder" label="Label for Tab 3" description="The text for this label is filter via JText (you can add to your ini language files)" />
+		<field name="subtitle_tab3_icon" type="text" default="fa fa-picture-o" label="LABEL_CSS_IMAGE_3" description="The text for this label is filter via JText (you can add to your ini language files)" />
+
+		<field name="subtitle_tab4_label" type="text" default="Google Map" label="Label for Tab 4" description="The text for this label is filter via JText (you can add to your ini language files)" />
+		<field name="subtitle_tab4_icon" type="text" default="fa fa-map-marker" label="LABEL_CSS_IMAGE_4" description="The text for this label is filter via JText (you can add to your ini language files)" />
+		
+		<field name="subtitle_tab5_label" type="text" default="Zusatzinfo 5" label="Label for Tab 5" description="The text for this label is filter via JText (you can add to your ini language files)" />
+		<field name="subtitle_tab5_icon" type="text" default="" label="LABEL_CSS_IMAGE_5" description="The text for this label is filter via JText (you can add to your ini language files)" />
+
+		<field name="subtitle_tab6_label" type="text" default="Zusatzinfo 6" label="Label for Tab 6" description="The text for this label is filter via JText (you can add to your ini language files)" />
+		<field name="subtitle_tab6_icon" type="text" default="" label="LABEL_CSS_IMAGE_6" description="The text for this label is filter via JText (you can add to your ini language files)" />
+		
+		
+		</fieldset>
+	</fields>
+	<fieldgroups>
+		<group>subtitle1</group>
+		<group>subtitle2</group>
+		<group>subtitle3</group>
+		<group posrow="subtitle">subtitle_tab1</group>
+		<group posrow="subtitle">subtitle_tab2</group>
+		<group posrow="subtitle">subtitle_tab3</group>
+		<group posrow="subtitle">subtitle_tab4</group>
+		<group posrow="subtitle">subtitle_tab5</group>
+		<group posrow="subtitle">subtitle_tab6</group>
+		<group>description</group>
+		<group>bottom-nolabel</group>
+		<group>bottom</group>
+		<group>renderonly</group>
+	</fieldgroups>	
+	<cssitem>
+		<file>css/item.css</file>
+	</cssitem>
+	<jsitem>
+	</jsitem>	
+</form>

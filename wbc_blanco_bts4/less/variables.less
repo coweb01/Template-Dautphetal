@@ -1,0 +1,130 @@
+/* Templatefarben   LESS Variablen */
+/* Template. wbc_blanco_bts4       */
+/*                                 */
+/* place custom variables here     */
+
+@default:                 #2e2e2e;
+@bordercolor:             #DDDDDD;
+@borderradius:            0px;
+@schatten:  			  0px 3px 5px 0px rgba(38,36,38,1);
+@fontfamily:              'Roboto', sans-serif;
+@printcolor:              #000000;
+@color1:                  #9DA0A7;
+@color2:				  #777E8E;
+@color3:			      #393E4B;
+@color4:				  #646568;	
+@color5:                  #D7DAE2;
+@transwhite_8: 		  	  rgba(255,255,255,0.8);
+@transwhite_9: 		  	  rgba(255,255,255,0.9);
+@transwhite_7: 		  	  rgba(255,255,255,0.7);
+@transwhite_4: 		  	  rgba(255,255,255,0.4);
+@transwhite_3: 		  	  rgba(255,255,255,0.3);
+@grau_5:                  rgba(56,61,65,0.5);
+@grau_8:                  rgba(56,61,65,0.8);
+@grau_2:                  rgba(56,61,65,0.2);
+@grau_3:                  rgba(56,61,65,0.3);
+@grau_1:                  #383d41;
+
+@grau_01:                 rgba(56,61,65,0.1);
+
+@dunkelgrau:              #6D6B6B;
+@hellgrau:                #ACACAC;
+@danger_color:            #721c24;
+@secondary_color:         #383d41;
+@primary_color:           #1269B0;
+@success_color:           #9AC00A;
+@warning_color:           #856404;
+@primary_background:      #383d41;
+@secondary_background:    #1269B0;
+@success_color_hover:     #7E9D06;
+secondary_color_hover:    #383d41;
+@primary_color_hover:     #1269B0;
+@warning_color_hover:     #856404;
+@animation_pl: 	  padding-left 0.5s ease-in-out;
+@animation_ml: 	  margin-left 0.5s ease-in-out;
+
+@trans: 80%;
+
+.wbc-flex { 
+	display: -webkit-box;
+  	display: -webkit-flex;
+  	display: -ms-flexbox;
+  	display: flex;
+ }
+
+.white-trans (@trans: 50%) {
+
+	color: fade(white, @trans);
+}
+
+.color1-trans (@trans: 20%) {
+	background: rgb(@color1);
+    background: fade(@color1, @trans);
+}
+
+.color2-trans (@trans: 20%) {
+	background: rgb(@color2);
+    background: fade(@color2, @trans);
+}
+
+.color3-trans (@trans: 20%) {
+	background: rgb(@color3);
+    background: fade(@color3, @trans);
+}
+
+.color4-trans (@trans: 20%) {
+	background: rgb(@color4);
+    background: fade(@color4, @trans);
+}
+
+.color5-trans (@trans: 20%) {
+	background: rgb(@color5);
+    background: fade(@color5, @trans);
+}
+
+.rounded-corners (@radius: 40px){
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	-ms-border-radius: @radius;
+	-o-border-radius: @radius;
+	border-radius: @radius;
+}
+
+.background_grau (@trans: 10%) {
+	background: rgb(@dunkelgrau)!important;
+	background: fade(@dunkelgrau, @trans)!important;
+}
+.background_secondary (@secondary_color: #FFFFFF) {
+	background: rgb(@secondary_background) !important;
+	background: fade(@secondary_background, @trans) !important;
+	color: @secondary_color;
+}
+.background_primary (@primary_color: #FFFFFF) {
+	background: rgb(@primary_background) !important;
+	background: fade(@primary_background, @trans) !important;
+	color: @primary_color;
+}
+.background_white ( @trans: 50%) {
+	background: rgb(white) !important;
+	background: fade(white, @trans) !important;
+}
+
+.graustufe (@grey: 5%) {
+    -webkit-filter: grayscale(@grey) !important;
+    filter: grayscale(@grey) !important;
+}
+
+.vertikal-zentriert-pos-abs {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.boxshadow {
+	-webkit-box-shadow: @schatten;
+	-moz-box-shadow: @schatten;
+	box-shadow: @schatten;
+}

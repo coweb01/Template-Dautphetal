@@ -1,0 +1,127 @@
+
+/* Buttons */
+/* Colors  */
+
+a.btn-primary:link,
+a.btn-primary:visited,
+a.btn-primary:hover,
+a.btn-primary:active,
+a.btn-primary:focus
+
+ {  }
+
+.btn-success
+
+ {  
+ 	color: white; 
+ 	background-color: @success_color;
+ 	border-color: @success_color;
+ }
+
+.btn-success:hover,
+.btn-success:focus
+ {  
+ 	color: white; 
+ 	background-color: @success_color_hover;
+ 	border-color: @success_color_hover;
+ }
+
+.btn-success.focus, 
+.btn-success:focus {
+	box-shadow: 0 0 0 .2rem rgba(126, 157, 6,.5);
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-success,
+.btn-danger,
+.btn-warning,
+.btn-info,
+.btn-light,
+.btn-outline-primary,
+.btn-outline-secondary,
+.btn-outline-success,
+.btn-outline-danger,
+.btn-outline-warning,
+.btn-outline-info,
+.btn-outline-light
+ {
+
+	border-radius: @borderradius;
+
+}
+
+.input-append .btn-primary,
+.input-append .btn-secondary,
+.input-append .btn-success,
+.input-append .btn-danger,
+.input-append .btn-warning,
+.input-append .btn-info,
+.input-append .btn-outline-primary,
+.input-append .btn-outline-secondary,
+.input-append .btn-outline-success,
+.input-append .btn-outline-danger,
+.input-append .btn-outline-warning,
+.input-append .btn-outline-info,
+.input-append .btn-outline-light
+ {
+
+	border-top-left-radius: 0px;
+	border-bottom-left-radius:  0px;
+}
+
+
+/* weiterlesen */
+
+.readon { 
+	
+ }
+ .readmore a.btn, .readmode a  {
+    color:@color1;
+    background-color: transparent;
+    border: solid 1px @grau_1;
+    border-radius: 20px;
+}
+.readmore a.btn:hover, .readmode a:hover,
+.readmore a.btn:focus, .readmode a:focus
+
+  {
+    color: white;
+    background-color:@color1;
+    border: solid 1px@color1;
+    text-decoration: none;
+}
+
+/*  buttons   Flexicontent */
+
+/* print, email, edit Buttons */
+
+#bookmark { margin-top: 3rem; margin-bottom: 3rem;}
+#bookmark .btn:first-child { margin-left: 0px; }
+#bookmark .btn {}
+#bookmark .btn > i { margin-right: 0.5rem; }
+
+#bookmark .btn:hover,
+#bookmark .btn:focus {}
+#bookmark .btn:active {}
+
+#bookmark .fc_printbutton:before {
+	
+}
+
+
+#flexicontent div .btn-group > :not(:first-of-type), 
+#flexicontent div .btn-group > :not(:first-child):not(label), 
+ {
+   margin-left: -5px;
+}
+
+#flexicontent .buttons { margin-bottom: 2rem; }
+
+#flexicontent .btn[class^="btn-outline-"], 
+#flexicontent .btn[class*=" btn-outline-"] {
+    .rounded-corners;
+}
+
+
+

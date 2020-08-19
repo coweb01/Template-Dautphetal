@@ -1,0 +1,157 @@
+/* ===========================
+	LAYOUT  STYLES	Positionierung 
+	
+	Template: wbc_blanco_bts4
+	========================== */
+
+
+html { /* style oer flexicontent behebt bug seite wackelt */
+	 height: auto !important; 
+     width: auto !important; 
+	 overflow: auto !important;
+	    }
+	    
+body { height: 100%;}
+
+	
+#bg {} /** Hintergrundbild body */
+
+
+/* Header *****************************************************/
+
+.header-top { 
+	background: rgb(@bgnavbarcolorR, @bgnavbarcolorG, @bgnavbarcolorB) !important;
+  	background: rgba(@bgnavbarcolorR, @bgnavbarcolorG, @bgnavbarcolorB, @transnavbar) !important;
+  }	 
+.header-top-01 { padding-top: 15px;}
+.header .navbar.wbc-bg-navbar { 
+	
+ }
+
+/*** Position Logo *******************************************************************/
+#logo img { max-width: 100%; height:auto; padding-left: 10px; padding-right: 10px; }
+#logo { padding-top: 20px; padding-bottom: 20px;}
+/*************************************************************************************/
+
+/* Contenbereich ********************************************************************/
+
+#wrap-content {position: static; }
+.wrap-outer {	
+	  height: auto !important;
+      margin: 0;
+	  padding: 0;	  
+	    }
+.wrap-main { margin-top: 20px;}
+.nofront {}
+.nofront .header {}
+
+
+
+/* Layout Module Headerimng **********************************************************/
+
+#headerimg {
+	position: relative;
+	overflow: hidden;
+	z-index: 10;
+}
+
+#headerimg .row {}
+#headerimg img {width: 100%; max-width: 100%; height:auto; padding: 0px; margin: 0px;}
+#headerimg .container-fluid .wrap-headerimg { padding: 0px; }
+
+.wrap-headerimg > p
+
+ {  line-height: 0px; padding: 0px; margin: 0px;  }
+
+.lg-slider { margin: 0px; padding: 0px;}
+.no-headerimg {height: 150px; clear:both; }	
+/*--------------------------------------------------------*/
+
+
+/*---------------- onepage    layout --------------------*/
+.onepage  {  padding-bottom: 40px; padding-top: 20px;}
+.onepage-fullsize  {  padding-bottom: 0px; padding-top: 0px;}
+/*--------------------------------------------------------*/
+
+#wrap-content { padding-bottom: 60px; }
+
+
+/*-----    Sidebars  --------------------------------------------------------------------*/
+#toggle-sidebar-btn {   /* Button blendet sidebar-left ein-aus bei phone + tablet */
+    position: absolute;
+	left: 5px;
+	top: 10px;
+	}
+
+
+#sidebar-left, #sidebar-right {margin-bottom: 20px; }
+#sidebar-left > div  {}
+#sidebar-right > div {}
+
+#left-fixed {  left: 0px; top: 20%; }
+#right-fixed { right: 0px; top: 20%; }
+
+
+/* ===================================================================================
+	BOOTSTRAP MEDIA QUERIES OVERRIDES
+	NOTE: The order of the media queries is important when styles overwrite each other
+	================================================================================== */
+
+
+@media (max-width: 480px) { /* phone */
+  
+	}
+
+@media (max-width: 767px) {
+	
+	}
+	
+@media (min-width: 768px) {
+    #toggle-sidebar-btn { display: none; position: relative; }
+
+	.affix {
+			top: 0px;
+			left: 0px;
+			z-index: 100;
+			width: 100%;
+	}
+
+}
+@media (min-width: 768px) and (max-width: 998px) {
+
+}
+
+
+@media (max-width: 979px) {}
+
+@media (min-width: 980px) {
+	.header-top {
+		 z-index: 999; 
+		 top: 0px; 
+	  }
+	  
+	#headerimg {
+		  padding: 0px;
+		  position: relative;
+		  top: 0px;
+		  z-index: 10;
+	  }
+	
+	
+
+	}
+	
+@media (min-width: 992px)   {
+
+
+}
+
+@media (min-width: 1200px) {
+
+.inside-left {	 }
+.inside-right {	 }
+#overlay_headerimg { position: absolute; z-index: 20; }
+#headerimg > img {width: 100%; max-width:auto; height:auto; padding: 0px; margin: 0px;}
+}
+	
+	

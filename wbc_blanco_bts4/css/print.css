@@ -1,0 +1,54 @@
+/* ===========================
+	PRINT STYLES
+	========================== */
+
+/* start */
+@page {
+margin: 0.5cm;
+}
+
+@page :left {
+margin: 0.5cm;
+}
+
+@page :right {
+margin: 0.8cm;
+}
+
+body {
+background-color:#fff; 
+color:#000; 
+font: 12pt Georgia, "Times New Roman", Times, serif;
+line-height: 1.3;
+height:100%; 
+text-align:left;
+}
+
+#bookmark { 
+	margin-bottom: 0;
+}
+#bookmark .feed-icon  {display: none;}
+#bookmark .email-icon {display: none;}
+
+h1, h2, h3, h4 {
+    page-break-after:avoid;
+}
+
+h1 { 
+	font-size:  24pt; 
+	margin-top: 25px;
+}
+h2 { 
+	font-size:  16pt;
+	margin-top: 20px;
+}
+h3 { 
+	font-size:  14pt;
+	margin-top: 20px;
+	 }
+h4, h5, h6 { font-size: 12pt; font-weight: 600;}
+
+
+blockquote, ul {
+margin: 0;
+}

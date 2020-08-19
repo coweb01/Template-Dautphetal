@@ -1,0 +1,529 @@
+/** CSS Document for Joomla 3 Template styles  **/
+/** 								           **/
+/**                                     **/
+
+@font-face {}
+
+
+/* ======================
+    Images 
+*/
+
+div.blog .pull-right img,
+div.blog img.pull-right,
+div.item-page img.pull-right,
+div.extension-outer img.pull-right
+
+ { border:1px solid #ccc; padding:2px;}
+
+div.blog .pull-left img,
+div.blog img.pull-left, 
+div.item-page img.pull-left,
+div.extension-outer img.pull-left,
+.img-rounded {}
+	
+div.blog img,
+div.item-page img
+{}
+
+/*----------------------------------------------------------------*/
+
+/* ======================
+	GENERAL STYLES
+	===================== */
+/* Bootstrap overrides */
+
+.page-header  {
+	border: none;
+	margin-top: 0px;
+	margin-bottom: 15px;
+	padding-bottom: 0px;
+	font-size: @h1_size;
+}
+
+h2.page-header  {}
+h3.page-header  {}
+.tab-content { padding: 1rem; margin-bottom: 25px;}
+.navbar-top-float { float: right; margin-left: 10px;}
+.fontsize { margin-right: 15px;}
+
+.wbc-margin        { margin: 15px; }
+.wbc-margin-top    { margin: 15px 0px 0px 0px; }
+.wbc-margin-bottom { margin: 0px 0px 15px 0px; }
+.wbc-margin-left   { margin: 0px 0px 0px 15px; }
+.wbc-margin-right  { margin: 0px 15px 0px 0px; }
+
+.wbc-margin-large            { margin: 30px; }
+.wbc-margin-large-top   	 { margin: 30px 0px 0px 0px; }
+.wbc-margin-large-bottom     { margin: 0px 0px 30px 0px; }
+.wbc-margin-large-left       { margin: 0px 0px 0px 30px; }
+.wbc-margin-large-right      { margin: 0px 30px 0px 0px; }
+
+.wbc-layer-trans-04 {
+    background: rgba(255, 255, 255, 0.4);
+}
+.wbc-layer-trans-05 {
+    background: rgba(255, 255, 255, 0.5);
+}
+.wbc-layer-trans-06 {
+    background: rgba(255, 255, 255, 0.6);
+}
+.wbc-layer-trans-07 {
+    background: rgba(255, 255, 255, 0.7);
+}
+.wbc-layer-trans-08 {
+    background: rgba(255, 255, 255, 0.8);
+}
+.wbc-layer-trans-09 {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+
+/* Override lupe jce mediabox */
+a.jcepopup span.jcemediabox-zoom-image {
+    margin: 0px;
+    padding: 0px;
+    border: 0px none;
+    outline: 0px none;
+    vertical-align: baseline;
+    display: block;
+    background-image: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    bottom: 0px;
+    left: 0px;
+}
+span.jcemediabox-zoom-image:before {
+      content: "\e003";
+  	  display: inline-block;
+      font-family: 'Glyphicons Halflings';
+	  font-size: 20px;
+	  font-size: inherit;
+	  text-rendering: auto;
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	  transform: translate(0, 0);
+	  }
+#jcemediabox-popup-closelink { width: 130px; }
+
+
+/*------------------- Meldungen -----------------------------------------------*/
+
+.alert {}
+.alert h4 { font-weight: 600;}
+.alert-message {  background-color: transparent; }
+
+
+/*------------------------  pagination ------------------------------*/
+.pager li > a, .pager li > span {}
+
+
+/*--------------------- end bootstrap -------------------------------*/
+
+/*--------------------- Icons Print Email ---------------------------*/
+div.icons {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	}
+div.icons .btn {
+	background-color: transparent;
+	border-style: none;
+}
+div.icons .btn:hover { 	
+    background-color: transparent;
+	border-style: none;
+}
+
+
+div.admin-icons {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	}
+	
+/*-------------------------------------------------------------------*/
+
+/*------------------  Article zusatzinfos ---------------------------*/
+
+
+.article-info { font-size: 12px;}
+.article-info-term { font-weight:600; }
+
+/*-------------------------------------------------------------------*/
+
+
+
+/*----------------------- Breadcrumbs -------------------------------*/	
+
+#wrap-breadcrumb {}
+.breadcrumb {}
+.breadcrumb li { }	 
+.breadcrumb li, .breadcrumb a { }
+.breadcrumb > li span {}
+		
+.breadcrumb > li .here {}
+
+.breadcrumb li > a.pathway {}
+.breadcrumb > li.active {}
+.breadcrumb .divider-last  {}
+.breadcrumb .divider {}
+.breadcrumb > li:last-child  { }
+.breadcrumb > li:last-child > span.last-item {
+}
+
+ul.pager { display: block; min-height: 25px; width: 100%;}
+
+/*----------------- weiterlesen link -----------------------------------------*/
+p.readmore .btn {  }
+p.readmore .btn:hover {	}
+
+/*----------------------------------------------------------------------------*/
+
+
+/* ======================
+	Main Content
+	===================== */
+
+
+
+/* ======================
+	MODULES
+	===================== */
+	
+/*------------------  Layout Module allgemein -------------------------------------*/	
+
+div.extension-outer { margin-bottom:30px;}
+#sidebar-left h3, #sidebar-right h3, #modules-frontpage h3 {}	 
+
+#sidebar-left  div.extension-outer h3,
+#sidebar-right div.extension-outer h3
+ {
+ }
+#modules-frontpage div.extension-outer h3
+	  {}
+#sidebar-left div.extension-outer,
+#sidebar-right div.extension-outer,
+#sidebar-right div.custom-outer,
+#sidebar-left div.custom-outer,
+#modules-frontpage div.extension-outer 
+ {
+	 
+   float: left;
+   clear: both;
+   margin-bottom: 30px;
+   padding: 15px;
+ }
+ 
+#sidebar-left div.extension-outer > custom-outer,
+#sidebar-right div.extension-outer > custom-outer
+{
+  margin-bottom:0px;
+	}
+
+
+#sidebar-left div.extension-outer > div,
+#sidebar-right div.extension-outer > div
+ {}
+
+#modules-frontpage div.extension-outer, .frontpage-box div.extension-outer {
+
+	
+}
+
+#wrap-headerimg .custom, #sidebar-right .custom { padding: 0px;}
+
+#sidebar-left .img-relative .extension-inner {width:95% !important; position:relative;}
+/*-----------------Ende layout Module --------------------*/
+
+
+/*----------------  Modul RSS Syndicate ------------------*/
+.syndicate-module img { max-width: 100%; height: auto;}
+
+/*----------------- Ende RSS Syndicate  ------------------*/
+
+
+/* ----------------- footer ------------------------------*/
+  
+#footer-01, #footer-02, #footer-03 { }  
+#wrap-footer {}
+#footer-01 a:link, #footer-01 a:visited,  #footer-01 a:active, #footer-01 p, #footer-01 li,
+#footer-02 a:link, #footer-02 a:visited,  #footer-02 a:active, #footer-02 p, #footer-02 li,
+#footer-03 a:link, #footer-03 a:visited,  #footer-03 a:active, #footer-03 p, #footer-03 li
+
+{ }
+
+#footer-01 h1, #footer-01 h2,  #footer-01 h3, #footer-01 h4, #footer-01 h5,
+#footer-02 h1, #footer-02 h2,  #footer-02 h3, #footer-02 h4, #footer-02 h5,
+#footer-03 h1, #footer-03 h2,  #footer-03 h3, #footer-03 h4, #footer-03 h5
+{ }
+
+#footer-01 {}
+#footer-02 {}
+#footer-03 {}
+#wrap-footer div.custom {
+} 
+/* --------------------------------------------------------*/
+
+/* -----------------  Frontpage Module --------------------*/
+
+#modules-frontpage div.extension-outer {  }
+#modules-frontpage .frontpage-col { }
+
+.custom {}
+.custom-inner { margin:0px; padding: 0px;}
+.custom-zentriert > div {
+	position: relative;
+	left: 50%;
+	float:left;
+}
+.custom-zentriert > div .custom-inner {
+	left: -50% !important;
+	float:left;
+}
+
+.
+/*-----   Modul suchen -------------------------------------------*/
+
+#suchenbox form {
+	float: right;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+#suchenbox input {
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	
+	-webkit-border-top-right-radius: 0px;
+	-webkit-border-bottom-right-radius: 0px;
+	-moz-border-radius-topright: 0px;
+	-moz-border-radius-bottomright: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+
+	line-height: 21px;
+	margin: 0px;
+	float:left;
+	width: 100%;
+}
+
+div.searchlabel {}
+.search {}
+.search label { }
+.search-results dd, .search-results dt     {}
+.word label      {}
+input.search-query {}	
+.search .button { }
+
+.search input[type="checkbox"], .search input[type="radio"] {
+	border-radius: 0;
+	cursor: pointer;
+	height: auto;
+	line-height: normal;
+	margin: .3125rem ;
+	padding: 0px;
+	width: auto;
+	height: auto;
+	display: inline-block;
+}
+
+
+/* override search modul */
+.wbc-cleardesign input {
+	border: none;
+	box-shadow: none;
+}
+
+.wbc-cleardesign { display: inline-block; border-bottom: 1px solid #CCC; }
+.search-wbc-cleardesign .btn-sm { margin-left: 5px; margin-right: 5px; }
+
+
+/* Component Search Suchergebnisse ------------------------------------------------*/	
+.search-results  {}
+.search-results dd { padding-left: 0px; padding-right: 0px; }
+.search-results dt {}
+.result-title    {
+	padding-top: 20px;
+	padding-bottom: 0.4em;
+	float: none;
+	width: 100%;
+	font-weight: 600;
+	margin: 0px;
+	} 
+	
+.result-category {
+	margin: 0px;
+	float: none;
+	width: 100%;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	line-height: 1.4em;
+	}
+.result-text, .result-created     {
+	line-height: 1.4em;
+	padding:     0px;
+	margin-left: 0px;
+	}
+.result-created  {
+	font-size: 0.8em;
+	color:#999;
+	}
+
+.form-group {
+	margin-top:20px; 
+}
+label.ordering { margin-left:15px;}
+
+.phrases-box .radio {
+    padding-top: 7px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+	margin-left: 10px;
+	vertical-align: middle;
+	display:inline-block;
+}
+
+/*---------------------------------------------------------------------------------*/
+
+/*--------------------------------  content ---------------------------------------*/
+
+.blog-featured-frontpage {}
+.blog-featured-frontpage .items-leading {}
+.blog-featured-frontpage .leading-0 {
+	border-bottom: 1px solid #C00;
+	margin-bottom: 20px;
+	padding-bottom: 1px;
+}
+.blog .items-leading {}
+.blog .leading-0 { }
+
+.blog-presse .intro-image { width: 250px; height: 180px;}
+.blog img { max-width: 98%; height: auto;}
+
+.blog .items-row  {
+	margin-bottom: 20px;
+	padding-bottom: 1px;
+}
+.blog .item { position:relative;}
+
+.item-image img, .intro-image img {max-width: 100%; height:auto;}
+
+.blog-wbc-blog-news .items-row {
+	margin-bottom: 30px;
+	padding-bottom: 10px;
+}
+.blog-wbc-blog-news .article-info { background-color: #E0E0E0; padding: 10px; font-weight: 600;}
+
+.blog .page-header h2,
+.blog-wbc-blog-news .page-header h2 {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  font-weight: 300; 
+	}
+
+
+
+/*---------------------------------------------------------------------------------*/
+
+
+
+/*----------------  Tags ----------------------------------------------------------*/
+.tags { padding: 0px; }
+.tags.inline {  }
+
+.tags li {
+	display: inline-block;
+	list-style: none;
+	
+	margin-right: 0.2rem;
+	margin-left: 0.2rem;
+}
+.tags.inline  li { display:inline-block;}
+.tags.inline li:first-child  {margin-left: 0px;}
+ 
+.tags li > a:link,
+.tags li > a:visited
+{
+	padding: 0.1rem 0.4rem;
+	border: solid 1px #DDDDDD;
+	border-radius: 0.9rem;
+	font-size: 0.9rem;
+	line-height: 1rem;
+	background-color: #FFFFFF;
+	color: #999999;
+}
+.tags li > a:hover,
+.tags li > a:focus 
+{
+	text-decoration: none;
+	background-color: #DDDDDD;
+	color: #999999;
+}
+.tags li > a:active { 
+	background-color: #DDDDDD;
+	color: #999999;
+	 }
+
+
+/* ----------------------
+	Special module styles
+	--------------------- */
+/* Special general */
+
+
+/*--------   OSMAP ----------------- */
+
+/*----------------------------------
+
+ Hilfsklassen */
+
+.alert-error  { background-color: #F4C9C1; } 
+
+/*--------------------------------*/
+ 
+ .element-invisible {display: none !important;}
+ 
+/* ===================================================================================
+	BOOTSTRAP MEDIA QUERIES OVERRIDES
+	NOTE: The order of the media queries is important when styles overwrite each other
+	================================================================================== */
+
+
+@media (max-width: 480px) { /* phone */
+  
+	}
+
+@media (max-width: 767px) {
+	
+	div.icons .print-icon { display: none;}	
+	
+}
+@media (min-width: 768px) and (max-width: 998px) {
+
+}
+@media (min-width: 768px) {
+	
+}
+
+
+@media (max-width: 979px) {}
+
+@media (min-width: 980px) {}
+	
+@media (min-width: 992px)   {
+
+
+}
+
+@media (min-width: 1200px) {
+
+	
+}
+	
+	
+
+
