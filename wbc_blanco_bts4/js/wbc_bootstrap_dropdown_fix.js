@@ -1,3 +1,4 @@
+"use strict";
 
 /* Bootstrap 4 Dropdown Menue
 /* 
@@ -11,12 +12,12 @@
 jQuery(document).ready(function($) {
     /* nach dem Laden des Documents */
     let windowWidth = 0;
-    let changeHref  = new(dropdownChangeHref);
-    let breakpoint  = 1201;
+    //let changeHref  = new(dropdownChangeHref);
+    let breakpoint  = 3000;
 
 	jQuery("a.dropdown-toggle").each( function(e){			
 		let a = jQuery(this);
-		changeHref.ChangeHref(breakpoint,a);	
+		ChangeHref(breakpoint,a);	
 	});
 	
 
@@ -29,7 +30,7 @@ jQuery(document).ready(function($) {
 	        if (jQuery(window).width() != windowWidth) {
 	                 
 								
-				changeHref.ChangeHrefPhone(breakpoint,a);
+				ChangeHrefPhone(breakpoint,a);
 
 	        } 
         	// do nothing
@@ -41,72 +42,70 @@ jQuery(document).ready(function($) {
 	
 });	
 
-class dropdownChangeHref {
 
 		
 
-	ChangeHref(breakpoint,element) {
+let ChangeHref = function	(breakpoint,element) {
 		
-		this.breakpoint     = breakpoint;
-		this.element        = element;					
-		this.StoreUrl(this.element);
+		//this.breakpoint     = breakpoint;
+		//this.element        = element;					
+		StoreUrl(element);
 
-	 	if ( jQuery(window).width() < this.breakpoint ) {
+	 	if ( jQuery(window).width() < breakpoint ) {
 
-				this.element.attr("data-toggle", "dropdown");
-				this.element.attr("href","#");
+				element.attr("data-toggle", "dropdown");
+				element.attr("href","#");
 			
 			} else {
 
-				let result = this.element.attr("href").search('#');				
+				let result = element.attr("href").search('#');				
 				if (result != 1) { // an erster Stelle keine # in der url					
-					this.element.attr("data-toggle", "dropdown href");	
+					element.attr("data-toggle", "dropdown href");	
 				} else {
-					this.element.attr("data-toggle", "dropdown");
+					element.attr("data-toggle", "dropdown");
 				}
 			}
 	}
 
-	ChangeHrefPhone(breakpoint,element) {
+let ChangeHrefPhone = function(breakpoint,element) {
 		
-		this.breakpoint     = breakpoint;
-		this.element        = element;	
+		//this.breakpoint     = breakpoint;
+		//this.element        = element;	
 	    let id              = 0;	
 	    let StoreHref       = "";	
 
-	 	if ( jQuery(window).width() < this.breakpoint ) {
+	 	if ( jQuery(window).width() < breakpoint ) {
 				
-				this.element.attr("data-toggle", "dropdown");
-				this.element.attr("href","#");
+				element.attr("data-toggle", "dropdown");
+				element.attr("href","#");
 
 			} else {
 				/* setzt die gesicherte url wieder an die Stelle der # */
-				let clone  = this.element.find('.Clonedropdown');
+				let clone  = element.find('.Clonedropdown');
 				console.log(clone.attr("href"));
 				StoreHref = clone.attr("href");
-				this.element.attr("href", StoreHref);	
+				element.attr("href", StoreHref);	
 				/* End  */	
 
-				let result = this.element.attr("href").search('#');
+				let result = element.attr("href").search('#');
 				
 				if (result != 1) { // an erster Stelle keine # in der url
-					this.element.attr("data-toggle", "dropdown href");
+					element.attr("data-toggle", "dropdown href");
 				} else {
-					this.element.attr("data-toggle", "dropdown");
+					element.attr("data-toggle", "dropdown");
 				}
 			}
 	}
 
-	StoreUrl(element) {
+let	StoreUrl = function (element) {
 		/* dupliziert den Dropdownlink, 
 		zur späteren Verwendung der URL bei Resize*/
 
-		this.element = element;
-		let clone = this.element.clone(true);
+		//this.element = element;
+		let clone = element.clone(true);
 		clone.removeAttr("data-toggle");
 		clone.removeClass("dropdown dropdown-toggle");
-		clone.addClass('Clonedropdown d-none').appendTo(this.element);
+		clone.addClass('Clonedropdown d-none').appendTo(element);
 		//console.log(clone);
 	}
 
-}

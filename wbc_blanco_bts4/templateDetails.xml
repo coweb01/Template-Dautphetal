@@ -44,6 +44,7 @@
 		<li>vorInhalt-01-col     -- Module mehrspaltig vor Contentbereich</li>
 		<li>nachInhalt-01-col    -- Module mehrspaltig nach Contentbereich</li>
 		<li>offcanvas            -- Offcanvas Mobil Menü</li>
+		<li>offcanvas-navbar.    -- rechts nn der Offcanvas Navbar</li>
 		<li>sidebar-left-fix     -- Module links fixiert </li>
 		<li>sidebar-right-fix    -- Module rechts fixiert </li>
 		<li>debug</li>
@@ -113,6 +114,7 @@
 		<position>onepagetoggle</position>
 		<position>nav-sidebar-right</position>
 		<position>offcanvas</position>
+		<position>offcanvas-navbar</position>
 		<position>sidebar-left-fix</position>
 		<position>sidebar-right-fix</position>
 		<position>sidebar-left-toggle</position>
@@ -160,9 +162,34 @@
 				<option value="2">TPL_WBC_BLANCO_J3_POS_TWO</option>
 				<option value="3">TPL_WBC_BLANCO_J3_POS_TREE</option>
 				<option value="4">TPL_WBC_BLANCO_J3_POS_FOUR</option>
+				<option value="5">TPL_WBC_BLANCO_J3_POS_FIVE</option>
 			</field>
 
-			
+			<!-- Hochkontrast Style umschalter -->
+	        <field name="styleswitch"
+				 type="radio"
+				 class="btn-group"
+				 default="0" 
+				 label="TPL_WBC_BLANCO_J3_FIELD_STYLESWITCH_LABEL" 
+				 description="TPL_WBC_BLANCO_J3_FIELD_STYLESWITCH_DESC">
+				 
+				 <option value="1">JYES</option>
+				 <option value="0">JNO</option>
+	        </field>
+
+			<field  name="styleswitch-position"
+					type="list"
+					default="1"
+					label="TPL_WBC_BLANCO_J3_PARAMETER_POSITION_STYLESWITCH_LABEL"
+					description="TPL_WBC_BLANCO_J3_PARAMETER_POSITION_STYLESWITCH_DESC"
+					>
+				<option value="1">TPL_WBC_BLANCO_J3_POS_ONE</option>
+				<option value="2">TPL_WBC_BLANCO_J3_POS_TWO</option>
+				<option value="3">TPL_WBC_BLANCO_J3_POS_TREE</option>
+				<option value="4">TPL_WBC_BLANCO_J3_POS_FOUR</option>
+				<option value="5">TPL_WBC_BLANCO_J3_POS_FIVE</option>
+			</field>
+
 			<!--  Fehlerseite 404  -->
 			<field name="errorsite" type="menuitem" default="45" label="TPL_WBC_BLANCO_J3_FIELD_ERROR_SITE_LABEL" description="TPL_WBC_BLANCO_J3_ERROR_SITE_DESC" />
 

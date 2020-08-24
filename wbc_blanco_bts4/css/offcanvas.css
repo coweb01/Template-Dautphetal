@@ -70,8 +70,8 @@ body {
 /*
  * Off Canvas
  * --------------------------------------------------
- */
-@media screen and (max-width: 1200px) {
+ 
+@media screen and (max-width: 1200px) {*/
     body {
       /* Fixed navbar height */
       padding-top: 70px; 
@@ -95,6 +95,7 @@ body {
 
   .offcanvas {
     position: absolute;
+    top: 0;
     display: block;
     min-height: 100%;
     -webkit-transition: all .25s ease-out;
@@ -195,7 +196,7 @@ body {
      transform: translateY(-12px) rotate(45deg);
   }
 
-}
+/*} */
 
 
 /* Sticky footer styles

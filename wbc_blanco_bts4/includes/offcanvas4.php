@@ -32,7 +32,14 @@
           <?php endif; ?>
           </div> 
         <?php endif; ?>
-
+        <?php if ($this->countModules('offcanvas-navbar') || $styleswitch == 1 ) :?>
+          <div class="col">
+          <jdoc:include type="modules" name="offcanvas-navbar" style="none" /> 
+          <?php if($styleswitch_pos == 5 ) { ?> 
+            <?php include_once JPATH_THEMES . '/' . $this->template . '/includes/CSSswitch.php'; // load CSSswitch.php ?>
+          <?php } ?>
+          </div>
+      <?php endif; ?>
     </div>  
   </nav>
 

@@ -81,14 +81,18 @@ if(typeof Element.prototype.hide != 'undefined' || typeof Element.prototype.show
 ( function($) {
  $(document).ready(function(){
 
-
-
-
- // Fix Tooltip Bootstrap conflict	 
+ 	// Fix Tooltip Bootstrap conflict	 
     $('.hasTooltip').addClass('mootools-noconflict');
+    $('.hasPopover').addClass('mootools-noconflict');
+
+    // Remove Boostrap 2 klassen
+    $('.control-group').removeClass('control-group').addClass('form-group');
+	$('.control-label').removeClass('control-label');
+	$('.controls').removeClass('controls');
+	$('.label-fcinner').removeClass('label-fcinner');
 	
-	     // hide #back-top 
-     $("#gototop").hide();
+	// hide #back-top 
+    $("#gototop").hide();
     
      // fade in #back-top
      $(function () { 
@@ -100,13 +104,13 @@ if(typeof Element.prototype.hide != 'undefined' || typeof Element.prototype.show
              }
          });
  
-         // scroll body to 0px 
+         /* scroll body to 0px 
          $('#gototop').click(function () {
              $('body,html').animate({
                  scrollTop: 0
              }, 800);
              return false;
-         });
+         }); */
      });
 
 

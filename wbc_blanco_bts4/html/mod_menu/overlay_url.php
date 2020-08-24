@@ -18,8 +18,8 @@ $htmlaccesskey  = (  $accesskey != '' ) ? ' accesskey="'. $accesskey. '" ' : '';
 if ($item->menu_image)
 {
 	$item->params->get('menu_text', 1) ?
-	$linktype = '<img src="' . $item->menu_image . '" alt="' . $item->title . '" /><div class="overlay"><span class="image-title">' . $item->title . '</span></div> ' :
-	$linktype = '<img src="' . $item->menu_image . '" alt="' . $item->title . '" />';
+	$linktype = '<img src="' . $item->menu_image . '" class="img-fluid" alt="' . $item->title . '" /><div class="overlay"><span class="image-title">' . $item->title . '</span></div> ' :
+	$linktype = '<img src="' . $item->menu_image . '" class="img-fluid" alt="' . $item->title . '" />';
 }
 else
 {

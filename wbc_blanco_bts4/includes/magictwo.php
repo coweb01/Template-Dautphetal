@@ -22,8 +22,10 @@ if ($floatingLabels == 1) :
   endif;
 
 ?>
-
+<?php // script für den Styleumschalter HK / Default
+  if( $styleswitch ==1 ) :  ?>
 <script src="<?php echo $this->baseurl. '/templates/' . $this->template . '/js/CSSswitcher.js';?>"></script> 
+<?php endif; ?>
 
 <?php 
 //  script fontsize  

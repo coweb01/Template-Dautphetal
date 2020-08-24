@@ -92,6 +92,9 @@ $floatingLabels     = $templateparams->get('floatingLabels', 0);
 $bgnavbar           = $templateparams->get('bgnavbar', 0);
 $flexicontent       = $templateparams->get('flexicontent', 0);
 $searchsiteId       = $templateparams->get('searchsite');         
+$styleswitch        = $templateparams->get('styleswitch');
+$styleswitch_pos    = $templateparams->get('styleswitch-position');
+
 
 /***  Ende Templatefarben ****/
 
