@@ -14,17 +14,9 @@
 	flex: 0 0 100%;
  }
 
-
-#flexicontent .fc_item_title,
-#flexicontent .fc_item_title a
- { 
-	font-size: 1.2rem;
-	line-height: 1.3rem;
-	font-weight: 500;
-	margin-bottom: 2rem;
- }
-
-.cattitle { font-weight: 500; margin-bottom: 1.5rem; }
+.cattitle { 
+	font-weight: 500; margin-bottom: 1.5rem;
+}
 
 hr.fcclearline {
     border: 0;
@@ -32,8 +24,15 @@ hr.fcclearline {
     background-image: transparent;
     margin:0;
 }
-
-
+#flexicontent .fc_block {
+	margin-bottom: 5px;
+}
+#flexicontent .fc_item_title, 
+#flexicontent .fc_item_title a {
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
 #flexicontent .item_total {
     border: none; 
     padding-left: 0px;
@@ -42,12 +41,10 @@ hr.fcclearline {
 #flexicontent .item_total .fc_limit_box, 
 #flexicontent .item_total .fc_orderby_box, 
 #flexicontent .item_total .fc_clayout_box {
-    
     margin-left: 0px;
 }
 
 #flexicontent img.fc_field_image { border-radius: 0px; }
-
 
 /* Flexicontent Bilder container */
 
@@ -263,33 +260,28 @@ body .fc-mssg-inline.fc-info, body .fc-mssg.fc-info {
 	font-size: 1rem;
 	line-height: 1.4rem;
 	font-weight: 300;
-	}
-
-.fcitem_readon {
-	margin-top: 2rem;	
 }
+
 .fcitem_readon a:link,
-.fcitem_readon a:visited
-{
-	color: @color1;
+.fcitem_readon a:visited {
+	color: #484546;
     background-color: transparent;
-    border: solid 1px @grau_1;
+	padding: 5px;
+    border: solid 2px #4497D6;
     border-radius: 20px;
 }
 .fcitem_readon a:hover,
-.fcitem_readon a:focus
- {
+.fcitem_readon a:focus {
  	color: white;
     background-color: @color1;
     border: solid 1px @color1;
  	text-decoration: none;
- }
+}
 .fcitem_readon a:active {}
 
 /*  Feld Fotogalerie widgetkit */
 
 .flexicontent-galerie { margin-top: 3rem; margin-bottom: 3rem; }
-
 
 .flexicontent-galerie .uk-panel h3,
 .flexicontent-galerie .uk-panel h2,
@@ -306,7 +298,6 @@ body .fc-mssg-inline.fc-info, body .fc-mssg.fc-info {
 .flexicontent-galerie .uk-panel-teaser { margin-bottom: 5px; }
 
 /*-----------------------------*/
-
 
 
 /****   Felder ***************************************/
@@ -399,9 +390,6 @@ a.fcfile_shareFile:focus {
 }
 
 
-
-
-
 /*------------------- wbc tabs -------------------------------------*/
 
 .wbc-tabs {
@@ -431,15 +419,6 @@ a.fcfile_shareFile:focus {
 }
 
 @media (min-width: 768px) {
-
-	#flexicontent .fc_item_title,
-	#flexicontent .fc_item_title a
-	 { 
-		font-size: 1.4rem;
-		line-height: 1.5rem;
-		text-transform: none;
- 	}
-
  	#flexicontent aside .item_total { float: right; }
 	#flexicontent aside .pagination { 
 		display: flex; 
@@ -456,6 +435,96 @@ a.fcfile_shareFile:focus {
 
 	body .fc-nowrap-box, #flexicontent .nowrap_box, .flexicontent .nowrap_box {
        display: inline-block;
-		} 
+	} 
 
+}
+
+@media (min-width: 768px) {
+	.introblock {
+		#fc_bloglist_item_0 > article {
+			margin-right: 20px;
+		}
+		#fc_bloglist_item_1 > article {
+			margin-left: 20px;
+		}
+	}
+}
+.front #fc_bloglist_item_1 {
+	background-image: url(../images/grafiken/welle-grau.png);
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-size: 80%;
+}
+
+.mod-aktuelles {
+	.card-columns {
+		column-count: 2;
+		.card {
+			border-radius: 0;
+			border: none;
+			h3 > a {
+				color: inherit;
+			}
+			.fcitem_date {
+				font-size: 0.9rem;
+				color: @color1;
+			}
+			.fc_readmore {
+				margin-top: auto;
+				text-align: right;
+				.fcitem_readon {
+					display: block;
+					margin-top: 30px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 979px) {
+	.mod-aktuelles {
+		.card-columns {
+			column-count: 1;
+		}
+	}
+}
+
+.mod-aktuelles .mod_flexicontent_standard {
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+	grid-gap: 20px;
+	> div {
+		background-color: #fff;
+		padding: 20px 15px;
+		display: flex;
+		flex-direction: column;
+		.fc_readmore {
+			margin-top: auto;
+			text-align: right;
+			.fcitem_readon {
+				display: block;
+				margin-top: 30px;
+			}
+		}
+		.image_standard {
+			margin-bottom: 20px;
+		}
+		.fcitem_date {
+			font-size: 0.9rem;
+			color: @color1;
+		}
+		h3 > a {
+			color: inherit;
+		}
+	}
+}
+.module_readon {
+	margin-top: 50px;
+	text-align: center;
+	a.readon {
+		color: #fff;
+		background-color: #0050A0;
+		font-size: 1.3rem;
+		padding: 10px 20px;
+		border-radius: 20px;
+	}
 }

@@ -8,95 +8,67 @@
 
 /* Modul Jevents Latest */
 
-.front .mod_events_latest_data {
-
-	margin-top: 30px;
-	margin-left: 1rem;
-}
-
-.front .mod_events_latest_data .iconicdaterow {}
-.front .mod_events_latest_data .iconicevent {
-
-	display: flex;
-	flex-basis: auto;
-	margin-bottom: 30px;
-
-}
-
-.front .mod_events_latest_data .jevdateicon {
-	background: @grau_5;
-	color: #FFF;
-	font-weight: 600;
-	width: 3.5em;
-	height: 3.5em;
-	display: inline-flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	 border-radius: 50%; 
-	text-decoration: none;
-	transition: background 1s ease-in-out;
+.front .mod_events_latest_table {
+	border-spacing: 0 20px;
+	border-collapse: separate;
+	margin-top: -20px;
+	td {
+		background-color: #fff;
 	}
-
-.front .mod_events_latest_data .jevdateicon:hover,
-.front .mod_events_latest_data .jevdateicon:focus {
-	background: @grau_8;
-
-  }
-
-.front .mod_events_latest_data .jevdateicon > span {
-	display: inline-block;
-    width: 100%;
-    text-align:center;
-    font-size: 0.86rem;
-    line-height: 1.3rem;
-
- }
-.front .mod_events_latest_data .jevdateicon > .jevdateicon1 {
-    
-    border-bottom: solid 1px #FFF;
+	.wbc-ev-date {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 10px;
+		width: 70%;
+		background-color: #1FA22E;
+		padding: 10px 15px;
+		color: #fff;
+		font-weight: 500;
+		i {
+			margin-right: 5px;
+		}
+	}
+	.wbc-ev-content {
+		padding: 15px;
+		h3 {
+			> a {
+				color: inherit;
+			}
+		}
+	}
 }
-.front .mod_events_latest_data .jevdateicon > .jevdateicon2 {
-	
-	text-transform: uppercase; 
+.mod_events_latest_callink {
+	text-align: right;
+	margin-top: 50px;
+	 a {
+		color: #fff !important;
+		background-color: #0086CB;
+		font-size: 1.3rem;
+		padding: 10px 20px;
+		border-radius: 20px;
+	}
 }
-
-.front .mod_events_latest_data .jeviconnotdate { 
-	width: 60%;
-	margin-left: 10%;
+@media (max-width: 767px ) {
+	.front .mod_events_latest_table {
+		.wbc-ev-date {
+			width: 100%;
+			margin-bottom: 0;
+		}
+		.wbc-ev-content {
+			background-color: #1FA22E;
+			padding: 5px 15px;
+			h3 {
+				margin-bottom: 0;
+				a {
+					color: #fff;
+				}
+			}
+			p {
+				display: none;
+			}
+		}
+	}
 }
-
-.front .mod_events_latest_data .date { width: 40%; }
-.front .mod_events_latest_data .date,
-.front .mod_events_latest_data .time { 
-	font-size: 0.9rem; 
-	line-height: 1rem;
-	display: inline-block;
-}
-
-.front .mod_events_latest_data .time { 
-	
-}
-
-.front .mod_events_latest_data .title a:link,
-.front .mod_events_latest_data .title a:visited 
-  { 
-	font-size: 1rem;
-	line-height: 1.2rem;
-	color: @grau_1;
-	display: inline-block;
- }
- 
-
-.front .mod_events_latest_data .title a:hover,
-.front .mod_events_latest_data .title a:focus 
- {
- 	color: @grau_8; 	
- }
-
 /* Modul JEvents Search */
 
 .jevfilterlist, .jevfilterfloatlist {

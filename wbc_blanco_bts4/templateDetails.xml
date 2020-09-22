@@ -171,7 +171,7 @@
 				 class="btn-group"
 				 default="0" 
 				 label="TPL_WBC_BLANCO_J3_FIELD_STYLESWITCH_LABEL" 
-				 description="TPL_WBC_BLANCO_J3_FIELD_STYLESWITCH_DESC">
+				 description="">
 				 
 				 <option value="1">JYES</option>
 				 <option value="0">JNO</option>
@@ -189,7 +189,6 @@
 				<option value="4">TPL_WBC_BLANCO_J3_POS_FOUR</option>
 				<option value="5">TPL_WBC_BLANCO_J3_POS_FIVE</option>
 			</field>
-
 			<!--  Fehlerseite 404  -->
 			<field name="errorsite" type="menuitem" default="45" label="TPL_WBC_BLANCO_J3_FIELD_ERROR_SITE_LABEL" description="TPL_WBC_BLANCO_J3_ERROR_SITE_DESC" />
 

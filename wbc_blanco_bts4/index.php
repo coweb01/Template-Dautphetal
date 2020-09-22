@@ -202,12 +202,18 @@ if (!isset($bootstrap_colclass_mobil_ph)) { $bootstrap_colclass_mobil_ph = ''; }
           </div><!-- End header-02 -->
       <?php endif; ?>
     
-    <?php if ( ($this->params->get('headerimg-select') == 1) && ( $this->params->get('headerimg') != NULL || $this->countModules('headerimg') ) ) : /*  wenn headerbild */?>   
+    <?php if ( ($this->params->get('headerimg-select') == 1) && ($this->params->get('headerimg') != NULL) || ($this->countModules('headerimg') ) ) : /*  wenn headerbild */?>   
             
            <?php include_once JPATH_THEMES . '/'.  $this->template . '/includes/headerimg.php'; ?>
            
     <?php endif; ?>
     
+    <?php if ($this->countModules('banner') ) : /*  wenn banner */?>   
+		<div class="header-banner">
+            <jdoc:include type="modules" name="banner" style="none" />
+		</div>
+    <?php endif; ?>
+
     <?php if ($this->countModules('navMain') && $NavMainPos == 3): ?> 
        
 
@@ -398,9 +404,16 @@ if (!isset($bootstrap_colclass_mobil_ph)) { $bootstrap_colclass_mobil_ph = ''; }
 <!-- ****************************    End Main Content ***************************************************** -->
 
   <?php if ($this->countModules('onepagebottom')): ?>
-  <jdoc:include type="modules" name="onepagebottom" style="onepage"/>
+    <jdoc:include type="modules" name="onepagebottom" style="onepage"/>
   <?php endif;?>
 
+  <?php if ($this->countModules('pagebottom2')): ?>
+    <section id="bottom2" class="onepage">
+      <div class="container">
+          <jdoc:include type="modules" name="pagebottom2" style="none"/>
+      </div>
+    </section>
+  <?php endif;?>
 
   <?php if ($this->countModules('onepagetoggle')): ?>
   <section id="toggle01" class="onepage-toggle">
@@ -418,11 +431,8 @@ if (!isset($bootstrap_colclass_mobil_ph)) { $bootstrap_colclass_mobil_ph = ''; }
   <!-- ****************************************************************************************************** -->  
       
   <footer id="wrap-footer">
-    
-      
-
        <?php if ($this->countModules('footer-top')): ?>
-        <div class="container-fluid">
+        <div class="container">
           <div class="base-row <?php echo $bootstrap_rowclass; ?>">
               <div id="footer-top" class="base-col <?php echo $bootstrap_colclass_mobil_tb . '12 ' . $bootstrap_colclass; ?>12">
                 <div class="footer-top-bg">
@@ -468,7 +478,7 @@ if (!isset($bootstrap_colclass_mobil_ph)) { $bootstrap_colclass_mobil_ph = ''; }
     <a class="mb-5" href="#top" id="gototop"><i class="shadow-sm bg-light fa fa-chevron-up"></i> <span class="sr-only"><?php echo JText::_('TPL_WBC_BLANCO_J3_TOP'); ?></span></a>
   </div>
 
-  <div id="gototop-mobil" class="d-flex d-sm-none shadow-sm p-1 bg-light fixed-bottom">
+  <div id="gototop-mobil" class="d-flex d-sm-none p-1 bg-dark fixed-bottom">
     <a class="gototop" href="#top"><i class="fa fa-chevron-up"></i><span class="sr-only"> <?php echo JText::_('TPL_WBC_BLANCO_J3_TOP'); ?></span></a>
     <jdoc:include type="modules" name="fixed-footer-mobil" style="none" />
   </div>

@@ -4,114 +4,95 @@
 
 /* Überschriften sections */
 
-.onepage > .onepage-inner > .page-header
+.onepage {
+	padding: 2rem 0;
+}
 
- { 
-	font-size: 30px;
-	line-height: 40px;
-	text-transform: uppercase;
-	margin-bottom: 20px;
+.onepage > .onepage-inner > .page-header { 
 	position: relative;
-	letter-spacing: -0.05em; 
- }
+}
 
 .onepage > .onepage-inner > .page-header .mod-title { 
-	font-size: 22px;
-	line-height: 35px;
-	text-transform: uppercase;  
-	color: @color1;
+	font-size: 2rem;
+	line-height: 1.1em;
 }
-
-
-/* Symbol vor der Überschrift */
-
-.onepage > .onepage-inner > .page-header > .container::before {
-	width: 3rem;
-	height: 3rem;
-	/*padding-top: 25px;*/
-	margin-right: 10px;
-	
-	background-color: #ddd;
-	border-radius: 50%;
-
-	display: -webkit-inline-flex;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	
-	-ms-flex-pack: center;
-	justify-content: center;
-	
-	-ms-flex-line-pack: center;
-	align-items: center;
-
-	font-size: 25px;
-	line-height: 1px;
-	font-family: FontAwesome;
-	text-align: center;
-	vertical-align: middle;
-	transform: rotate(-20deg);
-}
-
-/* icon grafik */
-#onepage-freizeit > .onepage-inner > .page-header .mod-icon {
-
-	position: relative;
-	left: auto;
-	
-	display: -webkit-inline-flex;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	
-	-ms-flex-pack: center;
-	justify-content: center;
-
-	margin-left: -45px;
-	width: 25px;
-	height: 25px;
-}
-
 
 /* Modulinhalt */
 
 .onepage > .onepage-inner > .container {
-
-	margin-top: 1rem;
+	margin: 1rem auto;
 }
 
 /* Kontaktdaten Rathaus */
+#bottom2 {
+	background-color: #9A9999;
+	background-image: url(../images/grafiken/welle-grau.png);
+	background-position: 100% 90%;
+	background-repeat: no-repeat;
+	background-size: 25%;
+	color: #fff;
+	.container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+		grid-gap: 30px;
+	}
+	@media (min-width: 460px) {
+		.custom:not(:last-child) {
+			border-right: 1px solid #fefefe;
+		}
+	}
+}
 
 #onepage-contact-rathaus > .onepage-inner > .page-header > .container::before {	
 	content: '\f073 ';
 }
 
-
-
-
 /* Menü Bürgerservice */
 
-#onepage-buergerservice  > .onepage-inner > .page-header > .container::before {
-	content: '\f2c2  ';
-}
-
-/* Freizeit */
-
-
-#onepage-freizeit > .onepage-inner > .page-header > .container::before {
-	content: '';
-}
-
-
-#onepage-freizeit > .onepage-inner > .page-header .mod-icon {
-	background: url(../images/cocktail-with-lemon-slice.png);	
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center center;
-}
-
-#onepage-freizeit > .onepage-inner > .page-header .mod-title { 
-			padding-left: 20px;
+#onepage-section-buergerservice {
+	background-color: #2E6FB1;
+	.mod-title {
+		color: #fff;
+	}
+	.nav {
+		display: grid;
+		grid-template-columns: repeat(auto-fit,minmax(80px,1fr));
+		grid-gap: 1rem;
+		li {
+			text-align: center;
 		}
-
+		.shadow-sm {
+			box-shadow: none !important;
+		}
+		.bg-secondary {
+			background-color: transparent !important;
+		}
+		.nav-link {
+			display: flex;
+			flex-direction: column;
+			color: #fff;
+			align-items: center;
+			padding: 0;
+			span {
+				background-color: rgba(35,31,32,.6);
+				border-radius: 50%;
+				padding: 1rem;
+				width: 80px;
+				height: 80px;
+				text-align: center;
+				margin-bottom: 1.5rem;
+				&:before {
+					font-size: 3rem;
+					color: rgba(255,255,255,.5);
+				}
+			}
+		}
+	}
+}
+/* Erleben */
+#onepage-section-erleben {
+	background-color: #fff;
+}
 /* ===================================================================================
 	MEDIA QUERIES OVERRIDES
 	NOTE: The order of the media queries is important when styles overwrite each other
@@ -119,217 +100,84 @@
 @media (max-width: 480px) {} 
 
 @media (min-width: 414px) {
-	
-	#onepage-buergerservice,
-	#onepage-freizeit,
-	#onepage-contact-rathaus
-	 {
-		
-		padding-top: 20px;
-		
-	}
-
-	
-
-
 }
 
 @media (min-width: 500px) {
-	
-	#onepage-buergerservice,
-	#onepage-freizeit,
-	#onepage-contact-rathaus
-    {
-		
-		padding-top: 30px;
-		
-	}
-
-	
-
-
 }
-
 
 @media (max-width: 767px) {
-		/* Sections hintergrund phone        -------------------------*/
-
-	.onepage:nth-child(even) {
-
-		background: rgb(162,159,159);
-		background: rgba(162,159,159, 0.2);
-	}
-
-
+	/* Sections hintergrund phone        -------------------------*/
 }
 
-
-
 @media (min-width: 768px) {
-	
 	/* hintergrund der Sections ab Tablet */
-	
-	#onepage-buergerservice,
-	#onepage-freizeit,
-	#onepage-contact-rathaus
-
-	 {
-		background-image: url(../images/bogen-sections.svg);
-		background-position: center top;
-		background-repeat: no-repeat;
-		background-size: contain;
-		width: 100%;
-		padding-top: 60px;
-		min-height: 300px;
-	}
 
 	/* Modulinhalt */
 
-	#onepage-buergerservice > .onepage-inner > .container,
-	#onepage-freizeit > .onepage-inner > .container,
-	#onepage-contact-rathaus > .onepage-inner > .container
-	 {
-
-		margin-top: 6rem;
+	#onepage-section-buergerservice > .onepage-inner > .container,
+	#onepage-section-erleben > .onepage-inner > .container,
+	#onepage-contact-rathaus > .onepage-inner > .container {
+		margin-top: 8rem;
 	}
-
-	
-
 }
 
 @media (min-width: 1024px) {
 
-
-		.onepage {
-		
-			padding-top: 60px;
-		
-		}
-
-		/* Überschriften sections */
-
-		.onepage > .onepage-inner > .page-header
-
-		 { 
-			font-size: 40px;
-			line-height: 50px;
-			text-transform: uppercase;
-			margin-bottom: 30px;
-			position: relative;
-			margin-top: 3rem;
-		 }
-
-		.onepage > .onepage-inner > .page-header .mod-title { 
-			font-size: 30px;
-			line-height: 40px;
-			text-transform: uppercase;  
-			padding-left: 20px;
-		}
-
-
-		.onepage > .onepage-inner > .page-header > .container::before {
-			width: 6rem;
-			height: 6rem;
-						
-			font-size: 40px;			
-		}
-
-		#onepage-freizeit > .onepage-inner > .page-header .mod-icon {
-
-			
-			margin-left: -80px;
-			width: 60px;
-			height: 60px;
-			top: 20px;
-		}
-
-		/* Modulinhalt */
-
-		.onepage > .onepage-inner > .container {
-
-			margin-top: 8rem;
-		}
-
-
-		/* Kontaktdaten Rathaus */
-
-		#onepage-contact-rathaus > .onepage-inner > .page-header > .container::before {
-			
-			
-		}
-
-		#onepage-contact-rathaus > .onepage-inner > .page-header > .container::before {
-			
-			
-		}
-
-
-		/* Menü Bürgerservice */
-
-		#onepage-buergerservice {}
-
-
-
-		/* Freizeit */
-
-		#onepage-freizeit {}
-
-		#onepage-freizeit > .onepage-inner > .page-header .mod-title { 
-			padding-left: 50px;
-		}
-		
-
-}
-
-
-
-@media (min-width: 1200px) {
 	.onepage {
-		
-		padding-top: 80px;
-		
+		padding: 4rem 0;
 	}
 
+	/* Überschriften sections */
+
 	.onepage > .onepage-inner > .page-header .mod-title { 
-			font-size: 40px;
-			line-height: 50px;
-			text-transform: uppercase;  
-			padding-left: 20px;
+		font-size: 3.8rem;
+		margin-left: 30%;
+	}
+
+	/* Modulinhalt */
+
+	/* Kontaktdaten Rathaus */
+
+	#onepage-contact-rathaus > .onepage-inner > .page-header > .container::before {
+	}
+
+	#onepage-contact-rathaus > .onepage-inner > .page-header > .container::before {
+	}
+
+	/* Menü Bürgerservice */
+
+	#onepage-section-buergerservice {
+		.nav {
+			.nav-link {
+				font-size: 1.3rem;
+			}
 		}
-	
-
-}
-
-
-@media (min-width: 1400px) {
-
-
-		.onepage {
-		
-			padding-top: 100px;
-		
+		.mod-title {
+			position: relative;
+			&:after {
+				content: url(../images/grafiken/welle-blau.png);
+				display: inline-block;
+				position: absolute;
+				top: 50px;
+				right: -280px;
+			}
 		}
+	}
 
-		/* Freizeit */
+	/* Freizeit */
 
-		
-
-		#onepage-freizeit > .onepage-inner > .page-header .mod-title { 
-			padding-left: 50px;
+	#onepage-section-erleben {
+		.mod-title {
+			position: relative;
+			font-size: 3rem;
+			&:after {
+				content: url(../images/grafiken/welle-gruen.png);
+				display: inline-block;
+				position: absolute;
+				top: 60px;
+				right: -280px;
+			}
 		}
-		
-
-
-}
-@media (min-width: 1600px) {
-
-		#onepage-buergerservice,
-		#onepage-freizeit,
-		#onepage-contact-rathaus
-		 {
-		
-			padding-top: 150px;
-		
-		}
+	}
 
 }

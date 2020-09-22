@@ -32,7 +32,7 @@ foreach ($list as $i => &$item)
 	$menuparams    = $menuitem->params;
     $accesskey     = $menuparams->get('accesskey'); 
     $subtitle      = $menuparams->get('description','');
-	$class = ' nav-item d-inline-block mb-1 item-' . $item->id;
+	$class = ' nav-item d-inline-block item-' . $item->id;
 
 	if (($item->id == $active_id) OR ($item->type == 'alias' AND $item->params->get('aliasoptions') == $active_id))
 	{

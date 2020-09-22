@@ -33,15 +33,15 @@ $flink = JFilterOutput::ampReplace(htmlspecialchars($flink));
 switch ($item->browserNav) :
 	default:
 	case 0:
-?><div class="bg-secondary shadow-sm d-inline-block" ><a class="nav-link" href="<?php echo $flink; ?>" <?php echo $title; ?>><span <?php echo $icon_class; ?>></span> <?php echo $linktype; ?><?php echo ( $subtitle ) ? '<span class="subtitle">'. $subtitle.  '</span>' : ''; ?></a></div><?php
+?><div class="d-inline-block" ><a class="nav-link" href="<?php echo $flink; ?>" <?php echo $title; ?>><span <?php echo $icon_class; ?>></span> <?php echo $linktype; ?><?php echo ( $subtitle ) ? '<span class="subtitle">'. $subtitle.  '</span>' : ''; ?></a></div><?php
 		break;
 	case 1:
 		// _blank
-?><div class="bg-secondary shadow-sm d-inline-block" ><a class="nav-link" href="<?php echo $flink; ?>" target="_blank" <?php echo $title; ?>><span <?php echo $icon_class; ?>></span> <?php echo $linktype; ?><?php echo ( $subtitle ) ? '<span class="subtitle">'. $subtitle.  '</span>' : ''; ?></a></div><?php
+?><div class="d-inline-block" ><a class="nav-link" href="<?php echo $flink; ?>" target="_blank" <?php echo $title; ?>><span <?php echo $icon_class; ?>></span> <?php echo $linktype; ?><?php echo ( $subtitle ) ? '<span class="subtitle">'. $subtitle.  '</span>' : ''; ?></a></div><?php
 		break;
 	case 2:
 		// Use JavaScript "window.open"
 		$options = 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,' . $params->get('window_open');
-			?><div class="bg-secondary shadow-sm d-inline-block" ><a class="nav-link" href="<?php echo $flink; ?>" onclick="window.open(this.href,'targetWindow','<?php echo $options;?>');return false;" <?php echo $title; ?>><span <?php echo $icon_class; ?>></span> <?php echo $linktype; ?></a></div><?php
+			?><div class="d-inline-block" ><a class="nav-link" href="<?php echo $flink; ?>" onclick="window.open(this.href,'targetWindow','<?php echo $options;?>');return false;" <?php echo $title; ?>><span <?php echo $icon_class; ?>></span> <?php echo $linktype; ?></a></div><?php
 		break;
 endswitch;

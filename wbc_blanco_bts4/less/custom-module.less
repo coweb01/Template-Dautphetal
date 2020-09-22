@@ -1,5 +1,59 @@
 /* styles Module */
-
+/* Banner */
+.front .header {
+	margin-top: 81px;
+	.header-banner {
+		column-count: 2;
+		.banner-container {
+			max-width: 400px;
+			margin: 0 auto;
+		}
+		.banner {
+			height: 450px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			.overlay {
+				width: 250px;
+				padding: 40px 20px;
+			}
+			&:first-child {
+				.overlay {
+					background-color: rgba(0,80,160,.7);
+					a {
+						color: #fff;
+					}
+				}
+			}
+			&:nth-child(2) {
+				.overlay {
+					background-color: rgba(255,255,255,.7);
+					text-align: right;
+					margin-left: auto;
+					a {
+						color: #484546;
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width:768px) {
+	.front .header {
+		.header-banner {
+			column-count: 1;
+			.banner {
+				height: 300px;
+				.overlay {
+					display: none;
+				}
+				&:nth-child(2) {
+					display: none;
+					background-image: none !important;
+				}
+			}	
+		}
+	}
+}
 /*   allgemein   */
 
 #left-fixed .extension-outer,
@@ -65,29 +119,6 @@
 	font-size: 30px;
 
 }
-
-
-/* Modul Flexslider Flexicontent Startseite */
-
-
-/*  layout slides flexicontent */
-
-.front .fc_block { display: block; }
-.front .fc_block > .fc_inline { 
-	display: inline-block; 
-	width: auto;
-	}
-
-.fcitem-data {}	
-
-.front .fcitem_text { 
-	color: @color1;
-	
-}
-
-
-.flexslider-vertical ul.slides li .item-data { min-height: 400px;  }
-
 
 /* Module linke und rechte seite ----------------------------------*/
 
