@@ -93,10 +93,10 @@ foreach ($list as $i => &$item) :
 
 	if ($item->deeper) {
 		if ($item->level < 2) {
-			$class .= ' dropdown deeper ';
+			$class .= ' mootools-noconflict dropdown deeper ';
 		}
 		else {
-			$class .= ' dropdown-submenu deeper ';
+			$class .= ' mootools-noconflict dropdown-submenu deeper ';
 		}
 	}
 

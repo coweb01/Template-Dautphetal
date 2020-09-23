@@ -83,6 +83,7 @@ $fontsize           = $templateparams->get('fontsize', 0);
 $fontsize_pos       = $templateparams->get('fontsize-position', 1);
 $compress_css       = $templateparams->get('compress_css', 1) == 1  ? '.min' : '';
 $offcanvas          = $templateparams->get('offcanvas', 1);
+$offcanvas_pos		= $templateparams->get('offcanvas_pos','left');
 $iconright			= $templateparams->get('iconfixedright','fa fa-bars');
 $iconleft			= $templateparams->get('iconfixedleft','fa fa-bars');
 $toggleright		= $templateparams->get('toggleright', 0);

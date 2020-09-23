@@ -118,6 +118,8 @@ body {
          -o-transition: all .25s ease-out;
             transition: all .25s ease-out;
   }
+
+/* Offcanvas von links einblenden */
   
   .offcanvas-left {
     left: 0;
@@ -138,6 +140,31 @@ body {
     left: 0; 
     border-top: 1px solid #e7e7e7;
   }
+
+
+/* Offcanvas von rechts einblenden */
+
+   .offcanvas-right {
+    right: 0;
+  }
+  
+  .offcanvas-right.active {
+    right: 300px; 
+  }
+
+  .offcanvas-right .sidebar-offcanvas {
+    right: -100%; 
+    -webkit-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+  .offcanvas-right.active .sidebar-offcanvas {
+    right: 0; 
+    border-top: 1px solid #e7e7e7;
+  }
+
+
 
   .sidebar-offcanvas {
     position: fixed;

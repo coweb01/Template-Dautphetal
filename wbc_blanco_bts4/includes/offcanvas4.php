@@ -6,12 +6,11 @@
 
     */
 
-    $cssnav    = 'navmenu-fixed-left offcanvas';
-    $data_attr = 'offcanvas';
-    $cssbutton = 'navbar-toggler navbar-toggle-offcanvas-left';
-
+    //$cssnav    = 'navmenu-fixed-left offcanvas';
+    //$data_attr = 'offcanvas';
+    //$cssbutton = 'navbar-toggler navbar-toggle-offcanvas-left';
 ?>
-<div class="offcanvas offcanvas-left">
+<div class="offcanvas offcanvas-<?php echo $offcanvas_pos; ?>">
   <nav class="fixed-top navbar-dark bg-white" >
     <div class="row no-gutters">
       <div class="container">
@@ -35,7 +34,7 @@
 
         <div class="nav-toggle">
           <input type="checkbox" id="hamburg">
-          <label for="hamburg" class="hamburg" data-toggle="offcanvas" data-target="#OffcanvasMenuleft">
+          <label for="hamburg" class="hamburg" data-toggle="offcanvas" data-target="#OffcanvasMenu<?php echo $offcanvas_pos; ?>">
               <span class="line"></span>
               <span class="line"></span>
               <span class="line"></span>
@@ -45,7 +44,7 @@
     </div> 
   </nav>
 
-  <div id="OffcanvasMenuleft" class="sidebar-offcanvas navbar-dark bg-dark" role='navigation'>
+  <div id="OffcanvasMenu<?php echo $offcanvas_pos; ?>" class="sidebar-offcanvas navbar-dark bg-dark" role='navigation'>
     <div class="wrap-offcanvas">
       <jdoc:include type="modules" name="offcanvas"/>
     </div>                     
