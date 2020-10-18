@@ -104,20 +104,20 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  font-size: calc(@h4_size - 0.5);
+  font-size: calc(@h4_size - 0.2);
   line-height: @h4_size;
   color: @h4_color;
 }
 
 h5, .h5 {
   font-size: 16px;
-  line-height: 20px;
+  line-height: 27px;
   font-weight:600;
 }
 
 h6, .h6 {
   font-size: 15px;
-  line-height: 20px;
+  line-height: 26px;
   font-weight:600;
 }
 
@@ -526,7 +526,7 @@ button:active,
 	color: @colorfooter;
 
 	margin: 0px;
-	padding: 60px 0px 0px;
+	padding: 20px 0px;
 	height: auto;
 	width: 100%;
 }
@@ -771,19 +771,19 @@ footer#footer {
 
 	h4, .h4 {
 	  font-size: @h4_size;
-	  line-height: @h4_size;
+	  line-height: calc(@h4_size * 1.2);
 	  color: @h4_color;
 	}
 
 	h5, .h5 {
 	  font-size: 16px;
-	  line-height: 20px;
+	  line-height: 27px;
 	  font-weight:600;
 	}
 
 	h6, .h6 {
 	  font-size: 15px;
-	  line-height: 20px;
+	  line-height: 26px;
 	  font-weight:600;
 	}
 
@@ -804,23 +804,6 @@ footer#footer {
 
 
 @media (min-width: 980px) {
-
-	
-
-	#wrap-footer   {
-		margin: 0px;
-		padding: 60px 0px 20px;
-		min-height: 250px;
-		height:auto;
-		width: 100%;
-		}
-
-	.wrap-outer {
-		height: auto !important;
-		margin: 0 auto -250px;
-		padding: 0 0 250px;	  
-		  }
-
 	/** suche -------------------------------------------------*/
 	
 	.search {  }	  
@@ -857,6 +840,9 @@ footer#footer {
 
 	#headerimg .wbc-background-image-stretch {
     	min-height: 500px;
+	}
+	.nofront #headerimg .wbc-background-image-stretch {
+    	min-height: 300px;
 	}
 }
 

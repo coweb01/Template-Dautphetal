@@ -1,7 +1,7 @@
 
 
 body { 
-	font-family: 'Roboto', Arial, sans-serif; 
+	font-family: @fontfamily; 
 	font-weight: 300;
 	/* fix uk-modal bei widgetkit */
 	padding: 0px !important;
@@ -9,31 +9,38 @@ body {
 	 }
 
 
-h2, .h2 {
-
-	
-}
-
 h1, .h1	{ 
-	font-family: 'Bebas Neue'; 
+	font-family: 'Bebas Neue', Arial, sans-serif; 
 	font-style: inherit;
 	font-weight: 400;
 }
 
 h2, .h2  {
-	font-family: 'Bebas Neue'; 
+	font-family: 'Bebas Neue', Arial, sans-serif; 
 	font-style: inherit;
 	font-weight: 400;
 }
+.nofront .fc_item_title {
+	font-family: @fontfamily; 
+	font-style: inherit;
+	font-weight: 500;
+}
 h3, .h3  {
-	font-family: 'Roboto', Arial, sans-serif; 
+	font-family: @fontfamily; 
 	font-style: inherit;
 	font-weight: 500;
 }
 h5, .h5  {}
 
-
-
+.pagination {
+	margin-top: 1em;
+	width: 100%;
+	max-width: 100%;
+}
+.page-item.active .page-link {
+    background-color: @linkcolor;
+    border-color: @linkcolor;
+}
 /* Widgetkit ------------------------------------------*/
 
 a.uk-slidenav-contrast:link,
@@ -197,11 +204,39 @@ a.uk-slidenav-contrast:focus { color: rgba(255,255,255,0.7) ; }
 
 /* Footer                  -------------------------*/
 
-#wrap-footer { }
-#footer-top {  }
-#footer-bottom { 
-	
-	 }
+#wrap-footer {}
+#footer-top {}
+#footer-bottom {}
+
+#bottom2 {
+
+	p { 
+		.white-trans (60);
+		margin-bottom: .5rem; 
+
+	}
+
+	a:link,
+	a:visited {
+		.white-trans (60);
+	}
+
+	a:focus,
+	a:hover {
+		.white-trans (100);
+	}
+
+	a:active {
+		.white-trans (50);
+	}
+	i { 
+		width: 1.5rem; 
+		padding-right: 5px;
+		text-align: center;
+		font-weight: 600;
+	}
+
+}
 
 /* Ende Footer             -------------------------*/
 
@@ -232,7 +267,9 @@ a.link-more:active { }
 a.link-more:hover:after,
 a.link-more:focus:after {}
 
-
+a.wfpopup {
+	display: block;
+}
 /* Systemmeldungen --------------------------------------------------------*/
 
 .alert { border-width: 3px; }

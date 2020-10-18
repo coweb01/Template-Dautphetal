@@ -250,7 +250,7 @@ if (!isset($bootstrap_colclass_mobil_ph)) { $bootstrap_colclass_mobil_ph = ''; }
   <!-- *     Main Content                                                                                   * -->
   <!-- ****************************************************************************************************** -->  
    <?php if  ( $headerimg  == 0 ) :?>
-   <div class="no-headerimg separator"></div>
+   <div class="no-headerimg"></div>
    <?php endif;?>
 
    <?php if ($this->countModules('onepagetop')): ?>
@@ -376,7 +376,7 @@ if (!isset($bootstrap_colclass_mobil_ph)) { $bootstrap_colclass_mobil_ph = ''; }
     <?php endif; ?>
 
     <?php echo  ( $pos_search  == 'right-01' ) ?  'div'. $anker_search .'></div' : ''; ?> 
-     <jdoc:include type="modules" name="right-01" style="icon" /><!--End right-01-->
+     <jdoc:include type="modules" name="right-01" style="default" /><!--End right-01-->
     <?php echo  ( $pos_search  == 'right-02' ) ?  'div'. $anker_search .'></div' : ''; ?> 
      <jdoc:include type="modules" name="right-02" style="none" /><!--End right-02-->
     </div>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<author>Claudia Oerter</author>
+	<website>www.das-webconcept.de</website>
+	<email>co@das-webconcept.de</email>
+	<license>GPLv2</license>
+	<version>1.3</version>
+	<release>Oktober 2019</release>
+	<description>Verzeichniss Organisationen oder Auflistung von Kontaktaden z.B. Vereine, Hotels. Basiert auf FAQ Template 	</description>
+	<fields name="attribs">
+		<fieldset name="attribs" addfieldpath="/administrator/components/com_flexicontent/elements">
+	
+
+		<field name="grid_framework" type="radio" default="1" label="FLEXI_GRID" description="FLEXI_GRID_DESC" class="btn-group btn-group-yesno">
+			<option value="0">FLEXI_GRID_YES</option>
+			<option value="1">FLEXI_BTS_YES</option>
+			<option value="2">FLEXI_UIKIT_YES</option>
+		</field>
+
+		<field name="item_placement" type="radio" default="0" label="FLEXI_ITEMS_PLACEMENT" description="FLEXI_ITEMS_PLACEMENT_DESC" class="btn-group btn-group-yesno">
+				<option value="">FLEXI_USE_GLOBAL</option>
+				<option value="0">FLEXI_CLEARED</option>
+				<option value="1">FLEXI_AS_MASONRY_TILES</option>
+		</field>
+
+		<field name="fields_class" type="list" default="left" label="FLEXI_FIELDSCLASS" description="FLEXI_FIELDSCLASS_DESC">
+			<option value="left">links ausrichten</option>
+			<option value="right">rechts ausrichten</option>
+			<option value="clearen">unten</option>
+		</field>
+		
+		
+		<field name="show_sub_cat_title" type="list" default="0" label="FLEXI_SUB_CATTITLE" description="FLEXI_SUB_CATTITLE_DESC">
+			<option value="0">FLEXI_NO</option>
+			<option value="1">FLEXI_YES</option>
+		</field>
+		<field name="intro_strip_html" type="list" default="1" label="FLEXI_STRIP_N_CUT" description="FLEXI_STRIP_N_CUT_DESC">
+			<option value="0">FLEXI_NO</option>
+			<option value="1">FLEXI_YES_FORCE_READ_MORE</option>
+			<option value="2">FLEXI_YES</option>
+		</field>
+		<field name="intro_cut_text" type="text" size="4" default="200" label="FLEXI_CUT_INTRO" description="FLEXI_CUT_INTRO_DESC" />
+		<field name="description_cut_text" type="text" size="3" default="180" label="FLEXI_CATDESCR_MAXLEN" description="FLEXI_CATDESCR_MAXLEN_DESC" />
+		
+		<field name="cat_readmore_txt" type="text" size="30" default="" label="FLEXI_ALT_READMORE" description="FLEXI_ALT_READMORE_DESC" />
+		<field name="sub_cat_description" type="list" default="0" label="FLEXI_SUB_CATDESC" description="FLEXI_SUB_CATDESC_DESC">
+			<option value="0">FLEXI_NO</option>
+			<option value="1">FLEXI_YES</option>
+		</field>
+
+		<field name="tmpl_cols" type="list" default="1" label="FLEXI_SUBCAT_COLS" description="FLEXI_SUBCAT_COLS_DESC">
+			<option value="1">FLEXI_1_COL</option>
+			<option value="2">FLEXI_2_COLS</option>
+		</field>
+		
+		<field name="tmpl_cols_sm" type="list" default="1" label="FLEXI_SUBCAT_COLS_SM" description="FLEXI_SUBCAT_COLS_SM_DESC">
+			<option value="1">FLEXI_1_COL</option>
+			<option value="2">FLEXI_2_COLS</option>
+		</field>
+		
+		<field name="tmpl_cols_xs" type="list" default="1" label="FLEXI_SUBCAT_COLS_XS" description="FLEXI_SUBCAT_COLS_XS_DESC">
+			<option value="1">FLEXI_1_COL</option>
+			<option value="2">FLEXI_2_COLS</option>
+		</field>
+		
+		<field name="sep_intro_image" type="separator" hr="false" default="FLEXI_IMAGE" description="FLEXI_IMAGE_DESC" level="level2" menu="hide" />
+		<field name="intro_use_image" type="list" default="1" label="FLEXI_USE_IMAGE" description="FLEXI_USE_IMAGE_DESC">
+			<option value="0">FLEXI_NO</option>
+			<option value="1">FLEXI_YES</option>
+		</field>
+
+		<field name="intro_image" type="fcimage" size="10" default="" label="FLEXI_IMAGE_SOURCE" description="FLEXI_IMAGE_SOURCE_DESC" />
+		<field name="intro_position" type="list" default="1" label="FLEXI_IMAGE_POSITION" description="FLEXI_IMAGE_POSITION_DESC">
+			<option value="0">FLEXI_IMAGE_LEFT</option>
+			<option value="1">FLEXI_IMAGE_RIGHT</option>
+		</field>
+
+		<field name="intro_link_image" type="list" default="1" label="FLEXI_LINK_IMAGE" description="FLEXI_LINK_IMAGE_DESC">
+			<option value="0">FLEXI_NO</option>
+			<option value="1">FLEXI_YES</option>
+		</field>
+
+		<field name="intro_image_size" type="list" default="" label="FLEXI_INTRO_IMAGE_SIZE" description="FLEXI_INTRO_IMAGE_SIZE_DESC">
+			<option value="">FLEXI_USE_PARAMS</option>
+			<option value="s">FLEXI_SMALL</option>
+			<option value="m">FLEXI_MEDIUM</option>
+			<option value="l">FLEXI_LARGE</option>
+		</field>
+		
+		<field name="intro_width" type="text" size="4" default="180" label="FLEXI_IMAGE_WIDTH" description="FLEXI_IMAGE_WIDTH" />
+		<field name="intro_height" type="text" size="4" default="180" label="FLEXI_IMAGE_HEIGHT" description="FLEXI_IMAGE_HEIGHT" />
+		<field name="intro_method" type="list" default="0" label="FLEXI_PROCESSING_METHOD" description="FLEXI_PROCESSING_METHOD">
+			<option value="0">FLEXI_SCALE</option>
+			<option value="1">FLEXI_CROP</option>
+		</field>
+		
+		<field name="intro_style" type="list" default="" label="FLEXI_INTRO_IMAGE_STYLE" description="FLEXI_INTRO_IMAGE_STYLE_DESC">
+			<option value="rounded">FLEXI_ROUND</option>
+			<option value="circle">FLEXI_CIRCLE</option>
+			<option value="thumbnail">FLEXI_THUMB</option>
+		</field>
+		
+		<field name="htmlmode" type="list" default="1" label="FLEXI_HTML_MODE" description="FLEXI_HTML_MODE_DESC" filter="int">
+			<option value="0">FLEXI_XHTML</option>
+			<option value="1">FLEXI_HTML5</option>
+		</field>
+
+		</fieldset>
+	</fields>
+	<fieldgroups>
+		<group readonly="true">Unterkategorie Titel</group>
+		<group readonly="true">Unterkategorie Beschreibung</group>
+		<group>line1</group>
+		<group readonly="true">Vorname, Nachname</group>
+		<group>line2</group>
+		<group>line3</group>
+		<group readonly="true">Beschreibung</group>
+		<group>line4</group>
+		<group>renderonly</group>		
+	</fieldgroups>	
+	<csscategory>
+		<file>css/category.css</file>
+	</csscategory>
+	<jscategory>
+	</jscategory>	
+</form>

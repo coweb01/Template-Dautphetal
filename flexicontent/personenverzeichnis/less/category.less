@@ -1,0 +1,307 @@
+@import 'include/config.less';
+
+/* css Personenverzeichniss Kategoriensicht  */
+/* das webconcept 2017                       */
+
+
+
+.background-primary {} 
+.background-secondary {}
+
+.category-full { margin-bottom: 3rem; }
+
+/*  Ueberschrift */
+
+.categorie { margin-bottom: 2rem; }
+
+
+
+#flexicontent .itemblock {
+	margin: 20px 0 0;
+	padding: 0;
+	clear: both;
+}
+
+
+ /** flexbox gleiche hoehe */
+#flexicontent .item-flex {}
+
+#flexicontent .flexi-item {} 
+#flexicontent .card { 
+	border: none;
+ } 
+
+#flexicontent .grid-content{
+	width: 95%;	
+}
+
+#flexicontent .item { float: none;}
+
+#flexicontent .flexi-itemlist	 {}
+
+#flexicontent .flexi-item {}
+
+
+#flexicontent .flexi-cat a .catimg {
+	margin-top: -3px;
+}
+
+#flexicontent .flexi-fieldlist .flexi-field.flexi-title {
+}
+
+
+#flexicontent flexi-fieldlist
+ {
+	 padding: 10px;
+}
+
+.flexi-field .label {
+  float: left;
+  margin-right: 0px!important;
+  display:block;
+  font-weight: 600 !important;
+}
+#flexicontent .wrap-line1   {
+	background: @grau_01;
+
+ 	padding: 1rem 0.5rem;
+ 	margin-bottom: 2rem;
+
+ 	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	 flex-wrap: wrap;
+ 	}
+
+#flexicontent .wrap-line2	{}
+#flexicontent .wrap-line3   {}	
+#flexicontent .wrap-line4   { padding-top: 1rem;}
+#flexicontent .wrap-title   {
+	padding: 5px;
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+#flexicontent .label {
+	font-size: 100%;
+	color:@grau_5;
+	text-align: left;
+	padding-left: 0px;
+}
+
+#flexicontent .flexi-field {
+	display: block;
+}
+#flexicontent .image img {}
+#flexicontent .image_descr {
+	margin-bottom: 20px;
+}
+
+
+#flexicontent .flexi-item
+ {	  		}
+
+
+
+ /**** felder ***/
+ 
+/***  Felder in der Titelzeile **/	
+
+#flexicontent .wrap-title .flexi-field { }
+#flexicontent .wrap-title .label { }
+#flexicontent .wrap-title  .value {}
+
+.flexi-name {  /* Name und Vorname */
+	margin: 0;
+	padding:0;
+	font-weight: 500 !important;
+	 }
+.flexi-name span { display:inline-block;}	 
+
+	 
+.field_abteilung_8 {font-weight: 600 !important;}
+
+.field-text { /**   description */
+	clear: both !important;
+	width: 100% !important;
+	margin-top: 1rem !important;
+}
+.value_funktion1 {
+	font-weight: normal;
+	color: @color1;
+}
+
+/* Zeile 1 Informationen Rathauskontakte */
+
+.wrap-line1 .flexi-field {
+	max-width: 50%;
+	padding-right: 2rem;
+	}
+.wrap-line1 .field_funktion1,
+.wrap-line1 .field_abteilung_08
+ { 
+	min-width: 100%;
+}
+.wrap-line1 .field_zimmer_08, 
+.wrap-line1 .field_partei_1 {}
+
+
+.wrap-line1 .label_field_zimmer_08, 
+.wrap-line1 .value_zimmer_08,
+.wrap-line1 .label_field_partei_1, 
+.wrap-line1 .value_partei_1  {
+	font-size: 1rem;
+	display: inline;
+}
+/*------ ende Zeile 1 -------------------*/
+
+
+.flexi-name div {	font-weight: 600 !important;}
+.value_plz_2, .value_ort_2, .value_plz_1, .value_ort_1, .value_ortsteil_auswahl, .value_name_2, .value_prename_2 {
+	display: inline-block!important; 
+	width: auto!important; }
+	
+.field_plz_2, .field_ort_2, .field_plz_1, .field_ort_1, .field_ortsteil_auswahl, .field_name_2, .field_prename_2 {
+	
+	display: inline-block !important; 
+	width: auto !important;
+	}
+.field_plz_2, .field_ort_2, .field_plz_1, .field_ort_1, .field_ortsteil_auswahl {}
+.value_ort_2, .value_ort_1, .value_ortsteil_auswahl {margin-left: 10px;} 
+
+
+.field_einrichtung_1 {width: 100%;}
+.field_einrichtung_1 span.label {
+	 width: 100% !important;
+	 float:none !important;
+	 clear:both !important;
+	}
+	
+/*  feld zustaendigkeiten  Rathausmitarbeiter */	
+.field_zustaendig {}
+.field_zustaendig .label { clear: both; float:none; }
+.field_zustaendig .label:before {content: "\f0ae" ;  font-family: 'FontAwesome'; padding-right: 10px;}
+
+.field_zustaendig .value {}
+.field_zustaendig ul li { 
+      display: inline; 
+	  list-style:none;
+	  margin-left: 0px; 
+	  }	
+.field_zustaendig ul li:first-child { margin-left: 0px; padding-left: 0px;}
+.field_zustaendig ul li:after {content: " |";}
+/*  ende Feld zustaending */
+
+	
+.value_plz_1, .value_ort_1, .value_ortsteil_auswahl2 {}		
+.value_pfarrer_1 {}
+.value_pfarrer_1, .value_funktion1 {}
+.value_name_1 span, .value_prename_1 span {
+	font-weight: 600;
+	font-size: 1.2rem;
+}
+
+
+#flexicontent .separator {
+	/*float: left;*/
+	display: block;
+	width:100%;
+	height: 10px;
+/*	padding: 0px !important;
+	margin: 0px 0px 15px !important;*/
+	}
+
+#flexicontent .flexi-fieldlist.pull-left,
+#flexicontent .flexi-fieldlist.uk-align-left,
+#flexicontent .flexi-fieldlist.left
+ {
+	width: 48%;
+	padding-left: 2%;
+}	
+
+/* =============================================
+   Bootstrap adjustments
+============================================= */
+#fc_alpha .btn.fc_alpha_index,
+#fc_alpha .btn.fc_alpha_index_sep {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* ===============================================
+   "micro" clearfix 
+   http://nicolasgallagher.com/micro-clearfix-hack/
+   =============================================== */
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.group:before,
+.group:after {
+	content: " "; /* 1 */
+	display: table; /* 2 */
+}
+
+.group:after {
+	clear: both;
+}
+
+@media only screen and (max-width: 480px) {
+	
+	#flexicontent .flexi-fieldlist.float-left,
+	#flexicontent .flexi-fieldlist.uk-align-left,
+	#flexicontent .flexi-fieldlist.left
+		{
+		width: 48%;
+		padding-left: 2%;
+		
+		}	
+
+}		
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { }
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+
+  }
+ 
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+
+	#flexicontent .col-sm-6 > .grid-content.even,
+	#flexicontent .col-md-6 > .grid-content.even,
+	#flexicontent .col-6 > .grid-content.even,
+	#flexicontent .col-sm-3 > .grid-content.even,
+	#flexicontent .col-md-3 > .grid-content.even,
+	#flexicontent .col-3 > .grid-content.even
+	 {			
+		border-right: solid 1px #dedede;
+		padding:  0 5% 0 0;
+	}
+
+	#flexicontent .col-sm-4 > .grid-content.odd,
+	#flexicontent .col-md-4 > .grid-content.odd,
+	#flexicontent .col-4 > .grid-content.odd
+	 {			
+		border-right: solid 1px #dedede;
+		padding:  0 5% 0 0;
+	}
+
+	#flexicontent .flexi-item
+	 {	  		}
+}
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {}
+
+

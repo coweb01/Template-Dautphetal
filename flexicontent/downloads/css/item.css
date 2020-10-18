@@ -1,0 +1,221 @@
+secondary_color_hover: #383d41;
+.wbc-flex {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+.vertikal-zentriert-pos-abs {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.flexi.lineinfo {
+	display: block;
+	padding: 0;
+	margin: 0 0 1em;
+	overflow: hidden;
+	clear: both;
+	border: 1px solid rgba(56,61,65,0.2);
+}
+.tabbertab .flexi.element,
+.subtitle1 .flexi.element,
+.subtitle2 .flexi.element,
+.subtitle3 .flexi.element {
+	clear: none;
+	display: block;
+	float: left;
+	max-width: 100% !important;
+	padding: 0% !important;
+	margin: 0.5em 2% 0.5em 2% !important;
+}
+.flexi.topblock {
+	overflow: hidden;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.topblock .flexi.image {
+	display: block;
+	float: left;
+	max-width: 100% !important;
+	padding: 0% !important;
+	margin-right: 6px;
+	line-height: 0px;
+	border: 0px solid silver;
+}
+.topblock .flexi.image a {
+	outline: none;
+}
+.topblock .flexi.image img {
+	border: 1px solid white;
+}
+.topblock .flexi.infoblock {
+	overflow: hidden;
+}
+.flexi.infoblock {
+	border: 1px solid silver;
+	margin: 0 0 10px;
+	padding: 10px;
+}
+.infoblock ul.flexi {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.infoblock ul li.flexi {
+	padding: 0;
+	background: none;
+	min-height: 10px;
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0%;
+	zoom: 1;
+	*display: inline;
+	_height: 10px;
+}
+span.flexi.label,
+.flexi.label {
+	display: block;
+	float: left;
+	border-bottom: 1px solid silver;
+	color: #777;
+	font-size: 90%;
+	margin-right: 8px;
+}
+span.flexi.value,
+.flexi.value {
+	display: block;
+	float: left;
+	max-width: 100% !important;
+	padding: 0% !important;
+}
+.onecols ul li.flexi {
+	width: 100%;
+}
+.onecols .flexi.label {
+	min-width: 20%;
+	margin-right: 4%;
+	margin-bottom: 6px;
+}
+.onecols .flexi.value {
+	min-width: 74%;
+	margin-right: 1%;
+}
+.twocols ul li.flexi {
+	min-width: 48%;
+}
+.twocols .flexi.label {
+	min-width: 34%;
+	margin-right: 6%;
+	margin-bottom: 6px;
+}
+.twocols .flexi.value {
+	min-width: 58%;
+	margin-right: 1%;
+}
+.description {
+	margin-top: 20px;
+}
+.field_downloads_1 {
+	display: flex;
+	flex-direction: column;
+}
+.field_downloads_1 .download-line {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+.fcfile_actions span.fcfile_mime,
+.fcfile_actions span.fcfile_title,
+.fcfile_actions span.fcfile_size {
+	display: inline-block;
+	padding-right: 0.5rem;
+}
+.fcfile_actions {
+	display: flex;
+}
+.fcfile_actions > a {
+	width: auto !important;
+	padding-right: 1rem;
+}
+.fcfile_actions br {
+	display: none;
+}
+.fcfile_actions .fc_button {
+	background-color: rgba(56,61,65,0.2) !important;
+	color: rgba(56,61,65,0.8) !important;
+	font-size: 0.9rem;
+}
+.fcfile_actions .fc_button:hover {
+	background-color: #9DA0A7 !important;
+	color: #FFF !important;
+	text-decoration: none;
+}
+a.fcfile_downloadFile {
+	display: inline-block;
+	margin-right: 5px;
+}
+a.fcfile_viewFile {
+	display: inline-block;
+	white-space: nowrap;
+	margin-right: 5px;
+}
+a.fcfile_shareFile {
+	display: inline-block;
+	white-space: nowrap;
+	margin-right: 5px;
+}
+a.fcfile_viewFile,
+a.fcfile_shareFile {
+	font-size: 0.9rem;
+	white-space: nowrap;
+	text-align: right;
+	padding: 3px 8px;
+	border-radius: 0px;
+	color: rgba(56,61,65,0.5) !important;
+	background-color: transparent;
+	border: 1px solid rgba(56,61,65,0.5);
+}
+a.fcfile_viewFile:hover,
+a.fcfile_shareFile:hover,
+a.fcfile_viewFile:focus,
+a.fcfile_shareFile:focus {
+	text-decoration: none;
+	background-color: rgba(56,61,65,0.2);
+	color: rgba(56,61,65,0.8) !important;
+}
+.fcfile_downloadFile:after {
+	content: "\f019";
+	padding-left: 5px;
+	font-family: 'FontAwesome';
+}
+.fcfile_viewFile:after {
+	content: "\f06e";
+	padding-left: 5px;
+	font-family: 'FontAwesome';
+}
+.fcfile_shareFile:after {
+	content: "\f045";
+	padding-left: 5px;
+	font-family: 'FontAwesome';
+}
+.fcfile_descr_inline.alert {
+	background-color: transparent !important;
+	border: none !important;
+	color: #2e2e2e !important;
+	padding: 0px !important;
+}
+.group:before,
+.group:after {
+	content: " ";
+	display: table;
+}
+.group:after {
+	clear: both;
+}
+.group {
+	*zoom: 1;
+}

@@ -34,6 +34,19 @@ $bottom_cols     = $this->params->get('bottom_cols', 1);
 $grid_framework  = $this->params->get('grid_framework', 1);
 
 
+
+// Layout Widgetkit Fotogalerie 
+
+$field_galerie  = $this->params->get('select_galerie');
+
+$widgetkit     = new JLayoutFile('templates.widgetkitgalerie', JPATH_ROOT .'/components/com_flexicontent/layouts');
+
+$data          = array(
+				  'params' => $this->params,
+				  'item'   => $this->item
+);
+
+
 // Widgetkit Fotogalerie 
 
 $field_galerie  = $this->params->get('select_galerie');
@@ -392,6 +405,7 @@ $tabsHeaderLevel =	( $itemTitleHeaderLevel == 2 ) ? '3' : '2';
 		<?php if( $this->item->positions['bottom'] ) : ?>
 		<div class="flexi flexi-bottom <?php echo ( $grid_framework > 0 ) ?  $gridclass  : $classnum; ?>">
 			<?php foreach ($this->item->positions['bottom'] as $field) : ?>
+
 			<div class='flexi'>
 				
 					<?php if ($field->label) : ?>
@@ -408,15 +422,19 @@ $tabsHeaderLevel =	( $itemTitleHeaderLevel == 2 ) ? '3' : '2';
 
 	<?php endif; ?>
 
-	<?php // Widgetkit Fotogalerie ?>
-	 
-    <?php if (!$_galerie_via_pos) : ?>
 
-		<?php if (  $field_galerie && FlexicontentFields::getFieldDisplay($this->item, $field_galerie, null, 'display_large', 'item') ): ?>
-		    <?php echo $this->loadTemplate('widgetkitgalerie'); ?>		   
-		<?php endif; ?>              
-	<?php endif; ?>
-	
+    
+    <?php // widgetkitgalerie JLayout Widgetkit ?>
+
+    <?php //if(!$_galerie_via_pos) : ?>
+		<?php if ( $field_galerie && FlexicontentFields::getFieldDisplay($item, $field_galerie, null, 'display_large', 'item') ):  // imagegalerie Widgetkit ?>
+		  
+			<?php echo $widgetkit->render($data);?>	
+
+
+		<?php endif; ?>
+    <?php// endif; ?>
+
 
 	<?php // if ($this->params->get('comments') && !JRequest::getVar('print')) : /* BOF comments */ ?>
 	<!-- <section class="comments group"> -->

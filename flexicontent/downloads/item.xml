@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<author>C.Oerter</author>
+	<website>www.das-webconcept.de</website>
+	<email>co@das-webconcept.de</email>
+	<license>GPLv3</license>
+	<version>2.0</version>
+	<release>July - 2017</release>
+	<description>Betragslayout als Tabs Inhaltstyp </description>
+	<fields name="attribs">
+		<fieldset name="attribs" addfieldpath="/administrator/components/com_flexicontent/elements">
+		<field name="grid_framework" type="radio" default="1" label="FLEXI_GRID" description="FLEXI_GRID_DESC" class="btn-group btn-group-yesno">
+			<option value="0">FLEXI_GRID_YES</option>
+			<option value="1">FLEXI_BTS_YES</option>
+			<option value="2">FLEXI_UIKIT_YES</option>
+		</field>
+
+
+		<field name="title_cut_text" type="text" size="3" default="200" label="FLEXI_TITLE_MAXLEN" description="FLEXI_TITLE_MAXLEN_DESC" />
+		
+		<field name="bottom_cols" type="list" default="2" label="FLEXI_ITEM_BOTTOM_COLS" description="FLEXI_ITEM_BOTTOM_COLS_DESC">
+			<option value="">FLEXI_USE_GLOBAL</option>
+			<option value="1">FLEXI_1_COL</option>
+			<option value="2">FLEXI_2_COLS</option>
+		</field>
+
+		<field name="itemimage" type="separator" hr="false" default="FLEXI_ITEMIMAGE_TIP" level="level2" menu="hide" />
+		<field name="use_item_image" type="list" default="1" label="FLEXI_USE_IMAGE" description="FLEXI_USE_IMAGE_DESC">
+			<option value="0">FLEXI_NO</option>
+			<option value="1">FLEXI_YES</option>
+		</field>
+
+		<field name="select_item_image" type="fcimage" size="10" default="" label="FLEXI_IMAGE_SOURCE" description="FLEXI_IMAGE_SOURCE_DESC" />
+		<field name="item_image_position" type="radio" default="" label="FLEXI_IMAGE_POSITION" description="FLEXI_IMAGE_POSITION_DESC" class="btn-group btn-group-yesno">
+				<option value="">FLEXI_USE_GLOBAL</option>
+				<option value="0">FLEXI_IMAGE_LEFT</option>
+				<option value="1">FLEXI_IMAGE_RIGHT</option>
+				<option value="2">FLEXI_IMAGE_CLEAR</option>
+		</field>
+		
+		
+		<field name="label_backlink" type="text" default="weitere Informationen: " label="label Backlink" description="Die Beschriftung für das Feld vewandte Artikel" />
+
+		<field name="subtitle_tabs_grp" type="separator" default="SubTitle Tabs" description="" level="level2" hr="false" />
+		<field name="subtitle_tab1_label" type="text" default="Beschreibung" label="Label for Tab 1" description="The text for this label is filter via JText (you can add to your ini language files)" />
+		<field name="subtitle_tab2_label" type="text" default="GoogleMap" label="Label for Tab 2" description="The text for this label is filter via JText (you can add to your ini language files)" />
+		<field name="subtitle_tab3_label" type="text" default="Lageplan" label="Label for Tab 3" description="The text for this label is filter via JText (you can add to your ini language files)" />
+		<field name="subtitle_tab4_label" type="text" default="Ansprechpartner" label="Label for Tab 4" description="The text for this label is filter via JText (you can add to your ini language files)" />
+		<field name="subtitle_tab5_label" type="text" default="Lageplan" label="Label for Tab 5" description="The text for this label is filter via JText (you can add to your ini language files)" />
+		<field name="subtitle_tab6_label" type="text" default="Ansprechpartner" label="Label for Tab 6" description="The text for this label is filter via JText (you can add to your ini language files)" />
+		<field name="templatehtmlmode" type="separator" hr="false" default="FLEXI_TEMPALTE_HTML_MODE" level="level2" menu="hide" />
+		<field name="htmlmode" type="list" default="1" label="FLEXI_HTML_MODE" description="FLEXI_HTML_MODE_DESC" filter="int">
+			<option value="0">FLEXI_XHTML</option>
+			<option value="1">FLEXI_HTML5</option>
+		</field>
+		</fieldset>
+	</fields>
+	<fieldgroups>
+		<group>subtitle1</group>
+		<group>subtitle2</group>
+		<group>subtitle3</group>
+		<group posrow="subtitle">subtitle_tab1</group>
+		<group posrow="subtitle">subtitle_tab2</group>
+		<group posrow="subtitle">subtitle_tab3</group>
+		<group posrow="subtitle">subtitle_tab4</group>
+		<group posrow="subtitle">subtitle_tab5</group>
+		<group posrow="subtitle">subtitle_tab6</group>
+		<group>description</group>
+		<group>bottom</group>
+		<group>renderonly</group>
+	</fieldgroups>	
+	<cssitem>
+		<file>css/item.css</file>
+	</cssitem>
+	<jsitem>
+	</jsitem>	
+</form>

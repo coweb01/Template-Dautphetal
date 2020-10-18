@@ -88,7 +88,7 @@ a.btn-primary:focus
   {
     color: white;
     background-color:@color1;
-    border: solid 1px@color1;
+    border: solid 1px @color1;
     text-decoration: none;
 }
 
@@ -105,8 +105,18 @@ a.btn-primary:focus
 #bookmark .btn:focus {}
 #bookmark .btn:active {}
 
-#bookmark .fc_printbutton:before {
-	
+#bookmark .fc_printbutton {
+	border: 1px solid #2E6FB1;
+	border-radius: 20px;
+	padding: 10px 20px;
+	i {
+		margin-right: 10px;
+	}
+	&:hover {
+		color: #fff;
+		background-color: @color1;
+		border: 1px solid @color1;
+	}
 }
 
 
@@ -120,8 +130,11 @@ a.btn-primary:focus
 
 #flexicontent .btn[class^="btn-outline-"], 
 #flexicontent .btn[class*=" btn-outline-"] {
-    .rounded-corners;
+	color: #fff;
+	&:not(:last-child) {
+		margin-right: 5px;
+	}
+	a {
+		color: #fff;
+	}
 }
-
-
-

@@ -1,0 +1,113 @@
+@import 'include/config.less';
+
+/**  CSS für Kategorieansicht Was-Erledige-Ich-Wo  ***/
+
+#verzeichnis-liste ul li { list-style: none; }
+#verzeichnis-liste {font-size: 0.9rem;}
+#verzeichnis-liste ul.header-flexilst, #verzeichnis-liste ul.items-flexilst {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	float: left;
+	}
+#verzeichnis-liste ul.header-flexilst {
+	margin-bottom: 1rem;
+}
+#verzeichnis-liste ul.items-flexilst li {
+	list-style: none;
+}
+
+
+#verzeichnis-liste ul.flexi-row { 
+		float: left; 
+		width: 98%; 
+		padding: 1% 0 0 1%;
+		margin-bottom: 1rem;
+		}
+
+#verzeichnis-liste ul.odd  { background-color: @grau_01;}
+#verzeichnis-liste ul.even { background-color: @grau_2;}
+
+#verzeichnis-liste ul li.flexi-item {
+	
+	margin:     0 0 10px 0;
+	padding: 0.2rem 0px;
+	width: 100%;
+	background-image: none;
+	list-style: none;
+	float:left;
+	line-height: 1.2rem;
+	} 
+#verzeichnis-liste ul li.beschriftung {
+	width: 22%;
+	color: @default !important;
+	font-size: 1rem;
+	font-weight: 500;
+	}
+#verzeichnis-liste ul li span {}
+#verzeichnis-liste ul li div {
+	text-align:left;
+	}
+
+#verzeichnis-liste a {
+	font-weight: 500;
+}
+	
+.title *
+ { 
+	font-size:    1.2rem;
+	font-weight:  500;
+	margin:       0px;
+	line-height:  2em;
+	display:      inline-block;
+}
+
+.title-zeile2        {display: none;}
+div.ersterB { clear: both; float: none!important;}
+div.ersterB p  {
+	color: #FFF;
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+	background: @color2;
+	padding: 0.1rem 0.2rem;
+	margin: 0 0 5px 0;
+	font-weight: 600;
+	display: inline;
+}
+
+#verzeichnis-liste ul li .item-col0 {width: 100%; padding:0px !important; margin-right:0px !important;} /*  */
+
+#verzeichnis-liste ul li a.relateditem {} /**  1.spalte Ansprechpartber  */
+#verzeichnis-liste ul li .item-col1 {width: 33%; padding:0px !important } /* 1.Spalte */
+#verzeichnis-liste ul li .item-col2 {width: 33%; padding:0px !important; margin-right:0px !important;} /* 2. oder 3.Spalte */
+#verzeichnis-liste ul li .item-col3 {width: 33%; padding:0px !important; margin-right:0px !important;} /* 3.Spalte */
+#verzeichnis-liste a {margin: 0px !important; padding: 0px !important;}
+		
+#flexicontent .separator {
+	border-bottom: 1px solid @grau_01;
+	height: 3px;
+	width: 100%;
+	float:left;
+	margin: 0px 0px 10px;
+}	
+
+@media (max-width: 768px) {
+
+		#verzeichnis-liste .wbc-margin-top
+		 { 
+		   margin-top: 1rem;
+		   padding-bottom: 1rem;
+		   /*border-bottom: solid 1px @grau_2;*/ 	
+		 }
+
+
+}
+
+@media (min-width: 769px) {
+	
+	#verzeichnis-liste .wbc-margin-top
+
+ 	{ margin-top: 0px;}
+
+
+}

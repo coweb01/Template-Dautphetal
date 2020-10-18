@@ -1,0 +1,270 @@
+.wbc-flex {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+.vertikal-zentriert-pos-abs {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.boxshadow {
+	-webkit-box-shadow: 0px 3px 5px 0px #262426;
+	-moz-box-shadow: 0px 3px 5px 0px #262426;
+	box-shadow: 0px 3px 5px 0px #262426;
+}
+.field_funktion1 {
+	font-weight: 600;
+}
+.field_prename_1,
+.field_name_1 {
+	padding-right: 5px !important;
+	float: left;
+	width: auto !important;
+	display: inline-block;
+}
+.flexi-name div {
+	font-weight: 600 !important;
+}
+.field_plz_1,
+.field_ort_1,
+.field_ortsteil_auswahl,
+.field_plz_2,
+.field_ortsteil_auswahl_2,
+.field_ortsteil_auswahl_einrichtung,
+.field_ort_einrichtung,
+.field_ortsteil_buergerhaus {
+	width: auto !important;
+	display: inline-block !important;
+	margin-right: 5px !important;
+}
+.value_plz_2,
+.value_ort_2,
+.value_plz_1,
+.value_plz_2,
+.value_ort_1,
+.value_ortsteil_auswahl,
+.field_ortsteil_auswahl_2,
+.value_ort_einrichtung,
+.value_ortsteil_buergerhaus,
+.value_name_2,
+.value_prename_2 {
+	float: left !important;
+	display: inline !important;
+	width: auto !important;
+}
+.value_ort_2,
+.value_ort_1,
+.value_ortsteil_auswahl,
+.value_ort_einrichtung,
+.value_ortsteil_auswahl_2 {
+	margin-left: 5px;
+}
+.field_plz_2,
+.field_plz_1 {
+	clear: left;
+}
+.field_pfarrer_1 .value,
+.field_funktion_1 .value,
+.field_funktion_1b .value,
+.field_name_1 .value,
+.field_prename_1 .value,
+.field_prename_2 .value,
+.field_name_2 .value,
+.field_praxisbezeichnung_1 .value {
+	font-weight: 600 !important;
+}
+#flexicontent .fc_item_title,
+#flexicontent .fc_item_title a {
+	font-size: 1.4rem;
+	line-height: 1.5rem;
+	text-transform: none;
+	color: #484546;
+}
+#flexicontent .listing {
+	margin: 0;
+	padding: 0;
+	clear: both;
+}
+#flexicontent .listing .flexi-item {
+	padding: 10px 20px 10px 20px;
+	float: left;
+	width: 100%;
+	list-style: none;
+	margin-left: 0px;
+}
+#flexicontent .wrap-item {
+	margin-right: 25px;
+}
+#flexicontent .listing.one  .full,
+#flexicontent .listing.two  .full,
+#flexicontent .flexi-fieldlist li {
+	width: 100%;
+	background-image: none !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	list-style: none;
+}
+#flexicontent .listing.two .even,
+#flexicontent .listing.two .odd {
+	width: 45%;
+	height: 8em;
+	min-height: 5em;
+	height: auto !important;
+	margin-left: 0;
+	margin-right: 0;
+	float: left;
+}
+#flexicontent .categorie-item-list {
+	padding-bottom: 20px;
+}
+#flexicontent .listing.two .even {
+	margin-left: 3%;
+}
+#flexicontent .flexi-cat a .catimg {
+	margin-top: -3px;
+}
+#flexicontent .flexi-cat {
+	clear: both;
+	padding-top: 20px;
+	border-top: 1px solid #CCC;
+}
+#flexicontent .line3,
+#flexicontent .line4 {
+	float: left;
+	width: 100%;
+	margin-bottom: 0.5em;
+}
+#flexicontent .flexi-item {
+	margin-top: 0.5em !important;
+	margin-bottom: 0.5em !important;
+	padding-top: 0.5em !important;
+}
+#flexicontent ul.flexi-itemlist li:last-child {
+	border-bottom: none !important;
+	margin-bottom: 0px !important;
+}
+#flexicontent ul.flexi-itemlist,
+#flexicontent ul.flexi-fieldlist {
+	margin: 1px;
+	padding: 0;
+	display: block;
+	width: 100%;
+}
+#flexicontent .fieldsclearen {
+	clear: both;
+	padding-bottom: 15px;
+}
+#flexicontent .fieldsleft,
+#flexicontent .fieldsright {
+	width: 100%;
+	float: left;
+	padding-bottom: 20px;
+}
+#flexicontent .flexi-field {
+	display: block;
+	float: left;
+	width: 100%;
+	padding: 0.2em 0px 0.2px;
+}
+#flexicontent .label {
+	font-weight: 600;
+	margin-right: 10px;
+}
+.clearen {
+	display: block;
+	width: 100%;
+	background-image: none;
+}
+.readmore {
+	clear: both;
+	float: none;
+	display: block;
+	margin: 0.5em 0px !important;
+}
+#flexicontent .description {
+	clear: both;
+}
+.separator {
+	width: 90%;
+	height: 20px;
+	float: left;
+	display: block;
+}
+h3.field_einrichtung {
+	font-size: 18px;
+	line-height: 25px;
+	font-weight: 600;
+}
+hr.fcclearline {
+	border: 0;
+	height: 1px;
+	background-image: none;
+	margin: 5px 0;
+}
+.fcfile_actions > a,
+.fcfile_actions > input,
+.fcfile_actions > form > input {
+	line-height: 25px;
+}
+.fcfile_mime {
+	height: 25px;
+	line-height: 25px;
+}
+#flexicontent .mansoryitem.uk-grid .flexi-item {
+	margin-right: 1.999999%;
+}
+#flexicontent .mansoryitem.row .flexi-item {
+	margin-right: 1.666666%;
+}
+.background-primary {
+	background-color: #f0f1f2;
+	background-color: rgba(139,145,151,0.15);
+}
+.background-secondary {
+	background-color: #f0f1f2;
+	background-color: rgba(139,145,151,0.15);
+}
+#flexicontent .mansoryitem .col-xs-12 {
+	width: 100%;
+}
+#flexicontent .mansoryitem .gutter-size {
+	width: 0%;
+}
+@media only screen and (min-width: 768px) {
+	#flexicontent .mansoryitem .col-sm-6 {
+		width: 50%;
+	}
+	#flexicontent .mansoryitem .col-sm-4 {
+		width: 33.333%;
+	}
+	#flexicontent .flexi-fieldlist {
+		width: auto;
+	}
+}
+@media only screen and (min-width: 992px) {
+	#flexicontent .mansoryitem .col-md-4 {
+		width: 33.333%;
+	}
+	#flexicontent .mansoryitem .col-md-6 {
+		width: 50%;
+	}
+	#flexicontent .mansoryitem .col-md-8 {
+		width: 66.666%;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	#flexicontent .mansoryitem .col-lg-4 {
+		width: 33.333%;
+	}
+	#flexicontent .mansoryitem .col-lg-6 {
+		width: 50%;
+	}
+	#flexicontent .mansoryitem .col-lg-8 {
+		width: 66.666%;
+	}
+}

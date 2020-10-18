@@ -1,0 +1,285 @@
+@import 'include/config.less';
+
+/* Downloadverzeichnis : category template CSS file */
+#flexicontent .download-block .card-columns {
+   column-count: 1;
+}
+@media only screen and (min-width: 1200px) {
+
+	#flexicontent .download-block .card-columns {
+   		column-count: 2;
+	}
+}
+
+
+#flexicontent .flexi.label,
+#flexicontent .flexi.value
+{
+	display:flex;
+	float: none;
+	max-width: 100% !important;  /* Allow responsive width while floating */
+	padding: 0rem 0.5rem !important; 
+}
+
+#flexicontent .flexi.label
+{
+	padding: 3px 3px !important;
+}
+
+#flexicontent .fc_markup.mu_has_text {
+	margin: 2px 2px 0px 2px !important;
+}
+
+#flexicontent.download-block {
+	margin: 0;
+	padding: 0;
+}
+
+#flexicontent .download-block > div {
+	margin: 0px;
+	padding: 0;
+	background: none;
+	min-height: 1rem;
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: top;
+	zoom: 1;
+	*display: inline;
+	_height: 1rem;
+	line-height: inherit;
+	list-style: none;
+}
+
+
+#flexicontent .flexi-cat .fc_cat_title {
+	font-weight: 500;
+	font-size: 1.4rem;
+	line-height: 1.6rem;
+}
+
+#flexicontent .flexi-cat .fc_cat_title:hover {
+	
+	text-decoration: none;
+	margin-bottom: 0.5rem;
+
+}
+
+#flexicontent .flexi-cat {}
+
+#flexicontent .flexi-cat:hover, .flexi-cat:focus {
+	
+	text-decoration: none;
+}
+
+#flexicontent .flexi-fieldlist .flexi-field.flexi-title {
+	font-size: 1.2rem;
+	font-weight: 500;
+	line-height: 1.8rem;
+	color:  @color1;
+	padding-top: 10px;
+}
+
+#flexicontent.flexi-itemlist,
+#flexicontent .flexi-fieldlist {
+	margin: 1px;
+	padding: 0;
+}
+
+#flexicontent .flexi-itemlist .flexi-fieldlist {
+	margin: 0 0 20px;
+	padding: 0;
+	.background_white(60);
+	width: 100%;
+	min-height: 10px;
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: top;
+	zoom: 1;
+	*display: inline;
+	_height: 10px;
+	line-height: inherit;
+	border: 1px solid @grau_2;
+}
+
+#flexicontent .flexi-fieldlist .flexi-field {
+	margin: 0 0 10px 0;
+	padding:0px 0px 0px 16px;
+	background: none;
+	width: 100%;
+	min-height: 10px;
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: top;
+	zoom: 1;
+	*display: inline;
+	_height: 10px;
+	line-height: inherit;
+
+}
+
+/****   Felder ***************************************/
+
+.field_downloads_1 { 
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+.field_downloads_1 .download-line {
+	display: flex;
+    align-items: center;
+	width: 100%;
+	flex-wrap: wrap;
+}
+
+.fcfile_descr_inline { 
+	flex: 0 0 100%; 
+	margin-bottom: 0.5rem;	
+	font-size: 0.9rem;
+
+}
+.fcfile_descr_inline.alert {
+	background-color: transparent !important;
+	border: none !important;
+	color: @default !important;
+	padding: 0px !important;
+}
+
+.fcfile_actions span.fcfile_mime,
+.fcfile_actions span.fcfile_title,
+.fcfile_actions span.fcfile_size
+ { 
+ 	display: inline-block; 
+ 	padding-right: 0.5rem;
+	
+  }
+
+
+/***  download buttons ***/
+
+.fcfile_actions { 
+	display: flex; 
+	align-items: flex-start;
+}
+.fcfile_actions > a { width: auto !important; padding-right: 0.5rem; }
+.fcfile_actions br {display: none;}
+
+.fcfile_actions .fc_button { 	
+    background-color: @grau_2 !important;
+	color: @grau_8 !important;
+	font-size: 0.9rem;
+}
+.fcfile_actions .fc_button:hover { 	
+    background-color:  @color1 !important;
+	color: #FFF !important;
+	text-decoration:none;
+}
+a.fcfile_downloadFile  { 
+    display: inline-block;
+    margin-right: 5px;
+	}
+
+a.fcfile_viewFile  {
+    display: inline-block;
+	white-space: nowrap;
+	margin-right: 5px;
+}
+
+a.fcfile_shareFile  {
+    display: inline-block;
+	white-space: nowrap;
+	margin-right: 5px;
+	 }
+
+a.fcfile_viewFile,
+a.fcfile_shareFile 
+  {
+	/*width: 20% !important;
+	float:right;*/
+	font-size: 0.9rem;
+	white-space: nowrap;
+	text-align: right;
+	padding:  3px 8px; 
+	border-radius: 0px;
+	color: @grau_5!important;
+	background-color: transparent;
+	border: 1px solid @grau_5;
+}
+
+a.fcfile_viewFile:hover,
+a.fcfile_shareFile:hover,
+a.fcfile_viewFile:focus,
+a.fcfile_shareFile:focus {
+	text-decoration: none;
+	background-color: @grau_2;
+	color: @grau_8 !important;
+}
+
+
+
+.fcfile_downloadFile:after  {content: "\f019"; padding-left: 5px;  font-family: 'FontAwesome';}
+.fcfile_viewFile:after  {content: "\f06e"; padding-left: 5px;  font-family: 'FontAwesome'; }
+.fcfile_shareFile:after  {content: "\f045"; padding-left: 5px;  font-family: 'FontAwesome'; }
+
+/* =============================================   Bootstrap adjustments ============================================= */
+#fc_alpha .btn.fc_alpha_index,
+#fc_alpha .btn.fc_alpha_index_sep {
+	margin-top:0;
+	margin-bottom:0;
+}
+
+@media (min-width: 768px) { 
+.field_downloads_1 span {} 
+.field_downloads_1 span.fcfile_mime,
+.field_downloads_1 span.fcfile_title,
+.field_downloads_1 span.fcfile_size,
+.field_downloads_2 span.fcfile_mime,
+.field_downloads_2 span.fcfile_title,
+.field_downloads_2 span.fcfile_size
+ {  /*float: left; */}
+
+
+a.fcfile_downloadFile  { 
+   /* float: left;
+	width: 58% !important;
+    padding-right: 5%;*/
+	}
+
+
+
+
+}
+
+
+/* ===============================================
+   "micro" clearfix 
+   http://nicolasgallagher.com/micro-clearfix-hack/
+   =============================================== */
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.group:before,
+.group:after {
+	content: " "; /* 1 */
+	display: table; /* 2 */
+}
+
+.group:after {
+	clear: both;
+}
+
+/**
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.group {
+	/* for IE 6/7 */
+	/* non-JS fallback */
+	*zoom: 1;
+}
+

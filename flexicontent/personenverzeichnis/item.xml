@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<author>C.Oerter</author>
+	<website>das-webconcept.de</website>
+	<email>co@das-webconcept.de</email>
+	<license>GPLv2</license>
+	<version>1.1</version>
+	<release>01 november 2012</release>
+	<description>Beitragslayout für Kontakte Rathausmitarbeiter</description>
+	<fields name="attribs">
+		<fieldset name="attribs" addfieldpath="/administrator/components/com_flexicontent/elements">
+		
+		<field name="grid_framework" type="radio" default="1" label="FLEXI_GRID" description="FLEXI_GRID_DESC" class="btn-group btn-group-yesno">
+			<option value="0">FLEXI_GRID_YES</option>
+			<option value="1">FLEXI_BTS_YES</option>
+			<option value="2">FLEXI_UIKIT_YES</option>
+		</field>
+
+		<field name="title_cut_text" type="text" size="3" default="200" label="FLEXI_TITLE_MAXLEN" description="FLEXI_TITLE_MAXLEN_DESC" />
+		<field name="top_cols" type="radio" default="2" label="FLEXI_ITEM_TOP_COLS" description="FLEXI_ITEM_TOP_COLS_DESC" class="btn-group"> 
+			<option value="">FLEXI_USE_GLOBAL</option>
+			<option value="1">FLEXI_1_COL</option>
+			<option value="2">FLEXI_2_COLS</option>
+		</field> 
+		<field name="bottom_cols" type="radio" default="2" label="FLEXI_ITEM_BOTTOM_COLS" description="FLEXI_ITEM_BOTTOM_COLS_DESC" class="btn-group"> 
+			<option value="">FLEXI_USE_GLOBAL</option>
+			<option value="1">FLEXI_1_COL</option>
+			<option value="2">FLEXI_2_COLS</option>
+		</field> 
+		
+		<field name="htmlmode" type="radio" default="1" label="FLEXI_HTML_MODE" description="FLEXI_HTML_MODE_DESC" filter="int" class="btn-group">
+			<option value="0">FLEXI_XHTML</option>
+			<option value="1">FLEXI_HTML5</option>
+		</field>
+
+		</fieldset>
+	</fields> 
+	<fieldgroups>
+		<group>subtitle1</group>
+		<group>subtitle2</group>
+		<group>subtitle3</group>
+		<group>image</group>
+		<group>top</group>
+		<group>description</group>
+		<group>bottom</group>
+		<group>renderonly</group>
+	</fieldgroups>	
+	<cssitem>
+		<file>css/item.css</file>
+	</cssitem>
+	<jsitem>
+	</jsitem>	
+</form>

@@ -13,8 +13,9 @@
 			background-size: cover;
 			background-repeat: no-repeat;
 			.overlay {
-				width: 250px;
+				/*width: 250px;*/
 				padding: 40px 20px;
+				font-size: 1.3rem;
 			}
 			&:first-child {
 				.overlay {
@@ -65,7 +66,10 @@
 .extension-inner.extension-icon .custom { margin-top: 0.5rem; }
 
 .extension-outer img { max-width: 100%; height: auto; } /* alles bilder in modulen responsive */
-
+#sidebar-right p,
+#sidebar-left p {
+	margin-bottom: .5rem;
+}
 
 
 /* Modulestyle icon */
@@ -128,18 +132,21 @@
 #sidebar-right div.custom-outer, 
 #sidebar-left div.custom-outer 
 {
-	margin-bottom: 4rem;
+	margin-bottom: 3rem;
 }
 
 
 #sidebar-right .extension-outer
-{
-  
+{ 
   position: relative;
+  background-color: rgba(255,255,255,0.6);
+  &:first-child {
+	margin-top: 6em;
+  }
 }
 
 #sidebar-right .extension-outer .fcitem_text { 
-	color: white;
+	
 }
 
 #sidebar-right .fcitem_readon a:link,
@@ -179,38 +186,36 @@
 #sidebar-right .extension-outer h3,
 #sidebar-right .extension-outer h4 
 {
-	color: #FFFFFF;
+	
 }
 
-
-#sidebar-left .extension-outer,
-
+#sidebar-left .extension-outer
  {
 	.background_grau(10%);
-	color: @defaultcolor;
+	color: @default;
 	position: relative;
 }
 
 #sidebar-left .extension-outer a:link,
 #sidebar-left .extension-outer a:visited {
-	color: @defaultcolor;	
+	color: @grau_5;	
 }
 
 #sidebar-left .extension-outer a:hover,
 #sidebar-left .extension-outer a:focus {
-	color: @grau_5;
+	color: @default;
 
 }
 
 
 #sidebar-right .extension-outer a:link,
 #sidebar-right .extension-outer a:visited
-	{ .white-trans; }
+	{ color: @grau_5; }
 
 
 #sidebar-right .extension-outer a:hover,
 #sidebar-right .extension-outer a:focus
-	{ color: white; }
+	{ color: @default; }
 
 
 
@@ -262,15 +267,18 @@
 }
 
 #sidebar-right .ext-header h2, 
-#sidebar-right  .ext-header h3, 
+#sidebar-right   h3, 
 #sidebar-right  .ext-header h4
 
+
  {
-    color: #FFFFFF;
+    color: @linkcolor;
     font-size: 22px;
     font-weight: 400;
     line-height: 35px;
-    text-transform: normal;
+    font-family: "Bebas Neue";
+    font-style: inherit;
+    font-weight: 400;
     margin-bottom: 20px;
     padding: 10px 10% 0 0;
 }

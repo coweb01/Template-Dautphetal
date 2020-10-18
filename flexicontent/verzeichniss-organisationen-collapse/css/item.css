@@ -1,0 +1,142 @@
+secondary_color_hover: #383d41;
+.wbc-flex {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+.vertikal-zentriert-pos-abs {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.boxshadow {
+	-webkit-box-shadow: 0px 3px 5px 0px #262426;
+	-moz-box-shadow: 0px 3px 5px 0px #262426;
+	box-shadow: 0px 3px 5px 0px #262426;
+}
+.field_funktion1 {
+	font-weight: 600;
+}
+.field_prename_1,
+.field_name_1 {
+	padding-right: 5px !important;
+	float: left;
+	width: auto !important;
+	display: inline-block;
+}
+.flexi-name div {
+	font-weight: 600 !important;
+}
+.field_plz_1,
+.field_ort_1,
+.field_ortsteil_auswahl,
+.field_plz_2,
+.field_ortsteil_auswahl_2,
+.field_ortsteil_auswahl_einrichtung,
+.field_ort_einrichtung,
+.field_ortsteil_buergerhaus {
+	width: auto !important;
+	display: inline-block !important;
+	margin-right: 5px !important;
+}
+.value_plz_2,
+.value_ort_2,
+.value_plz_1,
+.value_plz_2,
+.value_ort_1,
+.value_ortsteil_auswahl,
+.field_ortsteil_auswahl_2,
+.value_ort_einrichtung,
+.value_ortsteil_buergerhaus,
+.value_name_2,
+.value_prename_2 {
+	float: left !important;
+	display: inline !important;
+	width: auto !important;
+}
+.value_ort_2,
+.value_ort_1,
+.value_ortsteil_auswahl,
+.value_ort_einrichtung,
+.value_ortsteil_auswahl_2 {
+	margin-left: 5px;
+}
+.field_plz_2,
+.field_plz_1 {
+	clear: left;
+}
+.field_pfarrer_1 .value,
+.field_funktion_1 .value,
+.field_funktion_1b .value,
+.field_name_1 .value,
+.field_prename_1 .value,
+.field_prename_2 .value,
+.field_name_2 .value,
+.field_praxisbezeichnung_1 .value {
+	font-weight: 600 !important;
+}
+#flexicontent .fc_item_title,
+#flexicontent .fc_item_title a {
+	font-size: 1.4rem;
+	line-height: 1.5rem;
+	text-transform: none;
+	color: #484546;
+}
+#flexicontent .flexi-item {
+	float: left;
+	width: 100%;
+	list-style: none;
+}
+#flexicontent .flexi-item.background-primary {
+	background: #000000 !important;
+	background: rgba(109,107,107,0.1) !important;
+	padding: 10px 20px 10px 20px;
+}
+#flexicontent .flexi-field {
+	display: block;
+	padding: 0.2em 0px 0.2px;
+	float: none;
+}
+#flexicontent ul.zusatzinfo {
+	margin-top: 0.5em;
+}
+#flexicontent div.topblock {
+	float: left;
+	width: 100%;
+}
+#flexicontent div.two {
+	width: 48% !important;
+	margin-right: 2%;
+}
+#flexicontent div.links img {
+	float: left;
+	display: block;
+	margin-right: 5px;
+}
+#flexicontent div.links a.jcepopup {
+	display: block;
+	float: left;
+}
+#flexicontent div.images {
+	width: 100%;
+	clear: both;
+}
+hr.fcclearline {
+	border: 0;
+	height: 1px;
+	background-image: none;
+	margin: 5px 0;
+}
+.fcfile_actions > a,
+.fcfile_actions > input,
+.fcfile_actions > form > input {
+	line-height: 25px;
+}
+.fcfile_mime {
+	height: 25px;
+	line-height: 25px;
+}

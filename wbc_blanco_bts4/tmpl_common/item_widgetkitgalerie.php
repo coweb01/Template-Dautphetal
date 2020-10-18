@@ -6,7 +6,7 @@ $field_galerie       = $this->params->get('select_galerie');
 $galerie_gutter      = $this->params->get('galerie_gutter',5);
 $galerie_delay       = $this->params->get('galerie_delay',300);
 $galerie_cols        = $this->params->get('galerie_cols',4);
-$galerie_image_title = $this->params->get('galerie_image_title',0);
+$galerie_image_title = $this->params->get('galerie_image_title');
 
 FlexicontentFields::getFieldDisplay($this->item, $field_galerie, null, 'display_large', 'item');
 $image_field     = $this->item->fields[$field_galerie];
@@ -41,7 +41,7 @@ for($i=0; $i < $count; $i++) {
 											
 				</figure>
 				<?php if ( $galerie_image_title == 1 && $image['title'] > '' ) :?>
-					<p class="uk-3 h3 uk-margin-small"><?php echo $image['title'];?></p>
+					<p class="uk-3 uk-margin-small"><?php echo $image['title'];?></p>
 				<?php endif; ?>	
 			</div>
 		</div>

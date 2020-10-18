@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<author>Claudia Oerter webconcept</author>
+	<website>www.das-webconcept.org</website>
+	<email>info@das-webconcept.de</email>
+	<license>GPLv3</license>
+	<version>1.1</version>
+	<release>9-10-2020</release>
+	<description>Layout für ein Downloadverzeichnis. Bootstrap Card Layout. Spalten werden in category.less festgelegt.</description>
+	<fields name="attribs">
+		<fieldset name="attribs" addfieldpath="/administrator/components/com_flexicontent/elements">
+		<field name="description_cut_text" type="text" size="3" default="" label="FLEXI_CATDESCR_MAXLEN" description="FLEXI_CATDESCR_MAXLEN_DESC" />
+		
+		<field name="subcat_conf" type="separator" hr="false" default="FLEXI_SUBCATEGORIES" level="level2" menu="hide" />
+		<field name="description_cut_text_subcat" type="text" size="3" default="" label="FLEXI_CATDESCR_MAXLEN" description="FLEXI_CATDESCR_MAXLEN_DESC" />
+		
+		
+		<field name="grid_framework" type="radio" default="1" label="FLEXI_GRID" description="FLEXI_GRID_DESC" class="btn-group btn-group-yesno">		
+			<option value="1">FLEXI_BTS_YES</option>			
+		</field>
+
+		
+		
+		</fieldset>
+	</fields>
+	<fieldgroups>
+		<group readonly="true">subcategory_title</group>
+		<group readonly="true">subcategory_description</group>
+		<group>aftertitle</group>
+		<group>aftertitle_nolabel</group>
+		<group>aftertitle2</group>
+		<group>aftertitle_nolabel2</group>
+		<group>aftertitle3</group>
+		<group>aftertitle_nolabel3</group>
+	</fieldgroups>
+	<csscategory>
+		<file>css/category.css</file>
+	</csscategory>
+	<jscategory>
+	</jscategory>	
+</form>

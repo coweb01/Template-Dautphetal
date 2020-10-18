@@ -1,0 +1,244 @@
+@import 'include/config.less';
+
+
+/* Standard Tabs  Theme : item template CSS file */
+#flexicontent .contentheading  { padding-bottom: 20px;}
+#flexicontent .twocols {
+	margin: 0px 4% 0px 0px;
+	padding: 0px;
+	float: left;
+	width: 46%;
+}
+#flexicontent .twocols:last-child {margin-right: 0;}
+
+
+#flexicontent ul.flexi-fieldlist li.flexi-field.flexi-title {
+}
+#flexicontent li.flexi-item {
+	margin-top: 0.5rem !important;
+	margin-bottom: 0.5rem !important;
+	padding-top:   0.5rem !important
+}
+#flexicontent ul.flexi-itemlist li:last-child { border-bottom: none !important;  margin-bottom: 0px !important;}
+#flexicontent ul.flexi-itemlist,
+#flexicontent ul.flexi-fieldlist {
+	margin : 1px;
+	padding: 0;
+	display: block;
+	width:   100%;
+}
+#flexicontent ul.flexi-fieldlist {
+	float:left;
+	width:100%;
+	}
+#flexicontent ul.fieldsleft {width: 50%;}
+#flexicontent li.flexi-field {
+	display: block;
+	clear: both;
+	width: 100%;
+	padding: 0.2rem 0px 0.2px !important;
+}
+
+#flexicontent ul .label, #flexicontent ul .value { 
+	float     : left;
+	display   :block;
+	margin-right: 2px;
+}
+#flexicontent ul .label {
+	font-weight: 600;
+	margin-right: 10px;
+}
+
+
+#flexicontent ul.zusatzinfo { margin-top: 0.5rem;}
+
+#flexicontent div.topblock {float:left; width: 100%;}
+#flexicontent div.two {width: 48%!important; margin-right: 2%;}
+#flexicontent div.links img {float:left; display:block; margin-right: 5px;}
+#flexicontent div.links a.jcepopup {display:block; float:left;}
+
+/**** felder ***********************************************************************************************************/
+
+#flexicontent .flexi-bottom { clear: both;}
+#flexicontent .flexi-bottom li {list-style: none; margin-left: 0px;}
+
+/* was erledige ich wo ----------------------*/
+
+.field_zustaendiger_mitarbeiter .col-xs-6,
+.field_zustaendiger_mitarbeiter .col-sm-3,
+.field_zustaendiger_mitarbeiter .col-md-3,
+.field_zustaendiger_mitarbeiter .col-lg-3,
+.field_zustaendiger_mitarbeiter .col-xl-3,
+.field_zustaendiger_mitarbeiter .col-sm-4,
+.field_zustaendiger_mitarbeiter .col-md-4,
+.field_zustaendiger_mitarbeiter .col-lg-4,
+.field_zustaendiger_mitarbeiter .col-xl-4,
+.field_zustaendiger_mitarbeiter .col-4,
+.field_zustaendiger_mitarbeiter .col-3
+ { 
+	-ms-flex: 0 0 100%;
+	flex: 0 0 100%;
+	max-width: 100%
+}
+
+
+
+.flexi_fields .value_zustaendiger_mitarbeiter,
+.flexi_fields.field_zustaendiger_mitarbeiter 
+ { 
+	float: none; 
+	width: 100%;
+}
+
+.flexi_fields {
+	line-height: 1.6rem;
+	float:left;
+	margin-left: 0px; 
+	clear: both; 
+	display:block;
+}
+
+.flexi_fields .value, .flexi_fields .label {
+	float       : left;
+	display     : block;
+	margin-right: 2px;	
+}
+
+.flexi_fields .label { white-space: nowrap; }
+
+	
+.value_name_1, 
+.value_prename_1,
+.value_plz_2, 
+.value_ort_2, 
+.value_plz_1, 
+.value_plz_2, 
+.value_ort_1, 
+.value_ortsteil_auswahl, 
+.value_ortsteil_auswahl_2,
+.value_ort_einrichtung,
+.value_ortsteil_auswahl_einrichtung, 
+.value_name_2, 
+.value_prename_2 {
+	float: left !important; 
+	clear: none !important;
+	display: inline!important; 
+	width: auto!important; 
+}
+.value_name_1, 
+.value_prename_1,
+.value_ort_2, 
+.value_ort_1, 
+.value_ortsteil_auswahl, 
+.value_ortsteil_auswahl_2,
+.value_ort_einrichtung,
+.value_ortsteil_auswahl_einrichtung {
+	margin-left: 2px;
+} 
+
+.field_name_1, 
+.field_prename_1,
+.field_ort_2, 
+.field_ort_1, 
+.field_ortsteil_auswahl,
+.field_ort_einrichtung,
+.field_ortsteil_auswahl_einrichtung 
+.field_name_1 { 
+	clear: none; 
+}
+.field_name_1, 
+.field_prename_1,
+.field_plz_1, 
+.field_ortsteil_auswahl, 
+.field_plz_2,
+.field_ort_2, 
+.field_ort_1, 
+.field_ort_einrichtung,
+.field_ortsteil_auswahl_2,
+.field_ortsteil_auswahl_einrichtung
+{ 
+	width: auto !important; 
+	display: inline-block !important; 
+}
+.field_plz_2, .field_plz_1 { clear: left;}
+
+.value_plz_1, .value_ort_1, .value_ortsteil_auswahl2 {}		
+.value_funktion1 { font-weight: 600; }
+
+.value_ort_2, 
+.value_ort_1, 
+.value_ortsteil_auswahl,
+.value_ort_einrichtung,
+.field_ortsteil_auswahl_einrichtung, 
+.value_name_1  
+{ margin-left: 2px; } 
+
+
+
+/***  downloads  ***/
+
+hr.fcclearline {
+    border: 0;
+    height: 1px;
+    background-image: none;
+    margin: 5px 0;
+}
+
+.fcfile_actions > a, 
+.fcfile_actions > input, 
+.fcfile_actions > form > input {
+       line-height: 25px;
+}
+
+.fcfile_mime {
+    height: 25px;
+    line-height: 25px;
+}
+
+
+
+
+/********* Tabs ******/
+
+.wbc-tabs .nav-tabs { border: none; }
+.wbc-tabs .tab-content {}
+
+.wbc-tabs  li > .nav-link:link,
+.wbc-tabs  li > .nav-link:visited
+ { 
+	color: @grau_8;
+	border-radius: 0px;
+	background-color: #FFFFFF;
+	font-weight: 500;
+	font-size: 0.9rem;
+	border: solid 1px @grau_01;
+ }
+
+.wbc-tabs  li { margin-left: 0px; margin-right: 10px;}
+
+
+.wbc-tabs  li > .nav-link:focus,
+.wbc-tabs  li > .nav-link:hover,
+.wbc-tabs  li > .nav-link.active:focus,
+.wbc-tabs  li > .nav-link.active:hover
+	{ 
+	background-color: @primary_color_hover; 
+	border-color: @primary_color_hover;
+	color: white;
+	}
+
+.wbc-tabs  li > .nav-link.active
+
+	{ 
+	background-color:@primary_background; 
+	border-color: @primary_background;
+	color: white;
+	}
+	
+
+
+.wbc-tabs .tab-content {
+	min-height: 10rem;
+	padding-left: 0px;
+	padding-right: 0px;
+	}

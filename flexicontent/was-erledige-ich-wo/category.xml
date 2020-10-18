@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<author>Claudia Oerter</author>
+	<website>www.das-webconcept.de</website>
+	<email>info@das-webconcept.de</email>
+	<license>GPLv2</license>
+	<version>1.2</version>
+	<release>September 2019</release>
+	<description>Layout für das Was-erledige-ich-wo Verzeichnis der Kommunen</description>
+	<fields name="attribs">
+		<fieldset name="attribs" addfieldpath="/administrator/components/com_flexicontent/elements">
+		<field name="show_field_labels_row" type="list" default="1" label="FLEXI_SHOW_LABELS_ROW" description="FLEXI_SHOW_LABELS_ROW_DESC">
+			<option value="">FLEXI_USE_GLOBAL</option>
+			<option value="0">FLEXI_NO</option>
+			<option value="1">FLEXI_YES</option>
+		</field>
+
+		</fieldset>
+	</fields>
+	<fieldgroups>
+		<group>zeile1</group>
+		<group>zeile2</group>
+		<group posrow="subtitle">zeile3_sp1</group>
+		<group posrow="subtitle">zeile3_sp2</group>
+		<group posrow="subtitle">zeile3_sp3</group>
+		<group posrow="subtitle">zeile3_sp4</group>
+		<group>zeile4</group>
+		<group>renderonly</group>
+	</fieldgroups>	
+	<csscategory>
+		<file>css/category.css</file>
+	</csscategory>
+	<jscategory>
+	</jscategory>	
+</form>
