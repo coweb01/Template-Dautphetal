@@ -4,13 +4,10 @@
 
 
 
-#flexicontent .listing {
+#flexicontent .nomansoryitem { padding: 15px; }
 
-}
 
-#flexicontent .wrap-item {
-	margin-right: 25px;
-	 }
+#flexicontent .wrap-item { margin-right: 25px;	 }
 	 
 #flexicontent .listing.one  .full,
 #flexicontent .listing.two  .full,
@@ -36,6 +33,9 @@
 
 #flexicontent .categorie-item-list .row .col-12:not(.mansoryitem) { display: flex; }
 
+#flexicontent .categorie-item-list .row .col-12.grid-size { display: block; }
+
+
 #flexicontent .listing.two .even {
 	margin-left: 3%
 }
@@ -55,13 +55,10 @@
 /**** felder ***/
 
 #flexicontent .line3, #flexicontent .line4 {float: left; width: 100%; margin-bottom: 0.5em;}
-#flexicontent .flexi-fieldlist .flexi-field.flexi-title {
-}
-#flexicontent .flexi-item {
-	margin-top: 0.5em !important;
-	margin-bottom: 0.5em !important;
-	padding-top:   0.5em !important
-}
+#flexicontent .flexi-fieldlist .flexi-field.flexi-title {}
+#flexicontent .flexi-item {}
+	
+
 #flexicontent ul.flexi-itemlist li:last-child { border-bottom: none !important;  margin-bottom: 0px !important;}
 #flexicontent ul.flexi-itemlist,
 #flexicontent ul.flexi-fieldlist {
@@ -125,7 +122,7 @@
 
 
 .field_pfarrer_1 .value, .field_funktion_1 .value, .field_funktion_1b .value, .field_name_1 .value, .field_prename_1 .value, .field_prename_2 .value, .field_name_2 .value,
-.field_praxisbezeichnung_1 .value { font-weight: 600 !important; }*/
+.field_praxisbezeichnung_1 .value { font-weight: 600 !important; }
 
 /* überschriften 
 h3.field_einrichtung {
@@ -149,11 +146,11 @@ h3.field_einrichtung {
 	float: left;
 	display: block;
 	}
-	*/
+	
 
 
 
-.contentheading { display: block; margin-bottom: 20px; }
+.contentheading { display: block; margin-bottom: 20px; }*/
 
 /***  downloads 
 
@@ -177,56 +174,66 @@ hr.fcclearline {
 
 /*------------- mansory grid ----------------------------*/
 
-#flexicontent .mansoryitem .flexi-item
+
+
+#flexicontent .mansorygrid .mansoryitem
  {
-	padding: 10px 20px 10px 20px;
-	float: left;
-	width: 100%;
+	
+	margin: 0px;
+	padding: 15px;
+	min-height: 10px;
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: top;
+	zoom: 1;
+	line-height: inherit;
+
+	float: none;
+	width: auto;
  }
 
-#flexicontent .mansoryitem.uk-grid .flexi-item 
+#flexicontent .mansorygrid.uk-grid .mansoryitem 
 {
 	 margin-right: 1.999999%;
 	 
  }
 
-#flexicontent .mansoryitem.row .flexi-item 
+#flexicontent .mansorygrid.row .mansoryitem
 {
 	 margin-right: 1.666666%;
 }
 
-.flexi-item.background-primary 
-{ 
-	background-color: rgb( 242,242,242 );
-	background-color: rgba( 242,242,242, 1);
-	padding: 10px 20px 10px 20px;
-	float: left;
-	width: 100%;
-}
-
+.flexi-item.background-primary, 
 .flexi-item.background-secondary 
-{
-	background-color: rgb( 242,242,242 );
-	background-color: rgba(242,242,242,0.8);
-	padding: 10px 20px 10px 20px;
+{ 
+	
+	padding: 2rem;
 	float: left;
 	width: 100%;
 }
-#flexicontent .mansoryitem .col-xs-12 
-  {width: 100%;}
-
-#flexicontent .mansoryitem .flexi-item { min-height: 400px;}
 
 
-#flexicontent .mansoryitem .gutter-size  {width: 0%;} /* zur zeit nicht verwendet */
+#flexicontent .mansoryitem.col-xs-12 
+  { width: 100%; }
+
+#flexicontent .mansorygrid .flexi-item { min-height: 400px;}
+
+
+#flexicontent .mansorygrid .gutter-size  {width: 0%;} /* zur zeit nicht verwendet */
 
 @media only screen and (min-width: 768px) {
 
 	 
-	#flexicontent .mansoryitem .col-sm-6  {width: 50%;}
+	#flexicontent .mansoryitem.col-sm-6,
+	#flexicontent .mansorygrid .col-sm-6
+
+	  {width: 49.555%;}
 
 	  
-	#flexicontent .mansoryitem .col-sm-4  {width: 33.333%;}
+	#flexicontent .mansoryitem.col-sm-4,
+	#flexicontent .mansorygrid .col-sm-4
+
+	  {width: 33.333%;}
 
 
 }
@@ -234,25 +241,40 @@ hr.fcclearline {
 @media only screen and (min-width: 992px) {
 	
 	 
-	#flexicontent .mansoryitem .col-md-4  {width: 33.333%;}
+	#flexicontent .mansoryitem.col-lg-4,  
+	#flexicontent .mansorygrid .col-lg-4  {width: 33.333%;}
 
 	 
-	#flexicontent .mansoryitem .col-md-6  {width: 50%;}
+	#flexicontent .mansoryitem.col-lg-6, 
+	#flexicontent .mansorygrid .col-lg-6  {width: 49.555%;}
 
 	
 	 
-	#flexicontent .mansoryitem .col-md-8  {width: 66.666%;}
+	#flexicontent .mansoryitem.col-lg-8,
+	#flexicontent .mansorygrid .col-lg-8
+
+	  {width: 66.666%;}
+
 }
 
 @media only screen and (min-width: 1200px) {
 	
 	  
-	#flexicontent .mansoryitem .col-lg-4  {width: 33.333%;}
+	#flexicontent .mansoryitem.col-xl-4,
+	#flexicontent .mansorygrid .col-xl-4
+
+	  {width: 33.333%;}
 
 	 
-	#flexicontent .mansoryitem .col-lg-6  {width: 50%;}
+	#flexicontent .mansoryitem.col-xl-6,
+	#flexicontent .mansorygrid .col-xl-6
+
+	  {width: 49.555%;}
 
 	
-	#flexicontent .mansoryitem .col-lg-8  {width: 66.666%}
+	#flexicontent .mansoryitem.col-xl-8,
+	#flexicontent .mansorygrid .col-xl-8
+
+	  {width: 66.666%}
 
 }	

@@ -65,6 +65,19 @@
 	background-color: rgba(255,255,255,0.6);
 }
 
+/* Suche und Filter Feder innerhalb der Kategorie */
+.select2-container .select2-choice {
+   
+    height: 36px;
+    line-height: 36px;
+    border-radius: 0px;
+}
+
+.select2-container .select2-choice .select2-arrow {
+    
+    border-radius: 0px ;
+}
+
 .select2-container .select2-choice {
 	background-image: none;
 }
@@ -72,6 +85,8 @@
 .fc_field_filter label, .flexicontent .fc_field_filter {
     font-size: inherit;
 }
+
+
 fieldset.fc_search_set, fieldset.fc_filter_set {
     display: flex;
 	align-items: center;
@@ -636,7 +651,7 @@ a.fcfile_shareFile:focus {
 	border: solid 1px @grau_01;
  }
 
-.wbc-tabs  li { margin-left: 0px; margin-right: 10px;}
+.wbc-tabs  li { margin-left: 0px; margin-right: 10px; margin-top: 10px;}
 
 
 .wbc-tabs  li > .nav-link:focus,
@@ -665,6 +680,18 @@ a.fcfile_shareFile:focus {
 	padding-right: 0px;
 	}
 
+@media ( max-width: 415px) {
+
+	.wbc-tabs .nav-item { 
+		display: block;
+		width: 100%;
+		
+		.wbc-tabs  .nav-link { 
+			
+			padding: .3rem .5rem;
+		 }
+	}
+}
 
 /* field galerie wk_galerie */
 
@@ -677,10 +704,21 @@ a.fcfile_shareFile:focus {
 			display: none;
 		}	
 	#flexicontent div .btn-group > :not(:last-child), 
-	#flexicontent div .input-append > :not(:last-child) {
-		width: 70%;
-	}
+	#flexicontent div .input-append > :not(:last-child) {}	
 
+	/* Kategoriesuche und Filter */
+
+
+	#flexicontent .fc_filter_buttons_box  { width: 100%; 
+
+			 .fc_filter_buttons_box .btn { 
+				margin-bottom: 5px; 
+				font-size: 0.9rem;
+				padding: 0.3rem 0.3rem;
+				float: left;
+				margin-right: 10px;
+			}
+	}
 
 }
 
