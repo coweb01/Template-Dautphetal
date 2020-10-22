@@ -3,35 +3,39 @@
 
 
 /* floating labels ----------------------------------*/
-.float-placeholder {
+.float-placeholder {}
+.float-placeholder { width: auto !important;  }
 
-	
-}
 
 /* custom css formulare */
 
-form label { color: @color1; }
-.form-control.required { border: solid 2px #333333; }
+form label { 
+	color: var(--color-font, @defaultcolor); 
+	font-weight: inherit; 
+	font-style: inherit;
+	font-weight: 400; 
+	font-size: 1.2rem;
+}
+
+.form-control.required { border: solid 2px var(--color-font, @color1); }
 .form-control.invalid {border: solid 2px @danger_color;  }
-.form-control { border-radius: @borderradius; }
+.form-control { 
+  border-radius: @borderradius;
+  background-color: var(--color-bg, #fff);
+  color: var(--color-font, @default);
+}
 
-/* kontaktformular */
-
-.contact-form { }
-.contact .control-label { text-align:  right; }
-.contact input[type="text"],
-.contact input[type="email"],
-.contact textarea
- { width: 100%; }
-
-.contact select { width: auto; }
-.contact .form-actions { text-align: center; }
-.contact-form {margin-top: 0px;}
+.input-group {
+		.input-group-text {
+		    background-color: @color2;
+		    color: white;
+		    border-radius: @borderradius;
+		    border-top-right-radius: @borderradius;
+		    border-bottom-right-radius: @borderradius;
+		}
+}
 
 
-/* floating labels */
-
-.float-placeholder { width: auto !important;  }
 
 
 /* privacy message */
@@ -51,10 +55,57 @@ form label { color: @color1; }
 
 /*JTF Formulare ---------------------------------------*/
 
+/* file uploads */
+
+.wbc-form .uploader-wrapper .lead { padding-left: 3rem;  padding-right: 3rem; font-size: 1rem; }
+
+
+.wbc-form fieldset > div.radio-inline .col-12 { 
+	max-width: 100% !important; 
+ 	flex: 0 0 100% !important;
+}
+
+.wbc-form fieldset { margin-bottom: 2rem; }
+.wbc-form legend   { color: @color1; }
+
+.contact-form .form-inline label { justify-content: left }
+
+
 #kontakt0_jtf_important_notices { 
 		position: absolute;
 		left: -333333px;
  }
+ .contact-form #kontakt0_jtf_captcha_math  { width: 200px; }
+
+/*  Datenschutz checkbox ------------------------------*/
+
+.privacy_policy { width: 70%; }
+
+/* Captcha --------------------------------------------*/
+
+#kontakt0_captcha,
+#jform_captcha
+
+ { max-width: 250px; width: 250px;  }
+
+
+
+
+
+/* privacy message 
+
+.private-policy .control-label { 
+	display: inline-block !important; 
+	position: absolute;
+	right: 2rem;
+	left: auto;
+	bottom: 0rem;
+}
+
+.private-policy .col-sm-12 {
+	padding-bottom: 4rem;
+}*/
+
 
 /* Captcha --------------------------------------------*/
 

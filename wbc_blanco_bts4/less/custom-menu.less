@@ -193,7 +193,7 @@
 	padding: 0px;
 }
 .nav-overlay a {
-    display: block; 	
+  display: block; 	
 	text-align: center;
 }
 .nav-overlay li .overlay { 
@@ -213,16 +213,19 @@
 	background: rgba(0, 0, 0, 0.4);
 }
 .nav-overlay li .image-title { 
-	color: #231F20; 
+	color: @default; 
 	text-align: center;	
 	font-size: 1.2rem;
 	line-height: 1.3rem;
-	display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 	position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-	width: 85%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  min-height: 80px;
 	background: rgba(255, 255, 255, .8);
 	padding: .5rem;
 }
@@ -250,20 +253,17 @@
 		.nav-link {
 			margin-right: .5rem;
 			font-size: 1.5rem;
-			color: #231f20;
+			color: @default;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			width: 53px;
 			height: 50px;
-			border: 1px solid #707070;
+			border: 1px solid @color1;
 		}
 	}
 }
 @media (max-width: 400px) {
-	ul li.item-137 {
-		display: none !important;
-	}
 	.navbar-brand {
 		order: 2;
 		text-align: center;
@@ -282,7 +282,7 @@
 	}
 	.offcanvas .line {
 		width: 30px;
-		background: #0050A0;
+		background: @color2;
 	}
 }
 @media (max-width: 520px) {
@@ -304,7 +304,7 @@
 	content: '\f078'; padding-left: 5px; 
 }
 .offcanvas .nav-item.level1 { 
-	border-bottom: 1px solid #707070;
+	border-bottom: 1px solid @color1;
 	padding: .5rem 1rem; 
 	display: block;
 	width: 100%;
@@ -321,25 +321,25 @@
     font-size: 1rem;
 	color: #fff;
 	&:hover {
-		color: #d9d9d9;
+		color: @bordercolor;
 	}
 }
 .offcanvas .nav-item > .nav-child {
-	border-top: 1px solid #707070;
+	border-top: 1px solid @color1;
 	padding-bottom: 0;
 	.nav-link {
 		padding: .5rem 0;
 	}
 }
 .offcanvas .nav-header { 
-    display: block;
+  display: block;
 	color: #FFFFFF; 
-	background-color: #0086CB;
+	background-color: @color6;
 	font-size: 1.2rem; 
 	line-height: 1.6rem; 
 	font-weight: 500;
 	padding: .3rem;
-	border: 1px solid #707070;
+	border: 1px solid @color1;
 	margin: 1rem 0;
 }
 @media (min-width: 500px) {

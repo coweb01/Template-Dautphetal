@@ -492,7 +492,10 @@ if ( $bootstrap == 4  && $offcanvas == 1 )  :
   include_once JPATH_THEMES . '/' . $this->template . '/includes/offcanvas4.php'; // offcanvas mobil menu
 endif; ?> 
 
-<?php if($this->countModules('sidebar-left-fix') || $this->countModules('sidebar-left-toggle') || $fontsize ) : ?>
+<?php if( $this->countModules('sidebar-left-fix') || 
+                      $this->countModules('sidebar-left-toggle')  ||
+                          $toggleleft   ) : ?>
+
 <div id="left-fixed" class="position-fixed wbc-fixed-sidebar d-print-none ">
     <?php if ( $this->countModules('sidebar-left-fix') ): ?>
     <div class="wbc-fixed-sidebar-left d-none d-sm-block">
@@ -504,49 +507,71 @@ endif; ?>
     </div>
     <?php endif; ?>
 
-    <?php if ($this->countModules('sidebar-left-toggle') || $fontsize ): ?> 
-      <div id="fixed-sidebar-left-toggle" class="wbc-fixed-sidebar d-none d-sm-block">
-           <?php if ( $toggleleft ) { ?>
-           <a class="nav-link btn-icon border border-secondary bg-secondary shadow-sm" role="button" href="#"><i class="<?php echo $iconleft;?>"></i> <span class="sr-only"><?php echo JText::_('TPL_WBC_BLANCO_J3_OPEN_TXT'); ?></span></a>
+    
+    <?php if ($toggleleft ) :?>    
+
+            <?php if ( $this->countModules('sidebar-left-toggle') || 
+                                  ( $fontsize && $fontsize_pos = 3 )|| 
+                                   ( $styleswitch && $styleswitch_pos = 3 )) : ?> 
+              
+              <div id="fixed-sidebar-left-toggle" class="wbc-fixed-sidebar d-none d-sm-block">
+                
+                   <a class="nav-link btn-icon border border-secondary bg-secondary shadow-sm" role="button" href="#"><i class="<?php echo $iconleft;?>"></i> <span class="sr-only"><?php echo JText::_('TPL_WBC_BLANCO_J3_OPEN_TXT'); ?></span></a>
 
 
-           <?php  } ?>
-           <div id="left-container-fix" class="container-fix">
-            <?php if ( $fontsize  && $fontsize_pos == 3 ) : ?>              
-                <?php include_once JPATH_THEMES . '/' . $this->template . '/includes/fontsize.php'; // load fontsize.php ?>
-            <?php endif; ?> 
+                  
+                   <div id="left-container-fix" class="container-fix">
+                    <?php if ( $fontsize  ) : ?>              
+                        <?php include_once JPATH_THEMES . '/' . $this->template . '/includes/fontsize.php'; // load fontsize.php ?>
+                    <?php endif; ?> 
 
-            <?php include_once JPATH_THEMES . '/' . $this->template . '/includes/CSSswitch.php'; // load CSSswitch.php ?>
+                    <?php if ( $styleswitch  ) : ?>  
+                    <?php include_once JPATH_THEMES . '/' . $this->template . '/includes/CSSswitch.php'; // load CSSswitch.php ?>
+                    <?php endif; ?> 
+                     <jdoc:include type="modules" name="sidebar-left-toggle" style="none"/>
+                   </div>
+              </div>
              
-             <jdoc:include type="modules" name="sidebar-left-toggle" style="none"/>
-           </div>
-      </div>
-     
-    <?php endif; ?>
+            <?php endif; ?>
+    <?php endif; ?>  
 </div>
 <?php endif; ?>
 
-<?php if($this->countModules('sidebar-right-fix') || $fontsize ) : ?>
-<div id="right-fixed" class="position-fixed wbc-fixed-sidebar">
+<?php if($this->countModules('sidebar-right-fix') || $this->countModules('sidebar-right-toggle') || $toggleright  ) : ?>
+
+<div id="right-fixed" class="position-fixed wbc-fixed-sidebar d-print-none">
     <?php if ( $this->countModules('sidebar-right-fix') ): ?>
     <div class="wbc-fixed-sidebar-right d-none d-sm-block">
       <jdoc:include type="modules" name="sidebar-right-fix" style="none"/>
     </div>
     <?php endif; ?>
 
-    <?php if ($this->countModules('sidebar-right-toggle') || $fontsize ): ?>
-      <div id="fixed-sidebar-right-toggle" class="wbc-fixed-sidebar d-none d-sm-block"> 
-           <?php if ( $toggleright ) { ?> 
-           <a class="nav-link btn-icon border border-secondary bg-secondary shadow-sm" role="button" href="#"><i class="<?php echo $iconright;?>"></i> <span class="sr-only"><?php echo JText::_('TPL_WBC_BLANCO_J3_OPEN_TXT'); ?></span></a> 
-           <?php } ?> 
-           <div id="right-container-fix" class="container-fix">
-             <?php if ( $fontsize  && $fontsize_pos == 4 ) : ?>
-               <?php include_once JPATH_THEMES . '/' . $this->template . '/includes/fontsize.php'; // load fontsize.php ?>
-             <?php endif; ?> 
-             <jdoc:include type="modules" name="sidebar-right-toggle" style="none"/>
-           </div>
-      </div>
+
+
+    <?php if ($toggleright ) :?> 
+
+        <?php if ($this->countModules('sidebar-right-toggle') || 
+                                    ( $fontsize && $fontsize_pos = 4 ) || 
+                                    ( $styleswitch && $styleswitch_pos = 4 ) ): ?>
+          <div id="fixed-sidebar-right-toggle" class="wbc-fixed-sidebar d-none d-sm-block"> 
+              
+               <a class="nav-link btn-icon border border-secondary bg-secondary shadow-sm" role="button" href="#"><i class="<?php echo $iconright;?>"></i> <span class="sr-only"><?php echo JText::_('TPL_WBC_BLANCO_J3_OPEN_TXT'); ?></span></a> 
+              
+               <div id="right-container-fix" class="container-fix">
+                 <?php if ( $fontsize  ) : ?>
+                   <?php include_once JPATH_THEMES . '/' . $this->template . '/includes/fontsize.php'; // load fontsize.php ?>
+                 <?php endif; ?>
+
+                <?php if ( $styleswitch  ) : ?>  
+                <?php include_once JPATH_THEMES . '/' . $this->template . '/includes/CSSswitch.php'; // load CSSswitch.php ?>
+                <?php endif; ?> 
+
+                 <jdoc:include type="modules" name="sidebar-right-toggle" style="none"/>
+               </div>
+          </div>
+        <?php endif; ?>
     <?php endif; ?>
+
 </div>
 <?php endif; ?>
 

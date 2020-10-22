@@ -8,7 +8,6 @@ body {
 	margin: 0px !important;
 	 }
 
-
 h1, .h1	{ 
 	font-family: 'Bebas Neue', Arial, sans-serif; 
 	font-style: inherit;
@@ -41,6 +40,14 @@ h5, .h5  {}
     background-color: @linkcolor;
     border-color: @linkcolor;
 }
+.page-link {
+  background-color: var(--color-grau1, #fff);
+}
+@media (max-width: 450px) {
+  .page-link {
+    padding: .5rem;
+  }
+}
 /* Widgetkit ------------------------------------------*/
 
 a.uk-slidenav-contrast:link,
@@ -49,7 +56,11 @@ a.uk-slidenav-contrast:visited  { color: rgba(255,255,255,1); }
 a.uk-slidenav-contrast:hover,
 a.uk-slidenav-contrast:focus { color: rgba(255,255,255,0.7) ; }
 
+/* Cards */
 
+.card {
+  background-color: var(--color-bg, #fff);
+}
 
 /* Bootrap 4 fix --------------------------------------*/
 
@@ -113,39 +124,32 @@ a.uk-slidenav-contrast:focus { color: rgba(255,255,255,0.7) ; }
 
 /* Headering ----------------------------------------------------*/
 
-	#headerimg { 
-		
-		}
+	#headerimg {}
 
-	#overlay_headerimg  { 
-		
-	  }
+	#overlay_headerimg  {}
     
-	#overlay_headerimg  > div {
-	   
-	}
+	#overlay_headerimg  > div {}
 
 	#headerimg p,
 	#headerimg h1,
 	#headerimg h2,
 	#headerimg h3,
-	#headerimg h4 {
-		
-	}
+	#headerimg h4 {}
 	
 	#headerimg h1,
 	#headerimg h2,
-	#headerimg h3
-	{
-	 	
+	#headerimg h3 {}
+
+	#left-fixed.wbc-fixed-sidebar {
+		top: 20%;
 	}
 
-	#left-fixed {
-		top: 15%;
+	#right-fixed.wbc-fixed-sidebar {
+		top: 40%;
 	}
 
     body.header-large #left-fixed {
-		top: 20%;
+		top: 40%;
 	}
 
 	.wbc-fixed-sidebar .nav-item > .bg-secondary { 
@@ -194,8 +198,7 @@ a.uk-slidenav-contrast:focus { color: rgba(255,255,255,0.7) ; }
 
 /*  Content                -------------------------*/
 
-.main {
-}
+.main {}
 
 
 /* Ende Content            -------------------------*/
@@ -268,7 +271,7 @@ a.link-more:hover:after,
 a.link-more:focus:after {}
 
 a.wfpopup {
-	display: block;
+	display: inline-block;
 }
 /* Systemmeldungen --------------------------------------------------------*/
 
@@ -517,7 +520,9 @@ input.cc-cookie-checkbox { min-height: 16px !important; }
 
 	#fixed-sidebar-right-toggle .container-fix .btn,
 	#fixed-sidebar-left-toggle .container-fix .btn {
-		.rounded-corners (0%);
+    .rounded-corners (0%);
+    background-color: var(--color-bg, @color2);
+    color: var(--color-font, #fff);
 	}
 
 	#fixed-sidebar-right-toggle .container-fix .badge,

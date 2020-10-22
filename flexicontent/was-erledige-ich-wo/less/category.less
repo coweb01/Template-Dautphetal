@@ -3,7 +3,10 @@
 /**  CSS für Kategorieansicht Was-Erledige-Ich-Wo  ***/
 
 #verzeichnis-liste ul li { list-style: none; }
-#verzeichnis-liste {font-size: 0.9rem;}
+#verzeichnis-liste {
+	font-size:  1rem;
+	line-height: 1.5rem;
+}
 #verzeichnis-liste ul.header-flexilst, #verzeichnis-liste ul.items-flexilst {
 	margin: 0px;
 	padding: 0px;
@@ -25,8 +28,8 @@
 		margin-bottom: 1rem;
 		}
 
-#verzeichnis-liste ul.odd  { background-color: @grau_01;}
-#verzeichnis-liste ul.even { background-color: @grau_2;}
+#verzeichnis-liste ul.odd  { background-color: @transwhite_9;}
+#verzeichnis-liste ul.even { background-color: @transwhite_3;}
 
 #verzeichnis-liste ul li.flexi-item {
 	
@@ -36,7 +39,7 @@
 	background-image: none;
 	list-style: none;
 	float:left;
-	line-height: 1.2rem;
+	line-height: inherit;
 	} 
 #verzeichnis-liste ul li.beschriftung {
 	width: 22%;
@@ -50,7 +53,7 @@
 	}
 
 #verzeichnis-liste a {
-	font-weight: 500;
+
 }
 	
 .title *

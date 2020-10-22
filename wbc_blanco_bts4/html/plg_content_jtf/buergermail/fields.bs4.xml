@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form class="wbc-form buergermail " orientation="horizontal" gridlabel="col-12 col-sm-2 col-md-2"   
+     
+>
+	
+	<fieldset name="meldung" label="Was möchten Sie uns melden?">
+		
+		<field name="JTF_FIELDSET_BUEGERMAIL_TITLE_MELDUNG"
+		       type="note"
+		       description="JTF_FIELDSET_BUEGERMAIL_DESC_MELDUNG"
+		       class="wbc-info"     
+		/>
+		
+
+		<field name="message"
+			type="textarea"
+			class="form-control"
+			labelclass="nolabel"
+			cols="50"
+			rows="10"
+			description="JTF_DEFAULT_FORM_MESSAGE_DESC"
+			label="JTF_DEFAULT_FORM_MESSAGE_LABEL"
+			hint="JTF_DEFAULT_FORM_MESSAGE_HINT"
+			filter="safehtml"
+			required="true"
+			
+		/>
+		   
+		<field name="file"
+		       type="file"
+		       class="form-control"
+		       labelclass="nolabel"
+		       description="JTF_FILE_DESC"
+		       label="JTF_FILE_LABEL"		      
+		       validate="file"
+		       accept=".pdf,.jpg,.png,.gif"
+		       icon="fas fa-file-upload"
+		       uploadmaxsize="2"
+		       multiple="multiple"
+		       hiddenLabel="true"
+		/>
+		
+
+	</fieldset>
+
+	<fieldset name="date" label="Datum, Uhrzeit und Ort" class="mt-5 ">
+		<field name="formtag" type="hidden" default="JTF_FIELDSET_BUEGERMAIL_TITLE" />
+		<field name="JTF_FIELDSET_BUEGERMAIL_DESC_DATE"
+		       type="note"
+		       description=""
+		       heading="h4"
+		/>
+		<field name="datum" 
+			type="calendar" 
+			default="NOW"
+			icon="fa fa-calendar" 
+			label="JTF_EXTENDED_FORM_DATE_LABEL" 
+			description="JTF_EXTENDED_FORM_DATE_DESC"
+			class="form-control"
+			labelclass="wbc-label" 
+			required="true" 
+			format="%d.%m.%Y"
+			filter="user_utc"
+			showtime="false"
+			todaybutton="false"
+			filltable="false"
+			translateformat="true"
+			/>
+
+		<field name="uhrzeit"
+			type="text"
+			icon="fa fa-clock"
+			class="form-control"
+			labelclass="wbc-label"
+			size="30"
+			required="true"
+			description="JTF_EXTENDED_FORM_TIME_DESC"
+			label="JTF_EXTENDED_FORM_TIME_LABEL"
+			hint="JTF_EXTENDED_FORM_TIME_LABEL"
+		/>
+
+		<field name="list"
+		       type="list"
+		       class="form-control"
+			   labelclass="wbc-label"
+		       description="JTF_LIST_MELDUNG_DESC"
+		       label="JTF_LIST_MELDUNG_LABEL"
+		       default=""
+		       validate="options"
+		      
+		>
+			
+			<option value="JTF_OPTION1">JTF_OPTION1_LBL</option>
+			<option value="JTF_OPTION2">JTF_OPTION2_LBL</option>
+			<option value="JTF_OPTION3">JTF_OPTION3_LBL</option>
+			<option value="JTF_OPTION4">JTF_OPTION4_LBL</option>
+			<option value="JTF_OPTION5">JTF_OPTION5_LBL</option>
+			<option value="JTF_OPTION6">JTF_OPTION6_LBL</option>
+			<option value="JTF_OPTION7">JTF_OPTION7_LBL</option>
+			<option value="JTF_OPTION8">JTF_OPTION8_LBL</option>
+			<option value="JTF_OPTION9">JTF_OPTION9_LBL</option>
+			<option value="JTF_OPTION10">JTF_OPTION1_LBL</option>
+			<option value="JTF_OPTION11">JTF_OPTION2_LBL</option>
+			<option value="JTF_OPTION12">JTF_OPTION3_LBL</option>
+			<option value="JTF_OPTION13">JTF_OPTION4_LBL</option>
+			<option value="JTF_OPTION14">JTF_OPTION5_LBL</option>
+			<option value="JTF_OPTION15">JTF_OPTION6_LBL</option>
+			<option value="JTF_OPTION16">JTF_OPTION7_LBL</option>
+			<option value="JTF_OPTION17">JTF_OPTION8_LBL</option>
+			<option value="JTF_OPTION18">JTF_OPTION9_LBL</option>
+			<option value="JTF_OPTION99">JTF_OPTION99_LBL</option>
+		</field>
+
+		<field name="ortsteil"
+			type="list"	
+			class="form-control "
+			labelclass="wbc-label"
+			required=""
+			default="JTF_OPTION1"
+			description="JTF_EXTENDED_FORM_LOCATION_DESC"
+			label="JTF_EXTENDED_FORM_LOCATION_LABEL"
+			validate="options"
+		>
+			<option value="JTF_OPTIONOT1">JTF_OPTIONOT1_LBL</option>
+			<option value="JTF_OPTIONOT2">JTF_OPTIONOT2_LBL</option>
+			<option value="JTF_OPTIONOT3">JTF_OPTIONOT3_LBL</option>
+			<option value="JTF_OPTIONOT4">JTF_OPTIONOT4_LBL</option>
+			<option value="JTF_OPTIONOT5">JTF_OPTIONOT5_LBL</option>
+			<option value="JTF_OPTIONOT6">JTF_OPTIONOT6_LBL</option>
+			<option value="JTF_OPTIONOT7">JTF_OPTIONOT7_LBL</option>
+			<option value="JTF_OPTIONOT8">JTF_OPTIONOT8_LBL</option>
+			<option value="JTF_OPTIONOT9">JTF_OPTIONOT9_LBL</option>
+			<option value="JTF_OPTIONOT10">JTF_OPTIONOT11_LBL</option>
+			<option value="JTF_OPTIONOT11">JTF_OPTIONOT12_LBL</option>
+			<option value="JTF_OPTIONOT12">JTF_OPTIONOT13_LBL</option>
+			
+		</field>
+
+		<field name="strasse"
+			type="text"
+			class="form-control"
+			labelclass="wbc-label"
+			size="30"
+			required="true"
+			description="JTF_EXTENDED_FORM_STREET_DESC"
+			label="JTF_EXTENDED_FORM_STREET_LABEL"
+			hint="JTF_EXTENDED_FORM_STREET_LABEL"
+
+		/>
+
+	</fieldset>
+
+
+	<fieldset name="kontakt" label="Ihre Kontaktdaten" class="mt-5">
+		<field name="JTF_FIELDSET_BUEGERMAIL_DESC_CONTACT"
+		       type="note"
+		       description=""
+		       heading="h4"
+		/>
+
+		<field name="anrede"
+			type="list"
+			
+			description="JTF_EXTENDED_FORM_ANREDE_DESC"
+			label="JTF_EXTENDED_FORM_ANREDE_LABEL"
+			hint="JTF_EXTENDED_FORM_ANREDE_LABEL"
+			default=""
+			validate="options"
+			required="true"
+			class="form-control"
+			labelclass="wbc-label"
+		>
+			<option value="JTF_EXTENDED_FORM_ANREDE_OPTION_FRAU">JTF_EXTENDED_FORM_ANREDE_OPTION_FRAU</option>
+			<option value="JTF_EXTENDED_FORM_ANREDE_OPTION_HERR">JTF_EXTENDED_FORM_ANREDE_OPTION_HERR</option>
+			
+		</field>
+		<field name="prename"
+			type="text"
+			
+			class="form-control"
+			labelclass="wbc-label"
+			size="30"
+			description="JTF_EXTENDED_FORM_VNAME_DESC"
+			label="JTF_EXTENDED_FORM_VNAME_LABEL"
+			hint="JTF_EXTENDED_FORM_VNAME_LABEL"
+			required="true"
+		/>
+		<field name="nachname"
+			type="text"
+			
+			class="form-control"
+			labelclass="wbc-label"
+			size="30"
+			description="JTF_EXTENDED_FORM_NNAME_DESC"
+			label="JTF_EXTENDED_FORM_NNAME_LABEL"
+			hint="JTF_EXTENDED_FORM_NNAME_LABEL"
+			required="true"
+		/>
+		<field name="plz"
+		       type="plz"
+		     
+		       maxlength="60"
+		       class="form-control"
+			   labelclass="wbc-label"
+		       description="JTF_PLZ_DESC"
+		       label="JTF_PLZ_LABEL"
+		       hint="JTF_PLZ_LABEL"
+		       validate="plz"
+		       required="true"
+		/>
+
+			<field name="wohnort"
+			type="text"
+			
+			class="form-control"
+			labelclass="wbc-label"
+			size="30"
+			description="JTF_EXTENDED_FORM_ORT_DESC"
+			label="JTF_EXTENDED_FORM_ORT_LABEL"
+			hint="JTF_EXTENDED_FORM_ORT_LABEL"
+			required="true"
+		/>
+
+
+		<field name="telefon"
+			type="tel"
+			
+			class="form-control"
+			labelclass="wbc-label"
+			size="30"
+			description="JTF_EXTENDED_FORM_TEL_DESC"
+			label="JTF_EXTENDED_FORM_TEL_LABEL"
+			hint="JTF_EXTENDED_FORM_TEL_LABEL"
+		/>
+
+		<field name="email"
+			type="email"
+			
+			class="form-control"
+			labelclass="wbc-label"
+			size="30"
+			description="JTF_DEFAULT_FORM_EMAIL_DESC"
+			label="JTF_DEFAULT_FORM_EMAIL_LABEL"
+			hint="JTF_DEFAULT_FORM_EMAIL_LABEL"
+			filter="string"
+			validate="email"
+			required="true"
+		/>
+		<field name="antwort"
+		       type="radio"
+		       description="JTF_RADIO_INLINE_ANTWORT_DESC"
+		       label="JTF_RADIO_INLINE_ANTWORT_LABEL"
+		       default="JTF_OPTION2"
+		       validate="options"
+		       optionlabelclass="radio-inline"
+		       required="true"
+		>
+			<option value="JTF_YES">JYES</option>
+			<option value="JTF_NO">JNO</option>
+		</field>
+
+		
+		</fieldset>
+		<fieldset name="consent_form" class="privacy"	         
+	>
+		<field name="privacy_policy"
+		       type="checkboxes"
+		       class="form-check-input privacy_policy "
+		       labelclass="form-check-label "
+		       description=""
+		       label="JTF_PRIVACY_POLICY_LABEL"
+		       default=""
+		       required="true"
+		       hiddenLabel="true"
+		>
+			<option value="JYES">JTF_PRIVACY_POLICY_OPTION_ACCEPT</option>
+		</field>
+	</fieldset>
+		
+</form>

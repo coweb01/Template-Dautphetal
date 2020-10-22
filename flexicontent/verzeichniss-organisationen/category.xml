@@ -51,11 +51,13 @@
 		<field name="tmpl_cols" type="list" default="1" label="FLEXI_SUBCAT_COLS" description="FLEXI_SUBCAT_COLS_DESC">
 			<option value="1">FLEXI_1_COL</option>
 			<option value="2">FLEXI_2_COLS</option>
+			<option value="3">FLEXI_3_COLS</option>
 		</field>
 		
 		<field name="tmpl_cols_sm" type="list" default="1" label="FLEXI_SUBCAT_COLS_SM" description="FLEXI_SUBCAT_COLS_SM_DESC">
 			<option value="1">FLEXI_1_COL</option>
 			<option value="2">FLEXI_2_COLS</option>
+			<option value="3">FLEXI_3_COLS</option>
 		</field>
 		
 		<field name="tmpl_cols_xs" type="list" default="1" label="FLEXI_SUBCAT_COLS_XS" description="FLEXI_SUBCAT_COLS_XS_DESC">

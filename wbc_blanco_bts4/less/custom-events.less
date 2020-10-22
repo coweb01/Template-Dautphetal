@@ -11,16 +11,17 @@
 .front .mod_events_latest_table {
 	border-spacing: 0 20px;
 	border-collapse: separate;
-	margin-top: -20px;
+  margin-top: -20px;
+  margin-bottom: 0;
 	td {
-		background-color: #fff;
+		background-color: var(--color-bg, #fff);
 	}
 	.wbc-ev-date {
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 10px;
 		width: 70%;
-		background-color: #168F3B;
+		background-color: @color3;
 		padding: 10px 15px;
 		color: #fff;
 		font-weight: 500;
@@ -42,10 +43,10 @@
 	margin-top: 30px;
 	margin-bottom: 100px;
 	 a {
-		color: #fff !important;
-		background-color: #2E6FB1;
-		font-size: 1.3rem;
-		padding: 10px 20px;
+		color: var(--color-bg, #fff) !important;
+		background-color: var(--color-font, @color2);
+		font-size: 1.1rem;
+		padding: 10px 15px;
 		border-radius: 20px;
 	}
 }
@@ -56,7 +57,7 @@
 			margin-bottom: 0;
 		}
 		.wbc-ev-content {
-			background-color: #1FA22E;
+			background-color: @color3;
 			padding: 5px 15px;
 			h3 {
 				margin-bottom: 0;
@@ -68,7 +69,10 @@
 				display: none;
 			}
 		}
-	}
+  }
+  .mod_events_latest_callink {
+    text-align: center;
+  }
 }
 /* Modul JEvents Search */
 
@@ -176,7 +180,7 @@ td.mod_events_latest_first
 /* Jevents Listenansicht Template flat ---------------------------*/
 #jevents_body {
     
-    border: 1px solid #DDD;
+    border: 1px solid @bordercolor;
     border-radius: 0px;     
     background-color: transparent !important;
     padding-top: 0px;
@@ -185,7 +189,7 @@ td.mod_events_latest_first
 
 #jev_maincal {
     background-color: transparent !important;
-	border: 1px solid #ddd;
+	border: 1px solid @bordercolor;
 }
 
 /* Kopfzeile der Tabelle und Navigation --------------------------*/
@@ -227,11 +231,10 @@ td.mod_events_latest_first
 .jev_header2 .active a:hover {
 }
 #jevents_body .jev_toprow div.previousmonth a {
-	color: @defaultcolor;
+	color: var(--color-font, @defaultcolor);
 }
 #jevents_body .jev_toprow div.nextmonth a {
-    color:  @defaultcolor;
-    
+	color: var(--color-font, @defaultcolor);
 }
 /*----------------------------------------------------------------*/
 

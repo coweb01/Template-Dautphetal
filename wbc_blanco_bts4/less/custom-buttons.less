@@ -77,7 +77,7 @@ a.btn-primary:focus
 	
  }
  .readmore a.btn, .readmode a  {
-    color:@color1;
+    color: var(--color-mute, @color1);
     background-color: transparent;
     border: solid 1px @grau_1;
     border-radius: 20px;
@@ -96,7 +96,13 @@ a.btn-primary:focus
 
 /* print, email, edit Buttons */
 
-#bookmark { margin-top: 3rem; margin-bottom: 3rem;}
+#bookmark { 
+  margin-top: 2rem; 
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 #bookmark .btn:first-child { margin-left: 0px; }
 #bookmark .btn {}
 #bookmark .btn > i { margin-right: 0.5rem; }
@@ -105,10 +111,12 @@ a.btn-primary:focus
 #bookmark .btn:focus {}
 #bookmark .btn:active {}
 
-#bookmark .fc_printbutton {
-	border: 1px solid #2E6FB1;
+#bookmark .fc_printbutton,
+#bookmark .fc_feedbutton {
+	border: 1px solid var(--color-font, @color2);
 	border-radius: 20px;
-	padding: 10px 20px;
+  padding: 10px 20px;
+  margin: .5rem;
 	i {
 		margin-right: 10px;
 	}
@@ -130,11 +138,11 @@ a.btn-primary:focus
 
 #flexicontent .btn[class^="btn-outline-"], 
 #flexicontent .btn[class*=" btn-outline-"] {
-	color: #fff;
+	color: var(--color-bg,#fff);
 	&:not(:last-child) {
 		margin-right: 5px;
 	}
 	a {
-		color: #fff;
+    color: var(--color-bg,#fff);
 	}
 }

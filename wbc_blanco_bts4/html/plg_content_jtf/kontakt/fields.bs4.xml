@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form class="custom-form custom-contact form-inline">
+<form class="custom-form custom-contact" orientation="horizontal"
+      gridlabel="col-12 col-sm-3 col-md-3">
+
 	<fieldset name="kontaktdaten">
 		<field name="name"
 		    type="text"
-		    class="form-control col-sm-12 col-md-5 col-lg-5"
-			labelclass="col-sm-12 col-md-3 col-lg-3"
+		    class="form-control 5"
 		    maxlength="60"
 		    description="JTF_NAME_DESC"
 		    label="JTF_NAME_LABEL"
@@ -13,16 +14,14 @@
 		/>
 		<field name="strasse"
 			type="text"
-			class="form-control col-sm-12 col-md-5 col-lg-5"
-			labelclass="col-sm-12 col-md-3 col-lg-3"
+			class="form-control"
 			size="30"
 			description="JTF_EXTENDED_FORM_STREET_DESC"
 			label="JTF_EXTENDED_FORM_STREET_LABEL"
 		/>
 		<field name="ort"
 			type="text"
-			class="form-control col-sm-12 col-md-5 col-lg-5"
-			labelclass="col-sm-12 col-md-3 col-lg-3"
+			class="form-control"
 			size="30"
 			description="JTF_EXTENDED_FORM_LOCATION_DESC"
 			label="JTF_EXTENDED_FORM_LOCATION_LABEL"
@@ -30,8 +29,7 @@
 		
 		<field name="email"
 		    type="email"
-		    class="form-control col-sm-12 col-md-5 col-lg-5"
-			labelclass="col-sm-12 col-md-3 col-lg-3"
+		    class="form-control"
 		    maxlength="60"
 		    size="30"
 		    description="JTF_EMAIL_DESC"
@@ -43,8 +41,7 @@
 
 		<field name="telefon"
 			type="tel"	
-			class="form-control col-sm-12 col-md-5 col-lg-5"
-			labelclass="col-sm-12 col-md-3 col-lg-3"
+			class="form-control"
 			size="30"
 			description="JTF_EXTENDED_FORM_TEL_DESC"
 			label="JTF_EXTENDED_FORM_TEL_LABEL"
@@ -53,8 +50,7 @@
 		
 		<field name="message"
 		    type="textarea"
-		    class="form-control col-sm-12 col-md-5 col-lg-5"
-			labelclass="col-sm-12 col-md-3 col-lg-3"
+		    class="form-control"
 		    cols="30"
 		    rows="10"
 		    description="JTF_MESSAGE_DESC"

@@ -38,6 +38,12 @@ $tooltip_class = FLEXI_J30GE ? 'hasTooltip' : 'hasTip';
 
 
 
+// MICRODATA 'itemtype' for ALL items in the listing (this is the fallback if the 'itemtype' in content type / item configuration are not set)
+$microdata_itemtype_cat = $this->params->get( 'microdata_itemtype_cat', 'Article' );
+
+
+
+
 // Ergaenzung Template Variables webconcept Bootstrap 4 Template
 
 
@@ -123,7 +129,7 @@ $arr_cols_gridclasses_dbl_lg  	= array(
 
  	if ($mansory == 1) {
 		$js .= "
-			var container_item = document.querySelector('.mansoryitem');
+			var container_item = document.querySelector('.mansorygrid');
 			var msnry_item;
 			// initialize Masonry after all images have loaded
 			if (container_item) {
@@ -199,7 +205,7 @@ if ($count) :
 ?>
 
 <section>
-<div  class="<?php echo ( $grid_framework == 1 ) ? 'container-fluid' : '';?> listing <?php echo !isset($classnum) ? '' : $classnum ; ?>">
+<div  class="<?php  //echo ( $grid_framework == 1 ) ? 'container-fluid' : '';?> listing <?php echo !isset($classnum) ? '' : $classnum ; ?>">
 
 <?php
 if ($this->params->get('intro_use_image', 1) && $this->params->get('intro_image')) {
@@ -247,21 +253,33 @@ foreach ($cat_items as $catid => $items) :
 			
 
 		 
-            <div class="flexi-itemlist <?php echo ($grid_framework == 2) ? 'uk-grid' : '';?> <?php echo ( $grid_framework == 1 ) ? 'row' : ''; ?> <?php echo ($mansory == 1 ) ? 'mansoryitem' : ''; ?>">
+		   
+            <div class="<?php echo ($mansory == 1 ) ? 'mansorygrid' : 'nomansorygrid'; ?>">
 			
 			<?php if ($mansory == 1 ) : ?>
 			<div class="gutter-size"></div>	
 			<div class="grid-size <?php echo ( $grid_framework > 0 ) ? $gridclass : ''; ?>"></div>
 			<?php endif; ?>
 
+			 <div class="flexi-itemlist <?php echo ($grid_framework == 2) ? 'uk-grid' : '';?> <?php echo ( $grid_framework == 1 ) ? 'row' : ''; ?>">
+			
 			<?php $count_items = 0; ?>
 
 			<?php foreach ($items as $item) : // Schleife für Artikel
 				$introtxt = '';  
 			    if($item->state!=-2) :
-				$count_items ++; ?>
+				$count_items ++; 
+
+
+				// MICRODATA document type (itemtype) for each item
+				// -- NOTE: category's microdata itemtype is fallback if the microdata itemtype of the CONTENT TYPE / ITEM are not set
+				$microdata_itemtype = $item->params->get( 'microdata_itemtype') ? $item->params->get( 'microdata_itemtype') : $microdata_itemtype_cat;
+				$microdata_itemtype_code = $microdata_itemtype ? 'itemscope itemtype="http://schema.org/'.$microdata_itemtype.'"' : '';
+						
+
+				?>
                 
-			<div class='<?php echo ($mansory == 1 ) ? 'mansoryitem' : ''; ?> <?php echo ( $grid_framework > 0 ) ? $gridclass : ''; ?>'>
+			<div class="<?php echo ($mansory == 1 ) ? 'mansoryitem' : 'nomansoryitem'; ?> <?php echo ( $grid_framework > 0 ) ? $gridclass : ''; ?>" <?php echo $microdata_itemtype_code; ?>>
                 <div class="flexi-item <?php echo ($count_items%2 ? 'even background-primary' : 'odd background-secondary'); ?>">
 				<?php if ($this->params->get('show_title', 0)) : ?>
     			<h3 class="fc_item_title">

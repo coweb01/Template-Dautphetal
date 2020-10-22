@@ -40,7 +40,7 @@
     
     font-family: @fontfamily;
     font-weight: 300;
-    color: @color2;
+    color: var(--color-font, @color2);
 }
 .front #flexicontent .fc_item_title, 
 .front #flexicontent .fc_item_title a
@@ -62,7 +62,7 @@
 
 #flexicontent .background-primary,
 #flexicontent .background-secondary {
-	background-color: rgba(255,255,255,0.6);
+	background-color: var(--color-bg, rgba(255,255,255,0.6));
 }
 
 /* Suche und Filter Feder innerhalb der Kategorie */
@@ -88,7 +88,8 @@
 
 
 fieldset.fc_search_set, fieldset.fc_filter_set {
-    display: flex;
+  display: flex;
+  flex-wrap: wrap;
 	align-items: center;
 }
 
@@ -211,13 +212,13 @@ hr.fcclearline {
 
 /* An enabled individual alpha-index character element */
 #fc_alpha .fc_alpha_index {
-	
 	float: left;
 	margin-right: 2px;
 	padding: 6px;
 	position: relative;
 	right: 50%;
-	text-decoration: none;
+  text-decoration: none;
+  background-color:var(--color-grau1, #efefef);
 }
 
 /* A disabled individual alpha-index character element */
@@ -247,6 +248,15 @@ hr.fcclearline {
 
 /* Flexicontent Filters -----------------*/
 
+.fc_filter_html {
+  display: flex;
+  flex-wrap: wrap;
+}
+.fc_filter_html .input-append,
+.fc_filter_html .input-prepend {
+  display: flex;
+}
+
 #flexicontent .fc_filter_box input,
 #flexicontent .fc_filter_box select,
 #flexicontent .fc_orderby_selector select,
@@ -260,10 +270,10 @@ hr.fcclearline {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #495057;
+  color: @default;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid @bordercolor;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -381,7 +391,7 @@ body .fc-mssg-inline.fc-info, body .fc-mssg.fc-info {
 
 
 .fcitem_text { 
-	color: @default;
+	color: var(--color-font, @default);
 	font-size: 1rem;
 	line-height: 1.4rem;
 	font-weight: 300;
@@ -389,17 +399,17 @@ body .fc-mssg-inline.fc-info, body .fc-mssg.fc-info {
 
 .fcitem_readon a:link,
 .fcitem_readon a:visited {
-	color: #484546;
-    background-color: transparent;
+	color: var(--color-font, @default);
+  background-color: transparent;
 	padding: 5px;
-    border: solid 2px #4497D6;
-    border-radius: 20px;
+  border: solid 2px var(--color-font, @color6);
+  border-radius: 20px;
 }
 .fcitem_readon a:hover,
 .fcitem_readon a:focus {
  	color: white;
-    background-color: @color1;
-    border: solid 1px @color1;
+  background-color: @color1;
+  border: solid 1px @color1;
  	text-decoration: none;
 }
 .fcitem_readon a:active {}
@@ -469,6 +479,7 @@ div.fc-fieldgrp-value-box {
 
 .field_plz, .field_ort, 
 .field_plz_1, .field_ort_1, 
+.field_ort_3,
 .field_ortsteil_auswahl, 
 .field_plz_2, .field_ortsteil_auswahl2,
 .field_ortsteil_auswahl1,
@@ -486,7 +497,7 @@ div.fc-fieldgrp-value-box {
 {
 	margin-left: -10px;
 }
-.value_plz, .value_ort, .value_plz_1, .value_ort_1, .value_plz_2, .value_ort_2, 
+.value_plz, .value_ort, .value_plz_1, .value_ort_1, .value_plz_2, .value_ort_2, .value_ort_3,
 .value_ortsteil_auswahl, .value_ortsteil_auswahl2, .value_ortsteil_auswahl1, .value_stadtteil,
 .value_ortsteil_auswahl_ansprechpartner,
 .value_ortsteil_buergerhaus,
@@ -501,6 +512,7 @@ div.fc-fieldgrp-value-box {
 .value_ort, 
 .value_ort_2, 
 .value_ort_1, 
+.value_ort_3,
 .value_ortsteil_auswahl,
 .value_ortsteil_auswahl1,
 .value_ortsteil_auswahl2,
@@ -767,7 +779,7 @@ a.fcfile_shareFile:focus {
 
 }
 
-.front #fc_bloglist_item_2 {
+.front #flexicontent .introblock > div#fc_bloglist_item_1 {
 	background-image: url(../images/grafiken/welle-grau.png);
 	background-position: bottom center;
 	background-repeat: no-repeat;
@@ -785,7 +797,7 @@ a.fcfile_shareFile:focus {
 			}
 			.fcitem_date {
 				font-size: 0.9rem;
-				color: @color1;
+				color: var(--color-mute, @color1);
 			}
 			.fc_readmore {
 				margin-top: auto;
@@ -798,7 +810,7 @@ a.fcfile_shareFile:focus {
 		}
 	}
 }
-@media (max-width: 979px) {
+@media (max-width: 1024px) {
 	.mod-aktuelles {
 		.card-columns {
 			column-count: 1;
@@ -836,15 +848,28 @@ a.fcfile_shareFile:focus {
 	}
 }
 .module_readon {
-	margin-top: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 	text-align: center;
 	a.readon {
-		color: #fff;
-		background-color: @color2;
-		font-size: 1.3rem;
-		padding: 10px 20px;
+		color: var(--color-bg, #fff);
+		background-color: var(--color-font, @color2);
+		font-size: 1.1rem;
+		padding: 10px 15px;
 		border-radius: 20px;
 	}
+}
+
+/* Tabelle */
+
+table.adminlist tbody tr.row0 td h4,
+table.adminlist tbody tr.row1 td h4 {
+  color: var(--color-bg, @h4_color);
+}
+
+table.adminlist tbody tr.row0:hover,
+table.adminlist tbody tr.row1:hover {
+  color: var(--color-font, #555);
 }
 
 @media (min-width: 1024px) {

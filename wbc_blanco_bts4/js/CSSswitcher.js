@@ -9,16 +9,16 @@
 
     function loadStyle () {
       if (localStorage.getItem("stylez")) {
-        console.log(localStorage.getItem("stylez"));
+        //console.log(localStorage.getItem("stylez"));
         currentSheet.href = localStorage.getItem("stylez");
-        ToggleContainer();
+        //ToggleContainer();
        }
     }
 
-    function ToggleContainer () {
+    /*function ToggleContainer () {
        ToggleContainerLeft.style.display = "none";
        ToggleBtn.classList.remove("slide-open");
-    }
+    }*/
 
     // only continue if required elements are present
     if (currentSheet && switcher) {

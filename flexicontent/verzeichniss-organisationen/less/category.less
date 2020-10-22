@@ -3,11 +3,8 @@
 @import 'include/config.less';
 
 
-#flexicontent .listing .flexi-item
- {	
- 	padding: 10px 20px 10px 20px;
-	
- }
+#flexicontent .nomansoryitem { padding: 15px; }
+#flexicontent .flexi-item {}
 
 
 #flexicontent .wrap-item {
@@ -35,7 +32,10 @@
 	float:       left;
 }
 #flexicontent .categorie-item-list { padding-bottom: 20px;}
+
 #flexicontent .categorie-item-list .row .col-12:not(.mansoryitem) { display: flex; }
+
+#flexicontent .categorie-item-list .row .col-12.grid-size { display: block; }
 
 
 #flexicontent .listing.two .even {
@@ -50,19 +50,15 @@
 #flexicontent .flexi-cat {
 	clear:both;
 	padding-top: 20px;
-	border-top: 1px solid #CCC;	
 }
 
 
 /**** felder ***/
+
 #flexicontent .line3, #flexicontent .line4 {float: left; width: 100%; margin-bottom: 0.5em;}
 #flexicontent .flexi-fieldlist .flexi-field.flexi-title {
 }
-#flexicontent .flexi-item {
-	margin-top: 0.5em !important;
-	margin-bottom: 0.5em !important;
-	padding-top:   0.5em !important
-}
+
 #flexicontent ul.flexi-itemlist li:last-child {
 	border-bottom: none !important;  
 	margin-bottom: 0px !important;
@@ -97,59 +93,6 @@
 	margin-right: 10px;
 }
 
-/*-------------- Felder ---------------
-
-.field_funktion1 { font-weight: 600; }
-.field_prename_1,.field_name_1  {
-	padding-right: 5px !important;
-	float:left;
-	width: auto!important;
-	display:inline-block;
-	 }
-.flexi-name div {	font-weight: 600 !important;}
-
-.field_plz_1, .field_ort_1, 
-.field_ortsteil_auswahl, 
-.field_plz_2, 
-.field_ortsteil_auswahl_2, 
-.field_ortsteil_auswahl_einrichtung, 
-.field_ort_einrichtung,
-.field_ortsteil_buergerhaus { 
-	width: auto !important; 
-	display: inline-block !important; 
-	margin-right: 5px !important; }
-
-.value_plz_2, .value_ort_2, .value_plz_1, .value_plz_2, 
-.value_ort_1, .value_ortsteil_auswahl, 
-.field_ortsteil_auswahl_2,
-.value_ort_einrichtung,
-.value_ortsteil_buergerhaus,
-.value_name_2, .value_prename_2 
-{ 
-	float: left !important;
-	display: inline!important; 
-	width: auto!important; }
-
-.value_ort_2, 
-.value_ort_1, 
-.value_ortsteil_auswahl, 
-.value_ort_einrichtung, 
-.value_ortsteil_auswahl_2 {
-	margin-left: 5px;
-} 
-.field_plz_2, .field_plz_1 { clear: left;}
-
-
-.field_pfarrer_1 .value, 
-.field_funktion_1 .value, 
-.field_funktion_1b .value, 
-.field_name_1 .value, 
-.field_prename_1 .value, 
-.field_prename_2 .value, 
-.field_name_2 .value,
-.field_praxisbezeichnung_1 .value { font-weight: 600 !important; }
-
-*/
 /******* Category ************************************************/
 
 .clearen {display: block; width:100%; background-image:none;}
@@ -200,42 +143,65 @@ hr.fcclearline {
 
 /*------------- mansory grid ----------------------------*/
 
+#flexicontent .mansorygrid .mansoryitem
+ {
+	
+	margin: 0px;
+	padding: 15px;
+	min-height: 10px;
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: top;
+	zoom: 1;
+	line-height: inherit;
 
-#flexicontent .mansoryitem.uk-grid .flexi-item 
+	float: none;
+	width: auto;
+ }
+
+
+#flexicontent .mansorygrid.uk-grid .flexi-item 
 {
 	 margin-right: 1.999999%;
 	 
  }
 
-#flexicontent .mansoryitem.row .flexi-item 
+#flexicontent .mansorygrid.row .flexi-item 
 {
 	 margin-right: 1.666666%;
 }
 
-.background-primary 
+.background-primary,
+.background-secondary
 { 
-	background-color: rgb( 240, 241, 242 );
-	background-color: rgba( 139, 145, 151, 0.15 );
+		
+	padding: 2rem;
+	float: left;
+	width: 100%;
 
  }
-.background-secondary {
-	
-	background-color: rgb( 240, 241, 242 );
-	background-color: rgba( 139, 145, 151, 0.15 );
-}
+ 
 
-#flexicontent .mansoryitem .col-xs-12 
+#flexicontent .mansorygrid .col-xs-12 
   {width: 100%;}
 
-#flexicontent .mansoryitem .gutter-size  {width: 0%;} /*zur zeit nicht verwendet */
+#flexicontent .mansorygrid .gutter-size  {width: 0%;} /*zur zeit nicht verwendet */
 
 @media only screen and (min-width: 768px) {
 
+	
 	 
-	#flexicontent .mansoryitem .col-sm-6  {width: 50%;}
+	#flexicontent .mansoryitem.col-sm-6,
+	#flexicontent .mansorygrid .col-sm-6
+
+	  {width: 49.555%;}
 
 	  
-	#flexicontent .mansoryitem .col-sm-4  {width: 33.333%;}
+	#flexicontent .mansoryitem.col-sm-4,
+	#flexicontent .mansorygrid .col-sm-4
+
+	  {width: 33.333%;}
+
 	
 	#flexicontent .flexi-fieldlist { width: auto; }
 	#flexicontent .fieldsleft {}
@@ -246,25 +212,41 @@ hr.fcclearline {
 @media only screen and (min-width: 992px) {
 	
 	 
-	#flexicontent .mansoryitem .col-md-4  {width: 33.333%;}
+	#flexicontent .mansoryitem.col-lg-4,  
+	#flexicontent .mansorygrid .col-lg-4  {width: 33.333%;}
 
 	 
-	#flexicontent .mansoryitem .col-md-6  {width: 50%;}
+	#flexicontent .mansoryitem.col-lg-6, 
+	#flexicontent .mansorygrid .col-lg-6  {width: 49.555%;}
 
 	
 	 
-	#flexicontent .mansoryitem .col-md-8  {width: 66.666%;}
+	#flexicontent .mansoryitem.col-lg-8,
+	#flexicontent .mansorygrid .col-lg-8
+
+	  {width: 66.666%;}
+
 }
 
 @media only screen and (min-width: 1200px) {
 	
 	  
-	#flexicontent .mansoryitem .col-lg-4  {width: 33.333%;}
+	  
+	#flexicontent .mansoryitem.col-xl-4,
+	#flexicontent .mansorygrid .col-xl-4
+
+	  {width: 33.333%;}
 
 	 
-	#flexicontent .mansoryitem .col-lg-6  {width: 50%;}
+	#flexicontent .mansoryitem.col-xl-6,
+	#flexicontent .mansorygrid .col-xl-6
+
+	  {width: 49.555%;}
 
 	
-	#flexicontent .mansoryitem .col-lg-8  {width: 66.666%}
+	#flexicontent .mansoryitem.col-xl-8,
+	#flexicontent .mansorygrid .col-xl-8
+
+	  {width: 66.666%}
 
 }	
