@@ -1,10 +1,10 @@
 /* Navigation              -------------------------*/
 
 .chrome-fix {
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: @fontfamily;
     
 }
-
+/*
 #navigation-main .navbar { align-items: flex-start; }
 #navigation-main ul.akdropdown.navmain { 
 }
@@ -94,7 +94,7 @@
 	display: none;
 }
 
-/* dropdown  1. Level ---------------------------------------------------*/
+/* dropdown  1. Level ---------------------------------------------------
 
 #navigation-main ul.akdropdown ul.dropdown-menu li ul {
 	margin-top: 2.5rem;  
@@ -126,16 +126,16 @@
 #navigation-main ul.akdropdown .quicklink a:focus {}
 
 #navigation-main ul.akdropdown li.level2 > a:active,
-#navigation-main ul.akdropdown .quicklink a:active {}
-
-/* language switcher*/
+#navigation-main ul.akdropdown .quicklink a:active {}*/
+/*
+/* language switcher
 
 #navigation-main .mod-languages ul li a {
 	padding-left: 0px;
 	padding-right: 0px;
 }
-
-/* Quicklinks in der Hauptnavigation */
+*/
+/* Quicklinks in der Hauptnavigation 
 
 .multicolumn-dropdown > .quicklink {
 	.background_grau(5%);
@@ -175,7 +175,7 @@
 .quicklink > .nav { 
 	margin-top: 0px !important; 
 }
-
+*/
 /*  Kachelmenü Freizeit auf der Startseite Layout: overlay */
 
 .nav-overlay {}
@@ -285,16 +285,15 @@
 		background: @color2;
 	}
 }
+
 @media (max-width: 520px) {
 	.navbar-brand img.img-fluid {
 		max-width: 190px;
 	}
 }
-.offcanvas li.active {
-	> a {
-		text-decoration: underline;
-	}
-}
+
+
+
 .offcanvas .dropdown-toggle:after { border: none; display: none; }
 .offcanvas .divider {display: none; }
 .offcanvas .fa-chevron-down:before { 
@@ -316,6 +315,13 @@
 	font-size: 1.2rem;
 	font-weight: 400;
 } 
+
+.offcanvas .nav-item.level1.active {
+	> a {
+		.white-trans(70);
+	}
+}
+
 .offcanvas .nav-item > .nav-link { 
 	padding: 0; 
     font-size: 1rem;
@@ -325,15 +331,25 @@
 	}
 }
 .offcanvas .nav-item > .nav-child {
-	border-top: 1px solid @color1;
+	
 	padding-bottom: 0;
 	.nav-link {
-		padding: .5rem 0;
+		padding: .5rem 1rem;
+		.background_white(20);
+		margin-bottom: 1px;
 	}
+	.nav-item.active {
+		.nav-link { 
+			.background_white(80);
+			color: @defaultcolor;
+		 }
+
+	}
+
 }
 .offcanvas .nav-header { 
-  display: block;
-	color: #FFFFFF; 
+    display: block;
+	color: white; 
 	background-color: @color6;
 	font-size: 1.2rem; 
 	line-height: 1.6rem; 
@@ -342,11 +358,15 @@
 	border: 1px solid @color1;
 	margin: 1rem 0;
 }
+
+
 @media (min-width: 500px) {
 	.sidebar-offcanvas {
 		width: 500px;
 	}
 }
+
+
 /* Menue Buergerservice auf der Startseite */
 
 ul.servicemenu { justify-content: flex-start; }
@@ -467,7 +487,7 @@ ul.servicemenu > li.nav-item a.nav-link > .subtitle {
 	color: @grau_5;
 }
 
-/* language switcher */
+/* language switcher 
 ul.switcher { padding-bottom: 2rem; }
 ul.switcher li { 
 	width: 8%;
@@ -488,7 +508,7 @@ ul.switcher li > a:focus img,
 ul.switcher li.active > a:link img,
 ul.switcher li.active > a:link img {
 	.graustufe(0);
-}
+}*/
 
 @media (max-width: 767px) {
 
@@ -526,7 +546,7 @@ ul.switcher li.active > a:link img {
 @media (min-width: 1200px) {}
 
 @media (min-width: 1400px ) {
-	#navigation-main .dropdown-toggle::after {
+	/*#navigation-main .dropdown-toggle::after {
 		display: inline-block; 
 		position: absolute;
 		top: 0.3rem;
@@ -537,14 +557,14 @@ ul.switcher li.active > a:link img {
 	    font-size: 1.1rem;
 	    padding-left:  1rem;
 	    padding-right: 2rem;
-	}	
+	}*/	
 }
 
 @media (min-width: 1700px) {
 	/*#navigation-main ul.akdropdown.navmain { 
 		position: relative;
  	}*/
-	#navigation-main ul.nav > li.level1 > a {	    
+	/*#navigation-main ul.nav > li.level1 > a {	    
 	    font-size: 1.2rem;
 	    padding-left:  1rem;
 	    padding-right: 3rem;
@@ -555,13 +575,13 @@ ul.switcher li.active > a:link img {
  		margin-left: 17%; 
  		margin-right: 15%;
  		min-width: 70%;
-	}
-	/* Quicklinks in der Hauptnavigation */
+	} */
+	/* Quicklinks in der Hauptnavigation 
 	#quicklinks ul.nav > li > a {
 		padding: 0.3rem 0.5rem; 
 		font-size: 1rem;
 		line-height: 2.4rem;
-	}
+	}*/
 	.nav-overlay li .image-title { 
 		font-size: 1.7rem;
 		line-height: 2rem;

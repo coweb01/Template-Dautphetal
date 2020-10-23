@@ -15,7 +15,7 @@
 		<field name="message"
 			type="textarea"
 			class="form-control"
-			labelclass="nolabel"
+			labelclass="nofloat"
 			cols="50"
 			rows="10"
 			description="JTF_DEFAULT_FORM_MESSAGE_DESC"
@@ -99,15 +99,13 @@
 			<option value="JTF_OPTION7">JTF_OPTION7_LBL</option>
 			<option value="JTF_OPTION8">JTF_OPTION8_LBL</option>
 			<option value="JTF_OPTION9">JTF_OPTION9_LBL</option>
-			<option value="JTF_OPTION10">JTF_OPTION1_LBL</option>
-			<option value="JTF_OPTION11">JTF_OPTION2_LBL</option>
-			<option value="JTF_OPTION12">JTF_OPTION3_LBL</option>
-			<option value="JTF_OPTION13">JTF_OPTION4_LBL</option>
-			<option value="JTF_OPTION14">JTF_OPTION5_LBL</option>
-			<option value="JTF_OPTION15">JTF_OPTION6_LBL</option>
-			<option value="JTF_OPTION16">JTF_OPTION7_LBL</option>
-			<option value="JTF_OPTION17">JTF_OPTION8_LBL</option>
-			<option value="JTF_OPTION18">JTF_OPTION9_LBL</option>
+			<option value="JTF_OPTION10">JTF_OPTION10_LBL</option>
+			<option value="JTF_OPTION11">JTF_OPTION11_LBL</option>
+			<option value="JTF_OPTION12">JTF_OPTION12_LBL</option>
+			<option value="JTF_OPTION13">JTF_OPTION13_LBL</option>
+			<option value="JTF_OPTION14">JTF_OPTION14_LBL</option>
+			<option value="JTF_OPTION15">JTF_OPTION15_LBL</option>
+			<option value="JTF_OPTION16">JTF_OPTION16_LBL</option>			
 			<option value="JTF_OPTION99">JTF_OPTION99_LBL</option>
 		</field>
 
@@ -130,9 +128,9 @@
 			<option value="JTF_OPTIONOT7">JTF_OPTIONOT7_LBL</option>
 			<option value="JTF_OPTIONOT8">JTF_OPTIONOT8_LBL</option>
 			<option value="JTF_OPTIONOT9">JTF_OPTIONOT9_LBL</option>
-			<option value="JTF_OPTIONOT10">JTF_OPTIONOT11_LBL</option>
-			<option value="JTF_OPTIONOT11">JTF_OPTIONOT12_LBL</option>
-			<option value="JTF_OPTIONOT12">JTF_OPTIONOT13_LBL</option>
+			<option value="JTF_OPTIONOT10">JTF_OPTIONOT10_LBL</option>
+			<option value="JTF_OPTIONOT11">JTF_OPTIONOT11_LBL</option>
+			<option value="JTF_OPTIONOT12">JTF_OPTIONOT12_LBL</option>
 			
 		</field>
 
