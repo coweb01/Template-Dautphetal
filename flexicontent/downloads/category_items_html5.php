@@ -265,7 +265,7 @@ foreach ($cat_items as $catid => $items) :
 
 				<div id="card download_list_cat_<?php echo $catid; ?>item_<?php echo $i; ?>" class="<?php echo $fc_item_classes; ?>">
 					
-					<div class="card-body flexi-fieldlist">
+					<div class="card-body flexi-fieldlist background-secondary">
 
 					  	<?php if ($item->event->beforeDisplayContent) : ?>
 						  	<!-- BOF beforeDisplayContent -->

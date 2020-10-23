@@ -435,26 +435,6 @@ $tabsHeaderLevel =	( $itemTitleHeaderLevel == 2 ) ? '3' : '2';
 		<?php endif; ?>
     <?php// endif; ?>
 
-
-	<?php // if ($this->params->get('comments') && !JRequest::getVar('print')) : /* BOF comments */ ?>
-	<!-- <section class="comments group"> -->
-	<?php /*
-		if ($this->params->get('comments') == 1) :
-			if (file_exists(JPATH_SITE.DS.'components'.DS.'com_jcomments'.DS.'jcomments.php')) :
-				require_once(JPATH_SITE.DS.'components'.DS.'com_jcomments'.DS.'jcomments.php');
-				echo JComments::showComments($this->item->id, 'com_flexicontent', $this->escape($this->item->title));
-			endif;
-		endif;
-	
-		if ($this->params->get('comments') == 2) :
-			if (file_exists(JPATH_SITE.DS.'plugins'.DS.'content'.DS.'jom_comment_bot.php')) :
-    			require_once(JPATH_SITE.DS.'plugins'.DS.'content'.DS.'jom_comment_bot.php');
-    			echo jomcomment($this->item->id, 'com_flexicontent');
-  			endif;
-  		endif; */
-	?>
-	<!-- </section> -->
-	<?php /*endif;  EOF comments */ ?>
     
     <?php echo ( ($mainAreaTag == 'section') ? '</article>' : ''); ?>
 

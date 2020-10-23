@@ -49,7 +49,7 @@ for($i=0; $i < $count; $i++) {
 ?>
 
 
-<div id="wk-grid-<?php echo $item->id; ?>" class="wbc-galerie uk-grid-width-1-2 uk-grid-width-small-1-3 uk-grid-width-medium-1-<?php echo $galerie_cols;?> uk-grid-width-large-1-<?php echo $galerie_cols;?> uk-grid-width-xlarge-1-<?php echo $galerie_cols;?> " data-uk-grid-match="{target:'> div > .uk-panel', row:true}" data-uk-grid="{gutter: '<?php echo $galerie_gutter;?>'}"  data-uk-scrollspy="{cls:'uk-animation-scale-up uk-invisible', target:'> div > .uk-panel', delay:<?php echo $galerie_delay;?>}"> 
+<div id="wk-grid-<?php echo $item->id; ?>" class="wbc-galerie uk-grid-width-1-1 uk-grid-width-small-1-2 uk-grid-width-medium-1-<?php echo $galerie_cols;?> uk-grid-width-large-1-<?php echo $galerie_cols;?> uk-grid-width-xlarge-1-<?php echo $galerie_cols;?> " data-uk-grid-match="{target:'> div > .uk-panel', row:true}" data-uk-grid="{gutter: '<?php echo $galerie_gutter;?>'}"  data-uk-scrollspy="{cls:'uk-animation-scale-up uk-invisible', target:'> div > .uk-panel', delay:<?php echo $galerie_delay;?>}"> 
     
 	<?php foreach ($image_arr as  $image) : ?>
 	

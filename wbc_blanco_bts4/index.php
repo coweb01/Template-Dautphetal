@@ -52,8 +52,7 @@ if (!isset($bootstrap_colclass_mobil_ph)) { $bootstrap_colclass_mobil_ph = ''; }
   <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $tpath;?>/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="<?php echo $tpath;?>/images/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="<?php echo $tpath;?>/images/favicon-16x16.png">
-  
-
+ 
 
 <!-- ***************************************************************************************************** -->
 <!-- *****     copyright Template www.das-webconcept.de       2019                                    **** -->
@@ -516,7 +515,7 @@ endif; ?>
               
               <div id="fixed-sidebar-left-toggle" class="wbc-fixed-sidebar d-none d-sm-block">
                 
-                   <a class="nav-link btn-icon border border-secondary bg-secondary shadow-sm" role="button" href="#"><i class="<?php echo $iconleft;?>"></i> <span class="sr-only"><?php echo JText::_('TPL_WBC_BLANCO_J3_OPEN_TXT'); ?></span></a>
+                   <a class="toggle-btn nav-link btn-icon border border-secondary bg-secondary shadow-sm" role="button" href="#"><i class="<?php echo $iconleft;?>"></i> <span class="sr-only"><?php echo JText::_('TPL_WBC_BLANCO_J3_OPEN_TXT'); ?></span></a>
 
 
                   
@@ -555,7 +554,7 @@ endif; ?>
                                     ( $styleswitch && $styleswitch_pos = 4 ) ): ?>
           <div id="fixed-sidebar-right-toggle" class="wbc-fixed-sidebar d-none d-sm-block"> 
               
-               <a class="nav-link btn-icon border border-secondary bg-secondary shadow-sm" role="button" href="#"><i class="<?php echo $iconright;?>"></i> <span class="sr-only"><?php echo JText::_('TPL_WBC_BLANCO_J3_OPEN_TXT'); ?></span></a> 
+               <a class="toggle-btn nav-link btn-icon border border-secondary bg-secondary shadow-sm" role="button" href="#"><i class="<?php echo $iconright;?>"></i> <span class="sr-only"><?php echo JText::_('TPL_WBC_BLANCO_J3_OPEN_TXT'); ?></span></a> 
               
                <div id="right-container-fix" class="container-fix">
                  <?php if ( $fontsize  ) : ?>

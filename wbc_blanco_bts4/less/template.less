@@ -593,14 +593,18 @@ footer#footer {
 #fixed-sidebar-right-toggle .btn-icon,
 #fixed-sidebar-left-toggle .btn-icon,
 .wbc-fixed-sidebar ul > li a,
-.wbc-fixed-sidebar a.nav-link
- {  
+.wbc-fixed-sidebar a.nav-link {  
  	display:  flex; 
  	justify-content: center;
  	align-items: center;
- 	padding: 0.2rem 0.5rem;
- }
-
+   padding: 0.2rem 0.5rem;
+   i.fa-accessible-icon {
+     font-size: 1.5rem;
+   }
+}
+#fixed-sidebar-right-toggle:not(.slide-open) .btn-icon.bg-secondary {
+  background-color: var(--color-contrast, @color1) !important;
+}
 .wbc-fixed-sidebar a.nav-link { min-width: 32px; }
 
 #fixed-sidebar-right-toggle.slide-open {

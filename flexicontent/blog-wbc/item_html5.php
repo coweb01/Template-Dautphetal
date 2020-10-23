@@ -134,7 +134,7 @@ if ($show_img_desc == 1 ) :
 endif;
 
 
-
+// wenn bild im Beitragstext dann aus den array der positionen entfernen, 
 
 if ($show_img_desc == 1 ) {
 
@@ -311,9 +311,9 @@ $microdata_itemtype_code = $microdata_itemtype ? 'itemscope itemtype="http://sch
 			<?php endif; ?>
 	
 			<?php if ($this->params->get('show_create_date')) : ?>
-			<div class="created">
+			<div class="created badge badge-light">
 				<?php FlexicontentFields::getFieldDisplay($item, 'created', $values=null, $method='display'); ?>
-				<?php echo '['.JHTML::_('date', $this->fields['created']->value[0], JText::_('DATE_FORMAT_LC2')).']'; ?>		
+				<?php echo JHTML::_('date', $this->fields['created']->value[0], JText::_('DATE_FORMAT_LC2')); ?>		
 			</div>
 			<?php endif; ?>
 			
@@ -335,7 +335,7 @@ $microdata_itemtype_code = $microdata_itemtype ? 'itemscope itemtype="http://sch
 			<?php if (intval($item->modified) !=0 && $this->params->get('show_modify_date')) : ?>
 				<div class="modified">
 				<?php FlexicontentFields::getFieldDisplay($item, 'modified', $values=null, $method='display'); ?>
-				<?php echo '['.JHTML::_('date', $this->fields['modified']->value[0], JText::_('DATE_FORMAT_LC2')).']'; ?>
+				<?php echo JHTML::_('date', $this->fields['modified']->value[0], JText::_('DATE_FORMAT_LC2')); ?>
 				</div>
 			<?php endif; ?>
 			

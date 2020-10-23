@@ -62,7 +62,7 @@
 
 #flexicontent .background-primary,
 #flexicontent .background-secondary {
-	background-color: var(--color-bg, rgba(255,255,255,0.6));
+	background-color: var(--color-side, rgba(255,255,255,0.6));
 }
 
 /* Suche und Filter Feder innerhalb der Kategorie */
@@ -414,23 +414,31 @@ body .fc-mssg-inline.fc-info, body .fc-mssg.fc-info {
 }
 .fcitem_readon a:active {}
 
-/*  Feld Fotogalerie widgetkit */
+/*  Feld Fotogalerie widgetkit -------------------------------*/
 
-.flexicontent-galerie { margin-top: 3rem; margin-bottom: 3rem; }
 
-.flexicontent-galerie .uk-panel h3,
-.flexicontent-galerie .uk-panel h2,
-.flexicontent-galerie .uk-panel h4 {
-	font-size: 1.2rem;
-    font-weight: 500;
+
+.wbc-galerie { 
+	width: 100%;
+	float: none;
+	clear: both;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	 
+
+		 img,
+		.uk-overlay img.uk-overlay-scale 
+		 { max-width: 100%; height: auto;}
+
+
+		.uk-panel h3,
+		.uk-panel h2,
+		.uk-panel h4 {
+			 font-size: 0.9rem; 
+		}
+
+		.uk-panel-teaser { margin-bottom: 5px; text-align: center;}
 }
-
-.flexicontent-galerie .uk-panel p {
-   font-weight: 1rem;
-   line-height: 1.3rem;
-}
-
-.flexicontent-galerie .uk-panel-teaser { margin-bottom: 5px; }
 
 /*-----------------------------*/
 
@@ -540,12 +548,6 @@ div.fc-fieldgrp-value-box {
 .field_praxisbezeichnung_1 .value,
 .field_namekita1 .value
 {}
-
-
-
-
-
-
 
 
 .field_downloads_1 { 
@@ -868,7 +870,9 @@ table.adminlist tbody tr.row1 td h4 {
 }
 
 table.adminlist tbody tr.row0:hover,
-table.adminlist tbody tr.row1:hover {
+table.adminlist tbody tr.row1:hover,
+table.adminlist tbody tr.row0:hover h4,
+table.adminlist tbody tr.row1:hover h4 {
   color: var(--color-font, #555);
 }
 

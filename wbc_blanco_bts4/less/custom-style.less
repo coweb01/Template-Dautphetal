@@ -19,6 +19,9 @@ h2, .h2  {
 	font-style: inherit;
 	font-weight: 400;
 }
+.front h2 {
+  font-size: 2.3rem;
+}
 .nofront .fc_item_title {
 	font-family: @fontfamily; 
 	font-style: inherit;
@@ -59,9 +62,20 @@ a.uk-slidenav-contrast:focus { color: rgba(255,255,255,0.7) ; }
 /* Cards */
 
 .card {
-  background-color: var(--color-bg, #fff);
+  background-color: var(--color-side, #fff);
+  border: 1px solid var(--color-side, rgba(0,0,0,.125));
 }
-
+.card btn.active, 
+.card .btn:hover, 
+.card .btn:focus, 
+.card .btn:active, 
+.card button:active, 
+.card .btn:not(:disabled):not(.disabled):active {
+  color: var(--color-font, @default);
+}
+.card-header {
+  background-color: var(--color-grau1, rgba(0,0,0,.03));
+}
 /* Bootrap 4 fix --------------------------------------*/
 
 .img-responsive { 
@@ -351,17 +365,6 @@ input.cc-cookie-checkbox { min-height: 16px !important; }
 .cc-window .cc-highlight .cc-btn:first-child:hover {
     text-decoration: none!important;
 }
-
-
-/* galerie widgetkit */
-
-
-.wbc-galerie { 
-	width: 100%;
-	float: none;
-	clear: both;
-	margin-top: 3rem;
-	 }
 
 /* ===================================================================================
 	MEDIA QUERIES OVERRIDES
