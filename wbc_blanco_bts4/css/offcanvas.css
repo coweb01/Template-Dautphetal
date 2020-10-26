@@ -14,6 +14,7 @@ body {
 
 
 /* umradung bei safari*/
+.offcanvas a,
 .offcanvas li:hover,
 .offcanvas li:active,
 .offcanvas li.active a.dropdown-toggle,

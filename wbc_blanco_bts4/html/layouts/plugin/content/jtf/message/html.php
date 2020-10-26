@@ -36,7 +36,7 @@ extract($displayData);
 				font-family:Helvetica;
 				font-size:15px;
 				line-height:150%;
-				text-align:  center;
+				text-align:  left;
     		}
     		.content {width: 100%; max-width: 600px;}
 
@@ -77,123 +77,126 @@ extract($displayData);
 
     	</style>
     </head>
-    <body yahoo class="bodycontainer content" bgcolor="#E5E5E5">
+    <body yahoo class="bodycontainer" bgcolor="#E5E5E5">
     	
 	
-	<table class="bg-white" width="600" align="center" bgcolor="#FFFFF" cellpadding="0" cellspacing="0" border="0">
+	<table width="100%" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" border="0">
 		<tr>
-    		<td>
+			<td>
 
-<?php
+			<?php
 
-$form->setAttribute('fileTimeOut', '');
-$fieldsets = $form->getXML();
-$formheader = $form->getValue((string)'headline'); 
-?>
-<h1 class="form-header"><?php echo $formheader; ?></h1>
-<?php 
-foreach ($fieldsets->fieldset as $fieldset)
-{
-	if (!empty($fieldset['name']) && (string) $fieldset['name'] == 'submit')
-	{
-		continue;
-	}
-
-	$fieldsetLabel = (string) $fieldset['label'];
-
-	if (count($fieldset->field)) : ?>
-		<?php if (!empty($fieldsetLabel) && strlen($legend = trim(JText::_($fieldsetLabel)))) : ?>
-			<h2><?php echo $legend; ?></h2>
-		<?php endif; ?>
-
-		
-    	<table width="100%" class="bg-white" bgcolor="#FFFFF" border="0" cellpadding="0" cellspacing="0">
-            <tbody>
-			<?php foreach ($fieldset->field as $field) :
-				$label = trim(JText::_((string) $field['label']));
-				$value = $form->getValue((string) $field['name']);
-				$type = (string) $field['type'];
-				$fileTimeOut = '';
-
-				if (!empty($field['notmail']))
+			$form->setAttribute('fileTimeOut', '');
+			$fieldsets = $form->getXML();
+			$formheader = $form->getValue((string)'headline'); 
+			?>
+			
+			<?php 
+			foreach ($fieldsets->fieldset as $fieldset)
+			{
+				if (!empty($fieldset['name']) && (string) $fieldset['name'] == 'submit')
 				{
 					continue;
 				}
 
-				if ($type == 'note')
-				{
-					$value = trim(JText::_((string) $field['description']));
-				}
+				$fieldsetLabel = (string) $fieldset['label'];
 
-				if ($type == 'file' && $fileClear > 0)
-				{
-					$fileTimeOut .= '<tr><td colspan="2">';
-					$fileTimeOut .= JText::sprintf('JTF_FILE_TIMEOUT', $fileClear);
-					$fileTimeOut .= '</td></tr>';
-				}
+				if (count($fieldset->field)) : ?>
+					<?php if (!empty($fieldsetLabel) && strlen($legend = trim(JText::_($fieldsetLabel)))) : ?>
+						<h2><?php echo $legend; ?></h2>
+					<?php endif; ?>
 
-				if ($type == 'spacer')
-				{
-					$label = '&nbsp;';
-					$value = trim(JText::_((string) $field['label']));
-				}
+					
+			    	<table class="content" bgcolor="#FFFFFF" align="center" border="0" cellpadding="0" cellspacing="0">
+			            <tbody>
+			            	
+						<?php foreach ($fieldset->field as $field) :
+							$label = trim(JText::_((string) $field['label']));
+							$value = $form->getValue((string) $field['name']);
+							$type = (string) $field['type'];
+							$fileTimeOut = '';
 
-				if (empty($value))
-				{
-					// Comment out 'continue', if you want to submit only filled fields
-					// continue;
-				}
+							if (!empty($field['notmail']))
+							{
+								continue;
+							}
 
-				$sublayoutValues = array(
-					'form'          => $form,
-					'value'         => $value,
-					'type'          => $type,
-					'fieldName'     => (string) $field['name'],
-					'fieldMultiple' => filter_var($field['multiple'], FILTER_VALIDATE_BOOLEAN),
-					'fileClear'     => $fileClear,
-					'fileTimeOut'   => $fileTimeOut,
-				);
-				?>
-				<tr>
-					<th style="width:30%; text-align: left;">
-						<?php echo strip_tags($label); ?>
-					</th>
-					<td>
-						<?php if ($type == 'subform')
+							if ($type == 'note')
+							{
+								$value = trim(JText::_((string) $field['description']));
+							}
+
+							if ($type == 'file' && $fileClear > 0)
+							{
+								$fileTimeOut .= '<tr><td colspan="2">';
+								$fileTimeOut .= JText::sprintf('JTF_FILE_TIMEOUT', $fileClear);
+								$fileTimeOut .= '</td></tr>';
+							}
+
+							if ($type == 'spacer')
+							{
+								$label = '&nbsp;';
+								$value = trim(JText::_((string) $field['label']));
+							}
+
+							if (empty($value))
+							{
+								// Comment out 'continue', if you want to submit only filled fields
+								// continue;
+							}
+
+							$sublayoutValues = array(
+								'form'          => $form,
+								'value'         => $value,
+								'type'          => $type,
+								'fieldName'     => (string) $field['name'],
+								'fieldMultiple' => filter_var($field['multiple'], FILTER_VALIDATE_BOOLEAN),
+								'fileClear'     => $fileClear,
+								'fileTimeOut'   => $fileTimeOut,
+							);
+							?>
+							<tr>
+								<th style="width:30%; text-align: left;">
+									<?php echo strip_tags($label); ?>
+								</th>
+								<td>
+									<?php if ($type == 'subform')
+									{
+										echo $this->sublayout('subform', $sublayoutValues);
+									}
+									else
+									{
+										echo $this->sublayout('mainform', $sublayoutValues);
+									} ?>
+								</td>
+							</tr>
+						<?php endforeach; ?>
+						<?php if (empty($fileTimeOut))
 						{
-							echo $this->sublayout('subform', $sublayoutValues);
+							$fileTimeOut = $form->getAttribute('fileTimeOut', '');
 						}
-						else
-						{
-							echo $this->sublayout('mainform', $sublayoutValues);
-						} ?>
-					</td>
-				</tr>
-			<?php endforeach; ?>
-			<?php if (empty($fileTimeOut))
-			{
-				$fileTimeOut = $form->getAttribute('fileTimeOut', '');
-			}
 
-			echo $fileTimeOut; ?>
-			</tbody>
-		</table>
-	<?php endif;
-}?>
+						echo $fileTimeOut; ?>
+						<tr >
+							<td class="footer">					
+					       
+								<table width="100%" border="0" cellpadding="0" cellspacing="0" style="padding-top: 30px; margin-bottom: 30px;">
+										<tr>
+											
+											<td><?php echo JText::_(EMAIL_SIGNATUR); ?></td>
+										</tr>
+								</table>
+								
+							</td>
+
+						</tr>
+						</tbody>
+					</table>
+				<?php endif;
+			}?>
 
    		 </td>
 	 	</tr>
 </table>
-<table  width="600" align="center" cellpadding="0" cellspacing="0" border="0">
-		<tr>
-    		<td>
-       
-			<table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top: 30px; margin-bottom: 30px;">
-					<tr>
-						
-						<td><?php echo JText::_(EMAIL_SIGNATUR); ?></td>
-					</tr>
-			</table>
-			</td>
-		</tr>
-</table>
+</body>
+</html>

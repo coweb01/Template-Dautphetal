@@ -113,70 +113,6 @@
 
 
 
-/*
-.mod_events_latest_callink a:link,
-.mod_events_latest_callink a:visited {
-
-	background-color: @gruen;
-	color: #FFFFFF;
-	padding: 0.5rem 0.75rem;
-	font-size: 0.9rem;
-	display: inline-block;
-	float: right;
-	margin-bottom: 0.5rem;
-}
-.mod_events_latest_callink a:hover,
-.mod_events_latest_callink a:focus {
-	background-color: @bg_gruen_5;
-	text-decoration: none;
-}
-.mod_events_latest_callink a:active {}
-
-td.mod_events_latest,
-td.mod_events_latest_first
- { 
-	position: relative; 
-	padding: 0 !important;
-	border-top: 3px solid @gruen;
-}
-
-
-.mod_events_latest .wbc-ev-title,
-.mod_events_latest_first .wbc-ev-title
- {
-	margin-bottom: 0.5em;
-	font-weight: 500;
-	display: block;
-}
-
-.mod_events_latest a.wbc-event-link:link,
-.mod_events_latest a.wbc-event-link:visited,
-.mod_events_latest_first a.wbc-event-link:link,
-.mod_events_latest_first a.wbc-event-link:visited {
- 
-	color: @defaultcolor;
-	text-decoration: none;
-	display: block;
-	padding: 0.75rem;
-}	
-.mod_events_latest a.wbc-event-link:hover,
-.mod_events_latest a.wbc-event-link:focus,
-.mod_events_latest_first a.wbc-event-link:hover,
-.mod_events_latest_first a.wbc-event-link:focus {
- 
-	color: @defaultcolor;
-	text-decoration: none;
-	background-color: @grau_01;
-}	
-.mod_events_latest .wbc-ev-date .fa-arrow-circle-right,
-.mod_events_latest_first .wbc-ev-date .fa-arrow-circle-right
- { 
-	float:  right;
-	display: inline-block;
-	color: @color1;
-}
-*/
-
 /* Jevents Listenansicht Template flat ---------------------------*/
 #jevents_body {
     
@@ -310,6 +246,24 @@ td.mod_events_latest_first
 
 
  }
+
+
+@media only screen and (max-width: 569px) {
+
+	.front .mod_events_latest_table {
+		td {
+			padding: 0px;
+
+			h3 {
+				font-size: 1.125rem;
+				line-height: 1.5rem;
+			}
+		}
+
+	}
+}
+
+
 
 @media (max-width: 769px ) {
 
