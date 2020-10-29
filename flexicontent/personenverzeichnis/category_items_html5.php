@@ -54,43 +54,27 @@ switch  ( $grid_framework  ) {
 				break;
 } 
 
-$inlineStyle = '#flexicontent .itemblock .card-columns {
-   		column-count: '. $tmpl_cols_xs .';
-		}
-@media only screen and (min-width: 769px) {
-
-	#flexicontent .itemblock .card-columns {
-   		column-count: '. $tmpl_cols_md .';
-		}
-}		
-@media only screen and (min-width: 992px) {
-
-	#flexicontent .itemblock .card-columns {
-   		column-count: '. $tmpl_cols_lg .';
-		}
-}';
-$doc->addStyleDeclaration($inlineStyle);
 // Ergaenzung Template Variables webconcept Bootstrap 3 Template
 
 $grid_framework  = $this->params->get('grid_framework', 1);
 
 
 $arr_cols_gridclasses   	=   array(
-								array(1=>'col-lg-12',2=>'col-lg-6',3=>'col-lg-4',4=>'col-md-3'),
+								array(1=>'col-lg-12',2=>'col-lg-6',3=>'col-lg-4',4=>'col-lg-3'),
            					    array(1=>'uk-width-large-1-1',2=>'uk-width-large-1-2',3=>'uk-width-large-1-3',4=>'uk-width-large-1-4')
            					  );
 
 $arr_cols_gridclasses_sm    =   array(
-								array(1=>'col-md-12',2=>'col-md-6',3=>'col-md-4'),
+								array(1=>'col-md-12',2=>'col-md-6',3=>'col-md-4',4=>'col-md-3'),
   								array(1=>'uk-width-medium-1-1',2=>'uk-width-medium-1-2',3=>'uk-width-medium-1-3')
   								);
 $arr_cols_gridclasses_lg    =   array(
-								array(1=>'col-xl-12',2=>'col-xl-6',3=>'col-xl-4'),
+								array(1=>'col-xl-12',2=>'col-xl-6',3=>'col-xl-4',4=>'col-xl-3'),
   								array(1=>'uk-width-xlarge-1-1',2=>'uk-width-xlarge-1-2',3=>'uk-width-xlarge-1-3')
   								);
 
 $arr_cols_gridclasses_xs   	=   array(
-								array(1=>'col-12',2=>'col-6',3=>'col-4'),
+								array(1=>'col-12',2=>'col-6',3=>'col-4',4=>'col-3'),
   								array(1=>'uk-width-small-1-1',2=>'uk-width-small-1-2',3=>'uk-width-small-1-3')
   								);
 
@@ -104,24 +88,42 @@ $arr_cols_gridclasses_dbl_lg  	= array(
 								);
 
 
-	if ( $grid_framework == 1 ) :
-			$cols_gridclasses         = $arr_cols_gridclasses[0];
-			$cols_gridclasses_sm      = $arr_cols_gridclasses_sm[0];
-			$cols_gridclasses_xs      = $arr_cols_gridclasses_xs[0];
-			$cols_gridclasses_lg      = $arr_cols_gridclasses_lg[0];
-			$cols_gridclasses_dbl     = $arr_cols_gridclasses_dbl[0];
-			$cols_gridclasses_dbl_lg  = $arr_cols_gridclasses_dbl_lg[0];
+if ( $grid_framework == 1 ) :
+		$cols_gridclasses         = $arr_cols_gridclasses[0];
+		$cols_gridclasses_sm      = $arr_cols_gridclasses_sm[0];
+		$cols_gridclasses_xs      = $arr_cols_gridclasses_xs[0];
+		$cols_gridclasses_lg      = $arr_cols_gridclasses_lg[0];
+		$cols_gridclasses_dbl     = $arr_cols_gridclasses_dbl[0];
+		$cols_gridclasses_dbl_lg  = $arr_cols_gridclasses_dbl_lg[0];
 
-    endif;
+endif;
 
-	if ( $grid_framework == 2 ) :
-			$cols_gridclasses         = $arr_cols_gridclasses[1];
-			$cols_gridclasses_sm      = $arr_cols_gridclasses_sm[1];
-			$cols_gridclasses_lg      = $arr_cols_gridclasses_lg[1];
-			$cols_gridclasses_xs      = $arr_cols_gridclasses_xs[1];
-			$cols_gridclasses_dbl     = $arr_cols_gridclasses_dbl[1];
-			$cols_gridclasses_dbl_lg  = $arr_cols_gridclasses_dbl_lg[1];
-    endif;
+if ( $grid_framework == 2 ) :
+		$cols_gridclasses         = $arr_cols_gridclasses[1];
+		$cols_gridclasses_sm      = $arr_cols_gridclasses_sm[1];
+		$cols_gridclasses_lg      = $arr_cols_gridclasses_lg[1];
+		$cols_gridclasses_xs      = $arr_cols_gridclasses_xs[1];
+		$cols_gridclasses_dbl     = $arr_cols_gridclasses_dbl[1];
+		$cols_gridclasses_dbl_lg  = $arr_cols_gridclasses_dbl_lg[1];
+endif;
+
+
+if ( $grid_framework > 0 ) : 
+			
+			// grid 3 phone
+			$gridclass     = $cols_gridclasses_xs[$tmpl_cols_xs]. ' ';
+			
+			// grid 3 cols tablet
+ 			$gridclass     .= $cols_gridclasses_sm[$tmpl_cols_md] . ' ';
+
+ 			// grid desktop
+			$gridclass     .= $cols_gridclasses[$tmpl_cols_lg] . ' ' ;
+
+			// grid desktop xlarge
+			$gridclass     .= $cols_gridclasses_lg[$tmpl_cols_lg];
+endif;
+		
+
 
 
 if ($intro_use_image ) {
@@ -364,357 +366,348 @@ foreach ($cat_items as $catid => $items) :
 
 <?php if ( $this->params->get('show_title', 1) || count($columns['line2']) || count($columns['titlezeile']) || count($columns['line1']) || count($columns['line3']) || count($columns['line4']) ) : ?>
 		 
-		<article class="item item-flex">
-        <div class='flexi-itemlist  <?php echo ( $grid_framework > 0 ) ? 'card-columns' : ''; ?> '>
+<article class="item item-flex">
+    <div class="flexi-itemlist <?php echo ( $grid_framework == 1 ) ? 'row' : ''; ?>">
 
+  
 
-      <?php if ( $grid_framework > 0 ) : 
+<?php $count_items = 0;
+foreach ($items as $item) : // Schleife für Artikel 
+	if($item->state!=-2) : 
+$count_items ++; 
+
+	// MICRODATA document type (itemtype) for each item
+	// -- NOTE: category's microdata itemtype is fallback if the microdata itemtype of the CONTENT TYPE / ITEM are not set
+	$microdata_itemtype = $item->params->get( 'microdata_itemtype') ? $item->params->get( 'microdata_itemtype') : $microdata_itemtype_cat;
+	$microdata_itemtype_code = $microdata_itemtype ? 'itemscope itemtype="http://schema.org/'.$microdata_itemtype.'"' : '';?>
+
+	<div class="flexi-item mb-3 <?php echo ( $grid_framework == 1 ) ?  $gridclass : 'wbc-column';?> d-flex">
+			<div class="card background-primary" <?php echo $microdata_itemtype_code; ?> style="overflow: hidden;">
+			<div class="card-body <?php echo ($count_items%2 ? 'even' : 'odd'); ?>">
+					  
+			  <?php if ($this->params->get('show_editbutton', 0)) : ?>
+					<?php $editbutton = flexicontent_html::editbutton(  $item, $this->params );?> 
+					<?php $statebutton = flexicontent_html::statebutton( $item, $this->params );?>
+					<?php $deletebutton = flexicontent_html::deletebutton( $item, $this->params ); ?>
+					<?php $approvalbutton = flexicontent_html::approvalbutton( $item, $this->params ); ?>
 					
-					// grid 3 phone
-					$gridclass     = $cols_gridclasses_xs[$tmpl_cols_xs]. ' ';
-					
-					// grid 3 cols tablet
-	     			$gridclass     .= $cols_gridclasses_sm[$tmpl_cols_md] . ' ';
-
-					// grid desktop
-					$gridclass     .= $cols_gridclasses[$tmpl_cols_lg];
-			endif;?>
-
-	    <?php $count_items = 0;
-		 foreach ($items as $item) : // Schleife für Artikel 
-		 	if($item->state!=-2) : 
-			$count_items ++; 
-		
-			// MICRODATA document type (itemtype) for each item
-			// -- NOTE: category's microdata itemtype is fallback if the microdata itemtype of the CONTENT TYPE / ITEM are not set
-			$microdata_itemtype = $item->params->get( 'microdata_itemtype') ? $item->params->get( 'microdata_itemtype') : $microdata_itemtype_cat;
-			$microdata_itemtype_code = $microdata_itemtype ? 'itemscope itemtype="http://schema.org/'.$microdata_itemtype.'"' : '';?>
-		
-
-			<div class="card flexi-item background-primary " <?php echo $microdata_itemtype_code; ?> style="overflow: hidden;">
-			<div class="card-body grid-content <?php echo ($count_items%2 ? 'even' : 'odd'); ?>">
-				  
-		  <?php if ($this->params->get('show_editbutton', 0)) : ?>
-				<?php $editbutton = flexicontent_html::editbutton(  $item, $this->params );?> 
-				<?php $statebutton = flexicontent_html::statebutton( $item, $this->params );?>
-				<?php $deletebutton = flexicontent_html::deletebutton( $item, $this->params ); ?>
-				<?php $approvalbutton = flexicontent_html::approvalbutton( $item, $this->params ); ?>
-				
-				<?php if ($editbutton || $statebutton || $deletebutton || $approvalbutton) : ?>
-					<div class="adminbuttons d-flex">
-						<div><?php echo $editbutton;?></div>
-						<div><?php echo $statebutton;?></div>
-						<?php if ($deletebutton) : ?>
-						<div><?php echo $deletebutton;?></div>
-						<?php endif; ?>
-						<?php if ($approvalbutton) : ?>
-						<div><?php echo $approvalbutton;?></div>
-						<?php endif; ?>
-					</div>
-					<?php endif; ?>
-			<?php endif; ?>
-            
-            <?php if ($item->event->beforeDisplayContent) : ?>
-                  <div class='fc_beforeDisplayContent' style='clear:both;'>
-                      <?php echo $item->event->beforeDisplayContent; ?>
-                  </div>
-              <?php endif; ?>
-              
-			  <?php if ($this->params->get('show_title', 0)) : ?>
-              <h3 class="card-title fc_item_title" itemprop="name">
-	          	
-	            <?php if ($this->params->get('link_titles', 0)) : ?>
-	            <a href="<?php echo JRoute::_(FlexicontentHelperRoute::getItemRoute($item->slug, $item->categoryslug)); ?>"><?php echo $item->title; ?></a>
-	              <?php
-	            else :
-	              echo $item->title;
-	            endif;
-	            ?>
-              
-              </h3>
-              <?php endif; ?>
-
-              <?php 
-             	$custom_link = null;
-             	
-             	
-				if ($intro_use_image) :
-
-
-					if (!empty($img_field_name))
-					{
-												
-
-						// Render method 'display_NNNN_src' to avoid CSS/JS being added to the page
-						FlexicontentFields::getFieldDisplay($item, $img_field_name, $values=null, $method='display_'.$img_field_size.'_src', 'category');
-						if (isset($item->fields[$img_field_name])) {
-							$img_field = $item->fields[$img_field_name];
-						}
-						$src = str_replace(JURI::root(), '', @ $img_field->thumbs_src[$img_field_size][0] );
-						if ( $intro_link_image_to && isset($img_field->value[0]) ) {
-							$custom_link = ($v = unserialize($img_field->value[0])) !== false ? @ $v['link'] : @ $img_field->value[0]['link'];
-						}
-					} else {
-						$src = flexicontent_html::extractimagesrc($item);
-					}
-
-							
-					
-					$RESIZE_FLAG = !$this->params->get('intro_image') || !$this->params->get('intro_image_size');
-					if ( $src && $RESIZE_FLAG ) {
-						// Resize image when src path is set and RESIZE_FLAG: (a) using image extracted from item main text OR (b) not using image field's already created thumbnails
-						$w		= '&amp;w=' . $this->params->get('intro_width', 200);
-						$h		= '&amp;h=' . $this->params->get('intro_height', 200);
-						$aoe	= '&amp;aoe=1';
-						$q		= '&amp;q=95';
-						$zc		= $this->params->get('intro_method') ? '&amp;zc=' . $this->params->get('intro_method') : '';
-						$ext = strtolower(pathinfo($src, PATHINFO_EXTENSION));
-						$f = in_array( $ext, array('png', 'ico', 'gif') ) ? '&amp;f='.$ext : '';
-						$conf	= $w . $h . $aoe . $q . $zc . $f;
-						
-						$base_url = (!preg_match("#^http|^https|^ftp|^/#i", $src)) ?  JURI::base(true).'/' : '';
-						$thumb = JURI::base(true).'/components/com_flexicontent/librairies/phpthumb/phpThumb.php?src='.$base_url.$src.$conf;
-					} else {
-						// Do not resize image when (a) image src path not set or (b) using image field's already created thumbnails
-						$thumb = $src;
-					}
-				endif;
-
-			$link_url = $custom_link ? $custom_link : JRoute::_(FlexicontentHelperRoute::getItemRoute($item->slug, $item->categoryslug, 0, $item));
-			$title_encoded = htmlspecialchars($item->title, ENT_COMPAT, 'UTF-8'); ?>
-				
-			
-            <?php  // Position Title
-			if (isset ( $item->positions['titlezeile'] )) :
-				if (count ($columns['titlezeile'] )) : ?>
-				<div class="wrap-title">
-				<?php foreach ($columns['titlezeile'] as $name => $label) : // alle felder von position auflisten 
-					if (isset($item->positions['titlezeile']->{$name}->display)) : ?>
-					<div class='flexi-field title-zeile field_<?php echo $item->fields[$name]->name; ?>'>
-					<?php $label_str = '';
-						if ($item->fields[$name]->parameters->get('display_label', 0)) :
-							$label_str = $label.': ';?>
-							<div class="label label_field_<?php echo $item->fields[$name]->name; ?>"><?php echo $label_str;?>&nbsp;</div>
-						<?php endif; ?>
-	
-						<?php if (isset($item->positions['titlezeile']->{$name}->display)) :?>
-							<div class="value value_<?php echo $item->fields[$name]->name; ?>"><?php echo $item->positions['titlezeile']->{$name}->display; ?></div>
+					<?php if ($editbutton || $statebutton || $deletebutton || $approvalbutton) : ?>
+						<div class="adminbuttons d-flex">
+							<div><?php echo $editbutton;?></div>
+							<div><?php echo $statebutton;?></div>
+							<?php if ($deletebutton) : ?>
+							<div><?php echo $deletebutton;?></div>
 							<?php endif; ?>
-					</div>
+							<?php if ($approvalbutton) : ?>
+							<div><?php echo $approvalbutton;?></div>
+							<?php endif; ?>
+						</div>
 						<?php endif; ?>
-				<?php endforeach; ?>
-				</div>
 				<?php endif; ?>
-            <?php endif; ?>
- 
+		        
+		        <?php if ($item->event->beforeDisplayContent) : ?>
+		              <div class='fc_beforeDisplayContent' style='clear:both;'>
+		                  <?php echo $item->event->beforeDisplayContent; ?>
+		              </div>
+		          <?php endif; ?>
+		          
+				  <?php if ($this->params->get('show_title', 0)) : ?>
+		          <h3 class="card-title fc_item_title" itemprop="name">
+		          	
+		            <?php if ($this->params->get('link_titles', 0)) : ?>
+		            <a href="<?php echo JRoute::_(FlexicontentHelperRoute::getItemRoute($item->slug, $item->categoryslug)); ?>"><?php echo $item->title; ?></a>
+		              <?php
+		            else :
+		              echo $item->title;
+		            endif;
+		            ?>
+		          
+		          </h3>
+		          <?php endif; ?>
 
-	        <div class="lineinfo image_descr">
-	        <?php if ($intro_use_image && $src) : ?>
-				<figure class="image <?php echo $img_position; ?>">
-					<?php if ($this->params->get('intro_link_image', 1)) : ?>
-					<a href="<?php echo $link_url; ?>">
-						<img src="<?php echo $thumb; ?>" alt="<?php echo $title_encoded; ?>" class="<?php echo $img_class . $img_style; ?>  <?php echo $tooltip_class;?>" title="<?php echo flexicontent_html::getToolTip($_read_more_about, $title_encoded, 0, 0); ?>"/>
-					</a>
-					<?php else : ?>
-						<img src="<?php echo $thumb; ?>" class="<?php echo $img_class . $img_style;  ?>" alt="<?php echo $title_encoded; ?>" title="<?php echo $title_encoded; ?>" />
-					<?php endif; ?>
-				</figure>
-			<?php endif; ?>
-		
-				
-		<?php
-		 if (  ( isset ( $item->positions['titlezeile'] )  && count ($columns['titlezeile']) )
-		     || ( isset ( $item->positions['line2'] ) && count ($columns['line2']) )
-			 || ( isset ( $item->positions['line1'] ) && count ($columns['line1']) )
-			 || ( isset ( $item->positions['line3'] ) && count ($columns['line3']) )
-			 || ( isset ( $item->positions['line4'] ) && count ($columns['line4']) )
-			  ) : ?>
-		  
+		          <?php 
+		         	$custom_link = null;
+		         	
+		         	
+					if ($intro_use_image) :
 
-		  <?php if ( $intro_use_image && $src ) : 
-			
-				$fields_align = 'left';
-				if  ( $grid_framework  == 2 ) { $fields_align = 'uk-align-left'; }
-				if  ( $grid_framework  == 1 ) { $fields_align = 'float-md-left mr-md-3 mb-3'; }
 
-		  endif; ?>
+						if (!empty($img_field_name))
+						{
+													
 
-		  <div class='flexi-fieldlist <?php echo $fields_align; ?>'>
-				
-			   <?php
-                if ($item->event->afterDisplayTitle) : ?>
-                    <div class='fc_afterDisplayTitle' style='clear:both;'>
-                    <?php echo $item->event->afterDisplayTitle; ?>
-                    </div>
-                <?php endif; ?>
-			
-              
-                   <div class="<?php echo ($grid_framework == 2) ? 'uk-grid' : '';?> <?php echo ( $grid_framework == 1 ) ? 'row' : ''; ?> ">
-                   
+							// Render method 'display_NNNN_src' to avoid CSS/JS being added to the page
+							FlexicontentFields::getFieldDisplay($item, $img_field_name, $values=null, $method='display_'.$img_field_size.'_src', 'category');
+							if (isset($item->fields[$img_field_name])) {
+								$img_field = $item->fields[$img_field_name];
+							}
+							$src = str_replace(JURI::root(), '', @ $img_field->thumbs_src[$img_field_size][0] );
+							if ( $intro_link_image_to && isset($img_field->value[0]) ) {
+								$custom_link = ($v = unserialize($img_field->value[0])) !== false ? @ $v['link'] : @ $img_field->value[0]['link'];
+							}
+						} else {
+							$src = flexicontent_html::extractimagesrc($item);
+						}
 
-              <?php 
-              		if ( $grid_framework > 0 ) :
-
-	              		if ( isset ($item->positions['line4']) && !$intro_use_image  ) : 
+								
+						
+						$RESIZE_FLAG = !$this->params->get('intro_image') || !$this->params->get('intro_image_size');
+						if ( $src && $RESIZE_FLAG ) {
+							// Resize image when src path is set and RESIZE_FLAG: (a) using image extracted from item main text OR (b) not using image field's already created thumbnails
+							$w		= '&amp;w=' . $this->params->get('intro_width', 200);
+							$h		= '&amp;h=' . $this->params->get('intro_height', 200);
+							$aoe	= '&amp;aoe=1';
+							$q		= '&amp;q=95';
+							$zc		= $this->params->get('intro_method') ? '&amp;zc=' . $this->params->get('intro_method') : '';
+							$ext = strtolower(pathinfo($src, PATHINFO_EXTENSION));
+							$f = in_array( $ext, array('png', 'ico', 'gif') ) ? '&amp;f='.$ext : '';
+							$conf	= $w . $h . $aoe . $q . $zc . $f;
 							
-						$rowclass     .= $cols_gridclasses_xs[1]. ' ';					
-						$rowclass     .= $cols_gridclasses_sm[2] . ' ';				
-						$rowclass      = $cols_gridclasses[2];
+							$base_url = (!preg_match("#^http|^https|^ftp|^/#i", $src)) ?  JURI::base(true).'/' : '';
+							$thumb = JURI::base(true).'/components/com_flexicontent/librairies/phpthumb/phpThumb.php?src='.$base_url.$src.$conf;
+						} else {
+							// Do not resize image when (a) image src path not set or (b) using image field's already created thumbnails
+							$thumb = $src;
+						}
+					endif;
 
-						else: 
-					    
-						$rowclass     .= $cols_gridclasses_xs[1]. ' ';						
-						$rowclass     .= $cols_gridclasses_sm[1] . ' ';
-						$rowclass      = $cols_gridclasses[1];
+				$link_url = $custom_link ? $custom_link : JRoute::_(FlexicontentHelperRoute::getItemRoute($item->slug, $item->categoryslug, 0, $item));
+				$title_encoded = htmlspecialchars($item->title, ENT_COMPAT, 'UTF-8'); ?>
+					
+				
+		        <?php  // Position Title
+				if (isset ( $item->positions['titlezeile'] )) :
+					if (count ($columns['titlezeile'] )) : ?>
+					<div class="wrap-title">
+					<?php foreach ($columns['titlezeile'] as $name => $label) : // alle felder von position auflisten 
+						if (isset($item->positions['titlezeile']->{$name}->display)) : ?>
+						<div class='flexi-field title-zeile field_<?php echo $item->fields[$name]->name; ?>'>
+						<?php $label_str = '';
+							if ($item->fields[$name]->parameters->get('display_label', 0)) :
+								$label_str = $label.': ';?>
+								<div class="label label_field_<?php echo $item->fields[$name]->name; ?>"><?php echo $label_str;?>&nbsp;</div>
+							<?php endif; ?>
 
-				        endif;
+							<?php if (isset($item->positions['titlezeile']->{$name}->display)) :?>
+								<div class="value value_<?php echo $item->fields[$name]->name; ?>"><?php echo $item->positions['titlezeile']->{$name}->display; ?></div>
+								<?php endif; ?>
+						</div>
+							<?php endif; ?>
+					<?php endforeach; ?>
+					</div>
+					<?php endif; ?>
+		        <?php endif; ?>
 
-		          	endif;?>	
 
-                <div <?php echo $grid_framework > 0 ? 'class="'.$rowclass.'"' : '';?>>
-                      <?php if ( isset ( $item->positions['line1'] ) && count ($columns['line1']) ) : ?>
-                      <div class="wrap-line1">
-                      <?php   // Position Line 1
-                      foreach ($columns['line1'] as $name => $label) : // alle felder von position auflisten 
-                          if (isset($item->positions['line1']->{$name}->display)) : ?>
-                          <div class='flexi-field line-1a field_<?php echo $item->fields[$name]->name; ?>'>
-                          <?php $label_str = '';
-                              if ($item->fields[$name]->parameters->get('display_label', 0)) :
-                                  $label_str = $label.': ';?>
-                                  <div class="label label_field_<?php echo $item->fields[$name]->name; ?>"><?php echo $label_str;?>&nbsp;</div>
-                              <?php endif; ?>
-          
-                              <?php if (isset($item->positions['line1']->{$name}->display)) :?>
-                                  <div class="value value_<?php echo $item->fields[$name]->name; ?>"><?php echo $item->positions['line1']->{$name}->display; ?></div>
-                                  <?php endif; ?>
-                          </div>
-                              <?php endif; ?>
-	                  <?php endforeach; ?>
-	                  </div>
-	                  <?php endif; ?>
-                      
-       
-                      <?php // Vorname und Name feste Position     ?>
-                      <?php
-                       if ( isset ( $item->fields['prename_1'] ) || isset ( $item->fields['name_1'] ) ) :
-                           if ($item->fields['prename_1']->display || $item->fields['name_1']->display ) :  ?>
-                              <div class='flexi-field flexi-name'>
-                              <span><?php echo $item->fields['prename_1']->display;?></span>
-                              <?php if ($item->fields['name_1'] ) :?>
-                              <span><?php echo $item->fields['name_1']->display;?></span>
-                              <?php endif;?>
-                              </div>
-                          <?php endif;?>
-                      <?php endif;?>
-                       
-                      <?php
-                       if ( isset ( $item->fields['prename_2'] ) || isset ( $item->fields['name_2'] ) ) :
-                           if ($item->fields['prename_2']->display || $item->fields['name_2']->display ) :?>
-                              <div class='flexi-field flexi-name'>
-                              <span><?php echo $item->fields['prename_2']->display;?></span>
-                              <?php if ($item->fields['name_2'] ) :?>
-                              <span><?php echo $item->fields['name_2']->display;?></span>
-                              <?php endif;?>
-                              </div>
-                          <?php endif;?>
-                      <?php endif;?>
-                          
-                  
-                     <?php if (isset ( $item->positions['line2'] ) && count ($columns['line2']) ) : ?>
-                     <div class="wrap-line2">
-                      <?php // Position Line 2
-                      foreach ($columns['line2'] as $name => $label) : // alle felder von position auflisten
-                          if (isset($item->positions['line2']->{$name}->display)) : ?>
-                          <div class='flexi-field line-2 field_<?php echo $item->fields[$name]->name; ?>'>
-                          <?php $label_str = '';
-                              if ($item->fields[$name]->parameters->get('display_label', 0)) :
-                                  $label_str = $label.': ';?>
-                                  <div class="label label_field_<?php echo $item->fields[$name]->name; ?>"><?php echo $label_str;?>&nbsp;</div>
-                              <?php endif; ?>
-          
-                              <?php if (isset($item->positions['line2']->{$name}->display)) :?>
-                                  <div class="value value_<?php echo $item->fields[$name]->name; ?>"><?php echo $item->positions['line2']->{$name}->display; ?></div>
-                                  <?php endif; ?>
-                          </div>
-                          <?php endif; ?>
-                      <?php endforeach; ?>
-                     </div>
-                     <?php endif; ?>
-                     
-                     <?php  if (  isset ( $item->positions['line3'] ) && count ($columns['line3']) ) : ?>
-                     <div class="wrap-line3">
-	                 <?php // Position Line 3
-	                  foreach ($columns['line3'] as $name => $label) : // alle felder von position auflisten
-	                      if (isset($item->positions['line3']->{$name}->display)) : ?>
-	                      <div class='flexi-field line-3 field_<?php echo $item->fields[$name]->name; ?>'>
-	                      <?php $label_str = '';
-	                          if ($item->fields[$name]->parameters->get('display_label', 0)) :
-	                              $label_str = $label.': ';?>
-	                              <div class="label label_field_<?php echo $item->fields[$name]->name; ?>"><?php echo $label_str;?>&nbsp;</div>
-	                          <?php endif; ?>
-	      
-	                          <?php if (isset($item->positions['line3']->{$name}->display)) :?>
-	                              <div class="value value_<?php echo $item->fields[$name]->name; ?>"><?php echo $item->positions['line3']->{$name}->display; ?></div>
-	                              <?php endif; ?>
-	                      </div>
-	                      <?php endif; ?>
-	                 <?php endforeach; ?>
-	                 </div>
-	                 <?php endif; ?>
-	                 <div class="clearfix"></div>
-	                 </div> <!-- end  1. spalte -->
-              
-                     <?php if (isset ( $item->positions['line4'] ) && count ($columns['line4']) ) : ?>
-                     <div <?php echo $grid_framework > 0 ? 'class="'.$rowclass.'"' : ''?>>
-                     <div class="wrap-line4">
-                      <?php // Position Line 4
-                      foreach ($columns['line4'] as $name => $label) : // alle felder von position auflisten
-                          if (isset($item->positions['line4']->{$name}->display)) : ?>
-                          <div class='flexi-field line-4 field_<?php echo $item->fields[$name]->name; ?>'>
-                          <?php $label_str = '';
-                              if ($item->fields[$name]->parameters->get('display_label', 0)) :
-                                  $label_str = $label.' ';?>
-                                  <div class="label label_field_<?php echo $item->fields[$name]->name; ?>"><?php echo $label_str;?>&nbsp;</div>
-                              <?php endif; ?>
-          
-                              <?php if (isset($item->positions['line4']->{$name}->display)) :?>
-                                  <div class="value value_<?php echo $item->fields[$name]->name; ?>"><?php echo $item->positions['line4']->{$name}->display; ?></div>
-                                  <?php endif; ?>
-                          </div>
-                          <?php endif; ?>
-                      <?php endforeach; ?>
-                      </div>
-                      <div class="clearfix"></div>
-                      </div>                
-                     <?php endif; ?>
-    
-                     <?php if ($item->event->afterDisplayContent) : ?>
-                        <div class='afterDisplayContent clearfix' >
-                            <?php echo $item->event->afterDisplayContent; ?>
-                        </div> 
-                    <?php endif; ?>
-                     
-                    
-                    </div>
-                </div>
-             <?php endif; //  ende zusatzfelder?>     
-               </div>
-               
-               <?php if ($this->params->get('tmpl_cols') == 2 && $grid_framework == 1 ):  ?>
-			  		 <?php if ($count_items%2 != 0) { ?><div class="separator"></div><?php }  ?>
-               <?php endif; ?>
-                  
-			   </div>
-			   </div>
-
+		        <div class="lineinfo image_descr">
+		        <?php if ($intro_use_image && $src) : ?>
+					<figure class="image <?php echo $img_position; ?>">
+						<?php if ($this->params->get('intro_link_image', 1)) : ?>
+						<a href="<?php echo $link_url; ?>">
+							<img src="<?php echo $thumb; ?>" alt="<?php echo $title_encoded; ?>" class="<?php echo $img_class . $img_style; ?>  <?php echo $tooltip_class;?>" title="<?php echo flexicontent_html::getToolTip($_read_more_about, $title_encoded, 0, 0); ?>"/>
+						</a>
+						<?php else : ?>
+							<img src="<?php echo $thumb; ?>" class="<?php echo $img_class . $img_style;  ?>" alt="<?php echo $title_encoded; ?>" title="<?php echo $title_encoded; ?>" />
+						<?php endif; ?>
+					</figure>
+				<?php endif; ?>
+			
+					
+			<?php
+			 if (  ( isset ( $item->positions['titlezeile'] )  && count ($columns['titlezeile']) )
+			     || ( isset ( $item->positions['line2'] ) && count ($columns['line2']) )
+				 || ( isset ( $item->positions['line1'] ) && count ($columns['line1']) )
+				 || ( isset ( $item->positions['line3'] ) && count ($columns['line3']) )
+				 || ( isset ( $item->positions['line4'] ) && count ($columns['line4']) )
+				  ) : ?>
 			  
-          <?php endif; ?> 
-	  <?php endforeach; ?>
 
-           </div></article>
-		  <?php  endif; ?>
-	
-		</div>
+			  <?php if ( $intro_use_image && $src ) : 
+				
+					$fields_align = 'left';
+					if  ( $grid_framework  == 2 ) { $fields_align = 'uk-align-left'; }
+					if  ( $grid_framework  == 1 ) { $fields_align = 'float-md-left mr-md-3 mb-3'; }
+
+			  endif; ?>
+
+			  <div class='flexi-fieldlist <?php echo $fields_align; ?>'>
+					
+				   <?php
+		            if ($item->event->afterDisplayTitle) : ?>
+		                <div class='fc_afterDisplayTitle' style='clear:both;'>
+		                <?php echo $item->event->afterDisplayTitle; ?>
+		                </div>
+		            <?php endif; ?>
+				
+		          
+		               <div class="<?php echo ($grid_framework == 2) ? 'uk-grid' : '';?> <?php echo ( $grid_framework == 1 ) ? 'row' : ''; ?> ">
+		               
+
+		          <?php 
+		          		if ( $grid_framework > 0 ) :
+
+		              		if ( isset ($item->positions['line4']) && !$intro_use_image  ) : 
+								
+							$rowclass     .= $cols_gridclasses_xs[1]. ' ';					
+							$rowclass     .= $cols_gridclasses_sm[2] . ' ';				
+							$rowclass      = $cols_gridclasses[2];
+
+							else: 
+						    
+							$rowclass     .= $cols_gridclasses_xs[1]. ' ';						
+							$rowclass     .= $cols_gridclasses_sm[1] . ' ';
+							$rowclass      = $cols_gridclasses[1];
+
+					        endif;
+
+			          	endif;?>	
+
+		            <div <?php echo $grid_framework > 0 ? 'class="'.$rowclass.'"' : '';?>>
+		                  <?php if ( isset ( $item->positions['line1'] ) && count ($columns['line1']) ) : ?>
+		                  <div class="wrap-line1">
+		                  <?php   // Position Line 1
+		                  foreach ($columns['line1'] as $name => $label) : // alle felder von position auflisten 
+		                      if (isset($item->positions['line1']->{$name}->display)) : ?>
+		                      <div class='flexi-field line-1a field_<?php echo $item->fields[$name]->name; ?>'>
+		                      <?php $label_str = '';
+		                          if ($item->fields[$name]->parameters->get('display_label', 0)) :
+		                              $label_str = $label.': ';?>
+		                              <div class="label label_field_<?php echo $item->fields[$name]->name; ?>"><?php echo $label_str;?>&nbsp;</div>
+		                          <?php endif; ?>
+		      
+		                          <?php if (isset($item->positions['line1']->{$name}->display)) :?>
+		                              <div class="value value_<?php echo $item->fields[$name]->name; ?>"><?php echo $item->positions['line1']->{$name}->display; ?></div>
+		                              <?php endif; ?>
+		                      </div>
+		                          <?php endif; ?>
+		                  <?php endforeach; ?>
+		                  </div>
+		                  <?php endif; ?>
+		                  
+		   
+		                  <?php // Vorname und Name feste Position     ?>
+		                  <?php
+		                   if ( isset ( $item->fields['prename_1'] ) || isset ( $item->fields['name_1'] ) ) :
+		                       if ($item->fields['prename_1']->display || $item->fields['name_1']->display ) :  ?>
+		                          <div class='flexi-field flexi-name'>
+		                          <span><?php echo $item->fields['prename_1']->display;?></span>
+		                          <?php if ($item->fields['name_1'] ) :?>
+		                          <span><?php echo $item->fields['name_1']->display;?></span>
+		                          <?php endif;?>
+		                          </div>
+		                      <?php endif;?>
+		                  <?php endif;?>
+		                   
+		                  <?php
+		                   if ( isset ( $item->fields['prename_2'] ) || isset ( $item->fields['name_2'] ) ) :
+		                       if ($item->fields['prename_2']->display || $item->fields['name_2']->display ) :?>
+		                          <div class='flexi-field flexi-name'>
+		                          <span><?php echo $item->fields['prename_2']->display;?></span>
+		                          <?php if ($item->fields['name_2'] ) :?>
+		                          <span><?php echo $item->fields['name_2']->display;?></span>
+		                          <?php endif;?>
+		                          </div>
+		                      <?php endif;?>
+		                  <?php endif;?>
+		                      
+		              
+		                 <?php if (isset ( $item->positions['line2'] ) && count ($columns['line2']) ) : ?>
+		                 <div class="wrap-line2">
+		                  <?php // Position Line 2
+		                  foreach ($columns['line2'] as $name => $label) : // alle felder von position auflisten
+		                      if (isset($item->positions['line2']->{$name}->display)) : ?>
+		                      <div class='flexi-field line-2 field_<?php echo $item->fields[$name]->name; ?>'>
+		                      <?php $label_str = '';
+		                          if ($item->fields[$name]->parameters->get('display_label', 0)) :
+		                              $label_str = $label.': ';?>
+		                              <div class="label label_field_<?php echo $item->fields[$name]->name; ?>"><?php echo $label_str;?>&nbsp;</div>
+		                          <?php endif; ?>
+		      
+		                          <?php if (isset($item->positions['line2']->{$name}->display)) :?>
+		                              <div class="value value_<?php echo $item->fields[$name]->name; ?>"><?php echo $item->positions['line2']->{$name}->display; ?></div>
+		                              <?php endif; ?>
+		                      </div>
+		                      <?php endif; ?>
+		                  <?php endforeach; ?>
+		                 </div>
+		                 <?php endif; ?>
+		                 
+		                 <?php  if (  isset ( $item->positions['line3'] ) && count ($columns['line3']) ) : ?>
+		                 <div class="wrap-line3">
+		                 <?php // Position Line 3
+		                  foreach ($columns['line3'] as $name => $label) : // alle felder von position auflisten
+		                      if (isset($item->positions['line3']->{$name}->display)) : ?>
+		                      <div class='flexi-field line-3 field_<?php echo $item->fields[$name]->name; ?>'>
+		                      <?php $label_str = '';
+		                          if ($item->fields[$name]->parameters->get('display_label', 0)) :
+		                              $label_str = $label.': ';?>
+		                              <div class="label label_field_<?php echo $item->fields[$name]->name; ?>"><?php echo $label_str;?>&nbsp;</div>
+		                          <?php endif; ?>
+		      
+		                          <?php if (isset($item->positions['line3']->{$name}->display)) :?>
+		                              <div class="value value_<?php echo $item->fields[$name]->name; ?>"><?php echo $item->positions['line3']->{$name}->display; ?></div>
+		                              <?php endif; ?>
+		                      </div>
+		                      <?php endif; ?>
+		                 <?php endforeach; ?>
+		                 </div>
+		                 <?php endif; ?>
+		                 <div class="clearfix"></div>
+		                 </div> <!-- end  1. spalte -->
+		          
+		                 <?php if (isset ( $item->positions['line4'] ) && count ($columns['line4']) ) : ?>
+		                 <div <?php echo $grid_framework > 0 ? 'class="'.$rowclass.'"' : ''?>>
+		                 <div class="wrap-line4">
+		                  <?php // Position Line 4
+		                  foreach ($columns['line4'] as $name => $label) : // alle felder von position auflisten
+		                      if (isset($item->positions['line4']->{$name}->display)) : ?>
+		                      <div class='flexi-field line-4 field_<?php echo $item->fields[$name]->name; ?>'>
+		                      <?php $label_str = '';
+		                          if ($item->fields[$name]->parameters->get('display_label', 0)) :
+		                              $label_str = $label.' ';?>
+		                              <div class="label label_field_<?php echo $item->fields[$name]->name; ?>"><?php echo $label_str;?>&nbsp;</div>
+		                          <?php endif; ?>
+		      
+		                          <?php if (isset($item->positions['line4']->{$name}->display)) :?>
+		                              <div class="value value_<?php echo $item->fields[$name]->name; ?>"><?php echo $item->positions['line4']->{$name}->display; ?></div>
+		                              <?php endif; ?>
+		                      </div>
+		                      <?php endif; ?>
+		                  <?php endforeach; ?>
+		                  </div>
+		                  <div class="clearfix"></div>
+		                  </div>                
+		                 <?php endif; ?>
+
+		                 <?php if ($item->event->afterDisplayContent) : ?>
+		                    <div class='afterDisplayContent clearfix' >
+		                        <?php echo $item->event->afterDisplayContent; ?>
+		                    </div> 
+		                <?php endif; ?>
+		                 
+		                
+		                </div>
+		            </div>
+		         <?php endif; //  ende zusatzfelder?>     
+		           </div>
+		           
+		           <?php if ($this->params->get('tmpl_cols') == 2 && $grid_framework == 1 ):  ?>
+				  		 <?php if ($count_items%2 != 0) { ?><div class="separator"></div><?php }  ?>
+		           <?php endif; ?>
+		           
+
+		          </div>
+			   </div>
+   			</div>
+
+	  
+  <?php endif; ?> 
+<?php endforeach;  // article ?>
+
+</div></article>
+<?php  endif; ?>
+
+</div>
 		
 <?php endforeach; ?>
 

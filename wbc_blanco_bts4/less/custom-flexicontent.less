@@ -154,7 +154,6 @@ hr.fcclearline {
 
 
 /* Flexicontent Bilder Default Styles override -------------- */
-#flexicontent figure { text-align: center; }
 #flexicontent .fc_image_thumb { float: none; display: inline-block;}
 #flexicontent img.fc_field_image
  {
@@ -414,7 +413,7 @@ body .fc-mssg-inline.fc-info, body .fc-mssg.fc-info {
 
 .fcitem_text { 
 	color: var(--color-font, @default);
-	font-size: 1rem;
+	font-size: inherit;
 	line-height: 1.4rem;
 	font-weight: 300;
 }
@@ -484,6 +483,17 @@ div.fc-fieldgrp-value-box {
 	width: auto;
 	max-width: 100%;
 	 }
+
+.field_created {
+	display: inline-block;
+	font-size: .9rem;
+	font-weight: inherit;
+	line-height: 1;
+	
+	white-space: nowrap;
+	
+
+}
 
 .field_funktion1,
 .flexi-name,
@@ -733,6 +743,11 @@ a.fcfile_shareFile:focus {
 
 .field_wk_galerie .overlay { height: 0px; overflow: hidden; }
 
+@media ( max-width: 767px ) {
+
+		#flexicontent figure { text-align: center; }
+
+}
 
 @media (max-width: 769px ) {
 
@@ -755,6 +770,8 @@ a.fcfile_shareFile:focus {
 				margin-right: 10px;
 			}
 	}
+
+
 
 }
 
