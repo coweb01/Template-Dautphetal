@@ -46,6 +46,7 @@ extract($displayData);
 				padding: 5px 0px;
 				vertical-align: top;
     		}
+    		table th { vertical-align: top; }
     		.bodycontainer {
     			color:#606060;
 				font-family:Helvetica;
@@ -73,6 +74,10 @@ extract($displayData);
 				display: block;
 				background-color: #999999;
 				color:#FFFFFF;
+			}
+			.footer { 
+				border-top: solid 1px #DDDDDD; 
+				margin-top: 30px;
 			}
 
     	</style>
@@ -145,6 +150,8 @@ extract($displayData);
 								// continue;
 							}
 
+
+
 							$sublayoutValues = array(
 								'form'          => $form,
 								'value'         => $value,
@@ -177,19 +184,7 @@ extract($displayData);
 						}
 
 						echo $fileTimeOut; ?>
-						<tr >
-							<td class="footer">					
-					       
-								<table width="100%" border="0" cellpadding="0" cellspacing="0" style="padding-top: 30px; margin-bottom: 30px;">
-										<tr>
-											
-											<td><?php echo JText::_(EMAIL_SIGNATUR); ?></td>
-										</tr>
-								</table>
-								
-							</td>
-
-						</tr>
+						
 						</tbody>
 					</table>
 				<?php endif;
@@ -197,6 +192,19 @@ extract($displayData);
 
    		 </td>
 	 	</tr>
+		<tr>
+			<td colspan="2" class="footer">					
+	       
+				<table width="100%" border="0" cellpadding="0" cellspacing="0" style="padding-top: 30px; margin-bottom: 30px;">
+						<tr>
+							
+							<td><?php echo JText::_(EMAIL_SIGNATUR); ?></td>
+						</tr>
+				</table>
+				
+			</td>
+
+		</tr> 	
 </table>
 </body>
 </html>
