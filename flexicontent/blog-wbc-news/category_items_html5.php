@@ -511,7 +511,7 @@ if ($leadnum) :
 			
 			<?php if ($this->params->get('show_title', 1)) : ?>
 				<!-- BOF item title -->
-				<h
+				<h3>
 					<?php if ($this->params->get('link_titles', 0)) : ?>
 						<a href="<?php echo $link_url; ?>"><?php echo $item->title; ?></a>
 					<?php else : ?>

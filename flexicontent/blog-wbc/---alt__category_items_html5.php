@@ -511,13 +511,14 @@ if ($leadnum) :
 			
 			<?php if ($this->params->get('show_title', 1)) : ?>
 				<!-- BOF item title -->
-				<h
+				<h3>
+					<span class="fc_item_title" itemprop="name">
 					<?php if ($this->params->get('link_titles', 0)) : ?>
 						<a href="<?php echo $link_url; ?>"><?php echo $item->title; ?></a>
 					<?php else : ?>
 						<?php echo $item->title; ?>
 					<?php endif; ?>
-					
+					</span>
 				</h3>
 				<!-- EOF item title -->
 			<?php endif; ?>	
@@ -978,14 +979,14 @@ if ($count > $leadnum) :
 				<?php endif; ?>
 					
 				<?php if ($this->params->get('show_title', 1)) : ?>
-					<h3 class="fc_item_title" itemprop="name">
-						
+					<h3 >
+						<span class="fc_item_title" itemprop="name">
 						<?php if ($this->params->get('link_titles', 0)) : ?>
 							<a href="<?php echo $link_url; ?>"><?php echo $item->title; ?></a>
 						<?php else : ?>
 							<?php echo $item->title; ?>
 						<?php endif; ?>
-					
+						</span>
 					</h3>
 				<?php endif; ?>
 					

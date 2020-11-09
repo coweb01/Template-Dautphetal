@@ -234,8 +234,10 @@
 
 .offcanvas {
 	nav > .row > .container {
-		display: flex;
-		align-items: center;
+		.wbc-flex;
+		align-items: flex-start;
+
+
 		> div {
 			padding: .5rem 0;
 			align-self: center;
@@ -249,7 +251,33 @@
 		}
 		.nav-toggle {
 			flex: 0;
+
+			.hamburg {
+			  height: 38px;
+			
+			   .line:nth-child(1) { top: 6px; }
+			   .line:nth-child(2) { top: 17px; }
+			   .line:nth-child(3) { top: 28px; }
+			}		
+
 		}
+		.nav-toggle::after {
+				content: 'Menü';
+				display: block;
+				line-height: 0.9rem;
+				font-size: 0.9rem;
+				font-weight: 300; 
+				
+				text-align: center;
+				letter-spacing:  0.10rem;
+				text-transform: uppercase;
+				text-align: center;
+				color: white;
+				padding: 0px 0px 2px 3px;
+				width: 53px;
+				background-color: @color2
+			}
+
 		.nav-link {
 			margin-right: .5rem;
 			font-size: 1.5rem;
@@ -258,7 +286,7 @@
 			justify-content: center;
 			align-items: center;
 			width: 53px;
-			height: 50px;
+			height: 54px;
 			border: 1px solid @color1;
 		}
 	}
@@ -274,6 +302,14 @@
 	.nav-toggle {
 		order: 1;
 	}
+	.offcanvas nav > .row > .container .nav-toggle::after {
+		background-color: transparent;
+		color: @color2;
+		letter-spacing:  normal;
+		font-size: 0.8rem;
+		padding: 0px;
+	}
+
 	.offcanvas nav > .row > .container .nav-link {
 		border: none;
 	}

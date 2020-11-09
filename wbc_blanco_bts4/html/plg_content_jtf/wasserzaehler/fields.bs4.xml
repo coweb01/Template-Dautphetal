@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form class="custom-form custom-contact" orientation="horizontal"
+      gridlabel="col-12 col-sm-3 col-md-3">
+
+	<fieldset name="kontaktdaten">
+		<field name="name"
+		    type="text"
+		    class="form-control 5"
+		    maxlength="60"
+		    description="JTF_NAME_DESC"
+		    label="JTF_NAME_LABEL"
+		    filter="string"
+		    required="true"
+		/>
+		<field name="vorname"
+		    type="text"
+		    class="form-control 5"
+		    maxlength="60"
+		    description="JTF_PRENAME_DESC"
+		    label="JTF_PRENAME_LABEL"
+		    filter="string"
+		    required="true"
+		/>
+		
+		<field name="strasse"
+			type="text"
+			class="form-control"
+			size="30"
+			description="JTF_EXTENDED_FORM_STREET_DESC"
+			label="JTF_EXTENDED_FORM_STREET_LABEL"
+		/>
+		<field name="hausnr"
+		       type="text"
+		       maxlength="10"
+		       description="JTF_TXT_NR_DESC"
+		       label="JTF_TXT_NR_LABEL"
+		       required="true"
+		/>
+		<field name="plz"
+		       type="plz"		      
+		       maxlength="60"
+		       description="JTF_PLZ_DESC"
+		       label="JTF_PLZ_LABEL"
+		       validate="plz"
+		       required="true"
+		/>
+		<field name="ort"
+			type="text"
+			class="form-control"
+			size="30"
+			description="JTF_EXTENDED_FORM_LOCATION_DESC"
+			label="JTF_EXTENDED_FORM_LOCATION_LABEL"
+			required="true"
+		/>
+		
+		<field name="email"
+		    type="email"
+		    class="form-control"
+		    maxlength="60"
+		    size="30"
+		    description="JTF_EMAIL_DESC"
+		    label="JTF_EMAIL_LABEL"
+		    filter="string"
+		    validate="email"
+		    required="true"
+		/>
+
+	</fieldset>	
+	<fieldset name="zaehlerdaten">	
+		
+		<field name="zaehlernummer"
+		       type="text"
+		       maxlength="30"
+		       description="WBCF_TXT_WZNR_DESC"
+		       label="WBCF_TXT_WZNR_LABEL"
+		       required="true"
+		/>
+		<field name="zaehlerstand"
+		       type="text"
+		       maxlength="30"
+		       description="WBC_TXT_WZSTD_DESC"
+		       label="WBC_TXT_WZSTD_LABEL"
+		       required="true"
+		/>
+
+		<field name="ablesedatum"
+		       type="calendar"
+		       default="NOW"
+		       description="JTF_CAL_DESC"
+		       label="JTF_CAL_LABEL"
+		       size="8"
+		       format="%d.%m.%Y"
+		       filter="user_utc"
+		       required="true"
+		       showtime="false"
+		       todaybutton="false"
+		       translateformat="true"
+		/>
+
+		<field name="ortsteil"
+		       type="list"
+		       icon="fas fa-list"
+		       description="WBC_LIST_ORT_DESC"
+		       label="WBC_LIST_ORT_LABEL"
+		       default=""
+		       validate="options"
+		       required="true"
+		>
+			<option value="">JTF_OPTION_NONE</option>
+			<option value="Allendorf">Allendorf</option>
+			<option value="Buchenau">Buchenau</option>
+			<option value="Damshausen">Damshausen</option>
+			<option value="Dautphe">Dautphe</option>
+			<option value="Elmshausen">Elmshausen</option>
+			<option value="Friedensdorf">Friedensdorf</option>
+			<option value="Herzhausen">Herzhausenn</option>
+			<option value="Holzhausen">Holzhausen</option>
+			<option value="Hommertshausen">Hommertshausen</option>
+			<option value="Mornshausen">Mornshausen</option>
+			<option value="Silberg">Silberg</option>
+			<option value="Wolfgruben">Wolfgruben</option>
+		</field>
+
+		<field name="telefon"
+			type="tel"	
+			class="form-control"
+			size="30"
+			description="WBC_EXTENDED_FORM_TEL_DESC"
+			label="WBC_EXTENDED_FORM_TEL_LABEL"
+			
+		/>
+		<field name="message"
+		    type="textarea"
+		    class="form-control"
+		    cols="30"
+		    rows="10"
+		    description="JTF_MESSAGE_DESC"
+		    label="JTF_MESSAGE_LABEL"
+		    filter="safehtml"
+		    required="true"
+		/>
+	</fieldset>
+	<fieldset name="consent_form"	         
+	>
+		<field name="privacy_policy"
+		       type="checkboxes"
+		       class="form-check-input privacy_policy"
+		       labelclass="form-check-label"
+		       description=""
+		       label="JTF_PRIVACY_POLICY_LABEL"
+		       default=""
+		       required="true"
+		       hiddenLabel="true"
+		>
+			<option value="JYES">JTF_PRIVACY_POLICY_OPTION_ACCEPT</option>
+		</field>
+	</fieldset>
+</form>
