@@ -147,15 +147,17 @@ form label {
 	margin: 0px;
 }
 
+ 
 
-.reset input,
-.remind input,
-.reset-complete input,
-.reset-confirm input,
-.login input
- { min-width: 100%;  }
-
-
+.reset input:not(.form-check-input),
+.remind input:not(.form-check-input),
+.reset-complete input:not(.form-check-input),
+.reset-confirm input:not(.form-check-input),
+.login input:not(.form-check-input)
+{ 
+	min-width: 100%;  
+	
+}
 
 /* easycalccheckplus */
 
@@ -176,14 +178,12 @@ form label {
 
 @media (min-width: 1200px) { 
 
-	#easycalccheckplus { 
-		
-	}	
-	.reset input,
-	.remind input,
-	.reset-complete input,
-	.reset-confirm input,
-	.login input
+	#easycalccheckplus { }	
+	.reset input:not(.form-check-input),
+	.remind input:not(.form-check-input),
+	.reset-complete input:not(.form-check-input),
+	.reset-confirm input:not(.form-check-input),
+	.login input:not(.form-check-input)
 	 { min-width: 50%;  }
 
 

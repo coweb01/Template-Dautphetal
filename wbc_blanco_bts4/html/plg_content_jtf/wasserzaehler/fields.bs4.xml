@@ -5,7 +5,7 @@
 	<fieldset name="kontaktdaten">
 		<field name="name"
 		    type="text"
-		    class="form-control 5"
+		    class="form-control "
 		    maxlength="60"
 		    description="JTF_NAME_DESC"
 		    label="JTF_NAME_LABEL"
@@ -14,7 +14,7 @@
 		/>
 		<field name="vorname"
 		    type="text"
-		    class="form-control 5"
+		    class="form-control "
 		    maxlength="60"
 		    description="JTF_PRENAME_DESC"
 		    label="JTF_PRENAME_LABEL"
@@ -28,10 +28,12 @@
 			size="30"
 			description="JTF_EXTENDED_FORM_STREET_DESC"
 			label="JTF_EXTENDED_FORM_STREET_LABEL"
+			required="true"
 		/>
 		<field name="hausnr"
 		       type="text"
 		       maxlength="10"
+		       class="form-control "
 		       description="JTF_TXT_NR_DESC"
 		       label="JTF_TXT_NR_LABEL"
 		       required="true"
@@ -39,6 +41,7 @@
 		<field name="plz"
 		       type="plz"		      
 		       maxlength="60"
+		       class="form-control "
 		       description="JTF_PLZ_DESC"
 		       label="JTF_PLZ_LABEL"
 		       validate="plz"
@@ -61,8 +64,7 @@
 		    description="JTF_EMAIL_DESC"
 		    label="JTF_EMAIL_LABEL"
 		    filter="string"
-		    validate="email"
-		    required="true"
+		    validate="email"		    
 		/>
 
 	</fieldset>	
@@ -70,22 +72,27 @@
 		
 		<field name="zaehlernummer"
 		       type="text"
+		       class="form-control "
 		       maxlength="30"
 		       description="WBCF_TXT_WZNR_DESC"
 		       label="WBCF_TXT_WZNR_LABEL"
 		       required="true"
+		       pattern=""
 		/>
 		<field name="zaehlerstand"
 		       type="text"
+		       class="form-control "
 		       maxlength="30"
 		       description="WBC_TXT_WZSTD_DESC"
 		       label="WBC_TXT_WZSTD_LABEL"
 		       required="true"
+		       pattern=""
 		/>
 
 		<field name="ablesedatum"
 		       type="calendar"
 		       default="NOW"
+		       class="form-control "
 		       description="JTF_CAL_DESC"
 		       label="JTF_CAL_LABEL"
 		       size="8"
@@ -97,14 +104,24 @@
 		       translateformat="true"
 		/>
 
-		<field name="ortsteil"
+		<field name="ablesestelle"
+			type="text"
+			class="form-control"
+			size="30"
+			description="JTF_EXTENDED_FORM_ABLESESTELLE_DESC"
+			label="JTF_EXTENDED_FORM_ABLESESTELLE_LABEL"
+			required="true"
+		/>
+
+		<field name="ableseort"
 		       type="list"
 		       icon="fas fa-list"
-		       description="WBC_LIST_ORT_DESC"
-		       label="WBC_LIST_ORT_LABEL"
+		       description="WBC_LIST_ABLESE_ORT_DESC"
+		       label="WBC_LIST_ABLESE_ORT_LABEL"
 		       default=""
 		       validate="options"
 		       required="true"
+		       class="form-control "
 		>
 			<option value="">JTF_OPTION_NONE</option>
 			<option value="Allendorf">Allendorf</option>
@@ -129,16 +146,7 @@
 			label="WBC_EXTENDED_FORM_TEL_LABEL"
 			
 		/>
-		<field name="message"
-		    type="textarea"
-		    class="form-control"
-		    cols="30"
-		    rows="10"
-		    description="JTF_MESSAGE_DESC"
-		    label="JTF_MESSAGE_LABEL"
-		    filter="safehtml"
-		    required="true"
-		/>
+		
 	</fieldset>
 	<fieldset name="consent_form"	         
 	>

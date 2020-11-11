@@ -136,17 +136,28 @@ a.btn-primary:focus
 
 #flexicontent .buttons { margin-bottom: 2rem; }
 
-#flexicontent .btn[class^="btn-outline-"], 
-#flexicontent .btn[class*=" btn-outline-"] {
-	color: var(--color-bg,#fff);
+#flexicontent .btn {
 	&:not(:last-child) {
 		margin-right: 5px;
 	}
+}
+#flexicontent .btn.btn-outline-primary
+ {
+	color: var(--color-bg,@color2);
+	
 	a {
-    color: var(--color-bg,#fff);
+    color: var(--color-bg,@color2);
 	}
 }
 
+#flexicontent .btn.btn-outline-secondary
+ {
+	color: var(--color-bg,#FFF);
+	
+	a {
+    color: var(--color-bg,#FFF);
+	}
+}
 .alert a.btn,
 .alert a.btn:hover,
 .alert a.btn:focus,
