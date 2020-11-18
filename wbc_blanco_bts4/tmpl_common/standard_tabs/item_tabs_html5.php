@@ -193,10 +193,10 @@ if ($createtabs === true) :
                 
               
                   <?php if ( $field->name != "text" ) : ?>
-                    <div class="flexi_fields field_<?php echo $field->name; ?>">
+                    <div class="flexi-field field_<?php echo $field->name; ?>">
                         <?php if ($field->label) : ?>
-                        <span class="label label_field_<?php echo $field->name; ?>">
-                          <?php echo $field->label; ?></span>
+                        <div class="label label_field_<?php echo $field->name; ?>">
+                          <?php echo $field->label; ?></div>
                         <?php endif; ?>
                         <div class="value value_<?php echo $field->name; ?>">
                           <?php echo $field->display; ?>

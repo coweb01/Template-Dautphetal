@@ -308,11 +308,11 @@ $tabsHeaderLevel =	( $itemTitleHeaderLevel == 2 ) ? '3' : '2';
 	<?php if (isset($this->item->positions['subtitle1'])) : /* BOF subtitle1 block */ ?>
 	<div class="flexi lineinfo subtitle1 group">
 		<?php foreach ($this->item->positions['subtitle1'] as $field) : ?>
-		<div class="flexi element">
+		<div class="flexi-field field_<?php echo $field->name; ?>">
 			<?php if ($field->label) : ?>
-			<span class="flexi label field_<?php echo $field->name; ?>"><?php echo $field->label; ?></span>
+			<div class="label label_field_<?php echo $field->name; ?>"><?php echo $field->label; ?></div>
 			<?php endif; ?>
-			<div class="flexi value field_<?php echo $field->name; ?>"><?php echo $field->display; ?></div>
+			<div class="value value_<?php echo $field->name; ?>"><?php echo $field->display; ?></div>
 		</div>
 		<?php endforeach; ?>
 	</div>
@@ -321,11 +321,11 @@ $tabsHeaderLevel =	( $itemTitleHeaderLevel == 2 ) ? '3' : '2';
 	<?php if (isset($this->item->positions['subtitle2'])) : /* BOF subtitle2 block */ ?>
 	<div class="flexi lineinfo subtitle2 group">
 		<?php foreach ($this->item->positions['subtitle2'] as $field) : ?>
-		<div class="flexi element">
+		<div class="flexi-field field_<?php echo $field->name; ?>">
 			<?php if ($field->label) : ?>
-			<span class="flexi label field_<?php echo $field->name; ?>"><?php echo $field->label; ?></span>
+			<div class="label label_field_<?php echo $field->name; ?>"><?php echo $field->label; ?></div>
 			<?php endif; ?>
-			<div class="flexi value field_<?php echo $field->name; ?>"><?php echo $field->display; ?></div>
+			<div class="value value_<?php echo $field->name; ?>"><?php echo $field->display; ?></div>
 		</div>
 		<?php endforeach; ?>
 	</div>
@@ -334,11 +334,11 @@ $tabsHeaderLevel =	( $itemTitleHeaderLevel == 2 ) ? '3' : '2';
 	<?php if (isset($this->item->positions['subtitle3'])) : /* BOF subtitle3 block */ ?>
 	<div class="flexi lineinfo subtitle3 group">
 		<?php foreach ($this->item->positions['subtitle3'] as $field) : ?>
-		<div class="flexi element">
+		<div class="flexi-field field_<?php echo $field->name; ?>">
 			<?php if ($field->label) : ?>
-			<span class="flexi label field_<?php echo $field->name; ?>"><?php echo $field->label; ?></span>
+			<div class="label label_field_<?php echo $field->name; ?>"><?php echo $field->label; ?></div>
 			<?php endif; ?>
-			<div class="flexi value field_<?php echo $field->name; ?>"><?php echo $field->display; ?></div>
+			<div class="value value_<?php echo $field->name; ?>"><?php echo $field->display; ?></div>
 		</div>
 		<?php endforeach; ?>
 	</div>
@@ -390,12 +390,12 @@ $tabsHeaderLevel =	( $itemTitleHeaderLevel == 2 ) ? '3' : '2';
 		<?php if( isset ($this->item->positions['bottom-nolabel'] ) ) : ?>
 		<div class="flexi flexi-bottom-nolabel <?php echo ( $grid_framework > 0 ) ?  $gridclass  : $classnum; ?>">
 			<?php foreach ($this->item->positions['bottom-nolabel'] as $field) : ?>
-			<div class='flexi'>
+			<div class='flexi-field field_<?php echo $field->name; ?>'>
 				
 					<?php if ($field->label) : ?>
-					<label class="flexi label_field_<?php echo $field->name; ?>"><?php echo $field->label; ?></label>
+					<div class="label label_field_<?php echo $field->name; ?>"><?php echo $field->label; ?></div>
 					<?php endif; ?>
-					<div class="flexi_value value_field_<?php echo $field->name; ?>"><?php echo $field->display; ?></div>
+					<div class="value value_<?php echo $field->name; ?>"><?php echo $field->display; ?></div>
 				
 			</div>
 			<?php endforeach; ?>
@@ -406,12 +406,12 @@ $tabsHeaderLevel =	( $itemTitleHeaderLevel == 2 ) ? '3' : '2';
 		<div class="flexi flexi-bottom <?php echo ( $grid_framework > 0 ) ?  $gridclass  : $classnum; ?>">
 			<?php foreach ($this->item->positions['bottom'] as $field) : ?>
 
-			<div class='flexi'>
+			<div class='flexi-field field_<?php echo $field->name; ?>'>
 				
 					<?php if ($field->label) : ?>
-					<label class="flexi label_field_<?php echo $field->name; ?>"><?php echo $field->label; ?></label>
+					<div class="label label_field_<?php echo $field->name; ?>"><?php echo $field->label; ?></div>
 					<?php endif; ?>
-					<div class="flexi_value value_field_<?php echo $field->name; ?>"><?php echo $field->display; ?></div>
+					<div class="value value_<?php echo $field->name; ?>"><?php echo $field->display; ?></div>
 				
 			</div>
 			<?php endforeach; ?>

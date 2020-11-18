@@ -134,7 +134,7 @@ $img_auto_dims_css=" width: 100%; height: auto; display: block !important; borde
  * item placement 0: cleared, 1: as masonry tiles, 2: tabs, 3: accordion (sliders)
  */
 $item_placement_feat = (int) $params->get($layout.'_item_placement_feat', 0);
-$item_columns_feat   = (int) $params->get('item_columns_feat', 1);
+$item_columns_feat   = (int) $params->get('item_columns_feat', 3);
 $cols_class_feat     = $item_columns_feat <= 1 ? '' : 'cols_' . $item_columns_feat;
 
 /**
@@ -142,7 +142,7 @@ $cols_class_feat     = $item_columns_feat <= 1 ? '' : 'cols_' . $item_columns_fe
  * item placement 0: cleared, 1: as masonry tiles, 2: tabs, 3: accordion (sliders)
  */
 $item_placement_std = (int) $params->get($layout.'_item_placement', 0);
-$item_columns_std   = (int) $params->get('item_columns', 1);
+$item_columns_std   = (int) $params->get('item_columns', 4);
 $cols_class_std     = $item_columns_std  <= 1 ? '' : 'cols_' . $item_columns_std;
 
 $document = JFactory::getDocument();

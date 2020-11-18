@@ -12,50 +12,41 @@
 #flexicontent .twocols:last-child {margin-right: 0;}
 
 
-#flexicontent ul.flexi-fieldlist li.flexi-field.flexi-title {
+#flexicontent .flexi-fieldlist .flexi-field.flexi-title {
 }
-#flexicontent li.flexi-item {
-	border-bottom: 1px dotted #CCC !important;
-	margin-top: 0.5em !important;
-	margin-bottom: 0.5em !important;
-	padding-top:   0.5em !important
-}
-#flexicontent ul.flexi-itemlist li:last-child { border-bottom: none !important;  margin-bottom: 0px !important;}
-#flexicontent ul.flexi-itemlist,
-#flexicontent ul.flexi-fieldlist {
+#flexicontent .flexi-item {}
+#flexicontent .flexi-itemlist,
+#flexicontent .flexi-fieldlist {
 	margin : 1px;
 	padding: 0;
 	display: block;
 	width:   100%;
 }
-#flexicontent ul.flexi-fieldlist {
+#flexicontent .flexi-fieldlist {
 	float:left;
 	width:100%;
 	}
-#flexicontent ul.fieldsleft {width: 50%;}
-#flexicontent li.flexi-field {
+#flexicontent .fieldsleft {width: 50%;}
+
+#flexicontent .flexi-field {
 	display: block;
-	clear: both;
+	float: left;
 	width: 100%;
-	padding: 0.2em 0px 0.2px !important;
+	padding: 0.2em 0px 0.2px ;
 }
 
-#flexicontent ul .label, #flexicontent ul .value { 
-	float     : left;
-	display   :block;
-	margin-right: 2px;
+#flexicontent .label, #flexicontent .value { 
+	float     :    left;
+	display   :    block;
+	margin-right:  2px;
 }
-#flexicontent ul .label {
-	font-weight: 600;
+#flexicontent .label {
+	font-weight:  600;
 	margin-right: 10px;
 }
-.flexi_fields {
-	line-height: 1.6em;
-	/*float:left;*/
-	margin-left: 0px;
-	}
 
-#flexicontent ul.zusatzinfo { margin-top: 0.5em;}
+
+#flexicontent .zusatzinfo { margin-top: 0.5em;}
 
 #flexicontent div.topblock {float:left; width: 100%;}
 #flexicontent div.two {width: 48%!important; margin-right: 2%;}
@@ -71,6 +62,8 @@
 	margin-top: 3rem;
 }
 
+
+/*
 img.fc_field_image { margin-right: 15px;}
 
 .field_funktion1 { 
@@ -82,12 +75,12 @@ img.fc_field_image { margin-right: 15px;}
 
 .flexi_fields { clear: both; display:block;}
 .flexi_fields .value, .flexi_fields .label {
-	/*float     : left;*/
+	/*float     : left;
 	display   :block;
 	margin-right: 2px;	
-}
+}*/
 
-.flexi_fields .label { white-space: nowrap; }	
+/*.flexi_fields .label { white-space: nowrap; }	
 
 
 #flexicontent .value_zusatzinfo_tab6,
@@ -203,7 +196,7 @@ hr.fcclearline {
     line-height: 25px;
 }
 
-/********* Tabs ******/
+/********* Tabs *****
 
 .wbc-tabs .nav-tabs { border: none; }
 .wbc-tabs .tab-content {}
@@ -247,3 +240,4 @@ hr.fcclearline {
 	padding-left: 0px;
 	padding-right: 0px;
 	}
+*/

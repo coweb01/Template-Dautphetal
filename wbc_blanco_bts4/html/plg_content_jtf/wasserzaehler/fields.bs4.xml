@@ -3,6 +3,22 @@
       gridlabel="col-12 col-sm-3 col-md-3">
 
 	<fieldset name="kontaktdaten">
+
+		<field name="personennummer"
+		    type="text"
+		    class="form-control "
+		    maxlength="60"
+		    description="WBC_PERSNR_DESC"
+		    label="WBC_PERSNR_LABEL"
+		    filter="string"		  
+		    message="WBC_PERSNR_DESC"		    
+		/>
+		<field name="info"
+        	   type="note"
+        	   label=""
+        	   description="WBC_PERSNR_DESC"
+        	   class="wbc-note font-weight-light"
+        />
 		<field name="name"
 		    type="text"
 		    class="form-control "
@@ -77,7 +93,8 @@
 		       description="WBCF_TXT_WZNR_DESC"
 		       label="WBCF_TXT_WZNR_LABEL"
 		       required="true"
-		       pattern=""
+		       filter="integer"
+		       message="WBCF_TXT_WZNR_DESC"
 		/>
 		<field name="zaehlerstand"
 		       type="text"
@@ -86,7 +103,8 @@
 		       description="WBC_TXT_WZSTD_DESC"
 		       label="WBC_TXT_WZSTD_LABEL"
 		       required="true"
-		       pattern=""
+		       filter="integer"
+		       message="WBC_TXT_WZSTD_DESC"
 		/>
 
 		<field name="ablesedatum"
@@ -130,7 +148,7 @@
 			<option value="Dautphe">Dautphe</option>
 			<option value="Elmshausen">Elmshausen</option>
 			<option value="Friedensdorf">Friedensdorf</option>
-			<option value="Herzhausen">Herzhausenn</option>
+			<option value="Herzhausen">Herzhausen</option>
 			<option value="Holzhausen">Holzhausen</option>
 			<option value="Hommertshausen">Hommertshausen</option>
 			<option value="Mornshausen">Mornshausen</option>

@@ -52,7 +52,8 @@ if (!isset($bootstrap_colclass_mobil_ph)) { $bootstrap_colclass_mobil_ph = ''; }
   <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $tpath;?>/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="<?php echo $tpath;?>/images/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="<?php echo $tpath;?>/images/favicon-16x16.png">
- 
+  
+
 
 <!-- ***************************************************************************************************** -->
 <!-- *****     copyright Template www.das-webconcept.de       2019                                    **** -->

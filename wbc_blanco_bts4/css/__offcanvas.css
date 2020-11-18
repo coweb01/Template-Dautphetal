@@ -1,0 +1,272 @@
+/*
+ * html/body styles for Off Canvas and Sticky Footer
+ * --------------------------------------------------
+ */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+
+
+/* umradung bei safari*/
+.offcanvas li:hover,
+.offcanvas li:active,
+.offcanvas li.active a.dropdown-toggle,
+.offcanvas a.dropdown-toggle:hover,
+.offcanvas a.dropdown-toggle:active
+ { 
+  outline-color: transparent;
+  outline: none;
+ }
+
+.offcanvas { display: none; }
+
+/* Linkfarben */
+.offcanvas .bg-dark ul li a { color: #fefefe; }
+
+.offcanvas .bg-dark ul li a:hover, 
+.offcanvas .bg-dark ul li a:focus
+ { color: #fff; }
+
+.offcanvas .bg-dark ul li a:active, 
+.offcanvas .bg-dark ul li.active > a 
+{ color: #fefefe; }
+
+/* layout */
+.offcanvas ul.navbar-nav { 
+  -ms-flex-direction: column !important;
+      flex-direction: column !important;
+    }
+
+.offcanvas ul.navbar-nav li { 
+    display: block; 
+    float: none;
+    font-size: 1.3rem;
+  }
+
+.offcanvas ul.navbar-nav li.deeper ul li { 
+    padding-left: 15px; 
+    font-size: 1rem;
+  }
+.offcanvas .navbar-brand { margin-left: 2rem; }
+
+.offcanvas ul.navbar-nav > li
+ {
+  border-bottom: solid 1px #666666;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.offcanvas ul.navbar-nav > li:last-child { border: none !important; }
+.offcanvas ul.navbar-nav li.level1 > a,
+.offcanvas ul.navbar-nav > li > a
+
+ { padding-left: 15px; padding-right: 15px;}
+
+ .offcanvas #append-search-small { padding: 20px 15px; }
+
+ .offcanvas .nav > .nav-item.deeper > .nav-link::before
+
+ {  
+  content: '\f054 ';  
+  padding-left: 5px; 
+  font-family: 'FontAwesome';
+  color: white;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+.offcanvas .nav > .nav-item.deeper > .nav-link:before
+ { content: '\f078'; padding-left: 5px; }
+
+
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ 
+@media screen and (max-width: 1200px) {*/
+    body {
+      /* Fixed navbar height */
+      padding-top: 70px; 
+      }
+
+  #logo.wbc-offcanvas-on,
+  #navigation-main
+   { display: none !important; } /* Logo Desktop */
+
+  .offcanvas.active {
+      background: rgba(0,0,0,0.4);  
+      transition: background-color .5s;
+
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1000;
+      touch-action: none;
+  }
+
+  .offcanvas {
+    position: absolute;
+    top: 0;
+    display: block;
+    min-height: 100%;
+    -webkit-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+/* Offcanvas von links einblenden */
+  
+  .offcanvas-left {
+    left: 0;
+  }
+  
+  .offcanvas-left.active {
+    left: 300px; 
+  }
+
+  .offcanvas-left .sidebar-offcanvas {
+    left: -100%; 
+    -webkit-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+  .offcanvas-left.active .sidebar-offcanvas {
+    left: 0; 
+    border-top: 1px solid #e7e7e7;
+  }
+
+
+/* Offcanvas von rechts einblenden */
+
+   .offcanvas-right {
+    right: 0;
+  }
+  
+  .offcanvas-right.active {
+    right: 300px; 
+  }
+
+  .offcanvas-right .sidebar-offcanvas {
+    right: -100%; 
+    -webkit-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+  .offcanvas-right.active .sidebar-offcanvas {
+    right: 0; 
+    border-top: 1px solid #e7e7e7;
+  }
+
+
+
+  .sidebar-offcanvas {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 300px; 
+    padding: 80px 0px 15px;
+    border-radius: 0;
+    overflow-y: auto;
+    z-index: 1050;
+  }
+  
+  .sidebar-offcanvas .dropdown-menu {
+    border: medium none;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    float: none;
+    margin: 10px 0px 10px 0px;
+    padding-top: 0;
+    position: static !important;
+    transform: none !important;
+  }
+  
+  /*.navbar-toggler {
+    z-index: 1060;
+  }*/
+  
+
+  .offcanvas .fixed-top {
+    z-index: 2000;
+    min-height: 70px;
+  }
+
+  /* Hamburger Menübutton */
+
+  .offcanvas label.hamburg {
+    display: block;
+    width: 53px; 
+    height: 50px; 
+    position: relative;      
+    background-color: #2E6FB1;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .offcanvas input#hamburg {display:none}
+  
+
+  .offcanvas .line { 
+     position: absolute; 
+     left:10px;
+     height: 4px; 
+     width: 35px; 
+     background: #fff; 
+     border-radius: 2px;
+     display: block; 
+     transition: 0.5s; 
+     transform-origin: center; 
+  }
+
+  .offcanvas .line:nth-child(1) { top: 12px; }
+  .offcanvas .line:nth-child(2) { top: 24px; }
+  .offcanvas .line:nth-child(3) { top: 36px; }
+
+  .offcanvas #hamburg:checked + .hamburg .line:nth-child(1){
+     transform: translateY(12px) rotate(-45deg);
+  }
+
+  .offcanvas #hamburg:checked + .hamburg .line:nth-child(2){
+     opacity:0;
+  }
+
+  .offcanvas #hamburg:checked + .hamburg .line:nth-child(3){
+     transform: translateY(-12px) rotate(45deg);
+  }
+
+/*} */
+
+
+/* Sticky footer styles
+-------------------------------------------------- 
+.footer {
+  position: absolute;
+  bottom: 0 !important;
+  right: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here 
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there 
+  background-color: #f5f5f5;
+  -webkit-transition: all .25s ease-out;
+       -o-transition: all .25s ease-out;
+          transition: all .25s ease-out;
+}
+
+.footer.offcanvas-right.active {
+  right: 300px; 
+}
+*/
+@media screen and (max-width: 767px) {
+
+}

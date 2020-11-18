@@ -1,0 +1,147 @@
+
+/* Buttons *************************************************/
+
+button,
+.btn,
+
+a.btn-primary:link,
+a.btn-primary:visited,
+a.btn-default:link,
+a.btn-default:visited
+
+{ 
+	color: var(--color-bg, @linkcolorbtn); 
+	background-color: var(--color-font, @linkbgcolorbtn);
+	border-color:  var(--color-font, @linkbgcolorbtn);
+}
+
+button:hover,
+.btn:hover,
+
+a.btn-primary:hover,
+a.btn-primary:focus,
+a.btn-default:hover,
+a.btn-default:focus
+
+{
+	color: @hovercolorbtn; 
+	background-color: @hoverbgcolorbtn;
+	border-color:  @hoverbgcolorbtn;
+}
+
+button:active,
+.btn :active,
+.btn:not(:disabled):not(.disabled).active, 
+.btn:not(:disabled):not(.disabled):active, 
+.show > .btn.dropdown-toggle,
+
+a.btn-primary:active,
+a.btn-default:active
+
+ {
+ 	color: @activecolorbtn; 
+	background-color: @activebgcolorbtn;
+	border-color:   @activebgcolorbtn;
+ }
+
+.btn-success
+
+ {  
+ 	color: white; 
+ 	background-color: @success_color;
+ 	border-color: @success_color;
+ }
+
+.btn-success:hover,
+.btn-success:focus
+ {  
+ 	color: white; 
+ 	background-color: @success_color_hover;
+ 	border-color: @success_color_hover;
+ }
+
+.btn-success.focus, 
+.btn-success:focus {
+	box-shadow: 0 0 0 .2rem rgba(126, 157, 6,.5);
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-success,
+.btn-danger,
+.btn-warning,
+.btn-info,
+.btn-light,
+.btn-outline-primary,
+.btn-outline-secondary,
+.btn-outline-success,
+.btn-outline-danger,
+.btn-outline-warning,
+.btn-outline-info,
+.btn-outline-light
+ {
+
+	border-radius: @borderradius;
+
+}
+
+.input-append .btn-primary,
+.input-append .btn-secondary,
+.input-append .btn-success,
+.input-append .btn-danger,
+.input-append .btn-warning,
+.input-append .btn-info,
+.input-append .btn-outline-primary,
+.input-append .btn-outline-secondary,
+.input-append .btn-outline-success,
+.input-append .btn-outline-danger,
+.input-append .btn-outline-warning,
+.input-append .btn-outline-info,
+.input-append .btn-outline-light
+ {
+
+	border-top-left-radius: 0px;
+	border-bottom-left-radius:  0px;
+}
+
+
+
+
+.btn-outline-primary { 
+	color: @linkcolor; 
+	border-color: @linkbgcolorbtn;
+	background-color: transparent;
+}
+
+.btn-outline-primary:hover { 
+	color: #FFF !important;
+	background-color:  @linkbgcolorbtn;
+	border-color:  @linkbgcolorbtn;
+ }
+
+
+/*----------------- weiterlesen -------------------------------------*/
+
+
+.readon {}
+
+ .readmore a.btn, .readmore a  {
+    color: @linkcolorbtn;
+    background-color: transparent;
+    border: solid 2px  @linkcolorbtn;
+    border-radius: 20px;
+}
+.readmore a.btn:hover, .readmore a:hover,
+.readmore a.btn:focus, .readmore a:focus
+
+  {
+    background-color: @hoverbgcolorbtn;
+ 	color: @hovercolorbtn;
+    border: solid 1px @hoverbgcolorbtn;
+    text-decoration: none;
+}
+.readmore a.btn:active, .readmore a:active {
+	background-color: @activebgcolorbtn;
+	border: solid 1px @activebgcolorbtn;
+ 	color: @activecolorbtn;
+ }

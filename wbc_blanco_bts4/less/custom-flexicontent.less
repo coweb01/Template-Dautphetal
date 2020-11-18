@@ -87,20 +87,20 @@
 }
 
 
-fieldset.fc_search_set, fieldset.fc_filter_set {
+fieldset.fc_search_set, 
+fieldset.fc_filter_set {
   display: flex;
   flex-wrap: wrap;
-	align-items: center;
+  align-items: center;
 }
 
 #fc_filter_form_blocker { position: absolute; left: -99999; height: 0px; overflow: hidden;}
 
-#flexicontent .lineinfo { 
+#flexicontent .lineinfo:(.front) { 
 	display: flex;
 	flex-direction: column;
 	flex: 0 0 100%;
  }
-
 
 hr.fcclearline {
     border: 0;
@@ -353,19 +353,27 @@ body .fc-nowrap-box,
 fieldset.fc_search_set,    /* SEARCH view */
 fieldset.fc_filter_set {   /* CATEGORY view */
 	border: none;
+	padding-left: 0px;
+	padding-right: 0px;
 }
+
+
 .fcsearch {}
-.fcsearch .fc_search_set {  }
+.fcsearch .fc_search_set {}
+.fcsearch .fc_search_label_cell { display: none; }
 .fcsearch .fc_search_set legend { display: none;  }
-.flexicontent.fcsearch table.fc_search_tbl .fc_search_row_0 td {
-    background-color: @grau_01;
+.fcsearch table.fc_search_tbl .fc_search_row_0 td {
+    background-color: transparent;
+    padding: 0px;
  }
 
-.flexicontent.fcsearch table.fc_search_tbl .fc_search_option_cell {
+.fcsearch table.fc_search_tbl .fc_search_option_cell {
     padding: 1.5rem;
    
 }
-.flexicontent .input-append .button_go {margin-left: -4px;}
+.fcsearch .input-append .button_go {margin-left: -4px;}
+
+
 
 /* suchergebnis --------------------------------*/
 
@@ -409,6 +417,17 @@ body .fc-mssg-inline.fc-info, body .fc-mssg.fc-info {
     background-color: #FFFFFF;
 }
 
+@media ( max-width: 576px) {
+
+	.fcsearch .input-append input[type='text'],
+	.fcsearch .fc-mssg
+	 { max-width: 50%; }
+	.fcsearch .input-append { margin-bottom: 15px; }
+	 
+}
+
+
+
 /* Flexicontent Modul */
 
 
@@ -419,22 +438,6 @@ body .fc-mssg-inline.fc-info, body .fc-mssg.fc-info {
 	font-weight: 300;
 }
 
-.fcitem_readon a:link,
-.fcitem_readon a:visited {
-	color: var(--color-font, @default);
-  background-color: transparent;
-	padding: 5px;
-  border: solid 2px var(--color-font, @color6);
-  border-radius: 20px;
-}
-.fcitem_readon a:hover,
-.fcitem_readon a:focus {
- 	color: white;
-  background-color: @color1;
-  border: solid 1px @color1;
- 	text-decoration: none;
-}
-.fcitem_readon a:active {}
 
 /*  Feld Fotogalerie widgetkit -------------------------------*/
 
@@ -534,15 +537,22 @@ div.fc-fieldgrp-value-box {
 
  { 
 	width: auto !important; 
-	display: inline-block !important; 
+	display: block;
 	margin-right: 1px !important; }
 
-.field_ortsteil_auswahl1
-{
-	margin-left: -10px;
-}
-.value_plz, .value_ort, .value_plz_1, .value_ort_1, .value_plz_2, .value_ort_2, .value_ort_3,
-.value_ortsteil_auswahl, .value_ortsteil_auswahl2, .value_ortsteil_auswahl1, .value_stadtteil,
+.field_ortsteil_auswahl1 {	margin-left: -10px;}
+
+.value_plz, 
+.value_ort, 
+.value_plz_1, 
+.value_ort_1, 
+.value_plz_2, 
+.value_ort_2, 
+.value_ort_3,
+.value_ortsteil_auswahl, 
+.value_ortsteil_auswahl2, 
+.value_ortsteil_auswahl1, 
+.value_stadtteil,
 .value_ortsteil_auswahl_ansprechpartner,
 .value_ortsteil_buergerhaus,
 .value_name2, .value_prename2,
