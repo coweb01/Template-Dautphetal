@@ -73,30 +73,57 @@ a.btn-primary:focus
 
 /* weiterlesen */
 
-.readon { 
-	
- }
- .readmore a.btn, .readmode a  {
-    color:@color1;
+.readmore a.btn, 
+.readmode a,
+.fcitem_readon a:link,
+.fcitem_readon a:visited
+  {
+  	display: inline-block;
+	font-weight: 400;
+	text-align: center;
+	vertical-align: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-color: transparent;
+	padding: .375rem .75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: var(--color-font, @color1);
     background-color: transparent;
-    border: solid 1px @grau_1;
+    border: solid 2px var(--color-font, @grau_1);
     border-radius: 20px;
 }
-.readmore a.btn:hover, .readmode a:hover,
-.readmore a.btn:focus, .readmode a:focus
+.readmore a.btn:hover, 
+.readmode a:hover,
+.readmore a.btn:focus, 
+.readmode a:focus,
+.fcitem_readon a:hover,
+.fcitem_readon a:focus
 
   {
     color: white;
     background-color:@color1;
-    border: solid 1px@color1;
+    border: solid 2px @color1;
     text-decoration: none;
 }
+
+
+.fcitem_readon a:active {}
 
 /*  buttons   Flexicontent */
 
 /* print, email, edit Buttons */
 
-#bookmark { margin-top: 3rem; margin-bottom: 3rem;}
+#bookmark { 
+  margin-top: 2rem; 
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 #bookmark .btn:first-child { margin-left: 0px; }
 #bookmark .btn {}
 #bookmark .btn > i { margin-right: 0.5rem; }
@@ -105,8 +132,20 @@ a.btn-primary:focus
 #bookmark .btn:focus {}
 #bookmark .btn:active {}
 
-#bookmark .fc_printbutton:before {
-	
+#bookmark .fc_printbutton,
+#bookmark .fc_feedbutton {
+	border: 1px solid var(--color-font, @color2);
+	border-radius: 20px;
+  padding: 10px 20px;
+  margin: .5rem;
+	i {
+		margin-right: 10px;
+	}
+	&:hover {
+		color: #fff;
+		background-color: @color1;
+		border: 1px solid @color1;
+	}
 }
 
 
@@ -118,10 +157,33 @@ a.btn-primary:focus
 
 #flexicontent .buttons { margin-bottom: 2rem; }
 
-#flexicontent .btn[class^="btn-outline-"], 
-#flexicontent .btn[class*=" btn-outline-"] {
-    .rounded-corners;
+#flexicontent .btn {
+	&:not(:last-child) {
+		margin-right: 5px;
+	}
+}
+#flexicontent .btn.btn-outline-primary
+ {
+	color: var(--color-bg,@color2);
+	
+	a {
+    color: var(--color-bg,@color2);
+	}
 }
 
-
-
+#flexicontent .btn.btn-outline-secondary
+ {
+	color: var(--color-bg,#FFF);
+	
+	a {
+    color: var(--color-bg,#FFF);
+	}
+}
+.alert a.btn,
+.alert a.btn:hover,
+.alert a.btn:focus,
+.alert a.btn:active {
+	background-color: transparent !important;
+	 border: unset !important; 
+ 
+	}

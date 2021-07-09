@@ -10,6 +10,38 @@ $grid_framework  = $this->params->get('grid_framework', 1);
 //$img_size_map    = array('l'=>'large', 'm'=>'medium', 's'=>'small', 'o'=>'original');
 //$img_field_size  = $img_size_map[ $this->params->get('image_size' , 'm') ];
 
+// Fotogalerie 
+
+$field_galerie  = $this->params->get('select_galerie');
+$tabcount  = 6; 
+$prefixtab = 'subtitle_tab';
+for ($tc=1; $tc<=$tabcount; $tc++) :
+ 
+
+ // prüfen ob die Galerie als Widgetkit ausgewählt ist und das Feld zusätzlich auf einer Position sitzt.
+ $tabpos_name = $prefixtab.$tc;
+ 
+ if ( isset($this->item->positions[$tabpos_name] ))  :   
+   
+    foreach ($this->item->positions[$tabpos_name] as $field) : 
+
+      if ( $field_galerie == $field->name) :
+         $d = $field->name;
+         unset($this->item->positions[$tabpos_name]->$d);
+      endif;
+
+    endforeach;
+
+    $arr = (array)$this->item->positions[$tabpos_name];
+      if (!$arr) {
+         
+         unset($this->item->positions[$tabpos_name]);
+   }
+   
+  endif;
+
+endfor;
+
 // Bild im Fliesstext
 
 $show_img_desc  = $this->params->get('use_item_image',0);
@@ -25,10 +57,6 @@ if ($show_img_desc == 1 ) :
   endif;
 endif;
 
-
-// Fotogalerie 
-
-$field_galerie  = $this->params->get('select_galerie');
 
 $img_position   = '';
 $img_style      = '';
@@ -81,15 +109,14 @@ switch  ( $grid_framework  ) { /** CSS fuer Bilder  und Tabs **/
                   break;
           }
 
-$img_position   .= ' item-image';
-
-$tabcount            = 6;
+$img_position        .= ' item-image';
 $count_active        = 0;
 $count_active_cont   = 0;
 $createtabs          = false;
 // Find if at least one tabbed position is used
-for ($tc=1; $tc<=$tabcount; $tc++) 
-  $createtabs = ( $createtabs ||  isset($this->item->positions['subtitle_tab'.$tc])) ? true : false;
+for ($tc=1; $tc<=$tabcount; $tc++) :
+  $createtabs = ( $createtabs ||  isset($this->item->positions[$prefixtab.$tc]) ) ? true : false;
+endfor;  
 
 /* BOF Bootstrap4 tabs */
 if ($createtabs === true) :
@@ -98,17 +125,18 @@ if ($createtabs === true) :
 	  for ($tc=1; $tc<=$tabcount; $tc++) :
 		  //if (isset($item->positions['subtitle_tab'.$tc])):
          if (isset($this->item->positions['subtitle_tab'.$tc])):	
-  		   $tabpos_name = 'subtitle_tab'.$tc;
-  		   $tabpos_label = JText::_($this->params->get('subtitle_tab'.$tc.'_label', $tabpos_name));
-  		   
-         if ( $count_active == 0 ) {
-              $tabpanel_active =  $tab_active;
-              $count_active++;
-            } else {
-              $tabpanel_active = '';
+      		   $tabpos_name = $prefixtab.$tc;
+
+      		   $tabpos_label = JText::_($this->params->get($prefixtab.$tc.'_label', $tabpos_name));
+
+             if ( $count_active == 0 ) {
+                  $tabpanel_active =  $tab_active;
+                  $count_active++;
+                } else {
+                  $tabpanel_active = '';
          }
 
-    		 $css_icon = ( $this->params->get('subtitle_tab'.$tc.'_icon') > '' ) ? '<i class="' . $this->params->get('subtitle_tab'.$tc.'_icon') . '"></i> ' : '';
+    		 $css_icon = ( $this->params->get($prefixtab.$tc.'_icon') > '' ) ? '<i class="' . $this->params->get('subtitle_tab'.$tc.'_icon') . '"></i> ' : '';
     			  					  
   		   $navtabs .= '<li role="presentation" class="' .$tab;
          $navtabs .= ( $grid_framework == 2 ) ? $tabpanel_active : '';         
@@ -125,8 +153,10 @@ if ($createtabs === true) :
         <?php // Tabs erstellen ende 
      
         for ($tc=1; $tc<=$tabcount; $tc++) :
-            $tabpos_name          = 'subtitle_tab'.$tc;
-            $tabpos_label         = JText::_($this->params->get('subtitle_tab'.$tc.'_label', $tabpos_name));
+
+
+            $tabpos_name          = 'subtitle_tab'.$tc;            
+            $tabpos_label         = JText::_($this->params->get($prefixtab.$tc.'_label', $tabpos_name));
             $tab_id               = 'fc_'.$tabpos_name;
 			      $tabpanel_first_class = '';
             
@@ -138,38 +168,43 @@ if ($createtabs === true) :
               } else {
                
                 $tabpanel_first_class  = '';
-            }
+              }
       
 			 
 			  if (isset($this->item->positions[$tabpos_name])): ?>
-         <div role="tabpanel" class="<?php echo  $tab_pane . $tabpanel_first_class; ?>" id="<?php echo 'subtitle_tab'.$tc;?>">                      	
+         <div role="tabpanel" class="<?php echo  $tab_pane . $tabpanel_first_class; ?>" id="<?php echo 'subtitle_tab'.$tc;?>"> 
+                               	
               <?php foreach ($this->item->positions[$tabpos_name] as $field) : ?>
-                
-              <?php if ( $field->name == "text" ): ?>  
-                   
-                   <?php if ( $show_img_desc == 1 && isset($html_images) ) : 
-                    // Bild in Beitragtext einbinden?>                    
-                        <figure class="<?php echo $img_position; ?>" >
-                            <?php echo $html_images; ?>
-                        </figure>                   
-                    <?php endif; ?>
-                  <?php echo $field->display; ?>
-                  
-              <?php endif; ?>
               
+              <?php if ( $field_galerie != $field->name  && $field->name != 'wk_galerie ') : // nur anzeigen wenn Galerie nicht auf separater Postition ist ?>  
             
-              <?php if ( $field->name != "text" ) : ?>
-                <div class="flexi_fields field_<?php echo $field->name; ?>">
-                    <?php if ($field->label) : ?>
-                    <span class="label label_field_<?php echo $field->name; ?>">
-                      <?php echo $field->label; ?></span>
-                    <?php endif; ?>
-                    <div class="value value_<?php echo $field->name; ?>">
-                      <?php echo $field->display; ?>
-                    </div>
-                </div>
-              <?php endif;?>
 
+                  <?php if ( $field->name == "text" ): ?>  
+                       
+                       <?php if ( $show_img_desc == 1 && isset($html_images) ) : 
+                        // Bild in Beitragtext einbinden?>                    
+                            <figure class="<?php echo $img_position; ?>" >
+                                <?php echo $html_images; ?>
+                            </figure>                   
+                        <?php endif; ?>
+                      <?php echo $field->display; ?>
+                      
+                  <?php endif; ?>
+                
+              
+                  <?php if ( $field->name != "text" ) : ?>
+                    <div class="flexi-field field_<?php echo $field->name; ?>">
+                        <?php if ($field->label) : ?>
+                        <div class="label label_field_<?php echo $field->name; ?>">
+                          <?php echo $field->label; ?></div>
+                        <?php endif; ?>
+                        <div class="value value_<?php echo $field->name; ?>">
+                          <?php echo $field->display; ?>
+                        </div>
+                    </div>
+                  <?php endif;?>
+
+              <?php endif; ?>
               <?php endforeach; ?>
           </div> <!-- of tabpanel -->
              

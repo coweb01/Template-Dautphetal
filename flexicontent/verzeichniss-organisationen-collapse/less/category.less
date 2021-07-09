@@ -1,0 +1,203 @@
+/**   CSS Verzeichniss Organisationen  collapse **/
+
+@import 'include/config.less';
+
+/* Collapse klassen */
+
+.card .btn { 
+	background-color: transparent;
+	color: var(--color-font, @default);
+	border: none;
+	padding-left: 0px;
+	padding-right: 0px;
+ }
+
+.card btn.active,
+.card .btn:hover,
+.card .btn:focus,
+.card .btn:active,
+.card button:active,
+.card .btn:not(:disabled):not(.disabled):active
+ {
+	background-color: transparent;
+	color: @default;
+	border: none;
+	text-decoration: none;
+ }
+
+.card .btn > span.acc-icon:before {
+	.iconfont;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+}
+.card .btn > span.acc-icon:before {
+	content:'\f138';
+
+}
+.card.activeItem .btn > span.acc-icon:before {
+	content: '\f13a';
+}
+
+#flexicontent .card {  }
+
+#flexicontent .fc_item_title,
+#flexicontent .fc_item_title a {
+	font-size: 1.4rem;
+	line-height: 1.5rem;
+	text-transform: none;
+	color: @default;
+}
+
+
+#flexicontent .listing {
+	margin: 0;
+	padding: 0;
+	clear: both;
+}
+
+#flexicontent .listing .flexi-item
+ {	
+ 	padding: 10px 20px 10px 20px;
+	float: left;
+	width: 100%;
+	list-style: none;
+    margin-left: 0px;
+ }
+
+
+#flexicontent .wrap-item {
+	margin-right: 25px;
+	 }
+
+
+#flexicontent .flexi-cat a .catimg {
+	margin-top: -3px;
+}
+
+#flexicontent .flexi-cat {
+	clear:both;
+	padding-top: 3rem;
+	
+}
+
+#flexicontent .flexi-cat:first-child { 
+	padding-top: 0rem; 
+
+	.description { padding-top: 1rem; }
+}
+
+/**** felder ***/
+#flexicontent .line3, #flexicontent .line4 {float: left; width: 100%; margin-bottom: 0.5em;}
+#flexicontent .flexi-fieldlist .flexi-field.flexi-title {
+}
+#flexicontent .flexi-item {
+	margin-top: 0.5em !important;
+	margin-bottom: 0.5em !important;
+	padding-top:   0.5em !important
+}
+#flexicontent ul.flexi-itemlist li:last-child {
+	border-bottom: none !important;  
+	margin-bottom: 0px !important;
+}
+#flexicontent ul.flexi-itemlist,
+#flexicontent ul.flexi-fieldlist {
+	margin : 1px;
+	padding: 0;
+	display: block;
+	width:   100%;
+}
+
+#flexicontent .fieldsclearen { clear:both; padding-bottom: 15px;}
+#flexicontent .fieldsleft,
+#flexicontent .fieldsright { width: 100%; float: left; padding-bottom: 20px;}
+
+
+#flexicontent .flexi-field {
+	display: block;
+	float: left;
+	width: 100%;
+	padding: 0.2em 0px 0.2px ;
+}
+
+#flexicontent .label, #flexicontent .value { 
+/*	float     :    left;
+	display   :    block;
+	margin-right:  2px;*/
+}
+#flexicontent .label {
+	font-weight:  600;
+	margin-right: 10px;
+}
+
+/******* Category ************************************************/
+
+.clearen {display: block; width:100%; background-image:none;}
+.readmore {
+	clear:both;
+	float: none;
+	display:block;
+	margin: 0.5em 0px !important;
+}
+#flexicontent .description { clear:both; padding-top: 3rem; padding-bottom: 3rem;}
+
+.separator {
+	width: 90%;
+	/*border-bottom: solid 1px #999;*/
+	height: 20px;
+	float: left;
+	display: block;
+	}
+
+/* überschriften */
+h3.field_einrichtung {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 600;
+}
+
+
+/***  downloads  ***/
+
+hr.fcclearline {
+    border: 0;
+    height: 1px;
+    background-image: none;
+    margin: 5px 0;
+}
+
+.fcfile_actions > a, 
+.fcfile_actions > input, 
+.fcfile_actions > form > input {
+       line-height: 25px;
+}
+
+.fcfile_mime {
+    height: 25px;
+    line-height: 25px;
+}
+
+
+
+
+.background-primary {}
+.background-secondary {}
+
+
+@media only screen and (min-width: 768px) {
+
+	 
+
+	
+	#flexicontent .flexi-fieldlist { width: auto; }
+	#flexicontent .fieldsleft {}
+	#flexicontent .fieldsright {}
+	  
+}
+
+@media only screen and (min-width: 992px) {}
+
+@media only screen and (min-width: 1200px) {}	

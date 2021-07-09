@@ -47,7 +47,7 @@ foreach ($list as $i => &$item) :
 	$stylecolumn   = ' style="width: ' . $menucolwidth . '%;"';
 	$image_class   = '';
 
-	if ($item->menu_image)
+	/*if ($item->menu_image)
 	{
 	  
 		if ($item->menu_image_css)
@@ -55,10 +55,10 @@ foreach ($list as $i => &$item) :
 			$image_class = ($item->menu_image_css) ? '<i class="link-image '. $item->menu_image_css .'"></i>' : '';					
 		}
 	$toggleLink = '<a href="#" title="" class="toggle-offcanvas toggle-offcanvas-item offcanvas-left" data-toggle="offcanvas" ><img src="'.$item->menu_image.'" alt="'.$item->title.' "/>'.$image_class.'</a>';
-	}
+	}*/
 	 	
  	$class = 'nav-item item-'.$item->id;
-	$class .=  $item->anchor_css ? ' '.$item->anchor_css : '';
+	//$class .=  $item->anchor_css ? ' '.$item->anchor_css : '';
 	$class .= ' level' . $item->level;
   
     if ( $item->level == 2 ) {$cssarrow           = ' class="arrow down hide"'; }
@@ -93,10 +93,10 @@ foreach ($list as $i => &$item) :
 
 	if ($item->deeper) {
 		if ($item->level < 2) {
-			$class .= ' dropdown deeper ';
+			$class .= ' mootools-noconflict dropdown deeper ';
 		}
 		else {
-			$class .= ' dropdown-submenu deeper ';
+			$class .= ' mootools-noconflict dropdown-submenu deeper ';
 		}
 	}
 

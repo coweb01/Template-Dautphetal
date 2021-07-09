@@ -1,0 +1,259 @@
+ @import 'include/config.less';
+
+/* Blog Theme : item template CSS file */
+
+
+/********************************************************************/
+/*** Part 1, CSS rules for fields display via Template parameters ***/
+/********************************************************************/
+
+.iteminfo .createdline,
+.iteminfo .modifiedline {
+	font-size: 1rem;
+	display: block;
+}
+
+.iteminfo .createdby,
+.iteminfo .modifiedby {
+	font-size: 1rem;
+	font-weight: normal;
+	display: inline-block;
+	color: @grau_5;
+}
+
+.iteminfo .created,
+.iteminfo .modified {
+	font-size: 1rem;
+	font-weight: inherit;
+	display: inline-block;
+	color: @grau_5;
+}
+
+.itemactions,
+.iteminfo,
+.itemadditionnal,
+.description {
+	margin: 1em 0 1em 0;
+}
+.iteminfo {
+	margin: 1em 0 1em 0em;
+}
+.description {
+	clear: both;
+}
+.itemactions span {
+	margin: 0 0 0.5em;
+}
+.itemactions .voting,
+.itemactions .favourites {
+	margin-right: 32px;
+	float: left;
+}
+
+.itemadditionnal span {
+	margin: 0 0 0.3em;
+}
+.itemadditionnal .categories {
+	display: block;
+}
+.itemadditionnal .tags {
+	display: block;
+}
+
+
+
+/*******************************************************************/
+/*** Part 2, CSS rules for fields display via Template positions ***/
+/*******************************************************************/
+
+
+/* Rule for customblock used to display fields via template positions */
+.customblock {
+	width: 98% !important;
+	padding: 2px 1% !important;
+	margin: 8px 0px !important;
+	display: block;
+	float: left;
+	
+}
+
+
+/* Default rule for elements: Use auto columns, via min-width we can have full row automaticaly for larger elements (pseudo colspan=2 via css) */
+.customblock .element {
+	max-width: 100% !important;
+	min-width: 50% !important;
+	padding: 3px 0% 3px 0% !important;
+	margin: 0% !important;
+	display: block;
+	float: left;
+	
+}
+
+/* Force 1 column for all elements */
+.customblock .element.singlecol {
+	width: 100% !important;
+	padding: 0% !important;
+}
+
+/* Force 2 columns for all elements */
+.customblock .element.doublecol {
+	width: 48% !important;
+	overflow: hidden;
+}
+
+
+/* Field label inside the custom blocks */
+.customblock .flexi.label {}
+
+/* Field value inside the custom blocks */
+.customblock .flexi.value {}
+
+/* Field value when having no label */
+.customblock .flexi.value.nolabel {
+	width: 100% !important;
+}
+
+/***** custom styles *****************************/
+
+
+hr.fcclearline {
+    border: 0;
+    height: 1px;
+    background-image: none;
+    margin: 5px 0;
+}
+
+.field_downloads_1 span {} 
+.field_downloads_1 span.fcfile_mime,
+.field_downloads_1 span.fcfile_title,
+.field_downloads_1 span.fcfile_size,
+.field_downloads_2 span.fcfile_mime,
+.field_downloads_2 span.fcfile_title,
+.field_downloads_2 span.fcfile_size
+ { display: inline-block; 
+	height: 1.5em;
+	line-height: 1.5em;
+	width: 	32px;
+  }
+
+.field_downloads_1 span.fcfile_actions
+ { }
+
+/***  download buttons ***/
+
+.fcfile_actions > a { width: auto !important; }
+
+.fcfile_actions .fc_button { 	
+    background:  #CCC url(none) !important;
+	color: #333 !important;
+	font-size: 0.9em;
+}
+.fcfile_actions .fc_button:hover { 	
+    background:  #FA5B17 url(none) !important;
+	color: #FFF !important;
+	text-decoration:none;
+}
+a.fcfile_downloadFile  { 
+    display: inline-block;
+	}
+
+a.fcfile_viewFile  {
+    display: inline-block;
+	white-space: nowrap;
+}
+
+a.fcfile_shareFile  {
+    display: inline-block;
+	white-space: nowrap;
+	 }
+
+a.fcfile_viewFile,
+a.fcfile_shareFile 
+  {
+	/*width: 20% !important;
+	float:right;*/
+	font-size: 12px;
+	white-space: nowrap;
+	text-align: right;
+	padding:  3px 8px; 
+	border-radius: 0px;
+	color: #777777;
+	background-color: transparent;
+	border: 1px solid #CCCCCC;
+}
+
+a.fcfile_viewFile:hover,
+a.fcfile_shareFile:hover,
+a.fcfile_viewFile:focus,
+a.fcfile_shareFile:focus {
+	text-decoration: none;
+	background-color: #a2ab9c;
+	color: #FFFFFF;
+}
+
+
+
+.fcfile_downloadFile:after  {content: "\f019"; padding-left: 5px;  font-family: 'FontAwesome';}
+.fcfile_viewFile:after  {content: "\f06e"; padding-left: 5px;  font-family: 'FontAwesome'; }
+.fcfile_shareFile:after  {content: "\f045"; padding-left: 5px;  font-family: 'FontAwesome'; }
+.fcfile_descr_inline { font-size: 0.9em; display: block; margin-left: 10px; color:#666;} /* Beschreibung */
+
+
+/* Google Map */
+
+.map div.image {  /* statische Map */
+	width: 100%;
+	position: relative
+	}
+
+.map div.image img { 
+	min-width: auto !important; 
+	min-height: auto !important;
+	max-width: 100% !important; 
+	height: auto !important;
+
+	} /* map responsive */
+
+#flexicontent > header > header { clear: both; padding-top: 10px; }
+
+
+
+/* ===============================================
+   "micro" clearfix 
+   http://nicolasgallagher.com/micro-clearfix-hack/
+   =============================================== */
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.group:before,
+.group:after {
+	content: " "; /* 1 */
+	display: table; /* 2 */
+}
+
+.group:after {
+	clear: both;
+}
+
+@media only screen and (max-width: 480px) { 
+	#flexicontent .buttons {
+    
+    margin-right: 20px;
+   
+	}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) { 
+   #flexicontent .buttons {
+    
+    margin-right: 20px;
+   
+	}
+}

@@ -12,8 +12,6 @@ defined('_JEXEC') or die;
 JHtml::_('behavior.keepalive');
 JHtml::_('behavior.formvalidator');
 JLoader::register('FieldsHelper', JPATH_ADMINISTRATOR . '/components/com_fields/helpers/fields.php');
-
-
 ?>
 
 
@@ -60,9 +58,22 @@ JLoader::register('FieldsHelper', JPATH_ADMINISTRATOR . '/components/com_fields/
 						<?php 	echo $this->form->getInput('password2'); ?>
 						
 					</div>
+
  				</div>
 			</fieldset>
+
+
+	 		<?php if( $this->form->getInput('captcha') ) { ?>
+
+				<div class="form-group mb-2">
+					<?php  //echo $this->form->renderFieldset('privacyconsent'); ?>
+					<?php 	echo $this->form->getLabel('captcha'); ?>	
+					<?php 	echo $this->form->getInput('captcha'); ?>
+				</div>
+
+	 		<?php } ?>
 			
+
 			<div class="form-group">
 				
 					<button type="submit" class="btn btn-primary validate">
@@ -113,6 +124,14 @@ JLoader::register('FieldsHelper', JPATH_ADMINISTRATOR . '/components/com_fields/
 	 				<?php  	echo $this->form->getInput('phone','profile'); 		 ?>
 	 						
 	 			    </div>
+	 			    
+					<?php if ($this->form->getFieldset('privacyconsent')) { ?>
+						<div class="form-group mb-2">
+
+	 					<?php  echo $this->form->renderFieldset('privacyconsent'); ?>
+
+			 			</div>
+			 		<?php } ?>
  				
 
 			</fieldset>

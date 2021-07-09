@@ -14,7 +14,7 @@ div.blog img.pull-right,
 div.item-page img.pull-right,
 div.extension-outer img.pull-right
 
- { border:1px solid #ccc; padding:2px;}
+ { border:1px solid @bordercolor; padding:2px;}
 
 div.blog .pull-left img,
 div.blog img.pull-left, 
@@ -208,8 +208,6 @@ div.extension-outer { margin-bottom:30px;}
 #sidebar-left div.custom-outer,
 #modules-frontpage div.extension-outer 
  {
-	 
-   float: left;
    clear: both;
    margin-bottom: 30px;
    padding: 15px;
@@ -338,7 +336,7 @@ input.search-query {}
 	box-shadow: none;
 }
 
-.wbc-cleardesign { display: inline-block; border-bottom: 1px solid #CCC; }
+.wbc-cleardesign { display: inline-block; border-bottom: 1px solid @bordercolor; }
 .search-wbc-cleardesign .btn-sm { margin-left: 5px; margin-right: 5px; }
 
 
@@ -449,23 +447,23 @@ label.ordering { margin-left:15px;}
 .tags li > a:visited
 {
 	padding: 0.1rem 0.4rem;
-	border: solid 1px #DDDDDD;
+	border: solid 1px @bordercolor;
 	border-radius: 0.9rem;
 	font-size: 0.9rem;
 	line-height: 1rem;
 	background-color: #FFFFFF;
-	color: #999999;
+	color: @grau_02;
 }
 .tags li > a:hover,
 .tags li > a:focus 
 {
 	text-decoration: none;
-	background-color: #DDDDDD;
-	color: #999999;
+	background-color: @bordercolor;
+	color: @grau_02;
 }
 .tags li > a:active { 
-	background-color: #DDDDDD;
-	color: #999999;
+	background-color: @bordercolor;
+	color: @grau_02;
 	 }
 
 

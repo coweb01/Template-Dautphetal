@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form class="custom-form burgermail " >
+	<fieldset name="date" class="well bg-secondary" label="Datum und Uhrzeit">
+		<field name="formtag" type="hidden" default="JTF_FIELDSET_BUEGERMAIL_TITLE" />
+		<field name="JTF_FIELDSET_BUEGERMAIL_DESC_DATE"
+		       type="note"
+		       description=""
+		       heading="h4"
+		/>
+		<field name="datum" 
+			type="calendar" 
+			default="NOW"
+			icon="fa fa-calendar" 
+			label="JTF_EXTENDED_FORM_DATE_LABEL" 
+			description="JTF_EXTENDED_FORM_DATE_DESC"
+			class="form-control col-sm-12 col-md-5 col-lg-5"
+			labelclass="col-sm-12 col-md-3 col-lg-3" 
+			required="true" 
+			format="%d.%m.%Y"
+			filter="user_utc"
+			showtime="false"
+			todaybutton="false"
+			filltable="false"
+			translateformat="true"
+		/>
+
+		<field name="uhrzeit"
+			type="text"
+			icon="fa fa-clock-o"
+			class="form-control col-sm-12 col-md-5 col-lg-5"
+			labelclass="col-sm-12 col-md-3 col-lg-3"
+			size="30"
+			required="true"
+			description="JTF_EXTENDED_FORM_TIME_DESC"
+			label="JTF_EXTENDED_FORM_TIME_LABEL"
+		/>
+
+		<field name="ort"
+			type="text"
+			icon="fa fa-map-marker"
+			class="form-control col-sm-12 col-md-5 col-lg-5"
+			labelclass="col-sm-12 col-md-3 col-lg-3"
+			size="30"
+			required="true"
+			description="JTF_EXTENDED_FORM_LOCATION_DESC"
+			label="JTF_EXTENDED_FORM_LOCATION_LABEL"
+		/>
+
+		<field name="strasse"
+			type="text"
+			icon="fa fa-map-marker"
+			class="form-control col-sm-12 col-md-5 col-lg-5"
+			labelclass="col-sm-12 col-md-3 col-lg-3"
+			size="30"
+			required="true"
+			description="JTF_EXTENDED_FORM_STREET_DESC"
+			label="JTF_EXTENDED_FORM_STREET_LABEL"
+		/>
+
+	</fieldset>
+
+
+	<fieldset name="meldung" class="well bg-secondary" label="Meldungsdaten">
+		
+		<field name="JTF_FIELDSET_BUEGERMAIL_DESC_MELDUNG"
+		       type="note"
+		       description=""
+		       heading="h4"
+		/>
+		<field name="list"
+		       type="list"
+		       class="form-control col-sm-12 col-md-5 col-lg-5"
+			   labelclass="col-sm-12 col-md-3 col-lg-3"
+		       icon="glyphicon glyphicon-th-list"
+		       description="JTF_LIST_MELDUNG_DESC"
+		       label="JTF_LIST_MELDUNG_LABEL"
+		       default=""
+		       validate="options"
+		       multiple="true"
+		>
+			
+			<option value="JTF_OPTION1">JTF_OPTION1_LBL</option>
+			<option value="JTF_OPTION2">JTF_OPTION2_LBL</option>
+			<option value="JTF_OPTION3">JTF_OPTION3_LBL</option>
+			<option value="JTF_OPTION4">JTF_OPTION4_LBL</option>
+			<option value="JTF_OPTION5">JTF_OPTION5_LBL</option>
+			<option value="JTF_OPTION6">JTF_OPTION6_LBL</option>
+			<option value="JTF_OPTION7">JTF_OPTION7_LBL</option>
+			<option value="JTF_OPTION8">JTF_OPTION8_LBL</option>
+			<option value="JTF_OPTION99">JTF_OPTION99_LBL</option>
+		</field>
+
+		<field name="message"
+			type="textarea"
+			class="form-control col-sm-12 col-md-5 col-lg-5"
+			labelclass="col-sm-12 col-md-3 col-lg-3"
+			cols="50"
+			rows="10"
+			description="JTF_DEFAULT_FORM_MESSAGE_DESC"
+			label="JTF_DEFAULT_FORM_MESSAGE_LABEL"
+			filter="safehtml"
+			required="true"
+
+		/>
+		<field name="file"
+		       type="file"
+		       class="form-control col-sm-12 col-md-12 col-lg-12"
+		       labelclass="filelabel"
+		       description="JTF_FILE_DESC"
+		       label="JTF_FILE_LABEL"		      
+		       validate="file"
+		       accept=".zip,.pdf,image/*"
+		       multiple="multiple"
+		       uploadmaxsize="2"
+		/>
+	</fieldset>
+
+	<fieldset name="kontakt"  class="well bg-secondary" label="Kontaktdaten">
+		<field name="JTF_FIELDSET_BUEGERMAIL_DESC_CONTACT"
+		       type="note"
+		       description=""
+		       heading="h4"
+		/>
+
+		<field name="anrede"
+			type="list"
+			icon="fa fa-list"
+			description="JTF_EXTENDED_FORM_ANREDE_DESC"
+			label="JTF_EXTENDED_FORM_ANREDE_LABEL"
+			default=""
+			validate="options"
+			required="true"
+			class="form-control col-sm-12 col-md-5 col-lg-5"
+			labelclass="col-sm-12 col-md-3 col-lg-3"
+		>
+			<option value="JTF_EXTENDED_FORM_ANREDE_OPTION_FRAU">JTF_EXTENDED_FORM_ANREDE_OPTION_FRAU</option>
+			<option value="JTF_EXTENDED_FORM_ANREDE_OPTION_HERR">JTF_EXTENDED_FORM_ANREDE_OPTION_HERR</option>
+			
+		</field>
+		<field name="prename"
+			type="text"
+			icon="fa fa-edit"
+			class="form-control col-sm-12 col-md-5 col-lg-5"
+			labelclass="col-sm-12 col-md-3 col-lg-3"
+			size="30"
+			description="JTF_EXTENDED_FORM_VNAME_DESC"
+			label="JTF_EXTENDED_FORM_VNAME_LABEL"
+			required="true"
+		/>
+		<field name="nachname"
+			type="text"
+			icon="fa fa-edit"
+			class="form-control col-sm-12 col-md-5 col-lg-5"
+			labelclass="col-sm-12 col-md-3 col-lg-3"
+			size="30"
+			description="JTF_EXTENDED_FORM_NNAME_DESC"
+			label="JTF_EXTENDED_FORM_NNAME_LABEL"
+			required="true"
+		/>
+		<field name="plz"
+		       type="plz"
+		       icon="fa fa-map-marker"
+		       maxlength="60"
+		       class="form-control col-sm-12 col-md-5 col-lg-5"
+			   labelclass="col-sm-12 col-md-3 col-lg-3"
+		       description="JTF_PLZ_DESC"
+		       label="JTF_PLZ_LABEL"
+		       validate="plz"
+		       required="true"
+		/>
+
+			<field name="wohnort"
+			type="text"
+			icon="fa fa-edit"
+			class="form-control col-sm-12 col-md-5 col-lg-5"
+			labelclass="col-sm-12 col-md-3 col-lg-3"
+			size="30"
+			description="JTF_EXTENDED_FORM_ORT_DESC"
+			label="JTF_EXTENDED_FORM_ORT_LABEL"
+			required="true"
+		/>
+
+
+		<field name="telefon"
+			type="tel"
+			icon="fa fa-phone"
+			class="form-control col-sm-12 col-md-5 col-lg-5"
+			labelclass="col-sm-12 col-md-3 col-lg-3"
+			size="30"
+			description="JTF_EXTENDED_FORM_TEL_DESC"
+			label="JTF_EXTENDED_FORM_TEL_LABEL"
+			
+		/>
+
+		<field name="email"
+			type="email"
+			icon="fa fa-at"
+			class="form-control col-sm-12 col-md-5 col-lg-5"
+			labelclass="col-sm-12 col-md-3 col-lg-3"
+			size="30"
+			description="JTF_DEFAULT_FORM_EMAIL_DESC"
+			label="JTF_DEFAULT_FORM_EMAIL_LABEL"
+			filter="string"
+			validate="email"
+			required="true"
+		/>
+		<field name="antwort"
+		       type="radio"
+		       description="JTF_RADIO_INLINE_ANTWORT_DESC"
+		       label="JTF_RADIO_INLINE_ANTWORT_LABEL"
+		       default="JTF_OPTION2"
+		       validate="options"
+		       optionlabelclass="radio-inline"
+		>
+			<option value="JTF_YES">JYES</option>
+			<option value="JTF_NO">JNO</option>
+		</field>
+
+		<field name="privacy_policy"
+			   class="private-policy"
+		       type="checkboxes"
+		       description=""
+		       label="JTF_PRIVACY_POLICY_LABEL"
+		       default=""
+		       validate="options"
+		       filter="string"
+		       required="true"
+		>
+			<option value="JYES">JTF_PRIVACY_POLICY_OPTION_ACCEPT</option>
+		</field>
+		
+		</fieldset>
+
+	
+</form>

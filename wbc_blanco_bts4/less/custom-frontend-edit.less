@@ -1,0 +1,408 @@
+
+/* Filemanager */
+
+.contentpane #fileman  {
+
+}
+
+
+/*global */
+
+
+#flexicontent.flexi_edit {
+
+	.label { color: var(--color-font, @default); }
+
+	.label-fcouter  { 
+		
+		
+		float: none;
+		width: auto;
+		max-width: 100%;
+		
+
+			label { 
+				color: var(--color-font, @color2);
+				text-align: left;	
+			}
+
+	}
+
+}
+
+
+#flexicontent .fc_edit_container_full {
+    float: none;
+    width: 100%;
+    margin: 1em 0 1em 0;
+}
+
+
+#flexicontent.flexi_edit .control-label > label { max-width: 100%; }
+
+
+#flexicontent.flexi_edit  { max-width: 90%; }
+
+#flexicontent.flexi_edit input,
+#flexicontent.flexi_edit input:not(.btn),
+#flexicontent.flexi_edit input:not(.button),
+#flexicontent.flexi_edit input:not([type="radio"]),
+#flexicontent.flexi_edit input:not([type="checkbox"]),
+
+#flexicontent.flexi_edit select,
+#flexicontent.flexi_edit textarea,
+
+ {
+ 	display: block;
+	width: 100%;
+	/*height: calc(1.25rem + 2px);*/
+	padding: .375rem .75rem;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color:	@default;
+	/*background-color:	white;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;*/
+	border-radius: @borderradius;
+	transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+ }
+
+#flexicontent.flexi_edit .fc-field-props-box .fc_preview_msg {
+   
+    border-radius: @borderradius;
+    .background_grau;
+}
+
+
+#flexicontent.flexi_edit input[type="radio"],
+#flexicontent.flexi_edit input[type="checkbox"] {
+	padding: 0px;
+	width: auto;
+	border: unset;
+	transition: unset;
+	background-clip: unset;
+	height: auto;
+	display: inline-block;
+}
+
+#flexicontent.flexi_edit .fc-xpended-btns span:not(.fcfield-uploadvalue),
+#flexicontent.flexi_edit .fc-xpended-btns span:before
+
+ {
+    color: var(--color-font, @default)!important;
+    border-color: var(--color-font, @default)!important;
+} 
+
+#flexicontent.flexi_edit .fc-xpended-btns span:not(.fcfield-uploadvalue):hover,
+#flexicontent.flexi_edit .fc-xpended-btns span:not(.fcfield-uploadvalue):focus,
+#flexicontent.flexi_edit .fc-xpended-btns span:hover:before,
+#flexicontent.flexi_edit div [class^="fcfield-"].fcfont-icon:hover, 
+#flexicontent.flexi_edit div [class*=" fcfield-"].fcfont-icon:hover, 
+#flexicontent.flexi_edit ul.fcfield-sortables > li [class^="fcfield-"].fcfont-icon:hover, 
+#flexicontent.flexi_edit ul.fcfield-sortables > li [class*=" fcfield-"].fcfont-icon:hover
+
+ {
+    color: var(--color-font, white)!important;
+    background-image: unset;
+    background-color: @color2;
+} 
+
+
+#flexicontent.flexi_edit  .fc-xpended-btns .fcfield-uploadvalue.active.fcfont-icon, 
+#flexicontent.flexi_edit  .fc-xpended-btns .fcfield-uploadvalue.active.fcfont-icon:hover, 
+#flexicontent.flexi_edit  .fcfield-uploadvalue.active.fcfont-icon, 
+#flexicontent.flexi_edit  .fcfield-uploadvalue.active.fcfont-icon:hover {
+    background-color: var(--bg-font, @color2);
+    color: var(--color-font, white)!important;;
+}
+
+
+#flexicontent.flexi_edit  .fcfield-uploadvalue.fcfont-icon:before, 
+#flexicontent.flexi_edit  .fcfield-uploadvalue.fcfont-icon:after { 
+    
+   /* color: var(--color-font, white) !important; */
+   
+}
+
+#flexicontent.flexi_edit div [class^="fcfield-"].fcfont-icon, 
+#flexicontent.flexi_edit div [class*=" fcfield-"].fcfont-icon, 
+#flexicontent.flexi_edit ul.fcfield-sortables > li [class^="fcfield-"].fcfont-icon, 
+#flexicontent.flexi_edit ul.fcfield-sortables > li [class*=" fcfield-"].fcfont-icon {
+		
+		color: var(--color-font, @default)!important;
+    	border-color: var(--color-font, @default)!important;
+
+}
+
+#flexicontent.flexi_edit .wbc-form-check {
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-ms-flex-align: center;
+	align-items: center;
+	padding-left: 0;
+	margin-right: .75rem;
+}
+
+#flexicontent.flexi_edit .wbc-form-check .form-check-input {
+    position: static;
+    margin-top: 0;
+    margin-right: .3125rem;
+    margin-left: 0;
+}
+
+#flexicontent.flexi_edit .label-fcouter, #flexicontent .label-fcouter { max-width: 100%; }
+
+#flexicontent.flexi_edit .btn:not (.wf-editor-toggle),
+#flexicontent.flexi_edit .btn.fc_image_field_mm_modal 
+ { 
+	color: var(--color-font, white); 
+	background-color: @color1;
+	border-color: @color1;
+}
+
+
+
+#flexicontent.flexi_edit label,
+#flexicontent.flexi_edit .label-fcouter > label, 
+#flexicontent.flexi_edit .label-fcinner {
+    text-align: left;
+    font-weight: 500;
+}
+
+#flexicontent.flexi_edit .table td,
+#flexicontent.flexi_edit .table th {
+	border: none !important;
+}
+
+#flexicontent.flexi_edit .container_fcfield
+
+ {
+	.background_grau(5%);
+	border: solid 1px var(--color-grau1, #ddd);
+	padding: 1rem 0.5rem !important;
+	width: 100% !important;
+	position: relative;
+	min-height: 5rem;
+}
+
+#flexicontent.flexi_edit .container_fcfield_name_alias,
+#flexicontent.flexi_edit .container_fcfield_name_title {
+	background: unset !important;
+	min-height: auto;
+	padding: 0px!important;
+	border: unset;
+}
+
+
+
+/*#flexicontent.flexi_edit .input-append > * { margin-left: -5px !important; }*/
+
+#flexicontent.flexi_edit .fcfieldval_container.valuebox .fc-xpended-row { 
+
+	margin-bottom: 2rem !important;
+		.add-on:first-child {
+			font-size: 0.8rem;  
+			background-color: var(--color-grau2, @grau_8); 
+			border: solid 1px @grau_8;
+			text-align: left;
+			color: var(--color-font, white);
+		}
+
+}
+
+#flexicontent.flexi_edit .input-append > span {
+	display: inline-block;
+	font-weight: 400;
+	text-align: center;
+	vertical-align: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-color: transparent;
+	border: 1px solid @grau_2;
+  
+	padding: .375rem .75rem !important;
+	font-size: 1rem;
+	line-height: 1.5;
+	border-top-left-radius: 40px;
+	border-bottom-left-radius: 40px;
+}
+
+#flexicontent.flexi_edit .input-append input,
+#flexicontent.flexi_edit .input-append select
+ { 
+	display: inline-block; 
+	width: auto !important;
+	height: auto !important;	
+	min-height: 38px;
+	max-width: 80%;
+	min-width: 100px;
+	padding: .375rem .75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+#flexicontent.flexi_edit .input-append.inlinefile-desc-box .add-on { 
+		border: none; 
+		padding-left: 0px; 
+		text-align: left;
+	}
+
+#flexicontent.flexi_edit .input-append.fc-xpended-btns .add-on {
+	border-radius: 0px;
+}
+
+
+
+/** einzelne Felder */
+
+#flexicontent.flexi_edit .fcfieldval_container { 
+
+}
+
+
+#flexicontent.flexi_edit .fc_edit_container_full {}
+
+
+/* Tabs */
+#flexicontent.flexi_edit .fields_tabset {}
+
+
+/* Buttons */
+.btn-toolbar .btn { 
+	font-size: 0.8rem;
+	margin-right: 10px;
+	padding: 0.2rem 0.5rem;
+ } 
+
+#flexicontent.flexi_edit .btn-group.fc-iblock { display: inline-block !important; }
+
+/** Bilder Hochladen media manager Button */
+
+#flexicontent.flexi_edit .fc-field-value-properties-box a.btn { color: white; }
+#flexicontent.flexi_edit .fc_field-value-properties-box a.btn:last-child { margin-left: 10px; }
+
+#flexicontent.flexi_edit .plupload_droptext { 
+	color: var(--color-contrast, @default); 
+	padding: 5px;
+
+	 }
+
+
+
+/* gruppiertes Feld */
+
+
+
+#flexicontent.flexi_edit .fcfield-sortables.fcfield-group .fcfieldval_container.valuebox {
+
+	.flexi.label.sub_label { 
+		width: 100%; 
+		max-width: 100%;
+		text-align: left;
+	}
+
+	.fc-xpended-row .add-on:first-child { 
+			font-size: 0.8rem;  
+			background-color: var(--color-grau2, @grau_8); 
+			border: solid 1px @grau_8;
+			text-align: left;
+			color: var(--color-font, white);
+	}
+	
+	.fcfieldval_container {
+
+	}
+
+}	 
+
+/* Tabs Frontendbearbeitung */
+
+
+#flexicontent.flexi_edit  ul.tabbernav, 
+#flexicontent ul.tabbernav {
+    
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 2px solid transparent;
+    font-family: @fontfamily;
+    
+}
+
+
+
+#flexicontent.flexi_edit  ul.tabbernav > li {
+	margin: 0px 0px -2px 0px;
+}
+
+
+#flexicontent.flexi_edit ul.tabbernav > li.tabberactive a, 
+#flexicontent.flexi_edit ul.tabbernav > li.tabberactive a:hover 
+ {
+    .color2-trans(100); 
+    color: var(--color-font, white);
+    filter: unset !important;
+    border-bottom: 1px solid var(--color-bg, #ebebeb);
+	border-left: 1px solid var(--color-grau1, #ddd);
+	border-top: 1px solid var(--color-grau1, #ddd);
+	border-right: 1px solid var(--color-grau1, #ddd);
+    text-shadow: none;
+    position: relative;
+    border-radius: @borderradius;
+}
+#flexicontent.flexi_edit ul.tabbernav > li > a {
+    font-family: @fontfamily;
+    border-radius: @borderradius;
+    border-left: 1px solid var(--color-grau1, #ddd);
+    border-top: 1px solid var(--color-grau1, #ddd);
+    border-right: 1px solid var(--color-grau1, #ddd);
+    border-bottom: 1px solid var(--color-grau1, #ddd);
+    color: var(--color-font, white);
+    .color3-trans(100);
+}
+#flexicontent.flexi_edit ul.tabbernav > li:hover a 
+ {
+    .color1-trans(100); 
+    border: 1px solid var(--color-grau1, #ddd);
+    background-image: unset !important;
+    filter: unset !important;
+    color: var(--color-font, white);
+}
+
+#flexicontent.flexi_edit ul.tabbernav > li.tabberactive a::before {
+    border-top: unset;
+    border-radius: @borderradius;
+}
+
+
+#flexicontent.flexi_edit .tabberlive .tabbertab {
+    .background_grau(3%);
+    border: solid 1px var(--color-grau1, #ddd);
+}
+
+
+#flexicontent.flexi_edit .flexi_buttons {
+
+
+	.btn { margin-bottom: 10px; }
+
+}
+
+@media (max-width: 575px) {
+
+	#flexicontent.flexi_edit .input-append input,
+	#flexicontent.flexi_edit .input-append select
+		 { 
+			
+			max-width: 150px;
+			
+		}
+
+	body .fc_file_uploader .plupload_container {
+	    min-width: 250px;
+	    margin-left: 0px;
+	    margin-right: 0px;
+	}	
+}

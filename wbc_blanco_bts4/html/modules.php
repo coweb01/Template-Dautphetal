@@ -26,7 +26,7 @@ function modChrome_default($module, &$params, &$attribs)
         
 		<?php if ((bool) $module->showtitle) :?>
 			<div class="ext-header">
-			<<?php echo $headerTag . $headerClass . '>' . $module->title; ?></<?php echo $headerTag; ?>>
+			<<?php echo $headerTag . '>' . $module->title; ?></<?php echo $headerTag; ?>>
 			</div>
 		<?php endif; ?>
 
@@ -214,16 +214,18 @@ function modChrome_icon($module, &$params, &$attribs)
 
 function modChrome_headerimg($module, &$params, &$attribs)
 {
-	$app                = JFactory::getApplication();
-	$templateparams     = $app->getTemplate(true)->params; // Templateparameter
-	$bgimage            = $params->get('backgroundimage');      
+	$app                 = JFactory::getApplication();
+	$templateparams      = $app->getTemplate(true)->params; // Templateparameter
+	$bgimage             = htmlspecialchars($params->get('backgroundimage'));      
 	$ankerid             = htmlspecialchars($params->get('header_class'));
-
+   
     
-	if ( $bgimage != '' ) {	
-		echo "<div id=\"headerimg-" .$ankerid . "\" class=\"wbc-background-image-stretch\" style=\"background-image:url(" . $bgimage . "\")\">\r\n";
-		echo "</div> \r\n";
-	}
+	if ( $bgimage != '' ) {	?>
+
+		<div id="headerimg-<?php echo $ankerid;?>" class="wbc-background-image-stretch" style="background-image:url('<?php echo $bgimage;?>')">			
+		</div>
+		
+	<?php }
 }
 
 

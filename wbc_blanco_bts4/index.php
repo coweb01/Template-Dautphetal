@@ -4,8 +4,8 @@
  * Template Joomla 3 Bootstrap4 
  * Kunde:  
  * Author: Claudia Oerter  
- * Stand:  07 / 2019
- * Version: 1.1.1 
+ * Stand:  02 / 2021
+ * Version: 1.2 
  * copyright Template das webconcept
  **********************************************************/
 defined( '_JEXEC' ) or die; 
@@ -56,43 +56,40 @@ if (!isset($bootstrap_colclass_mobil_ph)) { $bootstrap_colclass_mobil_ph = ''; }
 
 
 <!-- ***************************************************************************************************** -->
-<!-- *****     copyright Template www.das-webconcept.de       2019                                    **** -->
+<!-- *****     copyright Template www.das-webconcept.de       2021                                   **** -->
 <!-- ***************************************************************************************************** -->
 
-
-<?php if ($this->params->get('googleanalytics') && $this->params->get('googleanalyticscode')!='') : ?>
+ 
+<?php if ($this->params->get('googleanalytics') && $this->params->get('googleanalyticscode')!='') : 
+// GA-4 Property  
+?>
         <!-- GOOGLEANAYLTICS -->
-        <?php if($this->params->get('googleanalyticsdomain')){?>
+        
+
+       
             <script>
-                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-                ga('create', '<?php echo $this->params->get('googleanalyticscode');?>', '<?php echo $this->params->get('googleanalyticsdomain');?>');
-                ga('set', 'anonymizeIp', true);
-                ga('send', 'pageview');
+            var gaProperty = '<?php echo $this->params->get('googleanalyticscode');?>';
+            var disableStr = 'ga-disable-' + gaProperty;
+            if (document.cookie.indexOf(disableStr + '=true') > -1) {
+              window[disableStr] = true;
+            }
+            function gaOptout() {
+              document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+              window[disableStr] = true;
+              alert('Das Tracking durch Google Analytics wurde in Ihrem Browser für diese Website deaktiviert.');
+            }
             </script>
-        <?php
-        }//if
-        else {
-        ?>
-            <script type="text/javascript">
-
-                var _gaq = _gaq || [];
-                _gaq.push(['_setAccount', '<?php echo $this->params->get('googleanalyticscode');?>']);
-                _gaq.push(['_gat._anonymizeIp']);
-                _gaq.push(['_trackPageview']);
-
-                (function() {
-                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-                })();
-
+            <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $this->params->get('googleanalyticscode');?>"></script>
+                      <script>
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', '<?php echo $this->params->get('googleanalyticscode');?>', { 'anonymize_ip': true });
             </script>
+
+
+           
         <?php
-        }//else
     endif;
 ?>
 
@@ -250,7 +247,7 @@ if (!isset($bootstrap_colclass_mobil_ph)) { $bootstrap_colclass_mobil_ph = ''; }
   <!-- *     Main Content                                                                                   * -->
   <!-- ****************************************************************************************************** -->  
    <?php if  ( $headerimg  == 0 ) :?>
-   <div class="no-headerimg separator"></div>
+   <div class="no-headerimg"></div>
    <?php endif;?>
 
    <?php if ($this->countModules('onepagetop')): ?>
@@ -376,7 +373,7 @@ if (!isset($bootstrap_colclass_mobil_ph)) { $bootstrap_colclass_mobil_ph = ''; }
     <?php endif; ?>
 
     <?php echo  ( $pos_search  == 'right-01' ) ?  'div'. $anker_search .'></div' : ''; ?> 
-     <jdoc:include type="modules" name="right-01" style="icon" /><!--End right-01-->
+     <jdoc:include type="modules" name="right-01" style="default" /><!--End right-01-->
     <?php echo  ( $pos_search  == 'right-02' ) ?  'div'. $anker_search .'></div' : ''; ?> 
      <jdoc:include type="modules" name="right-02" style="none" /><!--End right-02-->
     </div>
@@ -492,7 +489,10 @@ if ( $bootstrap == 4  && $offcanvas == 1 )  :
   include_once JPATH_THEMES . '/' . $this->template . '/includes/offcanvas4.php'; // offcanvas mobil menu
 endif; ?> 
 
-<?php if($this->countModules('sidebar-left-fix') || $this->countModules('sidebar-left-toggle') || $fontsize ) : ?>
+<?php if( $this->countModules('sidebar-left-fix') || 
+                      $this->countModules('sidebar-left-toggle')  ||
+                          $toggleleft   ) : ?>
+
 <div id="left-fixed" class="position-fixed wbc-fixed-sidebar d-print-none ">
     <?php if ( $this->countModules('sidebar-left-fix') ): ?>
     <div class="wbc-fixed-sidebar-left d-none d-sm-block">
@@ -504,49 +504,71 @@ endif; ?>
     </div>
     <?php endif; ?>
 
-    <?php if ($this->countModules('sidebar-left-toggle') || $fontsize ): ?> 
-      <div id="fixed-sidebar-left-toggle" class="wbc-fixed-sidebar d-none d-sm-block">
-           <?php if ( $toggleleft ) { ?>
-           <a class="nav-link btn-icon border border-secondary bg-secondary shadow-sm" role="button" href="#"><i class="<?php echo $iconleft;?>"></i> <span class="sr-only"><?php echo JText::_('TPL_WBC_BLANCO_J3_OPEN_TXT'); ?></span></a>
+    
+    <?php if ($toggleleft ) :?>    
+
+            <?php if ( $this->countModules('sidebar-left-toggle') || 
+                                  ( $fontsize && $fontsize_pos = 3 )|| 
+                                   ( $styleswitch && $styleswitch_pos = 3 )) : ?> 
+              
+              <div id="fixed-sidebar-left-toggle" class="wbc-fixed-sidebar d-none d-sm-block">
+                
+                   <a class="toggle-btn nav-link btn-icon border border-secondary bg-secondary shadow-sm" role="button" href="#"><i class="<?php echo $iconleft;?>"></i> <span class="sr-only"><?php echo JText::_('TPL_WBC_BLANCO_J3_OPEN_TXT'); ?></span></a>
 
 
-           <?php  } ?>
-           <div id="left-container-fix" class="container-fix">
-            <?php if ( $fontsize  && $fontsize_pos == 3 ) : ?>              
-                <?php include_once JPATH_THEMES . '/' . $this->template . '/includes/fontsize.php'; // load fontsize.php ?>
-            <?php endif; ?> 
+                  
+                   <div id="left-container-fix" class="container-fix">
+                    <?php if ( $fontsize  ) : ?>              
+                        <?php include_once JPATH_THEMES . '/' . $this->template . '/includes/fontsize.php'; // load fontsize.php ?>
+                    <?php endif; ?> 
 
-            <?php include_once JPATH_THEMES . '/' . $this->template . '/includes/CSSswitch.php'; // load CSSswitch.php ?>
+                    <?php if ( $styleswitch  ) : ?>  
+                    <?php include_once JPATH_THEMES . '/' . $this->template . '/includes/CSSswitch.php'; // load CSSswitch.php ?>
+                    <?php endif; ?> 
+                     <jdoc:include type="modules" name="sidebar-left-toggle" style="none"/>
+                   </div>
+              </div>
              
-             <jdoc:include type="modules" name="sidebar-left-toggle" style="none"/>
-           </div>
-      </div>
-     
-    <?php endif; ?>
+            <?php endif; ?>
+    <?php endif; ?>  
 </div>
 <?php endif; ?>
 
-<?php if($this->countModules('sidebar-right-fix') || $fontsize ) : ?>
-<div id="right-fixed" class="position-fixed wbc-fixed-sidebar">
+<?php if($this->countModules('sidebar-right-fix') || $this->countModules('sidebar-right-toggle') || $toggleright  ) : ?>
+
+<div id="right-fixed" class="position-fixed wbc-fixed-sidebar d-print-none">
     <?php if ( $this->countModules('sidebar-right-fix') ): ?>
     <div class="wbc-fixed-sidebar-right d-none d-sm-block">
       <jdoc:include type="modules" name="sidebar-right-fix" style="none"/>
     </div>
     <?php endif; ?>
 
-    <?php if ($this->countModules('sidebar-right-toggle') || $fontsize ): ?>
-      <div id="fixed-sidebar-right-toggle" class="wbc-fixed-sidebar d-none d-sm-block"> 
-           <?php if ( $toggleright ) { ?> 
-           <a class="nav-link btn-icon border border-secondary bg-secondary shadow-sm" role="button" href="#"><i class="<?php echo $iconright;?>"></i> <span class="sr-only"><?php echo JText::_('TPL_WBC_BLANCO_J3_OPEN_TXT'); ?></span></a> 
-           <?php } ?> 
-           <div id="right-container-fix" class="container-fix">
-             <?php if ( $fontsize  && $fontsize_pos == 4 ) : ?>
-               <?php include_once JPATH_THEMES . '/' . $this->template . '/includes/fontsize.php'; // load fontsize.php ?>
-             <?php endif; ?> 
-             <jdoc:include type="modules" name="sidebar-right-toggle" style="none"/>
-           </div>
-      </div>
+
+
+    <?php if ($toggleright ) :?> 
+
+        <?php if ($this->countModules('sidebar-right-toggle') || 
+                                    ( $fontsize && $fontsize_pos = 4 ) || 
+                                    ( $styleswitch && $styleswitch_pos = 4 ) ): ?>
+          <div id="fixed-sidebar-right-toggle" class="wbc-fixed-sidebar d-none d-sm-block"> 
+              
+               <a class="toggle-btn nav-link btn-icon border border-secondary bg-secondary shadow-sm" role="button" href="#"><i class="<?php echo $iconright;?>"></i> <span class="sr-only"><?php echo JText::_('TPL_WBC_BLANCO_J3_OPEN_TXT'); ?></span></a> 
+              
+               <div id="right-container-fix" class="container-fix">
+                 <?php if ( $fontsize  ) : ?>
+                   <?php include_once JPATH_THEMES . '/' . $this->template . '/includes/fontsize.php'; // load fontsize.php ?>
+                 <?php endif; ?>
+
+                <?php if ( $styleswitch  ) : ?>  
+                <?php include_once JPATH_THEMES . '/' . $this->template . '/includes/CSSswitch.php'; // load CSSswitch.php ?>
+                <?php endif; ?> 
+
+                 <jdoc:include type="modules" name="sidebar-right-toggle" style="none"/>
+               </div>
+          </div>
+        <?php endif; ?>
     <?php endif; ?>
+
 </div>
 <?php endif; ?>
 

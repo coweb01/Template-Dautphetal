@@ -11,6 +11,11 @@ defined('_JEXEC') or die;
  // get the custom params
 $document  = JFactory::getDocument();
 $app       = JFactory::getApplication();
+
+$tpath    = JURI::base( true ) .'/templates/'.$app->getTemplate();
+$document->addStyleSheet($tpath . '/html/mod_menu/assets/overlay.css'); 
+
+
 // Note. It is important to remove spaces between elements.
 ?>
 <?php // The menu class is deprecated. Use nav instead. ?>

@@ -1,7 +1,7 @@
 /* styles Module */
 /* Banner */
 .front .header {
-	margin-top: 81px;
+	margin-top: 76px;
 	.header-banner {
 		column-count: 2;
 		.banner-container {
@@ -13,14 +13,16 @@
 			background-size: cover;
 			background-repeat: no-repeat;
 			.overlay {
-				width: 250px;
+				/*width: 250px;*/
 				padding: 40px 20px;
+				font-size: 1.3rem;
 			}
 			&:first-child {
 				.overlay {
 					background-color: rgba(0,80,160,.7);
 					a {
-						color: #fff;
+						color: white;
+						text-transform: uppercase;
 					}
 				}
 			}
@@ -30,7 +32,8 @@
 					text-align: right;
 					margin-left: auto;
 					a {
-						color: #484546;
+						color: @defaultcolor;
+						text-transform: uppercase
 					}
 				}
 			}
@@ -54,6 +57,25 @@
 		}
 	}
 }
+
+@media (max-width: 576px) {
+  .front .header-middle {
+    display: none;
+  }
+}
+
+/* go to top */
+
+#gototop-mobil {
+  justify-content: space-between;
+  .nav {
+    margin-right: 18px;
+    li a {
+      color: #fff;
+    }
+  }
+}
+
 /*   allgemein   */
 
 #left-fixed .extension-outer,
@@ -65,7 +87,10 @@
 .extension-inner.extension-icon .custom { margin-top: 0.5rem; }
 
 .extension-outer img { max-width: 100%; height: auto; } /* alles bilder in modulen responsive */
-
+#sidebar-right p,
+#sidebar-left p {
+	margin-bottom: .5rem;
+}
 
 
 /* Modulestyle icon */
@@ -128,18 +153,26 @@
 #sidebar-right div.custom-outer, 
 #sidebar-left div.custom-outer 
 {
-	margin-bottom: 4rem;
+	margin-bottom: 3rem;
 }
 
-
 #sidebar-right .extension-outer
-{
-  
+{ 
   position: relative;
+  background-color: var(--color-side, rgba(255,255,255,0.6));
+  &:first-child {
+	margin-top: 6em;
+  }
+}
+
+@media (max-width: 992px) {
+  #sidebar-right .extension-outer:first-child {
+    margin-top: 0;
+  }
 }
 
 #sidebar-right .extension-outer .fcitem_text { 
-	color: white;
+	
 }
 
 #sidebar-right .fcitem_readon a:link,
@@ -179,40 +212,37 @@
 #sidebar-right .extension-outer h3,
 #sidebar-right .extension-outer h4 
 {
-	color: #FFFFFF;
+	
 }
 
-
-#sidebar-left .extension-outer,
-
+#sidebar-left .extension-outer
  {
 	.background_grau(10%);
-	color: @defaultcolor;
+	color: @default;
 	position: relative;
 }
 
 #sidebar-left .extension-outer a:link,
 #sidebar-left .extension-outer a:visited {
-	color: @defaultcolor;	
+	color: var(--color-font, @grau_5);	
 }
 
 #sidebar-left .extension-outer a:hover,
 #sidebar-left .extension-outer a:focus {
-	color: @grau_5;
+	color: var(--color-font, @default);
 
 }
 
-
 #sidebar-right .extension-outer a:link,
-#sidebar-right .extension-outer a:visited
-	{ .white-trans; }
+#sidebar-right .extension-outer a:visited { 
+	color: var(--color-font, @grau_5);	
+}
 
 
 #sidebar-right .extension-outer a:hover,
-#sidebar-right .extension-outer a:focus
-	{ color: white; }
-
-
+#sidebar-right .extension-outer a:focus { 
+	color: var(--color-font, @default);
+}
 
 #sidebar-left div.extension-outer-icon:first-child, 
 #sidebar-right div.extension-outer-icon:first-child {
@@ -262,15 +292,18 @@
 }
 
 #sidebar-right .ext-header h2, 
-#sidebar-right  .ext-header h3, 
+#sidebar-right   h3, 
 #sidebar-right  .ext-header h4
 
+
  {
-    color: #FFFFFF;
-    font-size: 22px;
+  color: var(--color-font, @linkcolor);
+  font-size: 22px;
     font-weight: 400;
     line-height: 35px;
-    text-transform: normal;
+    font-family: "Bebas Neue";
+    font-style: inherit;
+    font-weight: 400;
     margin-bottom: 20px;
     padding: 10px 10% 0 0;
 }
@@ -285,6 +318,9 @@
 
 .append-sidebar-before .ext-icon-block { display: none; }
 
+.front .introblock .moduletable:not(:first-child) {
+  margin-top: 3rem;
+}
 
 /* Modul Onpage Rathaus Kontakt */
 

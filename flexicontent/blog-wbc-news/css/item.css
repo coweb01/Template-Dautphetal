@@ -1,0 +1,206 @@
+.wbc-flex {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+.vertikal-zentriert-pos-abs {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.boxshadow {
+	-webkit-box-shadow: 0px 3px 5px 0px #262426;
+	-moz-box-shadow: 0px 3px 5px 0px #262426;
+	box-shadow: 0px 3px 5px 0px #262426;
+}
+.iteminfo .createdline,
+.iteminfo .modifiedline {
+	font-size: 1rem;
+	display: block;
+}
+.iteminfo .createdby,
+.iteminfo .modifiedby {
+	font-size: 1rem;
+	font-weight: normal;
+	display: inline-block;
+	color: rgba(56,61,65,0.5);
+}
+.iteminfo .created,
+.iteminfo .modified {
+	font-size: 1rem;
+	font-weight: inherit;
+	display: inline-block;
+	color: rgba(56,61,65,0.5);
+}
+.itemactions,
+.iteminfo,
+.itemadditionnal,
+.description {
+	margin: 1em 0 1em 0;
+}
+.iteminfo {
+	margin: 1em 0 1em 0em;
+}
+.description {
+	clear: both;
+}
+.itemactions span {
+	margin: 0 0 0.5em;
+}
+.itemactions .voting,
+.itemactions .favourites {
+	margin-right: 32px;
+	float: left;
+}
+.itemadditionnal span {
+	margin: 0 0 0.3em;
+}
+.itemadditionnal .categories {
+	display: block;
+}
+.itemadditionnal .tags {
+	display: block;
+}
+.customblock {
+	width: 98% !important;
+	padding: 2px 1% !important;
+	margin: 8px 0px !important;
+	display: block;
+	float: left;
+}
+.customblock .element {
+	max-width: 100% !important;
+	min-width: 50% !important;
+	padding: 3px 0% 3px 0% !important;
+	margin: 0% !important;
+	display: block;
+	float: left;
+}
+.customblock .element.singlecol {
+	width: 100% !important;
+	padding: 0% !important;
+}
+.customblock .element.doublecol {
+	width: 48% !important;
+	overflow: hidden;
+}
+.customblock .flexi.value.nolabel {
+	width: 100% !important;
+}
+hr.fcclearline {
+	border: 0;
+	height: 1px;
+	background-image: none;
+	margin: 5px 0;
+}
+.field_downloads_1 span.fcfile_mime,
+.field_downloads_1 span.fcfile_title,
+.field_downloads_1 span.fcfile_size,
+.field_downloads_2 span.fcfile_mime,
+.field_downloads_2 span.fcfile_title,
+.field_downloads_2 span.fcfile_size {
+	display: inline-block;
+	height: 1.5em;
+	line-height: 1.5em;
+	width: 32px;
+}
+.fcfile_actions > a {
+	width: auto !important;
+}
+.fcfile_actions .fc_button {
+	background: #CCC url(none) !important;
+	color: #333 !important;
+	font-size: 0.9em;
+}
+.fcfile_actions .fc_button:hover {
+	background: #FA5B17 url(none) !important;
+	color: #FFF !important;
+	text-decoration: none;
+}
+a.fcfile_downloadFile {
+	display: inline-block;
+}
+a.fcfile_viewFile {
+	display: inline-block;
+	white-space: nowrap;
+}
+a.fcfile_shareFile {
+	display: inline-block;
+	white-space: nowrap;
+}
+a.fcfile_viewFile,
+a.fcfile_shareFile {
+	font-size: 12px;
+	white-space: nowrap;
+	text-align: right;
+	padding: 3px 8px;
+	border-radius: 0px;
+	color: #777777;
+	background-color: transparent;
+	border: 1px solid #CCCCCC;
+}
+a.fcfile_viewFile:hover,
+a.fcfile_shareFile:hover,
+a.fcfile_viewFile:focus,
+a.fcfile_shareFile:focus {
+	text-decoration: none;
+	background-color: #a2ab9c;
+	color: #FFFFFF;
+}
+.fcfile_downloadFile:after {
+	content: "\f019";
+	padding-left: 5px;
+	font-family: 'FontAwesome';
+}
+.fcfile_viewFile:after {
+	content: "\f06e";
+	padding-left: 5px;
+	font-family: 'FontAwesome';
+}
+.fcfile_shareFile:after {
+	content: "\f045";
+	padding-left: 5px;
+	font-family: 'FontAwesome';
+}
+.fcfile_descr_inline {
+	font-size: 0.9em;
+	display: block;
+	margin-left: 10px;
+	color: #666;
+}
+.map div.image {
+	width: 100%;
+	position: relative;
+}
+.map div.image img {
+	min-width: auto !important;
+	min-height: auto !important;
+	max-width: 100% !important;
+	height: auto !important;
+}
+#flexicontent > header > header {
+	clear: both;
+	padding-top: 10px;
+}
+.group:before,
+.group:after {
+	content: " ";
+	display: table;
+}
+.group:after {
+	clear: both;
+}
+@media only screen and (max-width: 480px) {
+	#flexicontent .buttons {
+		margin-right: 20px;
+	}
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+	#flexicontent .buttons {
+		margin-right: 20px;
+	}
+}

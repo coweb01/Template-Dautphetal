@@ -1,3 +1,4 @@
+"use strict"; 
 /**
  *	Script to make all Tables Responsive
  *
@@ -5,16 +6,25 @@
  *	@version: v1.0 15.06.2015
  *	@requires: jQuery
  */
-(function($){
+( function($) {
+ $(document).ready(function(){
 
-	if($('table').length){
-		for (var i = $('table').length - 1; i >= 0; i--) {
-			$($('table')[i]).replaceWith('<div class="table-responsive">'+$('table')[i].outerHTML+'</div>');
-				$($('table')[i]).removeClass('table table-condensed');
-				$($('table')[i]).addClass('table table-condensed');
-		
-		
-		};
-	}
+let table = $('table');
 
+		if(table.length){
+			table.each(function(e){
+
+				if ( !$(this).hasClass('table') || !$(this).hasClass('table-condensed')) {
+
+					$(this).removeClass('table table-condensed');
+					$(this).addClass('table table-condensed');
+					$(this).wrap('<div class="table-responsive"></div>');
+					
+				}
+				
+			});
+			
+		}
+
+	});
 })(jQuery);

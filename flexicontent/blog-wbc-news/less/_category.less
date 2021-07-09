@@ -1,0 +1,384 @@
+@import 'include/config.less';
+
+/* Blog Theme : category template CSS file */
+
+
+/* LESS EXAMPLE variable name: 'FCI_' + parameter name */
+/* e.g. 'FCI_' + 'title_color' =>  'FCI_title_color' */
+
+
+#flexicontent .fc_item_title,
+#flexicontent .fc_item_title a {
+	font-size: 1.4rem;
+	line-height: 1.5rem;
+	text-transform: none;
+	color: @default;
+}
+
+
+/* Label styling */
+
+#flexicontent .flexi.label,
+#flexicontent .desc-title.label {
+	
+}
+
+#flexicontent .clear {
+	border: 0;
+	clear: both;
+	float: none;
+	font-size: 1px;
+	height: 0;
+	line-height: 1px;
+	margin: 0;
+	padding: 0;
+	visibility: hidden;
+}
+
+/***  downloads  ***/
+
+hr.fcclearline {
+    border: 0;
+    height: 1px;
+    background-image: none;
+    margin: 5px 0;
+}
+
+.fcfile_actions > a, 
+.fcfile_actions > input, 
+.fcfile_actions > form > input {
+       line-height: 25px;
+}
+
+.fcfile_mime {
+    height: 25px;
+    line-height: 25px;
+}
+
+/* Google Map */
+
+.map div.image {  /* statische Map */
+	width: 100%;
+	position: relative
+	}
+
+.map div.image img { 
+	min-width: auto !important; 
+	min-height: auto !important;
+	max-width: 100% !important; 
+	height: auto !important;
+
+	} /* map responsive */
+
+/**
+ * @section buttons
+ *
+ * print, pdf, ...
+ */
+#flexicontent .buttons {
+	float: right;
+}
+
+#flexicontent .buttons > a > img {}
+
+#flexicontent .buttons > a {}
+
+
+/**
+ * @section headlines
+ *
+ */
+#flexicontent h2 {}
+
+#flexicontent h2 img {
+	border: none;
+}
+
+
+
+
+/**
+ * blog block
+ */
+#flexicontent .leadingblock,
+#flexicontent .introblock {
+	margin: 0;
+	padding: 0;
+}
+#flexicontent .leadingblock > div,
+#flexicontent .introblock > div
+ {
+	margin: 0px;
+	padding: 10px;
+	background: none;
+	/* width: 100%;*/ 
+	min-height: 10px;
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: top;
+	zoom: 1;
+	line-height: inherit;
+}
+
+
+.badges #flexicontent .introblock article.grid-content, 
+.badges #flexicontent .leadingblock article.grid-content {
+	padding: 10px 20px 10px 50px;
+	
+ }
+
+.front #flexicontent .introblock article.grid-content, 
+.front #flexicontent .leadingblock article.grid-content {
+	padding: 0rem;
+	
+ }
+
+#flexicontent .introblock article.grid-content, 
+#flexicontent .leadingblock article.grid-content {
+	padding: 2rem;
+	
+}
+
+.background-primary { 
+	
+}
+.background-secondary {
+	
+}
+
+#flexicontent .mansorylead .col-xs-12,  
+#flexicontent .mansoryintro .col-xs-12  {width: 100%;}
+
+#flexicontent .mansorylead .gutter-size  {width: 0%;} /*zur zeit nicht verwendet */
+#flexicontent .mansoryintro .gutter-size  {width: 0%;}
+
+#flexicontent .introblock.two > div,
+#flexicontent .leadingblock.two > div 
+{
+	width: 48.6%;
+	margin: 0px;
+	padding: 15px 0 0 0;
+ }
+
+#flexicontent .mansorylead.two .grid-size,
+#flexicontent .mansoryintro.two .grid-size	{
+	width: 48.6%;
+}
+
+#flexicontent .introblock.three > div,
+#flexicontent .leadingblock.three > div
+ {
+	width: 32.4324324%;
+	
+ }
+#flexicontent .mansorylead.three .grid-size,
+#flexicontent .mansoryintro.three .grid-size
+ {
+	width: 32.4324324%; 
+ }
+
+#flexicontent .introblock.four > div,
+#flexicontent .leadingblock.four > div 
+ {
+	width: 23.4%;
+	margin: 0px;
+	padding: 15px 0 0 0;
+ }
+
+#flexicontent .mansorylead.four .grid-size,
+#flexicontent .mansoryintro.four .grid-size	
+ {
+	width: 23.4%;
+ }
+
+#flexicontent .introblock.one > div,
+#flexicontent .leadingblock.one > div
+ {
+	width: 100%;
+	margin: 0px;
+	/*padding: 15px 0 0 0;*/
+ }
+
+#flexicontent .mansorylead.one .grid-size,
+#flexicontent .mansoryintro.one .grid-size	
+ {
+	width: 100%;
+ }
+
+#flexicontent .image.centered { 
+	text-align: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 20px;
+}
+
+#flexicontent .image.centered img { display: inline-block; }
+
+/*  startseite */
+
+.front #flexicontent .lineinfo { float:none; }
+
+@media only screen and (min-width: 960px) and (max-width: 1160px) {}
+@media only screen and (min-width: 768px) and (max-width: 960px) {
+	#flexicontent ul.leadingblock.two > li,
+	#flexicontent ul.introblock.four  > li {
+		width: 31.6%;
+		margin-left: 1%;
+	}
+}
+
+@media only screen and (max-width: 569px) {
+	#flexicontent ul.leadingblock.two   > li,
+	#flexicontent ul.leadingblock.three > li,
+	#flexicontent ul.leadingblock.four  > li,
+	#flexicontent ul.introblock.two   > li,
+	#flexicontent ul.introblock.three > li,
+	#flexicontent ul.introblock.four  > li {
+		width: 100%;
+		margin-left: 0%;
+	}
+	#flexicontent .leadingblock > div,
+	#flexicontent .introblock > div
+ 	{  padding: 0px; }
+	
+ 	#flexicontent .introblock article.grid-content, 
+	#flexicontent .leadingblock article.grid-content {
+		padding: 1.25rem;
+		
+	}
+}
+
+@media only screen and (min-width: 768px) {
+
+	#flexicontent .mansorylead .col-md-6,  
+	#flexicontent .mansoryintro .col-md-6  {width: 49.555%;}
+
+	#flexicontent .mansorylead .col-md-4,  
+	#flexicontent .mansoryintro .col-md-4  {width: 33.333%;}
+
+
+}
+
+@media only screen and (min-width: 992px) {
+
+	.front #flexicontent .introblock article.grid-content, 
+	.front #flexicontent .leadingblock article.grid-content {
+		padding: 1rem;
+		
+	 }
+	
+	#flexicontent .mansorylead .col-lg-4,  
+	#flexicontent .mansoryintro .col-lg-4  {width: 33.333%;}
+
+	#flexicontent .mansorylead .col-lg-6,  
+	#flexicontent .mansoryintro .col-lg-6  {width: 49.555%;}
+
+	
+	#flexicontent .mansorylead .col-lg-8,  
+	#flexicontent .mansoryintro .col-lg-8  {width: 66.666%;}
+}
+
+@media only screen and (min-width: 1200px) {
+	
+	#flexicontent .mansorylead .col-xl-4,  
+	#flexicontent .mansoryintro .col-xl-4  {width: 33.333%;}
+
+	#flexicontent .mansorylead .col-xl-6,  
+	#flexicontent .mansoryintro .col-xl-6  {width: 49.555%;}
+
+	#flexicontent .mansorylead .col-xl-8,  
+	#flexicontent .mansoryintro .col-xl-8  {width: 66.666%}
+
+
+}
+
+
+#flexicontent figure.image.right,
+#flexicontent div.image.right {
+	float: right !important;
+	margin: 8px 2px 0px 10px !important;
+	width: auto !important;
+}
+
+#flexicontent figure.image.left,
+#flexicontent div.image.left {
+	float: left !important;
+	margin: 8px 10px 0px 2px !important;
+	width: auto !important;
+}
+
+#flexicontent figure.image.right img,
+#flexicontent figure.image.left img,
+#flexicontent div.image.right img,
+#flexicontent div.image.left img {
+	padding: 1px;
+	border: 1px solid lightgray;
+}
+
+/* lines */
+#flexicontent .lineinfo {
+	
+}
+#flexicontent .lineinfo.image_descr {
+	flex-direction: row;
+}
+#flexicontent .lineinfo .element {
+	display: inline-block;
+	float: left;
+	margin: 0;
+	padding: 6px;
+	width: 100%;
+	box-sizing: border-box;
+}
+#flexicontent .lineinfo .element .label {
+	display: inline-block;
+/*	font-size: 90%;
+	margin-left: 8px;
+	margin-right: 8px;
+	min-width: 120px;
+	padding: 6px 12px;
+	box-sizing: border-box;*/
+}
+#flexicontent .lineinfo .element .value {
+	display: inline-block;
+}
+
+#flexicontent .readmore {
+	display: inline-block;
+	float: left;
+	clear: both;
+}
+
+/* =============================================
+   Bootstrap adjustments
+============================================= */
+#fc_alpha .btn.fc_alpha_index,
+#fc_alpha .btn.fc_alpha_index_sep {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* ===============================================
+   "micro" clearfix 
+   http://nicolasgallagher.com/micro-clearfix-hack/
+   =============================================== */
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.group:before,
+.group:after {
+	content: " "; /* 1 */
+	display: table; /* 2 */
+}
+
+.group:after {
+	clear: both;
+}
+

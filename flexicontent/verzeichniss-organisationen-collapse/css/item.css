@@ -1,0 +1,78 @@
+.wbc-flex {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+.vertikal-zentriert-pos-abs {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.boxshadow {
+	-webkit-box-shadow: 0px 3px 5px 0px #262426;
+	-moz-box-shadow: 0px 3px 5px 0px #262426;
+	box-shadow: 0px 3px 5px 0px #262426;
+}
+#flexicontent .fc_item_title,
+#flexicontent .fc_item_title a {
+	font-size: 1.4rem;
+	line-height: 1.5rem;
+	text-transform: none;
+	color: #484546;
+}
+#flexicontent .flexi-item {
+	float: left;
+	width: 100%;
+	list-style: none;
+}
+#flexicontent .flexi-item.background-primary {
+	background: #000000 !important;
+	background: rgba(109,107,107,0.1) !important;
+	padding: 10px 20px 10px 20px;
+}
+#flexicontent .flexi-field {
+	padding: 0.2em 0px 0.2em;
+}
+#flexicontent ul.zusatzinfo {
+	margin-top: 0.5em;
+}
+#flexicontent div.topblock {
+	float: left;
+	width: 100%;
+}
+#flexicontent div.two {
+	width: 48% !important;
+	margin-right: 2%;
+}
+#flexicontent div.links img {
+	float: left;
+	display: block;
+	margin-right: 5px;
+}
+#flexicontent div.links a.jcepopup {
+	display: block;
+	float: left;
+}
+#flexicontent div.images {
+	width: 100%;
+	clear: both;
+}
+hr.fcclearline {
+	border: 0;
+	height: 1px;
+	background-image: none;
+	margin: 5px 0;
+}
+.fcfile_actions > a,
+.fcfile_actions > input,
+.fcfile_actions > form > input {
+	line-height: 25px;
+}
+.fcfile_mime {
+	height: 25px;
+	line-height: 25px;
+}

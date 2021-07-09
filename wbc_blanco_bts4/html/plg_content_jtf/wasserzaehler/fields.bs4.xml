@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form class="custom-form custom-contact" orientation="horizontal"
+      gridlabel="col-12 col-sm-3 col-md-3">
+
+	<fieldset name="kontaktdaten">
+
+		<field name="personennummer"
+		    type="text"
+		    class="form-control "
+		    maxlength="60"
+		    description="WBC_PERSNR_DESC"
+		    label="WBC_PERSNR_LABEL"
+		    filter="string"		  
+		    message="WBC_PERSNR_DESC"		    
+		/>
+		<field name="info"
+        	   type="note"
+        	   label=""
+        	   description="WBC_PERSNR_DESC"
+        	   class="wbc-note font-weight-light"
+        />
+		<field name="name"
+		    type="text"
+		    class="form-control "
+		    maxlength="60"
+		    description="JTF_NAME_DESC"
+		    label="JTF_NAME_LABEL"
+		    filter="string"
+		    required="true"
+		/>
+		<field name="vorname"
+		    type="text"
+		    class="form-control "
+		    maxlength="60"
+		    description="JTF_PRENAME_DESC"
+		    label="JTF_PRENAME_LABEL"
+		    filter="string"
+		    required="true"
+		/>
+		
+		<field name="strasse"
+			type="text"
+			class="form-control"
+			size="30"
+			description="JTF_EXTENDED_FORM_STREET_DESC"
+			label="JTF_EXTENDED_FORM_STREET_LABEL"
+			required="true"
+		/>
+		<field name="hausnr"
+		       type="text"
+		       maxlength="10"
+		       class="form-control "
+		       description="JTF_TXT_NR_DESC"
+		       label="JTF_TXT_NR_LABEL"
+		       required="true"
+		/>
+		<field name="plz"
+		       type="plz"		      
+		       maxlength="60"
+		       class="form-control "
+		       description="JTF_PLZ_DESC"
+		       label="JTF_PLZ_LABEL"
+		       validate="plz"
+		       required="true"
+		/>
+		<field name="ort"
+			type="text"
+			class="form-control"
+			size="30"
+			description="JTF_EXTENDED_FORM_LOCATION_DESC"
+			label="JTF_EXTENDED_FORM_LOCATION_LABEL"
+			required="true"
+		/>
+		
+		<field name="email"
+		    type="email"
+		    class="form-control"
+		    maxlength="60"
+		    size="30"
+		    description="JTF_EMAIL_DESC"
+		    label="JTF_EMAIL_LABEL"
+		    filter="string"
+		    validate="email"		    
+		/>
+
+	</fieldset>	
+	<fieldset name="zaehlerdaten">	
+		
+		<field name="zaehlernummer"
+		       type="text"
+		       class="form-control "
+		       maxlength="30"
+		       description="WBCF_TXT_WZNR_DESC"
+		       label="WBCF_TXT_WZNR_LABEL"
+		       required="true"
+		       filter="integer"
+		       message="WBCF_TXT_WZNR_DESC"
+		/>
+		<field name="zaehlerstand"
+		       type="text"
+		       class="form-control "
+		       maxlength="30"
+		       description="WBC_TXT_WZSTD_DESC"
+		       label="WBC_TXT_WZSTD_LABEL"
+		       required="true"
+		       filter="integer"
+		       message="WBC_TXT_WZSTD_DESC"
+		/>
+
+		<field name="ablesedatum"
+		       type="calendar"
+		       default="NOW"
+		       class="form-control "
+		       description="JTF_CAL_DESC"
+		       label="JTF_CAL_LABEL"
+		       size="8"
+		       format="%d.%m.%Y"
+		       filter="user_utc"
+		       required="true"
+		       showtime="false"
+		       todaybutton="false"
+		       translateformat="true"
+		/>
+
+		<field name="ablesestelle"
+			type="text"
+			class="form-control"
+			size="30"
+			description="JTF_EXTENDED_FORM_ABLESESTELLE_DESC"
+			label="JTF_EXTENDED_FORM_ABLESESTELLE_LABEL"
+			required="true"
+		/>
+
+		<field name="ableseort"
+		       type="list"
+		       icon="fas fa-list"
+		       description="WBC_LIST_ABLESE_ORT_DESC"
+		       label="WBC_LIST_ABLESE_ORT_LABEL"
+		       default=""
+		       validate="options"
+		       required="true"
+		       class="form-control "
+		>
+			<option value="">JTF_OPTION_NONE</option>
+			<option value="Allendorf">Allendorf</option>
+			<option value="Buchenau">Buchenau</option>
+			<option value="Damshausen">Damshausen</option>
+			<option value="Dautphe">Dautphe</option>
+			<option value="Elmshausen">Elmshausen</option>
+			<option value="Friedensdorf">Friedensdorf</option>
+			<option value="Herzhausen">Herzhausen</option>
+			<option value="Holzhausen">Holzhausen</option>
+			<option value="Hommertshausen">Hommertshausen</option>
+			<option value="Mornshausen">Mornshausen</option>
+			<option value="Silberg">Silberg</option>
+			<option value="Wolfgruben">Wolfgruben</option>
+		</field>
+
+		<field name="telefon"
+			type="tel"	
+			class="form-control"
+			size="30"
+			description="WBC_EXTENDED_FORM_TEL_DESC"
+			label="WBC_EXTENDED_FORM_TEL_LABEL"
+			
+		/>
+		
+	</fieldset>
+	<fieldset name="consent_form"	         
+	>
+		<field name="privacy_policy"
+		       type="checkboxes"
+		       class="form-check-input privacy_policy"
+		       labelclass="form-check-label"
+		       description=""
+		       label="JTF_PRIVACY_POLICY_LABEL"
+		       default=""
+		       required="true"
+		       hiddenLabel="true"
+		>
+			<option value="JYES">JTF_PRIVACY_POLICY_OPTION_ACCEPT</option>
+		</field>
+	</fieldset>
+</form>

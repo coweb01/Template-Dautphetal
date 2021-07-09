@@ -1,0 +1,54 @@
+/* 
+    Document   : jevcustom
+    Created on : 27.04.2016
+    Author        : Claudia Oerter / webconcept
+    Description: To allow customisation of CSS Strings where they can never be lost.
+    Purpose of the stylesheet follows.
+*/
+
+/*-----------------------------------  Jevents Komponente ----------------------------------------------------------*/
+
+#jevents_body {
+    font-size: 14px !important;
+}
+
+span.jevdateicon1, span.jevdateicon2 {
+    text-align: center;
+}
+
+.jev_toprow div.currentmonth { background-color: #C00 !important; color: #FFF;}
+.jev_toprow div.nextmonth,
+.jev_toprow div.currentmonth {margin-top: -4px;}
+
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+
+/*-----------------------------------  Modul Latest ------------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------  Modul Filter Events ---------------------------------------------------*/
+
+.jevfiltermodule ul li { list-style: none; }
+.jevfiltermodule input, 
+.jevfiltermodule select {  width: auto; display:inline-block;}
+.jevfiltermodule .input-append > input { 
+     	-webkit-border-top-right-radius: 0px;
+		-webkit-border-bottom-right-radius: 0px;
+		-moz-border-radius-topright: 0px;
+		-moz-border-radius-bottomright: 0px;
+		border-top-right-radius: 0px;
+		border-bottom-right-radius: 0px;
+   
+}
+.jevfiltermodule .input-append > button { margin-top: -2px;}
+.jevfiltermodule li { clear: both; width: 100%; margin-top: 5px; margin-bottom: 15px;}
+
+.jevfiltermodule .jevfilterinput { display: inline-block;}
+.jevfiltermodule label { display: inline-block; width: 10em; }
+/*---------------------------------------------------------------------------------------------------------------------*/
+

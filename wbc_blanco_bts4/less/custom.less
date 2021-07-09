@@ -16,6 +16,7 @@
 @import "custom-form.less";
 @import "custom-flexicontent.less";
 @import "custom-buttons.less";
+@import "custom-frontend-edit.less";
 
 /* Header                  --------------------------*/
 
@@ -144,7 +145,7 @@
 
 		a:link, a:visited {
 		background: transparent;
-		color: #520;
+		color: @color1;
 		font-weight: bold;
 		text-decoration: underline;
 		}
@@ -153,7 +154,7 @@
 		a[href]:after { 
 		content:" <"attr(href)">"; 
 		background-color: inherit;
-		color: #369; 
+		color: @color6; 
 		font-style: italic;
 		}
 
@@ -161,7 +162,7 @@
 		abbr[title]:after, acronym[title]:after { 
 		content: '(' attr(title) ')';
 		background-color: inherit;
-		color: #369; 
+		color: @color2; 
 		font-style: italic; 
 		}
 
@@ -212,10 +213,4 @@
 	    	height: 1.5cm;
 	    	display: block;
 	    }
-
-
-
-
-
-
 }

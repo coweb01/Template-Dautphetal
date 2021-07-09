@@ -10,7 +10,8 @@
 defined('_JEXEC') or die;
 
 // Note. It is important to remove spaces between elements.
-$class         = $menuparams->get('linkcss') ? 'class="nav-link '. $menuparams->get('linkcss') .'" ' : 'class="nav-link" ';
+//$class         = $menuparams->get('linkcss') ? 'class="nav-link '. $menuparams->get('linkcss') .'" ' : 'class="nav-link" ';
+$class         = 'class="nav-link"';
 $title         = $item->anchor_title ? 'title="'.$item->anchor_title.'" ' : '';
 $accesskey     = $menuparams->get('accesskey'); 
 $htmlaccesskey = (  $accesskey != '' ) ? ' accesskey="'. $accesskey. '" ' : '';
@@ -19,7 +20,7 @@ $image_class   = '';
 if ($item->deeper) { 
 		$linktype = $item->title;
 		if ($item->level < 2) {
-		$class = 'class="'.$item->anchor_css.' nav-link mootools-noconflict dropdown-toggle dropdown-hover-fix" data-toggle="dropdown" data-target="#" aria-expanded="false" ';
+		$class = 'class="nav-link mootools-noconflict dropdown-toggle dropdown-hover-fix" data-toggle="dropdown" data-target="#" aria-expanded="false" ';
 		//$item->flink = '#';
 	}
 	else {

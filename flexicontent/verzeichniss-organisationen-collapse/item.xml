@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<author>C.Oerter</author>
+	<website>www.das-webconcept.de</website>
+	<email>co@das-webconcept.de</email>
+	<license>GPLv3</license>
+	<version>2.0</version>
+	<release>September - 2019</release>
+	<description>Beitragslayout für Verzeichnis Organisationen </description>
+	<fields name="attribs">
+		<fieldset name="attribs" addfieldpath="/administrator/components/com_flexicontent/elements">
+		<field name="grid_framework" type="radio" default="1" label="FLEXI_GRID" description="FLEXI_GRID_DESC" class="btn-group btn-group-yesno">
+			<option value="0">FLEXI_GRID_YES</option>
+			<option value="1">FLEXI_BTS_YES</option>
+			<option value="2">FLEXI_UIKIT_YES</option>
+		</field>
+
+
+		<field name="title_cut_text" type="text" size="3" default="200" label="FLEXI_TITLE_MAXLEN" description="FLEXI_TITLE_MAXLEN_DESC" />
+	
+		<field name="itemimage" type="separator" hr="false" default="FLEXI_ITEMIMAGE_TIP" level="level2" menu="hide" />
+		<field name="use_item_image" type="list" default="1" label="FLEXI_USE_IMAGE" description="FLEXI_USE_IMAGE_DESC">
+			<option value="0">FLEXI_NO</option>
+			<option value="1">FLEXI_YES</option>
+		</field>
+
+		<field name="select_item_image" type="fcimage" size="10" default="" label="FLEXI_IMAGE_SOURCE" description="FLEXI_IMAGE_SOURCE_DESC" />
+		<field name="item_image_position" type="radio" default="" label="FLEXI_IMAGE_POSITION" description="FLEXI_IMAGE_POSITION_DESC" class="btn-group btn-group-yesno">
+				<option value="">FLEXI_USE_GLOBAL</option>
+				<option value="0">FLEXI_IMAGE_LEFT</option>
+				<option value="1">FLEXI_IMAGE_RIGHT</option>
+				<option value="2">FLEXI_IMAGE_CLEAR</option>
+		</field>
+		
+		<field name="image_size" type="radio" default="m" label="FLEXI_IMAGE_SIZE" description="FLEXI_IMAGE_SIZE_DESC" class="btn-group btn-group-yesno">
+				<option value="">FLEXI_USE_PARAMS</option>
+				<option value="s">FLEXI_SMALL</option>
+				<option value="m">FLEXI_MEDIUM</option>
+				<option value="l">FLEXI_LARGE</option>
+				<option value="o">FLEXI_ORIGINAL</option>
+		</field>
+
+
+		
+		</fieldset>
+	</fields>	
+	<fieldgroups>
+		<group>line1</group>
+		<group readonly="true">Vorname, Nachname</group>
+		<group>line2</group>
+		<group>line3</group>
+		<group readonly="true">Beschreibung</group>
+		<group>line4</group>
+		<group>Bilder</group>
+		<group>renderonly</group>		
+	</fieldgroups>	
+	<cssitem>
+		<file>css/item.css</file>
+	</cssitem>
+	<jsitem>
+	</jsitem>	
+</form>

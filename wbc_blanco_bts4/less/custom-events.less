@@ -11,16 +11,17 @@
 .front .mod_events_latest_table {
 	border-spacing: 0 20px;
 	border-collapse: separate;
-	margin-top: -20px;
+  margin-top: -20px;
+  margin-bottom: 0;
 	td {
-		background-color: #fff;
+		background-color: var(--color-bg, #fff);
 	}
 	.wbc-ev-date {
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 10px;
 		width: 70%;
-		background-color: #1FA22E;
+		background-color: @color3;
 		padding: 10px 15px;
 		color: #fff;
 		font-weight: 500;
@@ -39,12 +40,13 @@
 }
 .mod_events_latest_callink {
 	text-align: right;
-	margin-top: 50px;
+	margin-top: 30px;
+	margin-bottom: 100px;
 	 a {
-		color: #fff !important;
-		background-color: #0086CB;
-		font-size: 1.3rem;
-		padding: 10px 20px;
+		color: var(--color-bg, #fff) !important;
+		background-color: var(--color-font, @color2);
+		font-size: 1.1rem;
+		padding: 10px 15px;
 		border-radius: 20px;
 	}
 }
@@ -55,7 +57,7 @@
 			margin-bottom: 0;
 		}
 		.wbc-ev-content {
-			background-color: #1FA22E;
+			background-color: @color3;
 			padding: 5px 15px;
 			h3 {
 				margin-bottom: 0;
@@ -67,7 +69,10 @@
 				display: none;
 			}
 		}
-	}
+  }
+  .mod_events_latest_callink {
+    text-align: center;
+  }
 }
 /* Modul JEvents Search */
 
@@ -108,74 +113,10 @@
 
 
 
-/*
-.mod_events_latest_callink a:link,
-.mod_events_latest_callink a:visited {
-
-	background-color: @gruen;
-	color: #FFFFFF;
-	padding: 0.5rem 0.75rem;
-	font-size: 0.9rem;
-	display: inline-block;
-	float: right;
-	margin-bottom: 0.5rem;
-}
-.mod_events_latest_callink a:hover,
-.mod_events_latest_callink a:focus {
-	background-color: @bg_gruen_5;
-	text-decoration: none;
-}
-.mod_events_latest_callink a:active {}
-
-td.mod_events_latest,
-td.mod_events_latest_first
- { 
-	position: relative; 
-	padding: 0 !important;
-	border-top: 3px solid @gruen;
-}
-
-
-.mod_events_latest .wbc-ev-title,
-.mod_events_latest_first .wbc-ev-title
- {
-	margin-bottom: 0.5em;
-	font-weight: 500;
-	display: block;
-}
-
-.mod_events_latest a.wbc-event-link:link,
-.mod_events_latest a.wbc-event-link:visited,
-.mod_events_latest_first a.wbc-event-link:link,
-.mod_events_latest_first a.wbc-event-link:visited {
- 
-	color: @defaultcolor;
-	text-decoration: none;
-	display: block;
-	padding: 0.75rem;
-}	
-.mod_events_latest a.wbc-event-link:hover,
-.mod_events_latest a.wbc-event-link:focus,
-.mod_events_latest_first a.wbc-event-link:hover,
-.mod_events_latest_first a.wbc-event-link:focus {
- 
-	color: @defaultcolor;
-	text-decoration: none;
-	background-color: @grau_01;
-}	
-.mod_events_latest .wbc-ev-date .fa-arrow-circle-right,
-.mod_events_latest_first .wbc-ev-date .fa-arrow-circle-right
- { 
-	float:  right;
-	display: inline-block;
-	color: @color1;
-}
-*/
-
 /* Jevents Listenansicht Template flat ---------------------------*/
 #jevents_body {
     
-    border: 1px solid #DDD;
+    border: 1px solid @bordercolor;
     border-radius: 0px;     
     background-color: transparent !important;
     padding-top: 0px;
@@ -184,7 +125,7 @@ td.mod_events_latest_first
 
 #jev_maincal {
     background-color: transparent !important;
-	border: 1px solid #ddd;
+	border: 1px solid @bordercolor;
 }
 
 /* Kopfzeile der Tabelle und Navigation --------------------------*/
@@ -226,11 +167,10 @@ td.mod_events_latest_first
 .jev_header2 .active a:hover {
 }
 #jevents_body .jev_toprow div.previousmonth a {
-	color: @defaultcolor;
+	color: var(--color-font, @defaultcolor);
 }
 #jevents_body .jev_toprow div.nextmonth a {
-    color:  @defaultcolor;
-    
+	color: var(--color-font, @defaultcolor);
 }
 /*----------------------------------------------------------------*/
 
@@ -259,7 +199,8 @@ td.mod_events_latest_first
 }
 #jevents_body .ev_link_row::before {
 	content: '\f0a9';
-	font-family: 'FontAwesome';
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
 	padding-right: 1rem;
 	display: inline-block;
 	font-size: 1.3rem;
@@ -306,6 +247,24 @@ td.mod_events_latest_first
 
 
  }
+
+
+@media only screen and (max-width: 569px) {
+
+	.front .mod_events_latest_table {
+		td {
+			padding: 0px;
+
+			h3 {
+				font-size: 1.125rem;
+				line-height: 1.5rem;
+			}
+		}
+
+	}
+}
+
+
 
 @media (max-width: 769px ) {
 

@@ -15,15 +15,17 @@
 
 	  $('[data-toggle="offcanvas"]' ).click(function (e) {
 	  	
-	    $('.offcanvas').toggleClass('active');
 	    $('.navbar-toggler-close').toggleClass('d-none');
 	    $('.navbar-toggler-icon').toggleClass('d-none');
+	  	$('.offcanvas').toggleClass('active');
+  
 	    if ( $('.offcanvas').is(':hidden') ) {			
   				$('.offcanvas').find('.dropdown-toggle').dropdown('hide');
   				//console.log($(this));
 			};
 	   
 	  });
+
  	   
 	  $('.sidebar-offcanvas .level1.dropdown').click(function(e) {
 	  	     
@@ -43,3 +45,33 @@
 	 	});
   });
 })(jQuery);
+
+( function($) {
+
+	  $(document).click(function (e) {
+
+            //console.log(e.target);
+            if ( e.target == $('.offcanvas.active')[0]) {
+            	 //console.log('klick offcanvas')	;
+            	 $('.offcanvas').toggleClass('active');	
+            	 $('.navbar-toggler-close').toggleClass('d-none');
+	         	 $('.navbar-toggler-icon').toggleClass('d-none');
+	  		
+	         }	 
+
+
+			 if ( $('.offcanvas').hasClass('active') ) {
+
+			 	$('input#hamburg').prop('checked', true);
+
+			 } else {
+
+				$('input#hamburg').prop('checked', false);
+
+			}
+
+		 
+	  });
+
+})(jQuery);
+
